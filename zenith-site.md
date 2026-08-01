@@ -25,6 +25,8 @@
 
 We build the three systems a tree company actually needs — a real website, an instant text back when you miss a call, and reviews that stack up automatically. No miracle lead machine (nobody has one, including us). Just the leads you **already earn**, actually reaching your phone.
 
+*Mobile (≤600px) shows a shorter lead instead:* A real website, instant text-back when you miss a call, and reviews on autopilot — so the leads you **already earn** actually reach your phone.
+
 **Primary CTA:** Book A Free 15-Minute Audit
 **Secondary link:** See a live client site →
 

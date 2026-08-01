@@ -93,6 +93,11 @@
   .hero h1 .accent{color:var(--green);}
   .hero p.lead{font-size:17.5px;color:var(--muted);max-width:500px;margin-bottom:28px;}
   .hero p.lead b{color:var(--text);font-weight:600;}
+  .lead-mobile{display:none;}
+  @media (max-width:600px){
+    .lead-desktop{display:none;}
+    .lead-mobile{display:block;}
+  }
   .hero-ctas{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-bottom:26px;}
   .link-inline{font-size:14.5px;color:var(--text);border-bottom:1px solid var(--muted-dim);padding-bottom:2px;transition:border-color .2s,color .2s;}
   .link-inline:hover{color:var(--green);border-color:var(--green);}
@@ -397,7 +402,8 @@
       <div class="reveal">
         <div class="eyebrow">For Florida Tree Service Companies</div>
         <h1>Five-star work shouldn't be <span class="accent">invisible on Google.</span></h1>
-        <p class="lead">We build the three systems a tree company actually needs — a real website, an instant text back when you miss a call, and reviews that stack up automatically. No miracle lead machine (nobody has one, including us). Just the leads you <b>already earn</b>, actually reaching your phone.</p>
+        <p class="lead lead-desktop">We build the three systems a tree company actually needs — a real website, an instant text back when you miss a call, and reviews that stack up automatically. No miracle lead machine (nobody has one, including us). Just the leads you <b>already earn</b>, actually reaching your phone.</p>
+        <p class="lead lead-mobile">A real website, instant text-back when you miss a call, and reviews on autopilot — so the leads you <b>already earn</b> actually reach your phone.</p>
         <div class="hero-ctas">
           <a href="https://api.leadconnectorhq.com/widget/booking/wwSfiboHnDVi0pwtHMM2" target="_blank" rel="noopener" class="btn btn-primary">Book A Free 15-Minute Audit</a>
           <a href="#proof" class="link-inline">See a live client site →</a>
