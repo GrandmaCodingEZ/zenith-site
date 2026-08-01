@@ -13,7 +13,7 @@
 - Our Work
 - Pricing
 - FAQ
-- **CTA button:** Book A Call
+- **CTA button:** Book A Call → GHL booking calendar, new tab (every booking CTA site-wide links directly to the calendar)
 
 ---
 
