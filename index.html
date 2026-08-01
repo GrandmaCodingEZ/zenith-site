@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zenith Co. — Websites & Marketing Systems for Florida Tree Service Companies</title>
+<meta name="description" content="Zenith Co. builds websites, missed-call text-back, and 5-star review systems for Florida tree service companies. Flat pricing, no long-term contracts, live in about a week.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0E1417;
+    --bg-alt:#101A20;
+    --card:#1A2429;
+    --card-alt:#212E35;
+    --line:#2A3841;
+    --green:#34C77B;
+    --green-dim:#208F58;
+    --amber:#F5B301;
+    --red:#E0574D;
+    --text:#F2F6F7;
+    --muted:#90A4AE;
+    --muted-dim:#5D6E77;
+    --font-display:'Space Grotesk', sans-serif;
+    --font-body:'Inter', sans-serif;
+    --radius:14px;
+    --container:1160px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font-body);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  .wrap{max-width:var(--container);margin:0 auto;padding:0 28px;}
+  h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;letter-spacing:-0.01em;}
+  section{position:relative;}
+  ::selection{background:var(--green);color:#0E1417;}
+
+  a:focus-visible,button:focus-visible{outline:2px solid var(--amber);outline-offset:3px;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important;}
+  }
+
+  /* ---------- reveal (only hides content when JS is running) ---------- */
+  .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease;}
+  .js .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ---------- nav ---------- */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(14,20,23,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:76px;}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:19px;letter-spacing:0.01em;}
+  .brand-mark{width:26px;height:26px;flex-shrink:0;}
+  .nav-links{display:flex;align-items:center;gap:34px;font-size:14.5px;color:var(--muted);}
+  .nav-links a{transition:color .2s;}
+  .nav-links a:hover{color:var(--text);}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:13px 24px;border-radius:9px;font-weight:600;font-size:14.5px;
+    font-family:var(--font-body);border:none;cursor:pointer;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--green);color:#0B1512;box-shadow:0 0 0 0 rgba(52,199,123,0.5);}
+  .btn-primary:hover{background:#3fd88a;transform:translateY(-1px);box-shadow:0 8px 20px -6px rgba(52,199,123,0.45);}
+  .btn-ghost{background:transparent;color:var(--text);border:1px solid var(--line);}
+  .btn-ghost:hover{border-color:var(--muted);}
+  .nav .btn{padding:11px 20px;font-size:14px;}
+
+  /* ---------- hero ---------- */
+  .hero{padding:80px 0 52px;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--green);margin-bottom:18px;
+  }
+  .eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(52,199,123,0.18);}
+  .hero h1{font-size:46px;line-height:1.08;margin-bottom:20px;}
+  .hero h1 .accent{color:var(--green);}
+  .hero p.lead{font-size:17.5px;color:var(--muted);max-width:500px;margin-bottom:28px;}
+  .hero p.lead b{color:var(--text);font-weight:600;}
+  .hero-ctas{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-bottom:26px;}
+  .link-inline{font-size:14.5px;color:var(--text);border-bottom:1px solid var(--muted-dim);padding-bottom:2px;transition:border-color .2s,color .2s;}
+  .link-inline:hover{color:var(--green);border-color:var(--green);}
+  .hero-assurance{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--muted);}
+  .hero-assurance span{display:inline-flex;align-items:center;gap:7px;}
+  .hero-assurance svg{width:14px;height:14px;color:var(--green);flex-shrink:0;}
+
+  /* ---------- before/after mock ---------- */
+  .compare{
+    background:var(--card);border:1px solid var(--line);border-radius:18px;
+    padding:22px;
+  }
+  .compare-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+  .compare-title{font-size:12.5px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;}
+  .toggle{
+    display:flex;background:var(--bg);border-radius:999px;padding:4px;border:1px solid var(--line);
+  }
+  .toggle button{
+    border:none;background:transparent;color:var(--muted);font-family:var(--font-body);
+    font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:999px;cursor:pointer;transition:all .25s;
+  }
+  .toggle button.active{background:var(--green);color:#0B1512;}
+  .search-card{
+    background:var(--bg-alt);border:1px solid var(--line);border-radius:12px;padding:18px 18px 20px;
+  }
+  .search-topbar{display:flex;align-items:center;gap:8px;color:var(--muted-dim);font-size:12px;margin-bottom:14px;}
+  .search-topbar svg{width:14px;height:14px;}
+  .result-row{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px solid var(--line);}
+  .result-row:first-of-type{border-top:none;}
+  .pin{width:34px;height:34px;border-radius:9px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+  .result-name{font-size:14.5px;font-weight:600;margin-bottom:3px;}
+  .result-meta{font-size:12.5px;color:var(--muted);}
+  .stars{color:var(--amber);font-size:12px;letter-spacing:1px;}
+  .tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:5px;margin-top:6px;letter-spacing:0.03em;}
+  .tag-bad{background:rgba(224,87,77,0.14);color:var(--red);}
+  .tag-good{background:rgba(52,199,123,0.14);color:var(--green);}
+  .compare-caption{font-size:12.5px;color:var(--muted-dim);margin-top:14px;text-align:center;}
+
+  /* ---------- stats bar ---------- */
+  .stats-bar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-alt);}
+  .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);}
+  .stat-cell{padding:28px 24px;text-align:center;border-left:1px solid var(--line);}
+  .stat-cell:first-child{border-left:none;}
+  .stat-cell b{display:block;font-family:var(--font-display);font-size:30px;font-weight:700;color:var(--green);margin-bottom:4px;}
+  .stat-cell span{font-size:13px;color:var(--muted);display:block;max-width:200px;margin:0 auto;}
+
+  /* ---------- canopy divider ---------- */
+  .canopy{width:100%;height:64px;display:block;color:var(--card);}
+
+  /* ---------- section shell ---------- */
+  .section{padding:88px 0;}
+  .section-alt{background:var(--bg-alt);}
+  .section-head{max-width:640px;margin:0 auto 52px;text-align:center;}
+  .section-head .eyebrow{justify-content:center;width:100%;}
+  .section-head h2{font-size:34px;line-height:1.18;margin-bottom:14px;}
+  .section-head p{color:var(--muted);font-size:16px;}
+
+  /* ---------- problem cards ---------- */
+  .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .problem-card{
+    background:var(--card);border-radius:var(--radius);padding:28px 26px;
+    border-left:3px solid var(--red);
+  }
+  .problem-card .icon{width:34px;height:34px;color:var(--red);margin-bottom:18px;}
+  .problem-card h3{font-size:18px;margin-bottom:10px;}
+  .problem-card p{font-size:14.5px;color:var(--muted);}
+
+  /* ---------- feature rows ---------- */
+  .feature-row{
+    display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+    padding:64px 0;border-top:1px solid var(--line);
+  }
+  .feature-row:first-of-type{border-top:none;padding-top:12px;}
+  .feature-num{font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--green);letter-spacing:0.12em;margin-bottom:14px;}
+  .feature-copy h3{font-size:27px;margin-bottom:14px;line-height:1.15;}
+  .feature-copy > p{font-size:15.5px;color:var(--muted);margin-bottom:22px;max-width:460px;}
+  .feature-copy ul{display:flex;flex-direction:column;gap:11px;margin-bottom:26px;}
+  .feature-copy li{font-size:14.5px;display:flex;gap:10px;align-items:flex-start;}
+  .feature-copy li svg{width:16px;height:16px;color:var(--green);flex-shrink:0;margin-top:2px;}
+  .feature-stat{
+    display:inline-flex;align-items:baseline;gap:8px;background:rgba(52,199,123,0.08);
+    border:1px solid rgba(52,199,123,0.25);border-radius:9px;padding:10px 16px;margin-bottom:26px;
+  }
+  .feature-stat b{font-family:var(--font-display);font-size:20px;color:var(--green);}
+  .feature-stat span{font-size:13px;color:var(--muted);}
+  .feature-row.flip .feature-copy{order:2;}
+  .feature-row.flip .feature-visual{order:1;}
+
+  /* phone mock */
+  .phone-mock{
+    width:300px;margin:0 auto;background:var(--bg-alt);border:1px solid var(--line);
+    border-radius:26px;padding:18px 16px 22px;box-shadow:0 24px 48px -20px rgba(0,0,0,0.5);
+  }
+  .phone-notch{width:90px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 16px;}
+  .missed-call{
+    display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);
+    border-radius:11px;padding:11px 13px;margin-bottom:14px;font-size:12.5px;color:var(--muted);
+  }
+  .missed-call svg{width:16px;height:16px;color:var(--red);flex-shrink:0;}
+  .missed-call b{color:var(--text);font-weight:600;display:block;font-size:13px;}
+  .sms{max-width:86%;border-radius:14px;padding:10px 13px;font-size:13px;line-height:1.45;margin-bottom:10px;}
+  .sms-out{background:var(--green);color:#0B1512;margin-left:auto;border-bottom-right-radius:4px;font-weight:500;}
+  .sms-in{background:var(--card-alt);color:var(--text);border-bottom-left-radius:4px;}
+  .sms-time{font-size:10.5px;color:var(--muted-dim);text-align:center;margin:12px 0 10px;letter-spacing:0.04em;}
+
+  /* review mock */
+  .review-mock{width:320px;margin:0 auto;display:flex;flex-direction:column;gap:14px;}
+  .review-step{
+    background:var(--bg-alt);border:1px solid var(--line);border-radius:13px;padding:16px 18px;
+  }
+  .review-step .rs-label{font-size:10.5px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted-dim);margin-bottom:8px;}
+  .review-step p{font-size:13px;color:var(--text);line-height:1.45;}
+  .review-toast{
+    display:flex;align-items:center;gap:12px;background:rgba(52,199,123,0.1);
+    border:1px solid rgba(52,199,123,0.35);border-radius:13px;padding:14px 16px;
+  }
+  .review-toast .stars{font-size:14px;}
+  .review-toast b{display:block;font-size:13px;}
+  .review-toast span{font-size:12px;color:var(--muted);}
+
+  /* browser mock */
+  .browser-mock{width:100%;max-width:440px;margin:0 auto;background:var(--bg-alt);border-radius:12px;border:1px solid var(--line);overflow:hidden;box-shadow:0 24px 48px -20px rgba(0,0,0,0.5);}
+  .browser-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid var(--line);}
+  .browser-dot{width:8px;height:8px;border-radius:50%;background:var(--line);}
+  .browser-url{margin-left:10px;font-size:11.5px;color:var(--muted-dim);font-family:var(--font-body);}
+  .browser-body{padding:22px;}
+  .browser-body .bar{height:10px;border-radius:4px;background:var(--line);margin-bottom:10px;}
+  .browser-body .bar.short{width:55%;}
+  .mock-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;}
+  .mock-nav .bar{margin-bottom:0;}
+  .mock-form{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:14px;margin-top:16px;}
+  .mock-form .bar{background:var(--card-alt);height:14px;}
+  .mock-btn{height:30px;border-radius:7px;background:var(--green);opacity:0.85;margin-top:12px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#0B1512;letter-spacing:0.05em;}
+
+  /* ---------- services grid ---------- */
+  .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .service-tile{
+    background:var(--card);border:1px solid var(--line);border-radius:11px;
+    padding:18px 16px;display:flex;align-items:center;gap:12px;font-size:14px;font-weight:500;
+    transition:border-color .2s;
+  }
+  .service-tile:hover{border-color:var(--green-dim);}
+  .service-tile svg{width:20px;height:20px;color:var(--green);flex-shrink:0;}
+
+  /* ---------- process ---------- */
+  .process{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative;}
+  .process-step{padding:0 26px;position:relative;}
+  .ring-badge{width:64px;height:64px;margin-bottom:22px;position:relative;}
+  .process-step h3{font-size:18.5px;margin-bottom:10px;}
+  .process-step p{font-size:14.5px;color:var(--muted);}
+  .process-step .duration{display:block;font-size:12px;color:var(--amber);font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:8px;}
+  .process-connector{position:absolute;top:32px;left:100%;width:100%;height:1px;background:var(--line);z-index:0;}
+  .process-step:last-child .process-connector{display:none;}
+
+  /* ---------- why cards ---------- */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .why-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 24px;transition:border-color .25s;
+  }
+  .why-card:hover{border-color:var(--green-dim);}
+  .why-card .icon-wrap{
+    width:42px;height:42px;border-radius:10px;background:rgba(52,199,123,0.12);
+    display:flex;align-items:center;justify-content:center;margin-bottom:16px;
+  }
+  .why-card .icon-wrap svg{width:21px;height:21px;color:var(--green);}
+  .why-card h3{font-size:16.5px;margin-bottom:8px;}
+  .why-card p{font-size:13.5px;color:var(--muted);}
+
+  /* ---------- proof ---------- */
+  .proof-card{
+    background:var(--card);border:1px solid var(--line);border-radius:20px;
+    display:grid;grid-template-columns:1fr 1fr;overflow:hidden;
+  }
+  .proof-copy{padding:44px 44px;}
+  .proof-copy .eyebrow{color:var(--amber);}
+  .proof-copy .eyebrow::before{background:var(--amber);box-shadow:0 0 0 3px rgba(245,179,1,0.18);}
+  .proof-copy h3{font-size:26px;margin-bottom:14px;}
+  .proof-copy p{color:var(--muted);font-size:15px;margin-bottom:22px;}
+  .proof-visual{
+    background:linear-gradient(160deg,#141F25,#0D1417);
+    display:flex;align-items:center;justify-content:center;padding:36px;
+    border-left:1px solid var(--line);
+  }
+
+  /* ---------- regions ---------- */
+  .region-pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+  .region-pill{
+    padding:10px 20px;border:1px solid var(--line);border-radius:999px;font-size:14px;color:var(--muted);
+    transition:border-color .2s, color .2s;
+  }
+  .region-pill:hover{border-color:var(--green-dim);color:var(--text);}
+
+  /* ---------- pricing ---------- */
+  .pricing-card{
+    max-width:540px;margin:0 auto;background:var(--card);border:1px solid var(--line);
+    border-radius:20px;padding:42px 40px;text-align:center;position:relative;
+  }
+  .pricing-badge{
+    position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+    background:var(--green);color:#0B1512;font-size:11.5px;font-weight:700;
+    letter-spacing:0.08em;text-transform:uppercase;padding:5px 16px;border-radius:999px;
+  }
+  .pricing-row{display:flex;align-items:baseline;justify-content:center;gap:10px;margin:8px 0 4px;}
+  .pricing-row .amt{font-family:var(--font-display);font-size:42px;font-weight:700;}
+  .pricing-row .per{color:var(--muted);font-size:14px;}
+  .pricing-plus{color:var(--muted-dim);font-size:13px;margin:14px 0 22px;}
+  .pricing-list{text-align:left;display:flex;flex-direction:column;gap:12px;margin-bottom:24px;}
+  .pricing-list li{display:flex;gap:10px;font-size:14.5px;align-items:flex-start;}
+  .pricing-list svg{width:16px;height:16px;color:var(--green);flex-shrink:0;margin-top:2px;}
+  .pricing-roi{
+    background:rgba(245,179,1,0.07);border:1px solid rgba(245,179,1,0.25);border-radius:10px;
+    padding:13px 16px;font-size:13.5px;color:var(--text);margin-bottom:26px;text-align:left;
+  }
+  .pricing-roi b{color:var(--amber);}
+  .pricing-terms{font-size:12.5px;color:var(--muted-dim);margin-top:14px;}
+
+  /* ---------- faq ---------- */
+  .faq{max-width:760px;margin:0 auto;}
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-q{
+    width:100%;text-align:left;background:transparent;border:none;color:var(--text);
+    font-family:var(--font-display);font-size:16.5px;font-weight:600;padding:22px 0;
+    display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:20px;
+  }
+  .faq-q svg{width:18px;height:18px;color:var(--muted);flex-shrink:0;transition:transform .3s;}
+  .faq-item.open .faq-q svg{transform:rotate(45deg);color:var(--green);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+  .faq-a p{padding-bottom:22px;color:var(--muted);font-size:14.5px;max-width:640px;}
+
+  /* ---------- final cta ---------- */
+  .final-cta{
+    background:linear-gradient(135deg, #14231D 0%, #0E1417 60%);
+    border:1px solid var(--line);border-radius:24px;
+    padding:64px 48px;text-align:center;position:relative;overflow:hidden;
+  }
+  .final-cta h2{font-size:32px;margin-bottom:14px;}
+  .final-cta p{color:var(--muted);font-size:16px;max-width:500px;margin:0 auto 30px;}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--line);padding:48px 0 40px;}
+  .foot-inner{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;}
+  .foot-brand{font-family:var(--font-display);font-weight:700;font-size:17px;}
+  .foot-note{color:var(--muted-dim);font-size:13px;margin-top:8px;max-width:320px;}
+  .foot-links{display:flex;gap:36px;}
+  .foot-col h4{font-size:12.5px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted-dim);margin-bottom:12px;}
+  .foot-col a{display:block;font-size:14px;color:var(--muted);padding:5px 0;transition:color .2s;}
+  .foot-col a:hover{color:var(--text);}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:44px;}
+    .hero h1{font-size:35px;}
+    .nav-links{display:none;}
+    .stats-inner{grid-template-columns:repeat(2,1fr);}
+    .stat-cell{border-left:none;border-top:1px solid var(--line);}
+    .stat-cell:nth-child(-n+2){border-top:none;}
+    .problem-grid,.why-grid{grid-template-columns:1fr;}
+    .feature-row{grid-template-columns:1fr;gap:40px;padding:48px 0;}
+    .feature-row.flip .feature-copy{order:1;}
+    .feature-row.flip .feature-visual{order:2;}
+    .services-grid{grid-template-columns:repeat(2,1fr);}
+    .process{grid-template-columns:1fr;gap:36px;}
+    .process-connector{display:none;}
+    .proof-card{grid-template-columns:1fr;}
+    .proof-visual{border-left:none;border-top:1px solid var(--line);}
+    .section{padding:64px 0;}
+    .section-head h2{font-size:28px;}
+    .foot-inner{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 26 26" fill="none">
+        <circle cx="13" cy="13" r="12" stroke="#34C77B" stroke-width="1.6"/>
+        <circle cx="13" cy="13" r="7.5" stroke="#34C77B" stroke-width="1.6" opacity="0.6"/>
+        <circle cx="13" cy="13" r="3" fill="#34C77B"/>
+      </svg>
+      ZENITH CO.
+    </a>
+    <div class="nav-links">
+      <a href="#what-you-get">What You Get</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#why-us">Why Zenith</a>
+      <a href="#proof">Our Work</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#contact" class="btn btn-primary">Book A Call</a>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <div class="eyebrow">For Florida Tree Service Companies</div>
+        <h1>Five-star work shouldn't be <span class="accent">invisible on Google.</span></h1>
+        <p class="lead">We build the three systems a tree company actually needs — a real website, an instant text back when you miss a call, and reviews that stack up automatically. No miracle lead machine (nobody has one, including us). Just the leads you <b>already earn</b>, actually reaching your phone.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">Book A Free 15-Minute Audit</a>
+          <a href="#proof" class="link-inline">See a live client site →</a>
+        </div>
+        <div class="hero-assurance">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>No long-term contracts</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Live in about a week</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Keep your phone number</span>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="compare">
+          <div class="compare-head">
+            <span class="compare-title">Same company. Same reviews.</span>
+            <div class="toggle" role="tablist" aria-label="Before and after comparison">
+              <button type="button" class="tgl-before active" role="tab" aria-selected="true">Before</button>
+              <button type="button" class="tgl-after" role="tab" aria-selected="false">After</button>
+            </div>
+          </div>
+
+          <div class="search-card">
+            <div class="search-topbar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              tree service near me
+            </div>
+
+            <!-- BEFORE state -->
+            <div class="compare-state state-before">
+              <div class="result-row">
+                <div class="pin" style="background:rgba(224,87,77,0.14);">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E0574D" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+                </div>
+                <div>
+                  <div class="result-name">Ridge Tree &amp; Land Co.</div>
+                  <div class="result-meta"><span class="stars">★★★★★</span> 4.9 (61) · No website listed</div>
+                  <span class="tag tag-bad">EASY TO SCROLL PAST</span>
+                </div>
+              </div>
+              <div class="result-row">
+                <div class="pin" style="background:var(--card-alt);">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#90A4AE" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+                </div>
+                <div>
+                  <div class="result-name" style="color:var(--muted);">Competitor Tree Service</div>
+                  <div class="result-meta">Website · Booking form · Reviews</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- AFTER state -->
+            <div class="compare-state state-after" style="display:none;">
+              <div class="result-row">
+                <div class="pin" style="background:rgba(52,199,123,0.16);">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34C77B" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+                </div>
+                <div>
+                  <div class="result-name">Ridge Tree &amp; Land Co.</div>
+                  <div class="result-meta"><span class="stars">★★★★★</span> 4.9 (61) · ridgetreeco.com</div>
+                  <span class="tag tag-good">WEBSITE · QUOTE FORM · TEXT-BACK</span>
+                </div>
+              </div>
+              <div class="result-row">
+                <div class="pin" style="background:var(--card-alt);">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#90A4AE" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+                </div>
+                <div>
+                  <div class="result-name" style="color:var(--muted);">Competitor Tree Service</div>
+                  <div class="result-meta">Website · Booking form · Reviews</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="compare-caption">Illustrative example — same business, same reviews, different first impression.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="wrap stats-inner">
+      <div class="stat-cell reveal"><b>7×</b><span>more likely to win the lead when you respond within the hour</span></div>
+      <div class="stat-cell reveal"><b>&lt; 60 sec</b><span>for the text-back to reach a caller you just missed</span></div>
+      <div class="stat-cell reveal"><b>~1 week</b><span>from kickoff call to your site being live</span></div>
+      <div class="stat-cell reveal"><b>1 trade</b><span>we only work with tree service companies — nothing else</span></div>
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <section class="section-alt section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow" style="color:var(--red);">What's Costing You The Job</div>
+        <h2>The lead never even reaches your phone</h2>
+        <p>Most Florida tree companies aren't losing jobs on price or quality. They're losing them before the homeowner ever picks up the phone.</p>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card reveal">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/><line x1="17" y1="8" x2="22" y2="3" stroke="var(--red)"/></svg>
+          <h3>Missed calls go nowhere</h3>
+          <p>You're 60 feet up an oak or driving the chipper truck. The call rings out, no text goes back, and the homeowner calls the next company on the list — usually within minutes.</p>
+        </div>
+        <div class="problem-card reveal">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg>
+          <h3>No website, no first impression</h3>
+          <p>A Facebook page and a directory listing don't show a homeowner what you do, where you work, or why you're the safer choice for a 60-foot oak hanging over their roof.</p>
+        </div>
+        <div class="problem-card reveal">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <h3>Reviews trickle in, or don't</h3>
+          <p>You did the job right, but nobody thinks to leave a review a week later. Meanwhile the company with 40 more reviews keeps outranking you on the map.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="what-you-get">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">What You Get</div>
+        <h2>Three systems. One retainer. No guesswork.</h2>
+        <p>The same foundation we built for A Tree Surgeons in Tampa — built once, live in about a week, running every day after that.</p>
+      </div>
+
+      <!-- Feature 1: Website -->
+      <div class="feature-row reveal">
+        <div class="feature-copy">
+          <div class="feature-num">01 — THE WEBSITE</div>
+          <h3>A real website, built to turn searches into booked jobs</h3>
+          <p>Multi-page, mobile-first, and built around your actual services and service area — not a one-page template that looks like every other tree company in Florida.</p>
+          <div class="feature-stat"><b>Mobile-first</b><span>because homeowners search from their phone, usually standing in the yard</span></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>A page for every service you offer — removal, trimming, stump grinding, storm work</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Quote form that routes straight to your phone, not an inbox you never check</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>On-site SEO done properly, so Google can actually find and rank you</li>
+          </ul>
+          <a href="#contact" class="link-inline">Get your site built →</a>
+        </div>
+        <div class="feature-visual">
+          <div class="browser-mock">
+            <div class="browser-bar">
+              <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+              <span class="browser-url">yourtreecompany.com</span>
+            </div>
+            <div class="browser-body">
+              <div class="mock-nav">
+                <div class="bar" style="width:26%;height:12px;"></div>
+                <div class="bar" style="width:38%;height:8px;"></div>
+              </div>
+              <div class="bar" style="width:75%;height:18px;"></div>
+              <div class="bar short"></div>
+              <div class="bar" style="width:82%;"></div>
+              <div class="mock-form">
+                <div class="bar" style="width:100%;"></div>
+                <div class="bar" style="width:100%;"></div>
+                <div class="mock-btn">GET A FREE QUOTE</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2: Missed-call text back -->
+      <div class="feature-row flip reveal">
+        <div class="feature-copy">
+          <div class="feature-num">02 — MISSED-CALL TEXT-BACK</div>
+          <h3>Miss the call, keep the customer</h3>
+          <p>You can't answer the phone with a chainsaw running. The moment a call rings out, the caller gets a text from your number — so the conversation starts with you, not your competitor.</p>
+          <div class="feature-stat"><b>7×</b><span>more likely to qualify the lead when you respond within the hour</span></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Fires automatically, seconds after a missed call</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Every call, text, and form fill lands in one inbox you check from your truck</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Works nights, weekends, and mid-job — no app babysitting required</li>
+          </ul>
+          <a href="#contact" class="link-inline">Stop losing missed calls →</a>
+        </div>
+        <div class="feature-visual">
+          <div class="phone-mock">
+            <div class="phone-notch"></div>
+            <div class="missed-call">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 2v6h6"/><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div><b>Missed call · (813) 555-0142</b>Homeowner, 2:47 PM</div>
+            </div>
+            <div class="sms-time">2:47 PM — SENT AUTOMATICALLY</div>
+            <div class="sms sms-out">Sorry we missed you — we're up a tree right now 🌳 This is Ridge Tree &amp; Land. What can we help with? Reply here and we'll get you a quote today.</div>
+            <div class="sms sms-in">Oh great, thanks! Big oak leaning over my back fence, need someone to take a look this week.</div>
+            <div class="sms sms-out">We can do that. What's the address? I'll swing by tomorrow morning.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 3: Review engine -->
+      <div class="feature-row reveal">
+        <div class="feature-copy">
+          <div class="feature-num">03 — THE REVIEW ENGINE</div>
+          <h3>Reviews on autopilot, while the customer's still happy</h3>
+          <p>Every finished job triggers an automatic review request — timed for right after the crew leaves, when the yard looks great and your name is still top of mind. Then a gentle nudge if they forget.</p>
+          <div class="feature-stat"><b>1 tap</b><span>from your customer's text thread straight to your Google review page</span></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Automatic text &amp; email request after every closed job</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Polite follow-up if they don't respond the first time</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>No login, no friction for the customer — one tap and they're writing</li>
+          </ul>
+          <a href="#contact" class="link-inline">Start stacking reviews →</a>
+        </div>
+        <div class="feature-visual">
+          <div class="review-mock">
+            <div class="review-step">
+              <div class="rs-label">Job marked complete</div>
+              <p>Crew finishes the Hendersons' oak removal, 3:10 PM</p>
+            </div>
+            <div class="review-step">
+              <div class="rs-label">Auto-sent · 3:25 PM</div>
+              <p>"Thanks for trusting us with your oak today! If we did right by you, a quick Google review helps more than you'd think → g.page/r/ridge-tree"</p>
+            </div>
+            <div class="review-toast">
+              <div>
+                <span class="stars">★★★★★</span>
+                <b>New Google review</b>
+                <span>"Crew was on time, yard was spotless after…"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES GRID -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Built For Your Trade</div>
+        <h2>We speak tree service, not agency</h2>
+        <p>One trade, done properly. Your site gets a page for every kind of work you actually do — written by people who know the difference between a trim and a topping.</p>
+      </div>
+      <div class="services-grid reveal">
+        <div class="service-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22v-7"/><path d="M7 14l5-10 5 10z"/><path d="M9 9l3-5 3 5"/></svg>Tree Removal</div>
+        <div class="service-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9l6 6 6-6"/><path d="M6 15l6 6 6-6" opacity="0.4"/></svg>Tree Trimming</div>
+        <div class="service-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="14" r="6"/><path d="M12 8V3"/><path d="M9 4h6"/></svg>Stump Grinding</div>
+        <div class="service-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 20h18"/><path d="M5 20V9l6-5 8 7v9"/></svg>Land Clearing</div>
+        <div class="service-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg>Storm Cleanup</div>
+        <div class="service-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22V8"/><path d="M12 8c-4 0-6-3-6-6 3 0 6 1 6 6zM12 8c4 0 6-3 6-6-3 0-6 1-6 6z"/></svg>Palm Care</div>
+        <div class="service-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V8l8 4 8-4v13"/><path d="M12 12v9"/></svg>Crane Work</div>
+        <div class="service-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>24/7 Emergency</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how-it-works">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">How It Works</div>
+        <h2>From audit call to live site</h2>
+        <p>No 40-page proposals, no six-week discovery phase. Three steps, and you're not the company without a website anymore.</p>
+      </div>
+      <div class="process">
+        <div class="process-step reveal">
+          <svg class="ring-badge" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="30" stroke="#2A3841" stroke-width="1.5"/>
+            <circle cx="32" cy="32" r="21" stroke="#2A3841" stroke-width="1.5"/>
+            <circle cx="32" cy="32" r="12" stroke="#34C77B" stroke-width="2"/>
+            <text x="32" y="37" text-anchor="middle" font-family="Space Grotesk" font-size="14" fill="#F2F6F7" font-weight="600">1</text>
+          </svg>
+          <span class="duration">15 Minutes</span>
+          <h3>Free Audit Call</h3>
+          <p>We pull up your Google Business Profile live and show you exactly what a homeowner sees right now — and what's missing. If we can't help, we'll tell you that too.</p>
+          <div class="process-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <svg class="ring-badge" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="30" stroke="#2A3841" stroke-width="1.5"/>
+            <circle cx="32" cy="32" r="21" stroke="#34C77B" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="32" cy="32" r="12" stroke="#34C77B" stroke-width="2"/>
+            <text x="32" y="37" text-anchor="middle" font-family="Space Grotesk" font-size="14" fill="#F2F6F7" font-weight="600">2</text>
+          </svg>
+          <span class="duration">About A Week</span>
+          <h3>We Build It</h3>
+          <p>Send over your logo, photos, and service areas. We build the site and both automations, all set up around the phone number already painted on your truck.</p>
+          <div class="process-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <svg class="ring-badge" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="30" stroke="#34C77B" stroke-width="1.5" opacity="0.35"/>
+            <circle cx="32" cy="32" r="21" stroke="#34C77B" stroke-width="1.5" opacity="0.7"/>
+            <circle cx="32" cy="32" r="12" fill="#34C77B"/>
+            <text x="32" y="37" text-anchor="middle" font-family="Space Grotesk" font-size="14" fill="#0B1512" font-weight="700">3</text>
+          </svg>
+          <span class="duration">Launch Call</span>
+          <h3>Go Live</h3>
+          <p>We walk you through the site and the two things you actually need to know how to use. Then it runs — while you're out running jobs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ZENITH -->
+  <section class="section section-alt" id="why-us">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Why Zenith</div>
+        <h2>The un-agency agency</h2>
+        <p>Most agencies charge $1,500+/month, lock you into a year, and treat a tree company like a dentist's office with chainsaws. We don't.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg></div>
+          <h3>No long-term contracts</h3>
+          <p>Month to month. If the work isn't worth keeping, why would we need a contract to make you stay?</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <h3>Flat, honest pricing</h3>
+          <p>The price on this page is the price. No "custom quotes," no surprise line items three months in.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22v-7"/><path d="M7 14l5-10 5 10z"/><path d="M9 9l3-5 3 5"/></svg></div>
+          <h3>Tree services only</h3>
+          <p>We're not juggling roofers, dentists, and gyms. One trade means your site isn't a find-and-replace template.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <h3>Your number stays yours</h3>
+          <p>Everything runs on the number already on your trucks and cards. Nothing about how customers reach you changes.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <h3>One inbox for everything</h3>
+          <p>Calls, texts, quote forms, review replies — one place, on your phone. No tab-juggling between five apps.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></div>
+          <h3>Fast, then done</h3>
+          <p>Live in about a week. After launch it runs itself — we maintain it, you get back to running crews.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="section" id="proof">
+    <div class="wrap">
+      <div class="proof-card reveal">
+        <div class="proof-copy">
+          <div class="eyebrow">Live Client</div>
+          <h3>A Tree Surgeons Enterprise — Tampa, FL</h3>
+          <p>Our first Zenith Co. build. A working, multi-page website with missed-call text-back and automated review requests running on top of the phone number Fred already had — no number change, no disruption to how leads already reach him. Don't take our word for it; the site is live right now.</p>
+          <a href="https://atreesurgeons.net" target="_blank" rel="noopener" class="link-inline">View the live site atreesurgeons.net →</a>
+        </div>
+        <div class="proof-visual">
+          <div class="browser-mock">
+            <div class="browser-bar">
+              <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+              <span class="browser-url">atreesurgeons.net</span>
+            </div>
+            <div class="browser-body">
+              <div class="bar" style="width:70%;height:16px;"></div>
+              <div class="bar short"></div>
+              <div class="bar" style="width:80%;"></div>
+              <div class="mock-form">
+                <div class="bar" style="width:100%;"></div>
+                <div class="mock-btn">GET A FREE QUOTE</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGIONS -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Where We Work</div>
+        <h2>Built for Florida tree service companies</h2>
+        <p>We only work with tree service companies, so every site and automation is built around how your business actually runs — hurricane season included.</p>
+      </div>
+      <div class="region-pills reveal">
+        <span class="region-pill">Tampa Bay</span>
+        <span class="region-pill">Jacksonville</span>
+        <span class="region-pill">Treasure Coast</span>
+        <span class="region-pill">Naples</span>
+        <span class="region-pill">Bradenton</span>
+        <span class="region-pill">Daytona</span>
+        <span class="region-pill">Riverview</span>
+        <span class="region-pill">+ statewide</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Pricing</div>
+        <h2>One flat setup. One monthly retainer. That's the whole page.</h2>
+        <p>No tiers to decode, no "call for pricing." Here's the number.</p>
+      </div>
+      <div class="pricing-card reveal">
+        <span class="pricing-badge">Everything Included</span>
+        <span class="compare-title" style="color:var(--muted);">To get live</span>
+        <div class="pricing-row"><span class="amt">$500</span><span class="per">one-time setup</span></div>
+        <div class="pricing-plus">then $297/month — month to month, cancel anytime</div>
+        <ul class="pricing-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Multi-page website build, hosting &amp; on-site SEO</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Missed-call text-back, set up on your existing number</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Automated 5-star review requests with follow-up</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>One inbox for calls, texts &amp; quote forms</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Ongoing hosting, maintenance &amp; support</li>
+        </ul>
+        <div class="pricing-roi"><b>Do the math:</b> one average removal job runs $1,000+. If this system saves you one missed call a quarter, it's already paid for itself.</div>
+        <a href="#contact" class="btn btn-primary" style="width:100%;">Book A Free Audit</a>
+        <p class="pricing-terms">No long-term contract. If it's working, you'll stay — that's the deal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt" id="faq">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">FAQ</div>
+        <h2>Straight answers</h2>
+      </div>
+      <div class="faq reveal">
+        <div class="faq-item">
+          <button class="faq-q">Will this get me leads by itself?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="faq-a"><p>Honest answer: no system prints leads out of thin air, and anyone who promises that is selling you something. This is the foundation — it makes sure that when someone does look you up (from a truck they saw, a referral, or a search), what they find turns them into a booked job instead of a bounce. If you run ads or do outreach on top, this is what makes those dollars work harder.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Am I locked into a contract?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="faq-a"><p>No. It's month to month. If the system is making you money, you'll keep it — we'd rather earn that every month than trap you in a 12-month agreement.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">I already have a website. Can you work with it?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="faq-a"><p>If you've got a domain, we keep it — your web address doesn't change. We rebuild what lives at that address so it's fast, mobile-first, and wired into the text-back and review systems. Most "I already have a site" sites are exactly why we exist.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do I need to already have reviews?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="faq-a"><p>No. The review system starts working from day one — every job you close from here on triggers a request. If you've got existing reviews we'll showcase the best ones on the site too.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do I have to change my phone number?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="faq-a"><p>No. Text-back and call tracking route through the number you already give customers — the one on your trucks, cards, and Google listing. Nothing about how people reach you changes.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">How long until it's actually live?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="faq-a"><p>Once we have your logo, photos, and service details, most sites are ready within about a week. We walk you through everything on a short launch call before it goes live.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="final-cta reveal">
+        <h2>Stop losing jobs to a blank Google listing.</h2>
+        <p>15 minutes, no pitch deck. We'll pull up your listing live and show you exactly what a homeowner sees when they look you up right now.</p>
+        <a href="mailto:hello@zenithcomarketing.com?subject=Free%20Audit%20Request" class="btn btn-primary">Book A Free Audit</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>
+      <div class="foot-brand">ZENITH CO.</div>
+      <p class="foot-note">Websites, missed-call text-back, and review systems for Florida tree service companies. No contracts, no agency games.</p>
+    </div>
+    <div class="foot-links">
+      <div class="foot-col">
+        <h4>Site</h4>
+        <a href="#what-you-get">What You Get</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#why-us">Why Zenith</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="mailto:hello@zenithcomarketing.com">hello@zenithcomarketing.com</a>
+        <a href="#contact">Book a call</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js');
+
+  // reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:0.12});
+  revealEls.forEach(el=>io.observe(el));
+
+  // before/after toggle
+  const beforeBtn = document.querySelector('.tgl-before');
+  const afterBtn = document.querySelector('.tgl-after');
+  const beforeState = document.querySelector('.state-before');
+  const afterState = document.querySelector('.state-after');
+  function showBefore(){
+    beforeBtn.classList.add('active'); afterBtn.classList.remove('active');
+    beforeBtn.setAttribute('aria-selected','true'); afterBtn.setAttribute('aria-selected','false');
+    beforeState.style.display=''; afterState.style.display='none';
+  }
+  function showAfter(){
+    afterBtn.classList.add('active'); beforeBtn.classList.remove('active');
+    afterBtn.setAttribute('aria-selected','true'); beforeBtn.setAttribute('aria-selected','false');
+    afterState.style.display=''; beforeState.style.display='none';
+  }
+  beforeBtn.addEventListener('click', showBefore);
+  afterBtn.addEventListener('click', showAfter);
+  // auto-cycle once on load to draw the eye, then stop
+  let cycled = false;
+  setTimeout(()=>{ if(!cycled){ showAfter(); cycled = true; } }, 1400);
+
+  // faq accordion
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o=>{ o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight=null; });
+      if(!isOpen){ item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
+    });
+  });
+</script>
+
+</body>
+</html>
