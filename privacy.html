@@ -29,10 +29,16 @@
   h1{font-family:var(--font-display);font-size:34px;margin-bottom:8px;}
   .updated{color:var(--muted-dim);font-size:13.5px;margin-bottom:40px;}
   h2{font-family:var(--font-display);font-size:20px;margin:36px 0 12px;}
+  h3{font-family:var(--font-display);font-size:16px;margin:22px 0 10px;}
   p,li{color:var(--muted);font-size:15px;margin-bottom:14px;}
   ul{padding-left:22px;margin-bottom:14px;}
   li{margin-bottom:8px;}
   strong{color:var(--text);font-weight:600;}
+  table{width:100%;border-collapse:collapse;margin-bottom:18px;font-size:14px;}
+  th,td{text-align:left;padding:10px 12px;border:1px solid var(--line);color:var(--muted);vertical-align:top;}
+  th{color:var(--text);font-weight:600;background:var(--card);}
+  .toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:8px;}
+  .toc p{margin-bottom:6px;font-size:14px;}
   footer{border-top:1px solid var(--line);padding:28px;text-align:center;color:var(--muted-dim);font-size:13.5px;}
   footer a{color:var(--muted);margin:0 10px;}
 </style>
@@ -55,42 +61,109 @@
 
 <main>
   <h1>Privacy Policy</h1>
-  <p class="updated">Effective date: August 1, 2026</p>
+  <p class="updated">Effective date: August 1, 2026 · Last updated: August 1, 2026</p>
 
-  <p>This Privacy Policy describes how Zenith Co. ("we," "us," or "our") handles information in connection with the website zenithcomarketing.com (the "Site"). We keep this simple because our data practices are simple: we collect as little as possible.</p>
+  <p>This Privacy Policy describes how Zenith Co. ("Zenith," "we," "us," or "our") collects, uses, and discloses information when you visit zenithcomarketing.com (the "Site"), respond to our advertising, contact us, book a call, or use our products and services (the "Services"). It also describes your privacy rights and how to exercise them. By using the Site or Services, you agree to the practices described in this Policy.</p>
+  <p>Questions? Contact us at <a href="mailto:hello@zenithcomarketing.com">hello@zenithcomarketing.com</a>.</p>
 
-  <h2>Information you provide to us</h2>
-  <p>The Site does not currently include forms or account features. If you contact us — for example by emailing <a href="mailto:hello@zenithcomarketing.com">hello@zenithcomarketing.com</a> or booking a call — we receive the information you choose to share, such as your name, email address, phone number, business name, and the contents of your message. We use it to respond to you, provide our services, and manage our business relationship with you.</p>
+  <div class="toc">
+    <p><strong>Quick summary</strong></p>
+    <p>· We collect contact, business, billing, and online activity information.</p>
+    <p>· We use it to provide our Services, respond to inquiries, market to prospective clients, and run our business.</p>
+    <p>· We share it with service providers (such as our CRM and payment processor) — we do not sell personal information for money.</p>
+    <p>· Calls with us may be recorded, with notice at the start of the call.</p>
+    <p>· You can request access, correction, or deletion at any time — see "Your privacy rights."</p>
+  </div>
 
-  <h2>Information collected automatically</h2>
-  <p>Like most websites, the Site's hosting infrastructure may log standard technical information such as IP address, browser type, pages visited, and timestamps. The Site is hosted on GitHub Pages, operated by GitHub, Inc.; GitHub may collect visitor logs as described in its own privacy documentation. The Site also loads fonts from Google Fonts, which involves your browser sending a request (including your IP address) to Google's servers.</p>
-  <p>We may in the future use analytics tools (such as Google Analytics) or advertising platforms (such as Google Ads or Meta) to understand Site traffic and measure campaigns. These tools may use cookies or similar technologies. If we adopt them, we will update this policy.</p>
-
-  <h2>Text messaging (SMS)</h2>
-  <p>If you provide us your phone number — for example when requesting an audit, quote, or callback — you consent to receive text messages from us related to your inquiry and our services. Message frequency varies. Message and data rates may apply. You can opt out at any time by replying <strong>STOP</strong>, or get assistance by replying <strong>HELP</strong>.</p>
-  <p><strong>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</strong> Information sharing with subcontractors in support services, such as customer service, is permitted. All other use categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
-
-  <h2>How we share information</h2>
-  <p>We do not sell your personal information. We share information only with:</p>
+  <h2>1. Text messaging (SMS) policy</h2>
+  <p>When you provide your mobile number — for example when booking a call, requesting an audit, or becoming a client — you consent to receive SMS messages from us related to your inquiry and our Services, including notifications, account communications, and (only if you opt in) marketing messages.</p>
   <ul>
-    <li><strong>Service providers</strong> that help us operate — such as hosting, email, scheduling, and marketing-automation platforms — and only as needed to provide our services.</li>
-    <li><strong>Legal requirements</strong> — if required by law, regulation, or valid legal process.</li>
+    <li><strong>Opt out:</strong> reply <strong>STOP</strong> to any message at any time.</li>
+    <li><strong>Help:</strong> reply <strong>HELP</strong> for assistance.</li>
+    <li><strong>Frequency:</strong> message frequency varies based on your interactions with us.</li>
+    <li><strong>Cost:</strong> standard message and data rates apply per your carrier's terms.</li>
+  </ul>
+  <p><strong>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</strong> Text messaging originator opt-in data and consent will not be shared with any third parties, except that phone numbers may be processed by service providers (such as our SMS platform and CRM, GoHighLevel/LeadConnector) solely to deliver the messages you have consented to receive.</p>
+
+  <h2>2. Information we collect</h2>
+  <table>
+    <tr><th>Category</th><th>Examples</th></tr>
+    <tr><td>Identifiers</td><td>Name, email address, phone number, business name, IP address</td></tr>
+    <tr><td>Commercial information</td><td>Services purchased, billing history</td></tr>
+    <tr><td>Payment information</td><td>Processed by our third-party payment processor; we do not store full card numbers</td></tr>
+    <tr><td>Internet activity</td><td>Pages visited, referring URL, device and browser data collected by our hosting infrastructure and any analytics tools we use</td></tr>
+    <tr><td>Approximate location</td><td>City/state derived from IP address — we do not collect precise geolocation</td></tr>
+    <tr><td>Professional information</td><td>Trade, service area, business size</td></tr>
+    <tr><td>Communications</td><td>Emails, texts, form submissions, and recordings of sales, onboarding, and support calls (see Section 7)</td></tr>
+  </table>
+  <p>We do not knowingly collect sensitive categories such as precise geolocation, racial or ethnic origin, religious beliefs, health information, biometric data, or information about children under 16.</p>
+
+  <h2>3. Where we get information</h2>
+  <ul>
+    <li><strong>Directly from you</strong> — when you email us, book a call, fill out a form, or become a client.</li>
+    <li><strong>From your device</strong> — through our hosting provider's standard logs and, if we adopt them, cookies or analytics tools (see Section 6). The Site also loads fonts from Google Fonts, which involves your browser sending a request (including your IP address) to Google's servers.</li>
+    <li><strong>From service providers</strong> — including our CRM and booking platform (GoHighLevel/LeadConnector) and our payment processor.</li>
+    <li><strong>From advertising platforms</strong> — if you respond to an ad we run (such as Google or Meta ads).</li>
+    <li><strong>From publicly available sources</strong> — business directories, public records, and similar.</li>
   </ul>
 
-  <h2>Data retention</h2>
-  <p>We keep correspondence and business records only as long as needed for the purposes described above or as required by law, then delete them.</p>
+  <h2>4. How we use information</h2>
+  <ul>
+    <li><strong>Provide and operate the Services</strong> — onboarding, building and hosting your website, configuring automations, billing, and support.</li>
+    <li><strong>Sales and marketing</strong> — respond to inquiries, follow up on leads, and send promotional email or SMS where consented.</li>
+    <li><strong>Analytics and improvement</strong> — understand how the Site is used and improve our offering.</li>
+    <li><strong>Advertising measurement</strong> — measure the performance of any advertising campaigns we run.</li>
+    <li><strong>Quality assurance and training</strong> — review call recordings to improve our service.</li>
+    <li><strong>Security, fraud prevention, and legal compliance</strong> — protect the Site and Services and comply with applicable law.</li>
+  </ul>
 
-  <h2>Your choices and rights</h2>
-  <p>You may request access to, correction of, or deletion of personal information we hold about you by emailing <a href="mailto:hello@zenithcomarketing.com">hello@zenithcomarketing.com</a>. We will respond to reasonable requests within a reasonable time.</p>
+  <h2>5. How we share information</h2>
+  <table>
+    <tr><th>Recipient</th><th>Purpose</th></tr>
+    <tr><td>Service providers (e.g., GoHighLevel/LeadConnector, payment processor, hosting providers, email/SMS delivery services)</td><td>To deliver the Services on our behalf</td></tr>
+    <tr><td>Professional advisors</td><td>Legal, accounting, and compliance purposes</td></tr>
+    <tr><td>Successors</td><td>In connection with a merger, acquisition, financing, or sale of assets</td></tr>
+    <tr><td>Government authorities</td><td>When required by law, subpoena, or court order</td></tr>
+  </table>
+  <p><strong>We do not sell personal information for money.</strong> If we ever use advertising pixels or similar technologies that constitute "sharing" or a "sale" under state privacy laws, you may opt out at any time by emailing <a href="mailto:hello@zenithcomarketing.com">hello@zenithcomarketing.com</a> with the subject line "Opt Out of Sale/Sharing." We do not knowingly sell or share personal information of consumers under 16.</p>
 
-  <h2>Children</h2>
-  <p>The Site is a business-to-business service and is not directed to children under 13. We do not knowingly collect personal information from children.</p>
+  <h2>6. Cookies and tracking</h2>
+  <p>The Site does not currently set its own cookies or run session-replay technology. Our hosting infrastructure collects standard access logs. If we adopt analytics or advertising tools that use cookies or pixels, we will update this Policy. Most browsers let you block or delete cookies through their settings, and industry opt-outs are available at optout.aboutads.info.</p>
 
-  <h2>Changes to this policy</h2>
-  <p>We may update this policy from time to time. The effective date above reflects the latest revision. Material changes will be posted on this page.</p>
+  <h2>7. Call recording</h2>
+  <p>Sales, onboarding, and support calls with us may be recorded for quality assurance, training, recordkeeping, and dispute resolution. Where calls are recorded, we provide notice at the start of the call; by continuing after that notice, you consent to the recording. If you do not wish to be recorded, tell us at the start of the call and we will end or pause the recording. Recordings are accessible only to authorized personnel and our service providers.</p>
 
-  <h2>Contact</h2>
-  <p>Questions about this policy: <a href="mailto:hello@zenithcomarketing.com">hello@zenithcomarketing.com</a></p>
+  <h2>8. Data retention</h2>
+  <table>
+    <tr><th>Data type</th><th>Retention</th></tr>
+    <tr><td>Client account records</td><td>While the relationship is active, and thereafter as needed for legal, accounting, or legitimate business purposes, unless you request deletion</td></tr>
+    <tr><td>Marketing leads</td><td>Until you request deletion or opt out, or we determine the information is no longer needed</td></tr>
+    <tr><td>Billing and tax records</td><td>At least 7 years, as required by law</td></tr>
+    <tr><td>Call recordings</td><td>As needed for training, quality assurance, and dispute resolution</td></tr>
+  </table>
+  <p>After a deletion request is processed, we may retain limited information necessary to comply with legal obligations, resolve disputes, prevent fraud, and enforce our agreements.</p>
+
+  <h2>9. Your privacy rights</h2>
+  <p>Depending on the state where you live, you may have some or all of the following rights: to <strong>know/access</strong> the personal information we hold about you; to <strong>delete</strong> it; to <strong>correct</strong> it; to receive it in a <strong>portable</strong> format; to <strong>opt out</strong> of sale, sharing, or targeted advertising; to <strong>limit use of sensitive personal information</strong>; to <strong>non-discrimination</strong> for exercising your rights; and, in certain states, to <strong>appeal</strong> a denied request.</p>
+  <p>To exercise any right, email <a href="mailto:hello@zenithcomarketing.com">hello@zenithcomarketing.com</a> with your request. We will acknowledge it promptly, verify your identity by confirming details we already have on file, and respond within 45 days (with a further 45-day extension where permitted, in which case we will notify you). Your first request in any 12-month period is free. You may designate an authorized agent with written, signed authorization. If we deny your request and your state provides an appeal right, you may appeal by replying to our decision with the subject line "Appeal."</p>
+
+  <h2>10. Children's privacy</h2>
+  <p>The Site and Services are business-to-business and are not directed to children under 16. We do not knowingly collect personal information from children. If you believe we have, contact us and we will delete it.</p>
+
+  <h2>11. Data security</h2>
+  <p>We use reasonable administrative, technical, and physical safeguards to protect personal information, including encryption in transit and access controls. No method of transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+  <h2>12. International visitors</h2>
+  <p>The Site is operated from the United States. If you access it from outside the U.S., your information will be transferred to and processed in the United States.</p>
+
+  <h2>13. Third-party links</h2>
+  <p>The Site links to third-party websites (including client websites we showcase and our booking calendar). This Policy does not apply to those third parties; we encourage you to read their privacy policies.</p>
+
+  <h2>14. Changes to this policy</h2>
+  <p>We may update this Policy from time to time. The "Last updated" date above reflects the most recent change, and material changes will be posted on this page. We review this Policy at least once every 12 months.</p>
+
+  <h2>15. Contact us</h2>
+  <p>Zenith Co.<br>Email: <a href="mailto:hello@zenithcomarketing.com">hello@zenithcomarketing.com</a><br>Web: zenithcomarketing.com</p>
 </main>
 
 <footer>
