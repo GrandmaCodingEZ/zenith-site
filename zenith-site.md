@@ -31,7 +31,7 @@ We build the three systems a tree company actually needs — a real website, an 
 **Trust chips:**
 - ✓ No long-term contracts
 - ✓ Live in about a week
-- ✓ Keep your phone number
+- ✓ No new phone to carry
 
 **Hero visual:** Before/After toggle of a Google search result ("tree service near me")
 - *Before:* Ridge Tree & Land Co. — ★★★★★ 4.9 (61) · No website listed — tag: EASY TO SCROLL PAST
@@ -95,7 +95,7 @@ Multi-page, mobile-first, and built around your actual services and service area
 ### 02 — Missed-Call Text-Back
 **Miss the call, keep the customer**
 
-You can't answer the phone with a chainsaw running. The moment a call rings out, the caller gets a text from your number — so the conversation starts with you, not your competitor.
+You can't answer the phone with a chainsaw running. The moment a call rings out, the caller instantly gets a text back — so the conversation starts with you, not your competitor.
 
 > **7×** — more likely to qualify the lead when you respond within the hour
 
@@ -150,7 +150,7 @@ No 40-page proposals, no six-week discovery phase. Three steps, and you're not t
 We pull up your Google Business Profile live and show you exactly what a homeowner sees right now — and what's missing. If we can't help, we'll tell you that too.
 
 ### 2. We Build It — *about a week*
-Send over your logo, photos, and service areas. We build the site and both automations, all set up around the phone number already painted on your truck.
+Send over your logo, photos, and service areas. We build the site and both automations on a smart business line that forwards straight to the phone you already answer.
 
 ### 3. Go Live — *launch call*
 We walk you through the site and the two things you actually need to know how to use. Then it runs — while you're out running jobs.
@@ -168,7 +168,7 @@ Most agencies charge $1,500+/month, lock you into a year, and treat a tree compa
 - **No long-term contracts** — Month to month. If the work isn't worth keeping, why would we need a contract to make you stay?
 - **Flat, honest pricing** — The price on this page is the price. No "custom quotes," no surprise line items three months in.
 - **Tree services only** — We're not juggling roofers, dentists, and gyms. One trade means your site isn't a find-and-replace template.
-- **Your number stays yours** — Everything runs on the number already on your trucks and cards. Nothing about how customers reach you changes.
+- **No new phone, no new habits** — A smart line forwards straight to the phone you already answer. The number on your trucks keeps working — the system just catches what you miss.
 - **One inbox for everything** — Calls, texts, quote forms, review replies — one place, on your phone. No tab-juggling between five apps.
 - **Fast, then done** — Live in about a week. After launch it runs itself — we maintain it, you get back to running crews.
 
@@ -180,7 +180,7 @@ Most agencies charge $1,500+/month, lock you into a year, and treat a tree compa
 
 ## A Tree Surgeons Enterprise — Tampa, FL
 
-Our first Zenith Co. build. A working, multi-page website with missed-call text-back and automated review requests running on top of the phone number Fred already had — no number change, no disruption to how leads already reach him. Don't take our word for it; the site is live right now.
+Our first Zenith Co. build. A working, multi-page website with missed-call text-back and automated review requests forwarding straight to the phone Fred already answers — no disruption to how leads reach him. Don't take our word for it; the site is live right now.
 
 **Link:** [View the live site atreesurgeons.net →](https://atreesurgeons.net)
 
@@ -212,7 +212,7 @@ No tiers to decode, no "call for pricing." Here's the number.
 **then $297/month** — month to month, cancel anytime
 
 - Multi-page website build, hosting & on-site SEO
-- Missed-call text-back, set up on your existing number
+- Missed-call text-back, wired to the phone you already answer
 - Automated 5-star review requests with follow-up
 - One inbox for calls, texts & quote forms
 - Ongoing hosting, maintenance & support
@@ -240,7 +240,7 @@ If you've got a domain, we keep it — your web address doesn't change. We rebui
 No. The review system starts working from day one — every job you close from here on triggers a request. If you've got existing reviews we'll showcase the best ones on the site too.
 
 **Do I have to change my phone number?**
-No. Text-back and call tracking route through the number you already give customers — the one on your trucks, cards, and Google listing. Nothing about how people reach you changes.
+No — the phone in your pocket and how you answer it stay exactly the same. We set up a business line that forwards straight to it; that line goes on your website and Google listing so every call is tracked and a missed one triggers the text-back. The number painted on your trucks keeps working exactly like it always has.
 
 **How long until it's actually live?**
 Once we have your logo, photos, and service details, most sites are ready within about a week. We walk you through everything on a short launch call before it goes live.
