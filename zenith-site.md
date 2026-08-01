@@ -253,7 +253,7 @@ Once we have your logo, photos, and service details, most sites are ready within
 
 15 minutes, no pitch deck. We'll pull up your listing live and show you exactly what a homeowner sees when they look you up right now.
 
-**CTA:** Book A Free Audit → mailto:hello@zenithcomarketing.com?subject=Free%20Audit%20Request
+**CTA:** Book A Free Audit → https://api.leadconnectorhq.com/widget/booking/wwSfiboHnDVi0pwtHMM2 (opens booking calendar in new tab)
 
 ---
 
