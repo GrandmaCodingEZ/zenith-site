@@ -283,6 +283,55 @@
     border-left:1px solid var(--line);
   }
 
+  /* ---------- work grid (live builds) ---------- */
+  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .work-card{
+    --accent:var(--green);
+    --accent-glow:rgba(52,199,123,0.16);
+    display:flex;flex-direction:column;
+    background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;
+    transition:border-color .25s, transform .25s;
+  }
+  .work-card:hover{border-color:var(--accent);transform:translateY(-3px);}
+  .work-card.is-pool{--accent:#3FA9E0;--accent-glow:rgba(63,169,224,0.16);}
+  .work-frame{
+    background:linear-gradient(160deg,#141F25,#0D1417);
+    border-bottom:1px solid var(--line);padding:20px 20px 0;
+  }
+  .work-frame .browser-mock{max-width:none;box-shadow:0 18px 34px -18px rgba(0,0,0,0.6);border-radius:10px 10px 0 0;border-bottom:none;}
+  .work-shot{padding:16px 16px 20px;}
+  .work-shot .bar{height:9px;border-radius:4px;background:var(--line);margin-bottom:9px;}
+  .work-shot .bar.accent{background:var(--accent);opacity:0.55;}
+  .work-shot .bar.short{width:52%;}
+  .work-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:12px 0 4px;}
+  .work-tiles span{height:26px;border-radius:5px;background:var(--card-alt);}
+  .work-tiles span:nth-child(2){background:var(--card);}
+  .work-cta{
+    height:28px;border-radius:6px;background:var(--accent);opacity:0.85;margin-top:12px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:10px;font-weight:700;color:#0B1512;letter-spacing:0.06em;
+  }
+  .work-body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1;}
+  .work-meta{display:flex;align-items:center;gap:10px;margin-bottom:11px;}
+  .work-badge{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:10.5px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);
+  }
+  .work-badge::before{
+    content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);
+    box-shadow:0 0 0 3px var(--accent-glow);
+  }
+  .work-place{font-size:11.5px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted-dim);font-weight:600;}
+  .work-body h3{font-size:19px;margin-bottom:9px;}
+  .work-body p{font-size:14px;color:var(--muted);margin-bottom:16px;}
+  .work-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px;}
+  .work-tags span{
+    font-size:11.5px;color:var(--muted);padding:5px 11px;
+    border:1px solid var(--line);border-radius:999px;
+  }
+  .work-link{margin-top:auto;font-size:14px;font-weight:600;color:var(--accent);}
+  .work-card:hover .work-link{text-decoration:underline;text-underline-offset:3px;}
+
   /* ---------- regions ---------- */
   .region-pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
   .region-pill{
@@ -364,6 +413,7 @@
     .process-connector{display:none;}
     .proof-card{grid-template-columns:1fr;}
     .proof-visual{border-left:none;border-top:1px solid var(--line);}
+    .work-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto;}
     .section{padding:64px 0;}
     .section-head h2{font-size:28px;}
     .foot-inner{flex-direction:column;}
@@ -406,7 +456,7 @@
         <p class="lead lead-mobile">A real website, instant text-back when you miss a call, and reviews on autopilot — so the leads you <b>already earn</b> actually reach your phone.</p>
         <div class="hero-ctas">
           <a href="https://api.leadconnectorhq.com/widget/booking/wwSfiboHnDVi0pwtHMM2" target="_blank" rel="noopener" class="btn btn-primary">Book A Free 15-Minute Audit</a>
-          <a href="#proof" class="link-inline">See a live client site →</a>
+          <a href="#proof" class="link-inline">See live client sites →</a>
         </div>
         <div class="hero-assurance">
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>No long-term contracts</span>
@@ -750,30 +800,94 @@
   <!-- PROOF -->
   <section class="section" id="proof">
     <div class="wrap">
-      <div class="proof-card reveal">
-        <div class="proof-copy">
-          <div class="eyebrow">Live Client</div>
-          <h3>A Tree Surgeons Enterprise — Tampa, FL</h3>
-          <p>Our first Zenith Co. build. A working, multi-page website with missed-call text-back and automated review requests forwarding straight to the phone Fred already answers — no disruption to how leads reach him. Don't take our word for it; the site is live right now.</p>
-          <a href="https://atreesurgeons.net" target="_blank" rel="noopener" class="link-inline">View the live site atreesurgeons.net →</a>
-        </div>
-        <div class="proof-visual">
-          <div class="browser-mock">
-            <div class="browser-bar">
-              <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
-              <span class="browser-url">atreesurgeons.net</span>
-            </div>
-            <div class="browser-body">
-              <div class="bar" style="width:70%;height:16px;"></div>
-              <div class="bar short"></div>
-              <div class="bar" style="width:80%;"></div>
-              <div class="mock-form">
-                <div class="bar" style="width:100%;"></div>
-                <div class="mock-btn">GET A FREE QUOTE</div>
+      <div class="section-head reveal">
+        <div class="eyebrow">Our Work</div>
+        <h2>Real sites. Real owners. Live right now.</h2>
+        <p>No mockups, no "concepts," no portfolio of work we did for someone else's agency. Click any of them — they're online today, taking calls and quote requests for the people who own them.</p>
+      </div>
+      <div class="work-grid">
+
+        <a class="work-card reveal" href="https://atreesurgeons.net" target="_blank" rel="noopener">
+          <div class="work-frame">
+            <div class="browser-mock">
+              <div class="browser-bar">
+                <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+                <span class="browser-url">atreesurgeons.net</span>
+              </div>
+              <div class="work-shot">
+                <div class="bar accent" style="width:68%;height:14px;"></div>
+                <div class="bar short"></div>
+                <div class="bar" style="width:80%;"></div>
+                <div class="work-cta">GET A FREE QUOTE</div>
               </div>
             </div>
           </div>
-        </div>
+          <div class="work-body">
+            <div class="work-meta">
+              <span class="work-badge">Live</span>
+              <span class="work-place">Tampa, FL</span>
+            </div>
+            <h3>A Tree Surgeons Enterprise</h3>
+            <p>Our first Zenith Co. build. Multi-page site with missed-call text-back and automated review requests forwarding straight to the phone Fred already answers — no disruption to how leads reach him.</p>
+            <div class="work-tags"><span>Website</span><span>Missed-call text-back</span><span>Review engine</span></div>
+            <span class="work-link">Visit atreesurgeons.net →</span>
+          </div>
+        </a>
+
+        <a class="work-card reveal" href="https://kingstreecare.com" target="_blank" rel="noopener">
+          <div class="work-frame">
+            <div class="browser-mock">
+              <div class="browser-bar">
+                <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+                <span class="browser-url">kingstreecare.com</span>
+              </div>
+              <div class="work-shot">
+                <div class="bar accent" style="width:74%;height:14px;"></div>
+                <div class="bar short"></div>
+                <div class="work-tiles"><span></span><span></span><span></span></div>
+                <div class="work-cta">GET A FREE ESTIMATE</div>
+              </div>
+            </div>
+          </div>
+          <div class="work-body">
+            <div class="work-meta">
+              <span class="work-badge">Live</span>
+              <span class="work-place">Palm Bay, FL</span>
+            </div>
+            <h3>King's Tree Service</h3>
+            <p>Built for Bill and Jenniffer, two owner-operators covering Brevard County. Photo-upload estimate form so they can price a job before they drive it, a real gallery of climbing and rigging work, and storm-damage calls flagged as priority.</p>
+            <div class="work-tags"><span>Website</span><span>Photo estimate form</span><span>Job gallery</span><span>Storm priority</span></div>
+            <span class="work-link">Visit kingstreecare.com →</span>
+          </div>
+        </a>
+
+        <a class="work-card is-pool reveal" href="https://glassymountainpools.com" target="_blank" rel="noopener">
+          <div class="work-frame">
+            <div class="browser-mock">
+              <div class="browser-bar">
+                <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+                <span class="browser-url">glassymountainpools.com</span>
+              </div>
+              <div class="work-shot">
+                <div class="bar accent" style="width:62%;height:14px;"></div>
+                <div class="bar short"></div>
+                <div class="work-tiles"><span></span><span></span><span></span></div>
+                <div class="work-cta">REQUEST A FREE 3D DESIGN</div>
+              </div>
+            </div>
+          </div>
+          <div class="work-body">
+            <div class="work-meta">
+              <span class="work-badge">Live</span>
+              <span class="work-place">Greenville, SC</span>
+            </div>
+            <h3>Glassy Mountain Pools</h3>
+            <p>Outside the trade, on purpose — proof the system isn't a tree template with the words swapped. Custom pool builds across Upstate SC, with a project gallery, service pages, and a quote form that routes straight to Jeremy's phone.</p>
+            <div class="work-tags"><span>Website</span><span>Project gallery</span><span>Quote routing</span></div>
+            <span class="work-link">Visit glassymountainpools.com →</span>
+          </div>
+        </a>
+
       </div>
     </div>
   </section>

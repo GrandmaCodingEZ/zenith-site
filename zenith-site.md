@@ -176,15 +176,34 @@ Most agencies charge $1,500+/month, lock you into a year, and treat a tree compa
 
 ---
 
-## Proof / Live Client
+## Proof / Our Work
 
-**Eyebrow:** Live Client
+**Eyebrow:** Our Work
 
-## A Tree Surgeons Enterprise — Tampa, FL
+## Real sites. Real owners. Live right now.
 
-Our first Zenith Co. build. A working, multi-page website with missed-call text-back and automated review requests forwarding straight to the phone Fred already answers — no disruption to how leads reach him. Don't take our word for it; the site is live right now.
+No mockups, no "concepts," no portfolio of work we did for someone else's agency. Click any of them — they're online today, taking calls and quote requests for the people who own them.
 
-**Link:** [View the live site atreesurgeons.net →](https://atreesurgeons.net)
+### A Tree Surgeons Enterprise — Tampa, FL
+
+Our first Zenith Co. build. Multi-page site with missed-call text-back and automated review requests forwarding straight to the phone Fred already answers — no disruption to how leads reach him.
+
+**Tags:** Website · Missed-call text-back · Review engine
+**Link:** [Visit atreesurgeons.net →](https://atreesurgeons.net)
+
+### King's Tree Service — Palm Bay, FL
+
+Built for Bill and Jenniffer, two owner-operators covering Brevard County. Photo-upload estimate form so they can price a job before they drive it, a real gallery of climbing and rigging work, and storm-damage calls flagged as priority.
+
+**Tags:** Website · Photo estimate form · Job gallery · Storm priority
+**Link:** [Visit kingstreecare.com →](https://kingstreecare.com)
+
+### Glassy Mountain Pools — Greenville, SC
+
+Outside the trade, on purpose — proof the system isn't a tree template with the words swapped. Custom pool builds across Upstate SC, with a project gallery, service pages, and a quote form that routes straight to Jeremy's phone.
+
+**Tags:** Website · Project gallery · Quote routing
+**Link:** [Visit glassymountainpools.com →](https://glassymountainpools.com)
 
 ---
 
