@@ -76,7 +76,7 @@ You did the job right, but nobody thinks to leave a review a week later. Meanwhi
 
 **Eyebrow:** What You Get
 
-## Three systems. One retainer. No guesswork.
+## Four systems. Pick your retainer. No guesswork.
 
 The same foundation we built for A Tree Surgeons in Tampa — built once, live in about a week, running every day after that.
 
@@ -94,7 +94,7 @@ Multi-page, mobile-first, and built around your actual services and service area
 *CTA: Get your site built →*
 *Visual: browser mock of a tree company site with a "GET A FREE QUOTE" form*
 
-### 02 — Missed-Call Text-Back
+### 02 — Missed-Call Text-Back  *[tag: Included in: Growth]*
 **Miss the call, keep the customer**
 
 You can't answer the phone with a chainsaw running. The moment a call rings out, the caller instantly gets a text back — so the conversation starts with you, not your competitor.
@@ -125,6 +125,20 @@ Every finished job triggers an automatic review request — timed for right afte
 
 *CTA: Start stacking reviews →*
 *Visual: flow — "Job marked complete" → auto-sent review request text → "New Google review ★★★★★" toast*
+
+### 04 — The Receptionist  *[tag: Pro Plan]*
+**Every missed call, answered live — not texted**
+
+When a call comes in and no one picks up, your AI receptionist answers instead of letting it ring out. It knows your hours, your pricing, and your services, books the appointment on the spot, and confirms it by text right after.
+
+> **Live, not scripted** — sounds like a real front-desk person, not a phone tree
+
+- Answers in your business's voice, trained on your services and pricing
+- Books appointments directly onto your calendar during the call
+- Sends a confirmation text automatically once it's booked
+
+*CTA: See the Pro plan → (links to #pricing)*
+*Visual: phone call UI — "Missed → Answered by Ava" · live transcript ("Hi, thanks for calling — how can I help today?") · "Appointment booked ✓" toast*
 
 ---
 
@@ -223,13 +237,24 @@ Tampa Bay · Jacksonville · Treasure Coast · Naples · Bradenton · Daytona ·
 
 **Eyebrow:** Pricing
 
-## One flat setup. One monthly retainer. That's the whole page.
+## One website. Three ways to run it. Pick your level of automation.
 
-No tiers to decode, no "call for pricing." Here's the number.
+Every plan gets a real, multi-page website. The difference is how much of the follow-up runs itself.
 
-**[Badge: Everything Included]**
+### Starter — **[Badge: Website Only]**
 
-**To get live: $500** one-time setup
+**$250** one-time setup
+**then $97/month** — month to month, cancel anytime
+
+- Multi-page website build, hosting & on-site SEO
+- Quote form routed straight to your phone
+- Ongoing hosting, maintenance & support
+
+**CTA:** Book A Free Audit
+
+### Growth — **[Badge: Everything Included]** · *Most Popular (center card, highlighted)*
+
+**$500** one-time setup
 **then $297/month** — month to month, cancel anytime
 
 - Multi-page website build, hosting & on-site SEO
@@ -239,6 +264,22 @@ No tiers to decode, no "call for pricing." Here's the number.
 - Ongoing hosting, maintenance & support
 
 > **Do the math:** one average removal job runs $1,000+. If this system saves you one missed call a quarter, it's already paid for itself.
+
+**CTA:** Book A Free Audit
+
+### Pro — **[Badge: Full Automation]**
+
+**$750** one-time setup
+**then $499/month** — month to month, cancel anytime
+
+- Multi-page website build, hosting & on-site SEO
+- AI voice receptionist answers every missed call live and books the appointment
+- Confirmation text sent automatically after every booked call
+- Automated 5-star review requests with follow-up
+- One inbox for calls, texts & quote forms
+- Ongoing hosting, maintenance & support
+
+> **Most missed calls never call back.** A live AI receptionist answers on the first ring, every time — no voicemail, no waiting on a text reply.
 
 **CTA:** Book A Free Audit
 

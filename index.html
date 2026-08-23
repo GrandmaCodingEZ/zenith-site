@@ -350,7 +350,7 @@
   .pricing-badge{
     position:absolute;top:-13px;left:50%;transform:translateX(-50%);
     background:var(--green);color:#0B1512;font-size:11.5px;font-weight:700;
-    letter-spacing:0.08em;text-transform:uppercase;padding:5px 16px;border-radius:999px;
+    letter-spacing:0.08em;text-transform:uppercase;padding:5px 16px;border-radius:999px;white-space:nowrap;
   }
   .pricing-row{display:flex;align-items:baseline;justify-content:center;gap:10px;margin:8px 0 4px;}
   .pricing-row .amt{font-family:var(--font-display);font-size:42px;font-weight:700;}
@@ -365,6 +365,32 @@
   }
   .pricing-roi b{color:var(--amber);}
   .pricing-terms{font-size:12.5px;color:var(--muted-dim);margin-top:14px;}
+
+  /* pricing tiers */
+  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;}
+  .pricing-grid .pricing-card{max-width:none;margin:0;padding:38px 26px 30px;display:flex;flex-direction:column;}
+  .pricing-card.featured{border-color:var(--green-dim);margin-top:-14px;box-shadow:0 28px 56px -26px rgba(0,0,0,0.65);}
+  .pricing-popular{
+    font-family:var(--font-display);font-size:12px;font-weight:700;color:var(--green);
+    letter-spacing:0.12em;text-transform:uppercase;margin-bottom:10px;
+  }
+  .plan-name{font-family:var(--font-display);font-size:19px;font-weight:700;margin-bottom:8px;}
+  .pricing-grid .pricing-row .amt{font-size:34px;}
+  .pricing-grid .pricing-list{flex:1;margin-bottom:22px;}
+  .pricing-grid .pricing-roi{margin-bottom:22px;}
+  .pricing-cta{margin-top:auto;}
+  .pricing-grid + .pricing-terms{text-align:center;margin-top:30px;}
+
+  /* plan tags */
+  .plan-tag{
+    display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+    padding:5px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);margin-bottom:14px;
+  }
+  .plan-tag.is-pro{background:rgba(52,199,123,0.08);border-color:rgba(52,199,123,0.25);color:var(--green);}
+
+  /* receptionist mock (reuses phone + step + toast) */
+  .missed-call.answered svg{color:var(--green);}
+  .phone-mock .review-step{margin-bottom:12px;}
 
   /* ---------- faq ---------- */
   .faq{max-width:760px;margin:0 auto;}
@@ -412,6 +438,8 @@
     .feature-row.flip .feature-visual{order:2;}
     .services-grid{grid-template-columns:repeat(2,1fr);}
     .process{grid-template-columns:1fr;gap:36px;}
+    .pricing-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto;gap:34px;}
+    .pricing-card.featured{margin-top:0;}
     .process-connector{display:none;}
     .proof-card{grid-template-columns:1fr;}
     .proof-visual{border-left:none;border-top:1px solid var(--line);}
@@ -582,7 +610,7 @@
     <div class="wrap">
       <div class="section-head reveal">
         <div class="eyebrow">What You Get</div>
-        <h2>Three systems. One retainer. No guesswork.</h2>
+        <h2>Four systems. Pick your retainer. No guesswork.</h2>
         <p>The same foundation we built for A Tree Surgeons in Tampa — built once, live in about a week, running every day after that.</p>
       </div>
 
@@ -627,6 +655,7 @@
       <!-- Feature 2: Missed-call text back -->
       <div class="feature-row flip reveal">
         <div class="feature-copy">
+          <span class="plan-tag">Included in: Growth</span>
           <div class="feature-num">02 — MISSED-CALL TEXT-BACK</div>
           <h3>Miss the call, keep the customer</h3>
           <p>You can't answer the phone with a chainsaw running. The moment a call rings out, the caller instantly gets a text back — so the conversation starts with you, not your competitor.</p>
@@ -682,6 +711,43 @@
                 <span class="stars">★★★★★</span>
                 <b>New Google review</b>
                 <span>"Crew was on time, yard was spotless after…"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 4: AI receptionist -->
+      <div class="feature-row flip reveal">
+        <div class="feature-copy">
+          <span class="plan-tag is-pro">Pro Plan</span>
+          <div class="feature-num">04 — THE RECEPTIONIST</div>
+          <h3>Every missed call, answered live — not texted</h3>
+          <p>When a call comes in and no one picks up, your AI receptionist answers instead of letting it ring out. It knows your hours, your pricing, and your services, books the appointment on the spot, and confirms it by text right after.</p>
+          <div class="feature-stat"><b>Live, not scripted</b><span>sounds like a real front-desk person, not a phone tree</span></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Answers in your business's voice, trained on your services and pricing</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Books appointments directly onto your calendar during the call</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Sends a confirmation text automatically once it's booked</li>
+          </ul>
+          <a href="#pricing" class="link-inline">See the Pro plan →</a>
+        </div>
+        <div class="feature-visual">
+          <div class="phone-mock">
+            <div class="phone-notch"></div>
+            <div class="missed-call answered">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div><b>Missed → Answered by Ava</b>(813) 555-0142 · 2:47 PM</div>
+            </div>
+            <div class="sms-time">LIVE TRANSCRIPT</div>
+            <div class="review-step">
+              <div class="rs-label">Ava · Zenith Receptionist</div>
+              <p>"Hi, thanks for calling — how can I help today?"</p>
+            </div>
+            <div class="review-toast">
+              <div>
+                <b>Appointment booked ✓</b>
+                <span>Tue 9:00 AM — oak removal estimate</span>
               </div>
             </div>
           </div>
@@ -924,25 +990,62 @@
     <div class="wrap">
       <div class="section-head reveal">
         <div class="eyebrow">Pricing</div>
-        <h2>One flat setup. One monthly retainer. That's the whole page.</h2>
-        <p>No tiers to decode, no "call for pricing." Here's the number.</p>
+        <h2>One website. Three ways to run it. Pick your level of automation.</h2>
+        <p>Every plan gets a real, multi-page website. The difference is how much of the follow-up runs itself.</p>
       </div>
-      <div class="pricing-card reveal">
-        <span class="pricing-badge">Everything Included</span>
-        <span class="compare-title" style="color:var(--muted);">To get live</span>
-        <div class="pricing-row"><span class="amt">$500</span><span class="per">one-time setup</span></div>
-        <div class="pricing-plus">then $297/month — month to month, cancel anytime</div>
-        <ul class="pricing-list">
+      <div class="pricing-grid">
+        <div class="pricing-card reveal">
+          <span class="pricing-badge">Website Only</span>
+          <div class="plan-name">Starter</div>
+          <div class="pricing-row"><span class="amt">$250</span><span class="per">one-time setup</span></div>
+          <div class="pricing-plus">then $97/month — month to month, cancel anytime</div>
+          <ul class="pricing-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Multi-page website build, hosting &amp; on-site SEO</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Quote form routed straight to your phone</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Ongoing hosting, maintenance &amp; support</li>
+          </ul>
+          <div class="pricing-cta">
+            <a href="https://calendly.com/zacharyspencer/zenith-co-consultation" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;">Book A Free Audit</a>
+          </div>
+        </div>
+        <div class="pricing-card featured reveal">
+          <span class="pricing-badge">Everything Included</span>
+          <div class="pricing-popular">Most Popular</div>
+          <div class="plan-name">Growth</div>
+          <div class="pricing-row"><span class="amt">$500</span><span class="per">one-time setup</span></div>
+          <div class="pricing-plus">then $297/month — month to month, cancel anytime</div>
+          <ul class="pricing-list">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Multi-page website build, hosting &amp; on-site SEO</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Missed-call text-back, wired to the phone you already answer</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Automated 5-star review requests with follow-up</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>One inbox for calls, texts &amp; quote forms</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Ongoing hosting, maintenance &amp; support</li>
-        </ul>
-        <div class="pricing-roi"><b>Do the math:</b> one average removal job runs $1,000+. If this system saves you one missed call a quarter, it's already paid for itself.</div>
-        <a href="https://calendly.com/zacharyspencer/zenith-co-consultation" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;">Book A Free Audit</a>
-        <p class="pricing-terms">No long-term contract. If it's working, you'll stay — that's the deal.</p>
+          </ul>
+          <div class="pricing-roi"><b>Do the math:</b> one average removal job runs $1,000+. If this system saves you one missed call a quarter, it's already paid for itself.</div>
+          <div class="pricing-cta">
+            <a href="https://calendly.com/zacharyspencer/zenith-co-consultation" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;">Book A Free Audit</a>
+          </div>
+        </div>
+        <div class="pricing-card reveal">
+          <span class="pricing-badge">Full Automation</span>
+          <div class="plan-name">Pro</div>
+          <div class="pricing-row"><span class="amt">$750</span><span class="per">one-time setup</span></div>
+          <div class="pricing-plus">then $499/month — month to month, cancel anytime</div>
+          <ul class="pricing-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Multi-page website build, hosting &amp; on-site SEO</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>AI voice receptionist answers every missed call live and books the appointment</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Confirmation text sent automatically after every booked call</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Automated 5-star review requests with follow-up</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>One inbox for calls, texts &amp; quote forms</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Ongoing hosting, maintenance &amp; support</li>
+          </ul>
+          <div class="pricing-roi"><b>Most missed calls never call back.</b> A live AI receptionist answers on the first ring, every time — no voicemail, no waiting on a text reply.</div>
+          <div class="pricing-cta">
+            <a href="https://calendly.com/zacharyspencer/zenith-co-consultation" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;">Book A Free Audit</a>
+          </div>
+        </div>
       </div>
+      <p class="pricing-terms">No long-term contract. If it's working, you'll stay — that's the deal.</p>
     </div>
   </section>
 
