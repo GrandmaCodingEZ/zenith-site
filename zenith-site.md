@@ -13,7 +13,7 @@
 - Our Work
 - Pricing
 - FAQ
-- **CTA button:** Book A Call → GHL booking calendar, new tab (every booking CTA site-wide links directly to the calendar)
+- **CTA button:** Book A Call → Calendly booking calendar, new tab (every booking CTA site-wide links directly to the calendar)
 
 ---
 
@@ -274,7 +274,7 @@ Once we have your logo, photos, and service details, most sites are ready within
 
 15 minutes, no pitch deck. We'll pull up your listing live and show you exactly what a homeowner sees when they look you up right now.
 
-**CTA:** Book A Free Audit → https://api.leadconnectorhq.com/widget/booking/wwSfiboHnDVi0pwtHMM2 (opens booking calendar in new tab)
+**CTA:** Book A Free Audit → https://calendly.com/zacharyspencer/zenith-co-consultation (opens booking calendar in new tab)
 
 ---
 
