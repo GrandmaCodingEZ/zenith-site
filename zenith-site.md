@@ -1,329 +1,74 @@
-# Zenith Co. — Site Copy
+# Zenith Co. site: how to finish and edit it
 
-> Websites & Marketing Systems for Florida Tree Service Companies
-> Meta description: Zenith Co. builds websites, missed-call text-back, and 5-star review systems for Florida tree service companies. Flat pricing, no long-term contracts, live in about a week.
+The homepage (`index.html`) is a one-page sales letter with one job: get a
+qualified tree company owner to book a call. It's plain HTML, CSS, and a
+little JavaScript, with no build step. Push to `main` and GitHub Pages
+serves it at zenithcomarketing.com.
 
----
+## 1. Fill in the blanks
 
-## Navigation
+Open `index.html`, find `var SITE = {` near the bottom, and set:
 
-- What You Get
-- How It Works
-- Why Zenith
-- Our Work
-- Pricing
-- FAQ
-- **CTA button:** Book A Call → Calendly booking calendar, new tab (every booking CTA site-wide links directly to the calendar)
+| Key            | What it is                                   | Example              |
+|----------------|----------------------------------------------|----------------------|
+| `fitThreshold` | Who qualifies                                | `"2 or more crews"`  |
+| `minAdSpend`   | Minimum monthly ad spend                     | `"$2,000"`           |
+| `startTime`    | How long until ads go live                   | `"7 days"`           |
+| `founderName`  | Your name                                    |                      |
 
----
+Until a key is set, the page shows a dashed `[blank]` box wherever it's used.
+For search engines, you can also type the values straight into the HTML (search
+for `data-fill="..."`).
 
-## Hero
+The form choices for crews and ad budget are in `crewOptions` and
+`budgetOptions`, in the same block. Match the budget ranges to your minimum.
 
-**Eyebrow:** For Florida Tree Service Companies
+## 2. Drop in photos and screenshots
 
-# Five-star work shouldn't be invisible on Google.
+Each slot shows a labeled placeholder until its file exists. Save the file at
+the path and it covers the placeholder by itself. No code changes needed.
 
-We build the three systems a tree company actually needs — a real website, an instant text back when you miss a call, and reviews that stack up automatically. No miracle lead machine (nobody has one, including us). Just the leads you **already earn**, actually reaching your phone.
+| File                          | What                                         |
+|-------------------------------|----------------------------------------------|
+| `assets/photos/crew.jpg`      | Real tree work, landscape, 1600px+ wide      |
+| `assets/photos/founder.jpg`   | Founder photo, portrait 4:5                  |
+| `assets/work/atreesurgeons.jpg` | Homepage screenshot, 1600 x 1000           |
+| `assets/work/kingstreecare.jpg` | Homepage screenshot, 1600 x 1000           |
 
-*Mobile (≤600px) shows a shorter lead instead:* A real website, instant text-back when you miss a call, and reviews on autopilot — so the leads you **already earn** actually reach your phone.
+Keep JPGs under about 300 KB each so the page stays fast on a phone.
 
-**Primary CTA:** Book A Free 15-Minute Audit
-**Secondary link:** See a live client site →
+These slots need an HTML edit when you have the content:
 
-**Trust chips:**
-- ✓ No long-term contracts
-- ✓ Live in about a week
-- ✓ No new phone to carry
+- **Founder video** (hero): replace the `.ph` box inside `<div class="media video">`
+  with a YouTube/Vimeo `<iframe>` or a `<video>` tag.
+- **Owner testimonials** (Proof): replace each `.quote` box with the owner's
+  real words or video.
+- **First ads case study** (Proof): replace `.slot-empty` once a client has real numbers.
 
-**Hero visual:** Before/After toggle of a Google search result ("tree service near me")
-- *Before:* Ridge Tree & Land Co. — ★★★★★ 4.9 (61) · No website listed — tag: EASY TO SCROLL PAST
-- *After:* Ridge Tree & Land Co. — ★★★★★ 4.9 (61) · ridgetreeco.com — tag: WEBSITE · QUOTE FORM · TEXT-BACK
-- Caption: Illustrative example — same business, same reviews, different first impression.
+## 3. Booking
 
----
+Every "See If You Qualify" button opens a 5-question form. Then it shows the
+Calendly calendar for `zenith-co-consultation`.
 
-## Stats Bar
+- The answers go to Calendly as the prefilled answer to the event's **first
+  custom question** (`a1`). In Calendly, make question 1 a multi-line text box
+  such as "About your company". If you don't want that, set
+  `calendlyAnswerParam: null`.
+- To also send every submission to your CRM, set `formEndpoint` to a webhook
+  URL, such as a GoHighLevel inbound webhook. It receives JSON with company,
+  service_area, crews, monthly_ad_budget, phone, sms_consent, page, and
+  submitted_at.
+- If JavaScript is off, the buttons link straight to Calendly.
 
-| Stat | Label |
-|---|---|
-| **7×** | more likely to win the lead when you respond within the hour |
-| **< 60 sec** | for the text-back to reach a caller you just missed |
-| **~1 week** | from kickoff call to your site being live |
-| **1 trade** | we only work with tree service companies — nothing else |
+## 4. Copy rules used on the page
 
----
+Short sentences in the owner's words. No em dashes. No "no X, no Y" lists. Say
+each thing once. No invented numbers, testimonials, or clients. Green is only
+for buttons, amber only for the key number in the calculator, and navy only for
+the calculator band and the footer.
 
-## Problem Section
+## 5. Legal pages
 
-**Eyebrow:** What's Costing You The Job
-
-## The lead never even reaches your phone
-
-Most Florida tree companies aren't losing jobs on price or quality. They're losing them before the homeowner ever picks up the phone.
-
-### Missed calls go nowhere
-You're 60 feet up an oak or driving the chipper truck. The call rings out, no text goes back, and the homeowner calls the next company on the list — usually within minutes.
-
-### No website, no first impression
-A Facebook page and a directory listing don't show a homeowner what you do, where you work, or why you're the safer choice for a 60-foot oak hanging over their roof.
-
-### Reviews trickle in, or don't
-You did the job right, but nobody thinks to leave a review a week later. Meanwhile the company with 40 more reviews keeps outranking you on the map.
-
----
-
-## What You Get (Features)
-
-**Eyebrow:** What You Get
-
-## Four systems. Pick your retainer. No guesswork.
-
-The same foundation we built for A Tree Surgeons in Tampa — built once, live in about a week, running every day after that.
-
-### 01 — The Website
-**A real website, built to turn searches into booked jobs**
-
-Multi-page, mobile-first, and built around your actual services and service area — not a one-page template that looks like every other tree company in Florida.
-
-> **Mobile-first** — because homeowners search from their phone, usually standing in the yard
-
-- A page for every service you offer — removal, trimming, stump grinding, storm work
-- Quote form that routes straight to your phone, not an inbox you never check
-- On-site SEO done properly, so Google can actually find and rank you
-
-*CTA: Get your site built →*
-*Visual: browser mock of a tree company site with a "GET A FREE QUOTE" form*
-
-### 02 — Missed-Call Text-Back  *[tag: Included in: Growth]*
-**Miss the call, keep the customer**
-
-You can't answer the phone with a chainsaw running. The moment a call rings out, the caller instantly gets a text back — so the conversation starts with you, not your competitor.
-
-> **7×** — more likely to qualify the lead when you respond within the hour
-
-- Fires automatically, seconds after a missed call
-- Every call, text, and form fill lands in one inbox you check from your truck
-- Works nights, weekends, and mid-job — no app babysitting required
-
-*CTA: Stop losing missed calls →*
-*Visual: phone mock —*
-> Missed call · (813) 555-0142 — Homeowner, 2:47 PM
-> **Auto-text (2:47 PM):** "Sorry we missed you — we're up a tree right now 🌳 This is Ridge Tree & Land. What can we help with? Reply here and we'll get you a quote today."
-> **Reply:** "Oh great, thanks! Big oak leaning over my back fence, need someone to take a look this week."
-> **You:** "We can do that. What's the address? I'll swing by tomorrow morning."
-
-### 03 — The Review Engine
-**Reviews on autopilot, while the customer's still happy**
-
-Every finished job triggers an automatic review request — timed for right after the crew leaves, when the yard looks great and your name is still top of mind. Then a gentle nudge if they forget.
-
-> **1 tap** — from your customer's text thread straight to your Google review page
-
-- Automatic text & email request after every closed job
-- Polite follow-up if they don't respond the first time
-- No login, no friction for the customer — one tap and they're writing
-
-*CTA: Start stacking reviews →*
-*Visual: flow — "Job marked complete" → auto-sent review request text → "New Google review ★★★★★" toast*
-
-### 04 — The Receptionist  *[tag: Pro Plan]*
-**Every missed call, answered live — not texted**
-
-When a call comes in and no one picks up, your AI receptionist answers instead of letting it ring out. It knows your hours, your pricing, and your services, books the appointment on the spot, and confirms it by text right after.
-
-> **Live, not scripted** — sounds like a real front-desk person, not a phone tree
-
-- Answers in your business's voice, trained on your services and pricing
-- Books appointments directly onto your calendar during the call
-- Sends a confirmation text automatically once it's booked
-
-*CTA: See the Pro plan → (links to #pricing)*
-*Visual: phone call UI — "Missed → Answered by Ava" · live transcript ("Hi, thanks for calling — how can I help today?") · "Appointment booked ✓" toast*
-
----
-
-## Services Grid
-
-**Eyebrow:** Built For Your Trade
-
-## We speak tree service, not agency
-
-One trade, done properly. Your site gets a page for every kind of work you actually do — written by people who know the difference between a trim and a topping.
-
-Tree Removal · Tree Trimming · Stump Grinding · Land Clearing · Storm Cleanup · Palm Care · Crane Work · 24/7 Emergency
-
----
-
-## How It Works
-
-**Eyebrow:** How It Works
-
-## From audit call to live site
-
-No 40-page proposals, no six-week discovery phase. Three steps, and you're not the company without a website anymore.
-
-### 1. Free Audit Call — *15 minutes*
-We pull up your Google Business Profile live and show you exactly what a homeowner sees right now — and what's missing. If we can't help, we'll tell you that too.
-
-### 2. We Build It — *about a week*
-Send over your logo, photos, and service areas. We build the site and both automations on a smart business line that forwards straight to the phone you already answer.
-
-### 3. Go Live — *launch call*
-We walk you through the site and the two things you actually need to know how to use. Then it runs — while you're out running jobs.
-
----
-
-## Why Zenith
-
-**Eyebrow:** Why Zenith
-
-## The un-agency agency
-
-Most agencies charge $1,500+/month, lock you into a year, and treat a tree company like a dentist's office with chainsaws. We don't.
-
-- **No long-term contracts** — Month to month. If the work isn't worth keeping, why would we need a contract to make you stay?
-- **Flat, honest pricing** — The price on this page is the price. No "custom quotes," no surprise line items three months in.
-- **Tree services only** — We're not juggling roofers, dentists, and gyms. One trade means your site isn't a find-and-replace template.
-- **No new phone, no new habits** — A smart line forwards straight to the phone you already answer. The number on your trucks keeps working — the system just catches what you miss.
-- **One inbox for everything** — Calls, texts, quote forms, review replies — one place, on your phone. No tab-juggling between five apps.
-- **Fast, then done** — Live in about a week. After launch it runs itself — we maintain it, you get back to running crews.
-
----
-
-## Proof / Our Work
-
-**Eyebrow:** Our Work
-
-## Real sites. Real owners. Live right now.
-
-No mockups, no "concepts," no portfolio of work we did for someone else's agency. Click any of them — they're online today, taking calls and quote requests for the people who own them.
-
-### A Tree Surgeons Enterprise — Tampa, FL
-
-Our first Zenith Co. build. Multi-page site with missed-call text-back and automated review requests forwarding straight to the phone Fred already answers — no disruption to how leads reach him.
-
-**Tags:** Website · Missed-call text-back · Review engine
-**Link:** [Visit atreesurgeons.net →](https://atreesurgeons.net)
-
-### King's Tree Service — Palm Bay, FL
-
-Built for Bill and Jenniffer, two owner-operators covering Brevard County. Photo-upload estimate form so they can price a job before they drive it, a real gallery of climbing and rigging work, and storm-damage calls flagged as priority.
-
-**Tags:** Website · Photo estimate form · Job gallery · Storm priority
-**Link:** [Visit kingstreecare.com →](https://kingstreecare.com)
-
-### Glassy Mountain Pools — Greenville, SC
-
-Outside the trade, on purpose — proof the system isn't a tree template with the words swapped. Custom pool builds across Upstate SC, with a project gallery, service pages, and a quote form that routes straight to Jeremy's phone.
-
-**Tags:** Website · Project gallery · Quote routing
-**Link:** [Visit glassymountainpools.com →](https://glassymountainpools.com)
-
----
-
-## Where We Work
-
-**Eyebrow:** Where We Work
-
-## Built for Florida tree service companies
-
-We only work with tree service companies, so every site and automation is built around how your business actually runs — hurricane season included.
-
-Tampa Bay · Jacksonville · Treasure Coast · Naples · Bradenton · Daytona · Riverview · + statewide
-
----
-
-## Pricing
-
-**Eyebrow:** Pricing
-
-## One website. Three ways to run it. Pick your level of automation.
-
-Every plan gets a real, multi-page website. The difference is how much of the follow-up runs itself.
-
-### Starter — **[Badge: Website Only]**
-
-**$250** one-time setup
-**then $97/month** — month to month, cancel anytime
-
-- Multi-page website build, hosting & on-site SEO
-- Quote form routed straight to your phone
-- Ongoing hosting, maintenance & support
-
-**CTA:** Book A Free Audit
-
-### Growth — **[Badge: Everything Included]** · *Most Popular (center card, highlighted)*
-
-**$500** one-time setup
-**then $297/month** — month to month, cancel anytime
-
-- Multi-page website build, hosting & on-site SEO
-- Missed-call text-back, wired to the phone you already answer
-- Automated 5-star review requests with follow-up
-- One inbox for calls, texts & quote forms
-- Ongoing hosting, maintenance & support
-
-> **Do the math:** one average removal job runs $1,000+. If this system saves you one missed call a quarter, it's already paid for itself.
-
-**CTA:** Book A Free Audit
-
-### Pro — **[Badge: Full Automation]**
-
-**$750** one-time setup
-**then $499/month** — month to month, cancel anytime
-
-- Multi-page website build, hosting & on-site SEO
-- AI voice receptionist answers every missed call live and books the appointment
-- Confirmation text sent automatically after every booked call
-- Automated 5-star review requests with follow-up
-- One inbox for calls, texts & quote forms
-- Ongoing hosting, maintenance & support
-
-> **Most missed calls never call back.** A live AI receptionist answers on the first ring, every time — no voicemail, no waiting on a text reply.
-
-**CTA:** Book A Free Audit
-
-*No long-term contract. If it's working, you'll stay — that's the deal.*
-
----
-
-## FAQ
-
-**Will this get me leads by itself?**
-Honest answer: no system prints leads out of thin air, and anyone who promises that is selling you something. This is the foundation — it makes sure that when someone does look you up (from a truck they saw, a referral, or a search), what they find turns them into a booked job instead of a bounce. If you run ads or do outreach on top, this is what makes those dollars work harder.
-
-**Am I locked into a contract?**
-No. It's month to month. If the system is making you money, you'll keep it — we'd rather earn that every month than trap you in a 12-month agreement.
-
-**I already have a website. Can you work with it?**
-If you've got a domain, we keep it — your web address doesn't change. We rebuild what lives at that address so it's fast, mobile-first, and wired into the text-back and review systems. Most "I already have a site" sites are exactly why we exist.
-
-**Do I need to already have reviews?**
-No. The review system starts working from day one — every job you close from here on triggers a request. If you've got existing reviews we'll showcase the best ones on the site too.
-
-**Do I have to change my phone number?**
-No — the phone in your pocket and how you answer it stay exactly the same. We set up a business line that forwards straight to it; that line goes on your website and Google listing so every call is tracked and a missed one triggers the text-back. The number painted on your trucks keeps working exactly like it always has.
-
-**How long until it's actually live?**
-Once we have your logo, photos, and service details, most sites are ready within about a week. We walk you through everything on a short launch call before it goes live.
-
----
-
-## Final CTA
-
-## Stop losing jobs to a blank Google listing.
-
-15 minutes, no pitch deck. We'll pull up your listing live and show you exactly what a homeowner sees when they look you up right now.
-
-**CTA:** Book A Free Audit → https://calendly.com/zacharyspencer/zenith-co-consultation (opens booking calendar in new tab)
-
----
-
-## Footer
-
-**ZENITH CO.**
-Websites, missed-call text-back, and review systems for Florida tree service companies. No contracts, no agency games.
-
-**Site:** What You Get · How It Works · Why Zenith · Pricing · FAQ
-**Contact:** hello@zenithcomarketing.com · Book a call
-**Legal:** Privacy Policy · Terms of Service
+`privacy.html` and `terms.html` got the new look. Their text was not changed.
+The Terms still describe the old website and automation services and monthly
+billing, so they need updating for the per-shown-estimate offer.
