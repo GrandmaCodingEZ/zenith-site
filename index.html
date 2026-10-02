@@ -506,7 +506,7 @@
           <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Established tree companies in Florida</span></li>
           <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Owners running crews with steady work</span></li>
           <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg><span><span class="blank" data-fill="fitThreshold">[revenue or crew-size threshold]</span></span></li>
-          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Room to put <span class="blank" data-fill="minAdSpend">[$___]</span>+ a month into ads</span></li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Room to put <span data-fill="minAdSpend">$50</span>+ a month into ads</span></li>
         </ul>
       </div>
       <div class="card fit-card no">
@@ -724,7 +724,7 @@
       </details>
       <details>
         <summary>Who pays for the ads?</summary>
-        <div class="a"><p>You do, straight to the ad platform. Plan on at least <span class="blank" data-fill="minAdSpend">[$___]</span> a month. You can see every dollar in the ad account.</p></div>
+        <div class="a"><p>You do, straight to the ad platform. Plan on at least <span data-fill="minAdSpend">$50</span> a month. You can see every dollar in the ad account.</p></div>
       </details>
       <details>
         <summary>What counts as shown?</summary>
@@ -752,7 +752,7 @@
     <div class="card final">
       <div>
         <h2 id="final-h">Keep your crews <span class="accent">booked.</span></h2>
-        <p class="who">If you run an established Florida tree company with crews, <span class="blank" data-fill="fitThreshold">[revenue or crew-size threshold]</span>, and <span class="blank" data-fill="minAdSpend">[$___]</span>+ a month for ads, answer five questions and pick a time to talk.</p>
+        <p class="who">If you run an established Florida tree company with crews, <span class="blank" data-fill="fitThreshold">[revenue or crew-size threshold]</span>, and <span data-fill="minAdSpend">$50</span>+ a month for ads, answer five questions and pick a time to talk.</p>
         <a class="btn" href="https://calendly.com/zacharyspencer/zenith-co-consultation" data-book>See If You Qualify<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
       </div>
       <div class="founder">
@@ -842,13 +842,13 @@
    ===================================================================== */
 var SITE = {
   fitThreshold: null,  // e.g. "2 or more crews" or "$500k+ a year in revenue"
-  minAdSpend: null,    // e.g. "$2,000"
+  minAdSpend: '$50',
   startTime: null,     // e.g. "7 days"
   founderName: 'Zachary Spencer',
 
   // Form choices. Edit freely.
   crewOptions: ['None yet, just me', '1 crew', '2 crews', '3 to 4 crews', '5 or more crews'],
-  budgetOptions: ['Under $1,000', '$1,000 to $2,500', '$2,500 to $5,000', 'More than $5,000', 'Not sure yet'],
+  budgetOptions: ['Under $50', '$50 to $250', '$250 to $1,000', 'More than $1,000', 'Not sure yet'],
 
   calendly: 'https://calendly.com/zacharyspencer/zenith-co-consultation',
   // Form answers are passed to Calendly as the prefilled answer to the FIRST
