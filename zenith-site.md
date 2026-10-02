@@ -12,7 +12,7 @@ Open `index.html`, find `var SITE = {` near the bottom, and set:
 | Key            | What it is                                   | Example              |
 |----------------|----------------------------------------------|----------------------|
 | `fitThreshold` | Who qualifies                                | `"2 or more crews"`  |
-| `minAdSpend`   | Minimum monthly ad spend                     | `"$2,000"`           |
+| `minAdSpend`   | Minimum daily ad spend (set to $50)          | `"$50"`              |
 | `startTime`    | How long until ads go live                   | `"7 days"`           |
 | `founderName`  | Your name                                    |                      |
 
@@ -22,6 +22,8 @@ for `data-fill="..."`).
 
 The form choices for crews and ad budget are in `crewOptions` and
 `budgetOptions`, in the same block. Match the budget ranges to your minimum.
+The page says "a day" after the ad spend amount; the form asks for a monthly
+budget, so its ranges start at $1,500 (about $50 a day).
 
 ## 2. Images and the slots still empty
 
