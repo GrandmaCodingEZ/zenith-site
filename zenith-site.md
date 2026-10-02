@@ -39,7 +39,7 @@ Still to add:
 |------|-----|
 | Founder video (hero) | Replace the `.vph` block inside `<div class="video">` with a YouTube/Vimeo `<iframe>` or a `<video>` tag. |
 | Founder photo (closing section) | Save as `assets/photos/founder.jpg`. It fills the box by itself. |
-| Owner testimonials (Proof) | Replace each `.quote-slot` box with the owner's real words or video. |
+| Owner testimonials (Proof) | King's is done: a `figure.testimonial` with `assets/video/kings-testimonial.mp4`. For A Tree Surgeons, replace the dashed `.v-ph` box with the same kind of `<video>` and update the caption. Convert phone videos to MP4 (H.264) first; iPhone .mov files are HEVC and HDR, which many browsers can't play. |
 | First ads case study (Proof) | Replace the `.case` box once a client has real numbers. |
 
 ## 3. Booking

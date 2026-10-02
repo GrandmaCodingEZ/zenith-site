@@ -309,9 +309,18 @@
   .w-body h3{font-size:21px;margin-bottom:12px;}
   .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;}
   .tags span{font-size:12.5px;color:var(--muted);border:1px solid var(--line-2);border-radius:2px;padding:4px 9px;}
-  .quote-slot{margin:0 0 20px;padding:16px;border:1px dashed var(--line-2);border-radius:2px;background:var(--bg-alt);font-size:14.5px;color:var(--muted);}
-  .quote-slot b{display:block;margin:10px 0 4px;color:var(--text);font-size:16px;font-weight:600;}
-  .quote-slot p{margin:0;}
+  .testimonial{display:grid;grid-template-columns:130px 1fr;gap:16px;align-items:center;margin:0 0 20px;padding:12px;background:var(--bg-alt);border:1px solid var(--line);border-radius:2px;}
+  .testimonial video,.v-ph{display:block;width:130px;height:auto;aspect-ratio:9/16;border-radius:2px;}
+  .testimonial video{object-fit:cover;background:#000;}
+  .v-ph{display:flex;align-items:center;justify-content:center;padding:10px;text-align:center;border:1px dashed var(--line-2);font-size:12.5px;color:var(--muted-dim);}
+  .testimonial .ph{margin-bottom:8px;}
+  .testimonial figcaption{font-size:14.5px;color:var(--muted);line-height:1.5;}
+  .testimonial .t-label{display:block;margin-bottom:8px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);}
+  .testimonial b{display:block;margin-bottom:4px;font-size:17px;font-weight:600;line-height:1.3;color:var(--text);}
+  @media (min-width:960px){
+    .testimonial{grid-template-columns:180px 1fr;gap:24px;padding:14px;}
+    .testimonial video,.v-ph{width:180px;}
+  }
   .visit{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--green);text-decoration:none;}
   .visit:hover{text-decoration:underline;text-underline-offset:3px;}
   .visit svg{width:14px;height:14px;}
@@ -621,10 +630,11 @@
           <p class="w-meta"><span class="live">Live</span><span class="place">Tampa, FL</span></p>
           <h3>A Tree Surgeons Enterprise</h3>
           <div class="tags"><span>Website</span><span>Missed-call text back</span><span>Review requests</span></div>
-          <div class="quote-slot">
-            <span class="ph">Placeholder</span>
-            <p><b>Owner testimonial goes here.</b>A written quote or short video from Fred, in his own words.</p>
-          </div>
+          <!-- OWNER TESTIMONIAL: replace the .v-ph box with a <video> like the King's card, and update the caption. -->
+          <figure class="testimonial">
+            <div class="v-ph">Video goes here</div>
+            <figcaption><span class="ph">Placeholder</span><b>Owner testimonial goes here.</b>A short video from Fred, in his own words.</figcaption>
+          </figure>
           <a class="visit" href="https://atreesurgeons.net" target="_blank" rel="noopener">Visit atreesurgeons.net<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
         </div>
       </article>
@@ -640,10 +650,12 @@
           <p class="w-meta"><span class="live">Live</span><span class="place">Palm Bay, FL</span></p>
           <h3>King's Tree Service</h3>
           <div class="tags"><span>Website</span><span>Photo estimate form</span><span>Job gallery</span></div>
-          <div class="quote-slot">
-            <span class="ph">Placeholder</span>
-            <p><b>Owner testimonial goes here.</b>A written quote or short video from Bill and Jenniffer, in their own words.</p>
-          </div>
+          <figure class="testimonial">
+            <video controls playsinline preload="none" poster="assets/video/kings-testimonial.jpg" width="540" height="960" aria-label="Testimonial video from King's Tree Service">
+              <source src="assets/video/kings-testimonial.mp4" type="video/mp4">
+            </video>
+            <figcaption><span class="t-label">Owner testimonial</span><b>Hear it from King's Tree Service.</b>1 minute. Tap play for sound.</figcaption>
+          </figure>
           <a class="visit" href="https://kingstreecare.com" target="_blank" rel="noopener">Visit kingstreecare.com<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
         </div>
       </article>
