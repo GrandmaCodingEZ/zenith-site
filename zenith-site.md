@@ -13,7 +13,7 @@ Open `index.html`, find `var SITE = {` near the bottom, and set:
 |----------------|----------------------------------------------|----------------------|
 | `fitThreshold` | Who qualifies. Lowercase; it reads after "a tree company with" and is capitalized in the list | `"two or more crews ready for more work"` |
 | `minAdSpend`   | Minimum daily ad spend (set to $50)          | `"$50"`              |
-| `startTime`    | How long until ads go live                   | `"7 days"`           |
+| `startTime`    | How long until ads go live (set)             | `"1 to 2 weeks"`     |
 | `founderName`  | Your name                                    |                      |
 
 Until a key is set, the page shows a dashed `[blank]` box wherever it's used.
