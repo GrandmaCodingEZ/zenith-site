@@ -23,27 +23,25 @@ for `data-fill="..."`).
 The form choices for crews and ad budget are in `crewOptions` and
 `budgetOptions`, in the same block. Match the budget ranges to your minimum.
 
-## 2. Drop in photos and screenshots
+## 2. Photos, screenshots, and the slots still empty
 
-Each slot shows a labeled placeholder until its file exists. Save the file at
-the path and it covers the placeholder by itself. No code changes needed.
+The tree work photos come from the two client sites' own repos
+(`kings-tree-service` and `fred-tree-service-site`), compressed to WebP in
+`assets/photos/`. Each one is captioned or credited as that client's crew.
+**Confirm with both owners that you can use their photos and screenshots on
+your site.**
 
-| File                          | What                                         |
-|-------------------------------|----------------------------------------------|
-| `assets/photos/crew.jpg`      | Real tree work, landscape, 1600px+ wide      |
-| `assets/photos/founder.jpg`   | Founder photo, portrait 4:5                  |
-| `assets/work/atreesurgeons.jpg` | Homepage screenshot, 1600 x 1000           |
-| `assets/work/kingstreecare.jpg` | Homepage screenshot, 1600 x 1000           |
+The screenshots in `assets/work/` were rendered from each client site's source
+code in its repo, not from the live site. Retake them if the live sites change.
 
-Keep JPGs under about 300 KB each so the page stays fast on a phone.
+Still to add:
 
-These slots need an HTML edit when you have the content:
-
-- **Founder video** (hero): replace the `.ph` box inside `<div class="media video">`
-  with a YouTube/Vimeo `<iframe>` or a `<video>` tag.
-- **Owner testimonials** (Proof): replace each `.quote` box with the owner's
-  real words or video.
-- **First ads case study** (Proof): replace `.slot-empty` once a client has real numbers.
+| Slot | How |
+|------|-----|
+| Founder video (hero) | Replace the `.vph` block inside `<div class="video">` with a YouTube/Vimeo `<iframe>` or a `<video>` tag. |
+| Founder photo (closing section) | Save as `assets/photos/founder.jpg`. It fills the box by itself. |
+| Owner testimonials (Proof) | Replace each `.slot` box with the owner's real words or video. |
+| First ads case study (Proof) | Replace the `.slot.case` box once a client has real numbers. |
 
 ## 3. Booking
 
@@ -63,12 +61,14 @@ Calendly calendar for `zenith-co-consultation`.
 ## 4. Copy rules used on the page
 
 Short sentences in the owner's words. No em dashes. No "no X, no Y" lists. Say
-each thing once. No invented numbers, testimonials, or clients. Green is only
-for buttons, amber only for the key number in the calculator, and navy only for
-the calculator band and the footer.
+each thing once. No invented numbers, testimonials, or clients.
+
+Colors are green and blue: deep navy for the header, hero, demo, and footer;
+cool light gray and white for reading sections; green (#34C77B) for buttons,
+highlights, and the calculator band.
 
 ## 5. Legal pages
 
-`privacy.html` and `terms.html` got the new look. Their text was not changed.
+`privacy.html` and `terms.html` use the same colors and fonts. Their text was not changed.
 The Terms still describe the old website and automation services and monthly
 billing, so they need updating for the per-shown-estimate offer.
