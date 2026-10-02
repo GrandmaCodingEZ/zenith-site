@@ -23,16 +23,13 @@ for `data-fill="..."`).
 The form choices for crews and ad budget are in `crewOptions` and
 `budgetOptions`, in the same block. Match the budget ranges to your minimum.
 
-## 2. Photos, screenshots, and the slots still empty
+## 2. Images and the slots still empty
 
-The tree work photos come from the two client sites' own repos
-(`kings-tree-service` and `fred-tree-service-site`), compressed to WebP in
-`assets/photos/`. Each one is captioned or credited as that client's crew.
-**Confirm with both owners that you can use their photos and screenshots on
-your site.**
-
-The screenshots in `assets/work/` were rendered from each client site's source
-code in its repo, not from the live site. Retake them if the live sites change.
+The page uses no photos from clients or anyone else. The visuals are drawn in
+HTML: the founder video box, a sample calendar week (labeled as an
+illustrative example), the test lead phone, and simple browser outlines for
+the two client sites. The share image (`assets/og-image.png`) follows the same
+rule.
 
 Still to add:
 
@@ -63,19 +60,17 @@ Calendly calendar for `zenith-co-consultation`.
 Short sentences in the owner's words. No em dashes. No "no X, no Y" lists. Say
 each thing once. No invented numbers, testimonials, or clients.
 
-Colors are green and blue: deep navy for the header, hero, demo, the deal,
-the calculator, the closing section, and the footer; cool light gray and white
-for the fit, outcome, proof, and FAQ sections; green (#34C77B) for buttons and
-highlights only. No gradients, glows, or glass effects. Corners are square or
-barely rounded.
+The look matches the services site that was live on 2026-10-02: a dark navy
+page, quiet cards with thin borders, small green section labels, and product
+mockups instead of photos. Green (#34C77B) is for buttons and highlights only.
+No gradients, glows, glass effects, or emoji. Corners are barely rounded (4px).
 
-Headlines are Barlow Condensed in caps; body text is Archivo. Each section opens
-with a numbered title on a measuring-tape rule. The "Send a test lead" demo is
-the only animation on the page.
+Headlines and body text are both Archivo, mixed case. The "Send a test lead"
+demo is the only animation on the page.
 
 ## 5. Legal pages
 
-`privacy.html` and `terms.html` use the same navy and green. Their body font is
-Barlow, not Archivo. Their text was not changed.
+`privacy.html` and `terms.html` are light reading pages with a navy header,
+set in Barlow. Their text was not changed.
 The Terms still describe the old website and automation services and monthly
 billing, so they need updating for the per-shown-estimate offer.
