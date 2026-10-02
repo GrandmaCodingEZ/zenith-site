@@ -11,7 +11,7 @@ Open `index.html`, find `var SITE = {` near the bottom, and set:
 
 | Key            | What it is                                   | Example              |
 |----------------|----------------------------------------------|----------------------|
-| `fitThreshold` | Who qualifies                                | `"2 or more crews"`  |
+| `fitThreshold` | Who qualifies. Lowercase; it reads after "a tree company with" and is capitalized in the list | `"two or more crews ready for more work"` |
 | `minAdSpend`   | Minimum daily ad spend (set to $50)          | `"$50"`              |
 | `startTime`    | How long until ads go live                   | `"7 days"`           |
 | `founderName`  | Your name                                    |                      |
