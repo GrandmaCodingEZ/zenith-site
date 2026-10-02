@@ -40,8 +40,8 @@ Still to add:
 |------|-----|
 | Founder video (hero) | Replace the `.vph` block inside `<div class="video">` with a YouTube/Vimeo `<iframe>` or a `<video>` tag. |
 | Founder photo (closing section) | Save as `assets/photos/founder.jpg`. It fills the box by itself. |
-| Owner testimonials (Proof) | Replace each `.slot` box with the owner's real words or video. |
-| First ads case study (Proof) | Replace the `.slot.case` box once a client has real numbers. |
+| Owner testimonials (Proof) | Replace each `.quote-slot` box with the owner's real words or video. |
+| First ads case study (Proof) | Replace the `.case` box once a client has real numbers. |
 
 ## 3. Booking
 
@@ -63,12 +63,19 @@ Calendly calendar for `zenith-co-consultation`.
 Short sentences in the owner's words. No em dashes. No "no X, no Y" lists. Say
 each thing once. No invented numbers, testimonials, or clients.
 
-Colors are green and blue: deep navy for the header, hero, demo, and footer;
-cool light gray and white for reading sections; green (#34C77B) for buttons,
-highlights, and the calculator band.
+Colors are green and blue: deep navy for the header, hero, demo, the deal,
+the calculator, the closing section, and the footer; cool light gray and white
+for the fit, outcome, proof, and FAQ sections; green (#34C77B) for buttons and
+highlights only. No gradients, glows, or glass effects. Corners are square or
+barely rounded.
+
+Headlines are Barlow Condensed in caps; body text is Archivo. Each section opens
+with a numbered title on a measuring-tape rule. The "Send a test lead" demo is
+the only animation on the page.
 
 ## 5. Legal pages
 
-`privacy.html` and `terms.html` use the same colors and fonts. Their text was not changed.
+`privacy.html` and `terms.html` use the same navy and green. Their body font is
+Barlow, not Archivo. Their text was not changed.
 The Terms still describe the old website and automation services and monthly
 billing, so they need updating for the per-shown-estimate offer.
