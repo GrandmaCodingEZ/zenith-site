@@ -33,20 +33,20 @@ illustrative examples), the test lead phone, and simple browser outlines for
 the two client sites. The share image (`assets/og-image.png`) follows the same
 rule.
 
-The one video is Jenniffer's testimonial (King's Tree Service), in the hero.
-It only loads when someone presses play. Her words appear in two places: the
-"leery" line beside the video and the "Google ad" line in the King's card.
-Don't add more of her quotes, don't join quotes that weren't said together,
-and don't describe her as an ads-program client: her work with us is the
-website and her Google Ads.
+The one video is Jenniffer's testimonial, in the King's Tree Service card under
+Our work, with her "Google ad" line beside it. It only loads when someone
+presses play. The hero holds the founder video slot, not a testimonial; keep
+it that way. Don't join quotes that weren't said together, and don't describe
+her as an ads-program client: her work with us is the website and her Google
+Ads.
 
 Still to add:
 
 | Slot | How |
 |------|-----|
-| Founder video (closing card) | Replace the `.vph` block inside `<div class="video">` with a YouTube/Vimeo `<iframe>` or a `<video>` tag. |
+| Founder video (hero) | Replace the `.vph` block inside `<div class="video">` with a YouTube/Vimeo `<iframe>` or a `<video>` tag. |
 | Founder photo (closing card) | Save as `assets/photos/founder.jpg`. It fills the box by itself. |
-| A Tree Surgeons testimonial (Our work) | Replace the dashed `.quote-card.is-ph` box with a `figure.quote-card` like the King's one, using Fred's own words. Convert any phone video to MP4 (H.264) first; iPhone .mov files are HEVC and HDR, which many browsers can't play. |
+| A Tree Surgeons testimonial (Our work) | Replace the dashed `.v-ph` box with a `<video>` like the King's card, and update the caption with Fred's own words. Convert any phone video to MP4 (H.264) first; iPhone .mov files are HEVC and HDR, which many browsers can't play. |
 | First ads case study (Our work) | Replace the `.case` box once a client has real numbers. |
 
 ## 3. Booking
