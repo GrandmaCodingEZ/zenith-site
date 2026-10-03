@@ -237,14 +237,15 @@
   @media (max-width:767px){ .wk-more{display:none;} }
   .slip-list{margin:8px 0 0;border-top:1px solid var(--line);}
   .slip-list li{padding:16px 0;border-bottom:1px solid var(--line);font-size:19px;line-height:1.4;color:var(--text);}
-  /* Phone log: muted on purpose, no green, no red; the calendar below is the answer */
-  .pl-row{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);}
-  .pl-row:last-child{border-bottom:0;padding-bottom:4px;}
-  .pl-type{display:flex;align-items:center;gap:8px;margin-bottom:3px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-dim);}
-  .pl-type::before{content:"";width:7px;height:7px;border:1px solid var(--muted-dim);flex:none;}
-  .pl-detail{display:block;font-size:14.5px;line-height:1.4;color:var(--muted);}
-  .pl-row.is-last .pl-detail{color:var(--text);}
-  .pl-time{flex:none;padding-top:1px;font-size:12.5px;color:var(--muted-dim);font-variant-numeric:tabular-nums;}
+  /* Phone on a work day: the demo's phone, sized to its content. Muted on purpose,
+     no green and no red; the calendar in the next section is the answer. */
+  .phone.phone-day{height:auto;}
+  .phone-day .screen{padding-bottom:12px;}
+  .phone-day .lock{padding:10px 0 16px;}
+  .pd-list{display:flex;flex-direction:column;gap:8px;padding:0 10px;}
+  .app-ic{display:flex;align-items:center;justify-content:center;flex:none;width:22px;height:22px;border-radius:6px;background:var(--line-2);color:var(--text);}
+  .app-ic svg{width:12px;height:12px;}
+  .notif .n-from{display:block;font-weight:600;}
   @media (min-width:960px){ .slip-list li{font-size:21px;padding:18px 0;} }
   @media (min-width:960px){ .week{padding:24px;} .wk-row{grid-template-columns:56px 1fr;} }
 
@@ -389,12 +390,8 @@
   .site{padding:14px 16px 18px;background:var(--bg);}
   .s-nav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--line);}
   .s-nav b{overflow:hidden;font-size:12px;font-weight:700;color:var(--text);white-space:nowrap;text-overflow:ellipsis;}
-  .s-nav span{flex:none;padding:3px 8px;border:1px solid var(--green-line);border-radius:2px;font-size:10.5px;font-weight:700;color:var(--green);}
   .s-eye{display:block;margin-bottom:6px;font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);}
-  .s-h{display:block;margin-bottom:12px;font-size:21px;font-weight:700;line-height:1.12;letter-spacing:-.01em;color:var(--text);}
-  .s-ctas{display:flex;flex-wrap:wrap;gap:6px;}
-  .s-btn{padding:6px 10px;border-radius:2px;background:var(--green);font-size:10.5px;font-style:normal;font-weight:700;color:var(--on-green);}
-  .s-btn.alt{background:none;border:1px solid var(--line-2);color:var(--text);}
+  .s-h{display:block;margin-bottom:4px;font-size:21px;font-weight:700;line-height:1.12;letter-spacing:-.01em;color:var(--text);}
   .w-body{display:flex;flex-direction:column;flex:1;padding:22px 22px 24px;}
   .w-meta{display:flex;align-items:center;gap:12px;margin-bottom:10px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;}
   .live{display:inline-flex;align-items:center;gap:6px;color:var(--green);}
@@ -722,12 +719,18 @@
       </ul>
     </div>
     <div>
-      <div class="card week phone-log" aria-label="Example of a phone during a work day">
-        <div class="wk-head"><b>Your phone</b><span>Tuesday, on a job</span></div>
-        <div class="pl-row"><div><span class="pl-type">Missed call</span><span class="pl-detail">(813) 555-0142</span></div><span class="pl-time">9:14 AM</span></div>
-        <div class="pl-row"><div><span class="pl-type">Missed call</span><span class="pl-detail">(813) 555-0187</span></div><span class="pl-time">11:02 AM</span></div>
-        <div class="pl-row"><div><span class="pl-type">Voicemail</span><span class="pl-detail">&ldquo;Got an oak leaning toward the house...&rdquo;</span></div><span class="pl-time">1:36 PM</span></div>
-        <div class="pl-row is-last"><div><span class="pl-type">Message</span><span class="pl-detail">&ldquo;Thanks for getting back to us. We already booked someone.&rdquo;</span></div><span class="pl-time">7:48 PM</span></div>
+      <div class="phone phone-day" role="img" aria-label="Example of a phone after a work day: two missed calls, a voicemail about an oak, and a text from a caller who already booked someone else">
+        <div class="screen">
+          <span class="island" aria-hidden="true"></span>
+          <div class="sbar"><span></span><span class="sicons" aria-hidden="true"><svg viewBox="0 0 17 11"><rect x="0" y="7" width="3" height="4" rx=".6"/><rect x="4.5" y="5" width="3" height="6" rx=".6"/><rect x="9" y="2.5" width="3" height="8.5" rx=".6"/><rect x="13.5" y="0" width="3" height="11" rx=".6"/></svg><svg viewBox="0 0 15 11"><path d="M7.5 2.2c2.2 0 4.2.85 5.7 2.25l1.1-1.15A9.6 9.6 0 0 0 7.5.6 9.6 9.6 0 0 0 .7 3.3l1.1 1.15A8.1 8.1 0 0 1 7.5 2.2zm0 3.2c1.3 0 2.5.5 3.4 1.3l1.1-1.15A6.5 6.5 0 0 0 7.5 3.8 6.5 6.5 0 0 0 3 5.55L4.1 6.7c.9-.8 2.1-1.3 3.4-1.3zm0 3.2c.5 0 .9.15 1.2.45L7.5 10.3 6.3 9.05c.3-.3.7-.45 1.2-.45z"/></svg><svg viewBox="0 0 25 12"><rect x=".5" y=".5" width="21" height="11" rx="3" fill="none" stroke="currentColor" opacity=".5"/><rect x="2" y="2" width="16" height="8" rx="1.6"/><rect x="23" y="4" width="1.6" height="4" rx=".8" opacity=".5"/></svg></span></div>
+          <div class="lock"><span class="l-day">Tuesday</span><span class="l-time">7:48</span></div>
+          <div class="pd-list">
+            <div class="notif"><div class="n-h"><span class="app-ic"><svg viewBox="0 0 16 16"><path d="M3.6 1.5h2.1l1 3.1-1.6 1.1a8.2 8.2 0 0 0 4.2 4.2l1.1-1.6 3.1 1v2.1a1.6 1.6 0 0 1-1.6 1.6A11.6 11.6 0 0 1 2 3.1a1.6 1.6 0 0 1 1.6-1.6z" fill="currentColor"/></svg></span><b>Phone</b><small>9:14 AM</small></div><p>Missed call from (813) 555-0142</p></div>
+            <div class="notif"><div class="n-h"><span class="app-ic"><svg viewBox="0 0 16 16"><path d="M3.6 1.5h2.1l1 3.1-1.6 1.1a8.2 8.2 0 0 0 4.2 4.2l1.1-1.6 3.1 1v2.1a1.6 1.6 0 0 1-1.6 1.6A11.6 11.6 0 0 1 2 3.1a1.6 1.6 0 0 1 1.6-1.6z" fill="currentColor"/></svg></span><b>Phone</b><small>11:02 AM</small></div><p>Missed call from (813) 555-0187</p></div>
+            <div class="notif"><div class="n-h"><span class="app-ic"><svg viewBox="0 0 16 16"><circle cx="4.5" cy="8" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="11.5" cy="8" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 10.6h7" stroke="currentColor" stroke-width="1.6"/></svg></span><b>Voicemail</b><small>1:36 PM</small></div><p>&ldquo;Got an oak leaning toward the house...&rdquo;</p></div>
+            <div class="notif"><div class="n-h"><span class="app-ic"><svg viewBox="0 0 16 16"><path d="M2 3.6A1.6 1.6 0 0 1 3.6 2h8.8A1.6 1.6 0 0 1 14 3.6v6a1.6 1.6 0 0 1-1.6 1.6H6.2L2.8 14v-2.9A1.6 1.6 0 0 1 2 9.6z" fill="currentColor"/></svg></span><b>Messages</b><small>7:48 PM</small></div><p><span class="n-from">(813) 555-0187</span>Thanks for getting back to us. We already booked someone.</p></div>
+          </div>
+        </div>
       </div>
       <p class="mock-cap">Illustrative example, not a real customer.</p>
     </div>
@@ -805,10 +808,9 @@
           <div class="browser">
             <div class="b-bar"><i></i><i></i><i></i><span>atreesurgeons.net</span></div>
             <div class="site">
-              <div class="s-nav"><b>A Tree Surgeon's Enterprise</b><span>Call now</span></div>
+              <div class="s-nav"><b>A Tree Surgeon's Enterprise</b></div>
               <span class="s-eye">Tampa's Tree Surgeons Since Day One</span>
               <span class="s-h">Honest Tree Work. Every&nbsp;Time.</span>
-              <span class="s-ctas"><i class="s-btn">Get My Estimate</i><i class="s-btn alt">View Services</i></span>
             </div>
           </div>
         </div>
@@ -832,10 +834,9 @@
           <div class="browser">
             <div class="b-bar"><i></i><i></i><i></i><span>kingstreecare.com</span></div>
             <div class="site">
-              <div class="s-nav"><b>King's Tree Service</b><span>Call now</span></div>
+              <div class="s-nav"><b>King's Tree Service</b></div>
               <span class="s-eye">25+ years &middot; Palm Bay, FL</span>
               <span class="s-h">The tree comes down. Your yard stays&nbsp;intact.</span>
-              <span class="s-ctas"><i class="s-btn">Get a free estimate</i><i class="s-btn alt">Our work</i></span>
             </div>
           </div>
         </div>
