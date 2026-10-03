@@ -440,7 +440,9 @@
     .testimonial blockquote{font-size:18px;}
     .testimonial cite{font-size:14px;}
   }
-  .visit{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--green);text-decoration:none;}
+  /* In a stretched card, the panel sits centered between the tags and the link */
+  .w-body>:is(.built,.testimonial){margin-top:auto;margin-bottom:auto;}
+  .visit{margin-top:20px;display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--green);text-decoration:none;}
   .visit:hover{text-decoration:underline;text-underline-offset:3px;}
   .visit svg{width:14px;height:14px;transition:transform .2s ease;}
   .visit:hover svg{transform:translate(2px,-2px);}
@@ -628,13 +630,13 @@
   <div class="wrap nav-in">
     <a href="#main" class="brand" aria-label="Zenith Co.">
       <svg viewBox="0 0 300 300" fill="none" aria-hidden="true">
-        <path d="M46 206 L96 140 L138 194" stroke="#34C77B" stroke-width="9" stroke-linejoin="round" opacity=".55"/>
-        <path d="M254 206 L204 140 L162 194" stroke="#34C77B" stroke-width="9" stroke-linejoin="round" opacity=".55"/>
-        <path d="M78 208 L150 100 L222 208 Z" fill="#0B1520" stroke="#34C77B" stroke-width="9" stroke-linejoin="round"/>
+        <path d="M46 206 L96 140 L138 194" stroke="#7FC8A9" stroke-width="9" stroke-linejoin="round" opacity=".55"/>
+        <path d="M254 206 L204 140 L162 194" stroke="#7FC8A9" stroke-width="9" stroke-linejoin="round" opacity=".55"/>
+        <path d="M78 208 L150 100 L222 208 Z" fill="#0B1520" stroke="#7FC8A9" stroke-width="9" stroke-linejoin="round"/>
         <path d="M96 140 L112 161 L104 170 L96 158 L88 170 L80 161 Z" fill="#FFFFFF"/>
         <path d="M204 140 L220 161 L212 170 L204 158 L196 170 L188 161 Z" fill="#FFFFFF"/>
         <path d="M150 100 L180 145 L169 158 L160 140 L150 156 L140 139 L130 159 L120 145 Z" fill="#FFFFFF"/>
-        <circle cx="150" cy="150" r="139" stroke="#34C77B" stroke-width="12"/>
+        <circle cx="150" cy="150" r="139" stroke="#7FC8A9" stroke-width="9"/>
       </svg>
       <span>Zenith Co.</span>
     </a>
@@ -895,9 +897,9 @@
       <div class="d-head">
         <b>
           <svg viewBox="0 0 300 300" fill="none" aria-hidden="true">
-            <path d="M78 208 L150 100 L222 208 Z" fill="#1B2B3C" stroke="#34C77B" stroke-width="12" stroke-linejoin="round"/>
+            <path d="M78 208 L150 100 L222 208 Z" fill="#1B2B3C" stroke="#7FC8A9" stroke-width="12" stroke-linejoin="round"/>
             <path d="M150 100 L180 145 L169 158 L160 140 L150 156 L140 139 L130 159 L120 145 Z" fill="#FFFFFF"/>
-            <circle cx="150" cy="150" r="139" stroke="#34C77B" stroke-width="14"/>
+            <circle cx="150" cy="150" r="139" stroke="#7FC8A9" stroke-width="11"/>
           </svg>
           Per-estimate ads
         </b>
@@ -1008,13 +1010,13 @@
       <div>
         <a href="#main" class="brand" aria-label="Zenith Co.">
           <svg viewBox="0 0 300 300" fill="none" aria-hidden="true">
-            <path d="M46 206 L96 140 L138 194" stroke="#34C77B" stroke-width="9" stroke-linejoin="round" opacity=".55"/>
-            <path d="M254 206 L204 140 L162 194" stroke="#34C77B" stroke-width="9" stroke-linejoin="round" opacity=".55"/>
-            <path d="M78 208 L150 100 L222 208 Z" fill="#0B1520" stroke="#34C77B" stroke-width="9" stroke-linejoin="round"/>
+            <path d="M46 206 L96 140 L138 194" stroke="#7FC8A9" stroke-width="9" stroke-linejoin="round" opacity=".55"/>
+            <path d="M254 206 L204 140 L162 194" stroke="#7FC8A9" stroke-width="9" stroke-linejoin="round" opacity=".55"/>
+            <path d="M78 208 L150 100 L222 208 Z" fill="#0B1520" stroke="#7FC8A9" stroke-width="9" stroke-linejoin="round"/>
             <path d="M96 140 L112 161 L104 170 L96 158 L88 170 L80 161 Z" fill="#FFFFFF"/>
             <path d="M204 140 L220 161 L212 170 L204 158 L196 170 L188 161 Z" fill="#FFFFFF"/>
             <path d="M150 100 L180 145 L169 158 L160 140 L150 156 L140 139 L130 159 L120 145 Z" fill="#FFFFFF"/>
-            <circle cx="150" cy="150" r="139" stroke="#34C77B" stroke-width="12"/>
+            <circle cx="150" cy="150" r="139" stroke="#7FC8A9" stroke-width="9"/>
           </svg>
           <span>Zenith Co.</span>
         </a>
