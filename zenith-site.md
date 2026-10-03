@@ -76,10 +76,18 @@ each thing once. No invented numbers, testimonials, or clients.
 The look matches the services site that was live on 2026-10-02: a dark navy
 page, quiet cards with thin borders, small green section labels, and product
 mockups instead of photos. Green (#34C77B) is for buttons and highlights only.
-No gradients, glows, glass effects, or emoji. Corners are barely rounded (4px).
+No gradients, glows, glass effects, or emoji. Cards have 12px corners and
+buttons 8px, and the mockups sit on a soft shadow, like the services site.
 
-Headlines and body text are both Archivo, mixed case. The "Send a test lead"
-demo is the only animation on the page.
+Headlines and body text are both Archivo, mixed case, on the services site's
+calmer scale (46px hero headline and 34px section headings on desktop).
+
+Motion, like the services site: blocks fade up 18px over 0.7 seconds the
+first time they scroll into view (siblings follow each other by 90ms),
+buttons lift 1px on hover, client cards light their border, FAQ answers slide
+open, and section links scroll smoothly. The "Send a test lead" demo plays
+when tapped. Everyone who has reduced motion turned on gets all of it with no
+movement.
 
 The page order and copy came out of a review on 2026-10-02 against other
 agencies selling booked or shown appointments (Etlio, Booked Then Built,
