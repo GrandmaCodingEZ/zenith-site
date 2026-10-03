@@ -598,10 +598,11 @@
     .cal-frame{height:720px;min-height:0;}
   }
 
-  /* ---------- Scroll reveal (same feel as the services site; off for reduced motion) ---------- */
-  .js-reveal :is(.hero-grid>div,.head,.fit-intro,.fit-yes,.fit-no,.fit-cta,.feature>div,.how-intro,.phone-col,.steps li,.work,.compare,.deal-card,.deal-calc>*,.qa details,.final){opacity:0;transform:translateY(18px);}
-  .js-reveal :is(.hero-grid>div,.head,.fit-intro,.fit-yes,.fit-no,.fit-cta,.feature>div,.how-intro,.phone-col,.steps li,.work,.compare,.deal-card,.deal-calc>*,.qa details,.final):not(.rv-done){transition:opacity .7s ease,transform .7s ease;}
-  .js-reveal :is(.hero-grid>div,.head,.fit-intro,.fit-yes,.fit-no,.fit-cta,.feature>div,.how-intro,.phone-col,.steps li,.work,.compare,.deal-card,.deal-calc>*,.qa details,.final).in{opacity:1;transform:none;}
+  /* ---------- Scroll reveal (same feel as the services site; off for reduced motion) ----------
+     Blocks fade up together, a section at a time. The script at the end groups them. */
+  .js-reveal :is(.hero-grid>div,.hero-points,.wrap>.head,.fit-intro,.fit-lists,.fit-cta,.feature>div,.how-intro,.steps,.phone-col,.work,.compare,.deal-card,.deal-calc>*,.qa,.final){opacity:0;transform:translateY(18px);}
+  .js-reveal :is(.hero-grid>div,.hero-points,.wrap>.head,.fit-intro,.fit-lists,.fit-cta,.feature>div,.how-intro,.steps,.phone-col,.work,.compare,.deal-card,.deal-calc>*,.qa,.final):not(.rv-done){transition:opacity .7s ease,transform .7s ease;}
+  .js-reveal :is(.hero-grid>div,.hero-points,.wrap>.head,.fit-intro,.fit-lists,.fit-cta,.feature>div,.how-intro,.steps,.phone-col,.work,.compare,.deal-card,.deal-calc>*,.qa,.final).in{opacity:1;transform:none;}
 </style>
 </head>
 <body>
@@ -862,7 +863,7 @@
       </dl>
       <p class="cmp-note">Typical setups. Some agencies and lead sites work differently.</p>
     </div>
-    <div class="card deal-card">
+    <div class="card deal-card" data-rv-group>
       <div class="d-head">
         <b>
           <svg viewBox="0 0 300 300" fill="none" aria-hidden="true">
@@ -890,7 +891,7 @@
         <a class="btn" href="https://calendly.com/zacharyspencer/zenith-co-consultation" data-book>See if you qualify</a>
       </div>
     </div>
-    <div class="calc-grid deal-calc">
+    <div class="calc-grid deal-calc" data-rv-group>
       <div class="head">
         <p class="sub-label">Do the math</p>
         <h3 id="calc-h">What one shown estimate is worth to you</h3>
@@ -1372,30 +1373,35 @@ var SITE = {
 })();
 </script>
 <script>
-/* Scroll reveal: each block fades up the first time it scrolls into view.
-   Siblings (cards, steps, FAQ items) follow each other by 90ms. */
+/* Scroll reveal: blocks fade up together, one group at a time, the first time
+   the group scrolls into view. A group is the section, unless a block sits inside
+   data-rv-group (the deal card and the calculator, far down a long section).
+   Inside a group, blocks start within 160ms of each other. */
 (function () {
   'use strict';
   var d = document.documentElement;
   if (!d.classList.contains('js-reveal')) return;
   window.__reveal = true;
-  var els = Array.prototype.slice.call(document.querySelectorAll('.hero-grid>div,.head,.fit-intro,.fit-yes,.fit-no,.fit-cta,.feature>div,.how-intro,.phone-col,.steps li,.work,.compare,.deal-card,.deal-calc>*,.qa details,.final'));
+  var els = Array.prototype.slice.call(document.querySelectorAll('.hero-grid>div,.hero-points,.wrap>.head,.fit-intro,.fit-lists,.fit-cta,.feature>div,.how-intro,.steps,.phone-col,.work,.compare,.deal-card,.deal-calc>*,.qa,.final'));
+  var groups = [];
   els.forEach(function (el) {
-    var sibs = Array.prototype.filter.call(el.parentNode.children, function (c) { return els.indexOf(c) > -1; });
-    var i = sibs.indexOf(el);
-    if (i > 0) el.style.transitionDelay = Math.min(i, 5) * 90 + 'ms';
+    var g = el.closest('[data-rv-group]') || el.closest('section') || el;
+    if (groups.indexOf(g) < 0) { groups.push(g); g.__rv = []; }
+    el.style.transitionDelay = Math.min(g.__rv.length, 2) * 80 + 'ms';
+    g.__rv.push(el);
   });
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (!e.isIntersecting) return;
-      var el = e.target;
-      el.classList.add('in');
-      io.unobserve(el);
-      // After the fade, hand transitions back to the element (hover effects, the demo).
-      setTimeout(function () { el.classList.add('rv-done'); el.style.transitionDelay = ''; }, 1300);
+      io.unobserve(e.target);
+      e.target.__rv.forEach(function (el) {
+        el.classList.add('in');
+        // After the fade, hand transitions back to the element (hover effects, the demo).
+        setTimeout(function () { el.classList.add('rv-done'); el.style.transitionDelay = ''; }, 1100);
+      });
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  els.forEach(function (el) { io.observe(el); });
+  }, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
+  groups.forEach(function (g) { io.observe(g); });
 })();
 </script>
 </body>
