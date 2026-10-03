@@ -83,8 +83,9 @@ Headlines and body text are both Archivo, mixed case, on the services site's
 calmer scale (46px hero headline and 34px section headings on desktop).
 
 Motion, like the services site: blocks fade up 18px over 0.7 seconds the
-first time they scroll into view (siblings follow each other by 90ms),
-buttons lift 1px on hover, client cards light their border, FAQ answers slide
+first time their section scrolls into view. A section fades in as one group,
+never line by line; only the deal card and the calculator (far down a long
+section) are their own groups (`data-rv-group`). Buttons lift 1px on hover, client cards light their border, FAQ answers slide
 open, and section links scroll smoothly. The "Send a test lead" demo plays
 when tapped. Everyone who has reduced motion turned on gets all of it with no
 movement.

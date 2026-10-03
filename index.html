@@ -137,10 +137,16 @@
   .hero h1{font-size:clamp(32px,8.8vw,38px);line-height:1.1;margin-bottom:18px;}
   .hero .lead{font-size:17px;color:var(--muted);max-width:30em;margin-bottom:26px;}
   .ctas{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-bottom:12px;}
-  .cta-note{margin:0 0 22px;font-size:14px;color:var(--muted);}
-  .assure{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;color:var(--muted);}
-  .assure span{display:inline-flex;align-items:center;gap:7px;}
-  .assure svg{width:14px;height:14px;color:var(--green);flex:none;}
+  .cta-note{margin:0;font-size:14px;color:var(--muted);}
+  /* Three promises under the hero, straight from the Terms */
+  .hero-points{display:grid;gap:18px;margin-top:40px;padding-top:28px;border-top:1px solid var(--line);}
+  .hero-points li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:14px;align-items:start;}
+  .hp-ic{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--green-tint);border:1px solid var(--green-line);color:var(--green);}
+  .hp-ic svg{width:13px;height:13px;}
+  .hero-points b{display:block;font-size:15.5px;font-weight:600;line-height:1.35;}
+  .hero-points div span{display:block;margin-top:3px;font-size:14px;line-height:1.45;color:var(--muted);}
+  @media (min-width:768px){ .hero-points{grid-template-columns:repeat(3,1fr);gap:32px;} }
+  @media (min-width:960px){ .hero-points{margin-top:72px;padding-top:36px;} }
   .hc-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
   .video{position:relative;aspect-ratio:16/9;background:var(--bg-alt);border:1px dashed var(--line-2);border-radius:2px;overflow:hidden;}
   .video>iframe,.video>video{position:absolute;inset:0;width:100%;height:100%;border:0;}
@@ -176,35 +182,30 @@
 
   /* ---------- Fit ---------- */
   .fit{display:grid;gap:28px;}
-  .fit-intro h2{font-size:28px;line-height:1.15;margin-bottom:16px;}
-  .fit-intro p{font-size:18px;color:var(--muted);max-width:26em;margin:0;}
+  .fit-intro h2{font-size:28px;line-height:1.18;margin-bottom:14px;}
+  .fit-intro p{font-size:17px;color:var(--muted);max-width:26em;margin:0;}
   .fit-yes{background:var(--card);border:1px solid var(--green-line);border-radius:var(--r);padding:6px 20px 4px;}
   .fit-no{margin-top:14px;border:1px solid var(--line);border-radius:var(--r);padding:6px 20px 4px;}
   .fit h3{padding:16px 0 12px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green);}
   .fit-no h3{color:var(--muted-dim);}
-  .fit-list li{display:grid;grid-template-columns:30px 1fr;gap:16px;align-items:center;padding:16px 0;border-top:1px solid var(--line);font-size:19px;font-weight:500;line-height:1.35;}
-  .fit-list .ic{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:3px;background:var(--green);color:var(--on-green);}
-  .fit-list .ic svg{width:16px;height:16px;}
-  .fit-no .fit-list li{font-size:16.5px;font-weight:400;color:var(--muted);padding:13px 0;}
-  .fit-no .ic{background:none;border:1px solid var(--line-2);color:var(--muted-dim);}
-  .fit-no .ic svg{width:12px;height:12px;}
-  @media (min-width:700px){
-    .fit-no .fit-list{display:grid;grid-template-columns:repeat(2,1fr);column-gap:24px;}
-  }
+  .fit-list li{display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:center;padding:15px 0;border-top:1px solid var(--line);font-size:17px;font-weight:500;line-height:1.4;}
+  .fit-list .ic{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--green-tint);border:1px solid var(--green-line);color:var(--green);}
+  .fit-list .ic svg{width:13px;height:13px;}
+  .fit-no .fit-list li{font-size:15.5px;font-weight:400;color:var(--muted);padding:12px 0;}
+  .fit-no .ic{background:none;border-color:var(--line-2);color:var(--muted-dim);}
+  .fit-no .ic svg{width:11px;height:11px;}
   @media (min-width:960px){
-    .fit{grid-template-columns:5fr 7fr;grid-template-areas:"intro lists" "cta lists";column-gap:80px;row-gap:28px;}
-    .fit-intro{grid-area:intro;align-self:end;}
-    .fit-lists{grid-area:lists;align-self:center;}
+    .fit{grid-template-columns:5fr 7fr;grid-template-rows:auto 1fr;grid-template-areas:"intro lists" "cta lists";column-gap:80px;row-gap:32px;}
+    .fit-intro{grid-area:intro;align-self:start;}
+    .fit-lists{grid-area:lists;align-self:start;}
     .fit-cta{grid-area:cta;align-self:start;}
-    .fit-intro h2{font-size:36px;}
-    .fit-intro p{font-size:19px;}
-    .fit-yes{padding:10px 36px 8px;}
-    .fit-no{padding:8px 36px 6px;}
-    .fit-list li{grid-template-columns:34px 1fr;gap:18px;padding:20px 0;font-size:21px;}
-    .fit-list .ic{width:34px;height:34px;}
-    .fit-list .ic svg{width:18px;height:18px;}
-    .fit-no .fit-list li{grid-template-columns:28px 1fr;gap:12px;font-size:16px;padding:14px 0;}
-    .fit-no .ic{width:28px;height:28px;}
+    .fit-intro h2{font-size:34px;}
+    .fit-intro p{font-size:18px;}
+    .fit-yes{padding:8px 32px 6px;}
+    .fit-no{padding:6px 32px 4px;}
+    .fit-list li{grid-template-columns:30px 1fr;gap:16px;padding:17px 0;font-size:18px;}
+    .fit-list .ic{width:30px;height:30px;}
+    .fit-no .fit-list li{font-size:16px;padding:13px 0;}
   }
 
   /* ---------- Feature rows ---------- */
@@ -375,7 +376,7 @@
   }
 
   /* ---------- Proof ---------- */
-  .work-grid{display:grid;gap:20px;align-items:start;}
+  .work-grid{display:grid;gap:20px;}
   .work{display:flex;flex-direction:column;overflow:hidden;transition:border-color .25s ease;}
   .work:hover{border-color:var(--green-line);}
   .frame{padding:18px 18px 0;background:var(--bg-alt);border-bottom:1px solid var(--line);}
@@ -598,6 +599,10 @@
     .cal-frame{height:720px;min-height:0;}
   }
 
+  /* Section labels keep one look, whatever paragraph style the section sets */
+  :is(.hero,.sec) .eyebrow{margin:0 0 14px;font-size:12.5px;line-height:1.5;color:var(--green);max-width:none;}
+  .hero .eyebrow{margin-bottom:18px;}
+
   /* ---------- Scroll reveal (same feel as the services site; off for reduced motion) ----------
      Blocks fade up together, a section at a time. The script at the end groups them. */
   .js-reveal :is(.hero-grid>div,.hero-points,.wrap>.head,.fit-intro,.fit-lists,.fit-cta,.feature>div,.how-intro,.steps,.phone-col,.work,.compare,.deal-card,.deal-calc>*,.qa,.final){opacity:0;transform:translateY(18px);}
@@ -643,11 +648,6 @@
         <a class="link" href="#how">Watch a test lead</a>
       </div>
       <p class="cta-note">Five questions, then pick a time to talk with Zachary.</p>
-      <div class="assure">
-        <span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>One company per service area</span>
-        <span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>No long-term contract</span>
-        <span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>Ad spend stays on your card</span>
-      </div>
     </div>
     <!-- FOUNDER VIDEO: when it's recorded, replace this card with
          <div class="card hero-card"><div class="video"><video controls playsinline preload="none"
@@ -663,6 +663,13 @@
         <li class="is-paid"><span class="lc-t">Thu 9:02</span><div><b>Homeowner was there</b><span>The only step you pay for</span></div><span class="pill yes">Billed</span></li>
       </ol>
     </div>
+  </div>
+  <div class="wrap">
+    <ul class="hero-points">
+      <li><span class="hp-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><div><b>One company per service area</b><span>We won't run ads for another tree company in your area.</span></div></li>
+      <li><span class="hp-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><div><b>No long-term contract</b><span>Email us and the ads go off within 2 business days.</span></div></li>
+      <li><span class="hp-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><div><b>Ad spend stays on your card</b><span>The ad accounts are in your business's name.</span></div></li>
+    </ul>
   </div>
 </section>
 
@@ -704,7 +711,7 @@
   <div class="wrap feature">
     <div>
       <p class="eyebrow">Where jobs slip</p>
-      <h2 id="slip-h">You lose jobs before you ever see the yard.</h2>
+      <h2 id="slip-h">You lose jobs before you ever see the yard</h2>
       <ul class="slip-list">
         <li>The phone rings while you're up a tree or running the chipper.</li>
         <li>By the time you call back, they've booked whoever answered first.</li>
@@ -728,7 +735,7 @@
   <div class="wrap feature flip">
     <div>
       <p class="eyebrow">What a week looks like</p>
-      <h2 id="out-h">Estimates on your calendar before the week&nbsp;starts.</h2>
+      <h2 id="out-h">Estimates on your calendar before the week&nbsp;starts</h2>
       <p>You show up, walk the job, and write the quote. You stop calling people back at 9 at night.</p>
     </div>
     <div>
