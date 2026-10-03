@@ -145,6 +145,18 @@
   }
 
   .hero-card{margin-top:40px;padding:16px;}
+  .lead-card{padding:18px 18px 6px;}
+  .lc-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:12px;border-bottom:1px solid var(--line);}
+  .lc-head b{font-size:15px;font-weight:600;}
+  .lc-head span{font-size:12px;color:var(--muted-dim);}
+  .lc-list li{display:grid;grid-template-columns:66px minmax(0,1fr) auto;gap:12px;align-items:start;padding:12px 0;}
+  .lc-list li+li{border-top:1px solid var(--line);}
+  .lc-t{padding-top:2px;font-size:12.5px;color:var(--muted-dim);white-space:nowrap;font-variant-numeric:tabular-nums;}
+  .lc-list b{display:block;font-size:15px;font-weight:600;line-height:1.35;color:var(--text);}
+  .lc-list li div span{display:block;font-size:13.5px;line-height:1.4;color:var(--muted);}
+  .lc-list .is-paid b{color:var(--green);}
+  .lc-list .pill{align-self:center;}
+  @media (min-width:960px){ .lead-card{padding:22px 24px 8px;} .lc-list li{grid-template-columns:76px minmax(0,1fr) auto;padding:14px 0;} }
   @media (min-width:960px){ .hero-card{margin-top:0;padding:20px;} }
   @media (min-width:700px) and (max-width:959px){ .work-grid{grid-template-columns:1fr 1fr;} }
 
@@ -257,12 +269,12 @@
   .av.g{background:var(--green);color:var(--on-green);}
   /* 1. Feed and ad */
   .feed{display:flex;flex-direction:column;gap:10px;transition:transform .9s ease;}
-  .post{display:flex;flex-direction:column;gap:7px;padding:10px;border:1px solid var(--line);border-radius:6px;background:var(--bg-alt);}
+  .post{display:flex;flex-direction:column;gap:8px;padding:10px 11px;border:1px solid var(--line);border-radius:6px;background:var(--bg-alt);}
   .post .p-top{display:flex;align-items:center;gap:8px;}
-  .post .av{width:24px;height:24px;}
-  .ln{display:block;height:7px;border-radius:2px;background:var(--line);}
-  .ln.s{width:42%;} .ln.m{width:72%;}
-  .post .p-img{height:72px;border-radius:3px;background:var(--card-alt);}
+  .post .av{width:26px;height:26px;font-size:9.5px;}
+  .post .p-top b{display:block;font-size:12.5px;line-height:1.2;}
+  .post .p-top small{display:block;font-size:11px;color:var(--muted-dim);}
+  .post p{margin:0;font-size:13px;line-height:1.4;color:var(--text);}
   .ad{background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;}
   .ad .who{padding:10px;font-weight:600;}
   .ad .who small{display:block;font-weight:400;font-size:12px;color:var(--muted);}
@@ -349,20 +361,22 @@
   }
 
   /* ---------- Proof ---------- */
-  .work-grid{display:grid;gap:20px;}
+  .work-grid{display:grid;gap:20px;align-items:start;}
   .work{display:flex;flex-direction:column;overflow:hidden;}
   .frame{padding:18px 18px 0;background:var(--bg-alt);border-bottom:1px solid var(--line);}
   .browser{background:var(--bg);border:1px solid var(--line);border-bottom:0;border-radius:3px 3px 0 0;overflow:hidden;}
   .b-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;border-bottom:1px solid var(--line);font-size:11.5px;color:var(--muted-dim);}
   .b-bar i{width:7px;height:7px;border-radius:50%;background:var(--line-2);}
   .b-bar span{margin-left:8px;}
-  .b-body{padding:16px 16px 18px;}
-  .bar{height:9px;border-radius:2px;background:var(--line);margin-bottom:9px;}
-  .bar.g{background:var(--green);opacity:.55;width:70%;}
-  .bar.s{width:48%;}
-  .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:12px 0 4px;}
-  .tiles span{height:26px;border-radius:2px;background:var(--card-alt);}
-  .b-cta{display:flex;align-items:center;justify-content:center;height:28px;margin-top:12px;border-radius:2px;background:var(--green);opacity:.85;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--on-green);}
+  .site{padding:14px 16px 18px;background:var(--bg);}
+  .s-nav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--line);}
+  .s-nav b{overflow:hidden;font-size:12px;font-weight:700;color:var(--text);white-space:nowrap;text-overflow:ellipsis;}
+  .s-nav span{flex:none;padding:3px 8px;border:1px solid var(--green-line);border-radius:2px;font-size:10.5px;font-weight:700;color:var(--green);}
+  .s-eye{display:block;margin-bottom:6px;font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);}
+  .s-h{display:block;margin-bottom:12px;font-size:21px;font-weight:700;line-height:1.12;letter-spacing:-.01em;color:var(--text);}
+  .s-ctas{display:flex;flex-wrap:wrap;gap:6px;}
+  .s-btn{padding:6px 10px;border-radius:2px;background:var(--green);font-size:10.5px;font-style:normal;font-weight:700;color:var(--on-green);}
+  .s-btn.alt{background:none;border:1px solid var(--line-2);color:var(--text);}
   .w-body{display:flex;flex-direction:column;flex:1;padding:22px 22px 24px;}
   .w-meta{display:flex;align-items:center;gap:12px;margin-bottom:10px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;}
   .live{display:inline-flex;align-items:center;gap:6px;color:var(--green);}
@@ -371,6 +385,12 @@
   .w-body h3{font-size:21px;margin-bottom:12px;}
   .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;}
   .tags span{font-size:12.5px;color:var(--muted);border:1px solid var(--line-2);border-radius:2px;padding:4px 9px;}
+  .built{margin:0 0 20px;padding:14px 16px 4px;background:var(--bg-alt);border:1px solid var(--line);border-radius:2px;}
+  .built .t-label{display:block;margin-bottom:4px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);}
+  .b-row{padding:11px 0;border-top:1px solid var(--line);}
+  .b-row:first-of-type{border-top:0;}
+  .b-row b{display:block;font-size:15px;font-weight:600;color:var(--text);}
+  .b-row span{display:block;font-size:14px;line-height:1.45;color:var(--muted);}
   .testimonial{display:grid;grid-template-columns:130px minmax(0,1fr);gap:16px;align-items:center;margin:0 0 20px;padding:12px;background:var(--bg-alt);border:1px solid var(--line);border-radius:2px;}
   .testimonial video,.v-ph{display:block;width:130px;height:auto;aspect-ratio:9/16;border-radius:2px;}
   .testimonial video{object-fit:cover;background:#000;}
@@ -488,7 +508,7 @@
   .fin-side{margin-top:28px;padding:20px;background:var(--bg-alt);border:1px solid var(--line);border-radius:var(--r);}
   .hc-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
   .founder{display:flex;align-items:center;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--line);}
-  .fph{position:relative;width:72px;height:72px;display:flex;align-items:center;justify-content:center;text-align:center;padding:4px;background:var(--bg-alt);border:1px dashed var(--line-2);border-radius:2px;font-size:11px;line-height:1.2;color:var(--muted);overflow:hidden;}
+  .fph{position:relative;width:72px;height:72px;display:flex;align-items:center;justify-content:center;background:var(--green-tint);border:1px solid var(--green-line);border-radius:var(--r);font-size:22px;font-weight:700;letter-spacing:.02em;color:var(--green);overflow:hidden;}
   .fph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
   .fph{flex:none;}
   .f-id b{display:block;font-size:18px;font-weight:600;line-height:1.25;color:var(--text);}
@@ -602,16 +622,19 @@
         <span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>Ad spend stays on your card</span>
       </div>
     </div>
-    <div class="card hero-card">
-      <div class="hc-head"><span>Founder video</span><span class="ph">Placeholder</span></div>
-      <!-- FOUNDER VIDEO: replace the .vph block with a YouTube/Vimeo <iframe> or a <video> tag. The box keeps it 16:9. -->
-      <div class="video">
-        <div class="vph">
-          <span class="play" aria-hidden="true"></span>
-          <b>Founder video goes here</b>
-          <span>Add the video once it's recorded.</span>
-        </div>
-      </div>
+    <!-- FOUNDER VIDEO: when it's recorded, replace this card with
+         <div class="card hero-card"><div class="video"><video controls playsinline preload="none"
+           poster="assets/video/founder.jpg"><source src="assets/video/founder.mp4" type="video/mp4"></video></div></div>
+         (zenith-site.md has the steps). -->
+    <div class="card hero-card lead-card" aria-label="Example of one lead, from the ad to a shown estimate">
+      <div class="lc-head"><b>One lead, start to finish</b><span>Example</span></div>
+      <ol class="lc-list">
+        <li><span class="lc-t">6:12 PM</span><div><b>Homeowner taps your ad</b><span>Oak hanging over the driveway</span></div></li>
+        <li><span class="lc-t">6:12 PM</span><div><b>Your business texts and calls</b><span>28 seconds after the form</span></div></li>
+        <li><span class="lc-t">6:15 PM</span><div><b>Estimate booked</b><span>Thursday at 9:00 AM, on your calendar</span></div></li>
+        <li><span class="lc-t">Wed 5 PM</span><div><b>Reminder sent</b><span>They reply &ldquo;See you then&rdquo;</span></div></li>
+        <li class="is-paid"><span class="lc-t">Thu 9:02</span><div><b>Homeowner was there</b><span>The only step you pay for</span></div><span class="pill yes">Billed</span></li>
+      </ol>
     </div>
   </div>
 </section>
@@ -743,18 +766,25 @@
         <div class="frame" aria-hidden="true">
           <div class="browser">
             <div class="b-bar"><i></i><i></i><i></i><span>atreesurgeons.net</span></div>
-            <div class="b-body"><div class="bar g"></div><div class="bar"></div><div class="bar s"></div><div class="tiles"><span></span><span></span><span></span></div><div class="b-cta">Get a free quote</div></div>
+            <div class="site">
+              <div class="s-nav"><b>A Tree Surgeon's Enterprise</b><span>Call now</span></div>
+              <span class="s-eye">Tampa's Tree Surgeons Since Day One</span>
+              <span class="s-h">Honest Tree Work. Every&nbsp;Time.</span>
+              <span class="s-ctas"><i class="s-btn">Get My Estimate</i><i class="s-btn alt">View Services</i></span>
+            </div>
           </div>
         </div>
         <div class="w-body">
           <p class="w-meta"><span class="live">Live</span><span class="place">Tampa, FL</span></p>
           <h3>A Tree Surgeons Enterprise</h3>
           <div class="tags"><span>Website</span><span>Missed-call text back</span><span>Review requests</span></div>
-          <!-- OWNER TESTIMONIAL: replace the .v-ph box with a <video> like the King's card, and update the caption. -->
-          <figure class="testimonial">
-            <div class="v-ph">Video goes here</div>
-            <figcaption><span class="ph">Placeholder</span><b>Owner testimonial goes here.</b>A short video from Fred, in his own words.</figcaption>
-          </figure>
+          <!-- OWNER TESTIMONIAL: when Fred's video or quote comes in, replace this panel with a figure.testimonial like the King's card. -->
+          <div class="built">
+            <span class="t-label">What runs behind the site</span>
+            <div class="b-row"><b>Estimate form</b><span>Right on the first screen, so homeowners can ask without calling.</span></div>
+            <div class="b-row"><b>Missed call</b><span>The caller gets a text back right away.</span></div>
+            <div class="b-row"><b>Job finished</b><span>The customer gets a review request.</span></div>
+          </div>
           <a class="visit" href="https://atreesurgeons.net" target="_blank" rel="noopener">Visit atreesurgeons.net<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
         </div>
       </article>
@@ -763,7 +793,12 @@
         <div class="frame" aria-hidden="true">
           <div class="browser">
             <div class="b-bar"><i></i><i></i><i></i><span>kingstreecare.com</span></div>
-            <div class="b-body"><div class="bar g"></div><div class="bar"></div><div class="bar s"></div><div class="tiles"><span></span><span></span><span></span></div><div class="b-cta">Get a free estimate</div></div>
+            <div class="site">
+              <div class="s-nav"><b>King's Tree Service</b><span>Call now</span></div>
+              <span class="s-eye">25+ years &middot; Palm Bay, FL</span>
+              <span class="s-h">The tree comes down. Your yard stays&nbsp;intact.</span>
+              <span class="s-ctas"><i class="s-btn">Get a free estimate</i><i class="s-btn alt">Our work</i></span>
+            </div>
           </div>
         </div>
         <div class="w-body">
@@ -781,18 +816,7 @@
       </article>
     </div>
 
-    <div class="card case">
-      <div>
-        <span class="ph">Placeholder</span>
-        <h3>First ads case study goes here.</h3>
-        <p>Saved for our first ads client, with their real numbers.</p>
-      </div>
-      <dl>
-        <div><dt>Shown estimates</dt><dd>[ ___ ]</dd></div>
-        <div><dt>Cost per job</dt><dd>[ ___ ]</dd></div>
-        <div><dt>Jobs closed</dt><dd>[ ___ ]</dd></div>
-      </dl>
-    </div>
+    <!-- FIRST ADS CASE STUDY: add a card here once a client has real numbers (zenith-site.md has the markup). -->
   </div>
 </section>
 
@@ -911,7 +935,7 @@
       <div class="fin-side">
         <div class="founder">
           <!-- Founder photo: save as assets/photos/founder.jpg and it fills this box. -->
-          <div class="fph">Founder photo goes here<img src="assets/photos/founder.jpg" alt="Zachary Spencer, founder of Zenith Co." loading="lazy" decoding="async" onerror="this.remove()"></div>
+          <div class="fph"><span aria-hidden="true">ZS</span><img src="assets/photos/founder.jpg" alt="Zachary Spencer, founder of Zenith Co." loading="lazy" decoding="async" onerror="this.remove()"></div>
           <div class="f-id"><b data-fill="founderName">Zachary Spencer</b><span>Founder, Zenith Co.</span></div>
         </div>
         <p class="f-note">You'll be talking to me on the call.</p>
@@ -1079,9 +1103,10 @@ var SITE = {
       '<circle cx="104" cy="44" r="24" fill="#208F58"/><circle cx="134" cy="32" r="28" fill="#34C77B"/><circle cx="168" cy="38" r="22" fill="#2AA866"/><circle cx="150" cy="18" r="16" fill="#208F58"/>' +
       '</svg></div>' +
       '<div class="cta">Tree removal and trimming<span>Book now</span></div></div>';
-  var POST = '<div class="post"><div class="p-top"><i class="av"></i><span class="ln s"></span></div><span class="ln"></span><span class="ln m"></span><div class="p-img"></div></div>';
+  var POST1 = '<div class="post"><div class="p-top"><i class="av">BN</i><div><b>Brevard Neighbors</b><small>2h</small></div></div><p>Power is back on along Malabar Rd. Thanks to the crews out there today.</p></div>';
+  var POST2 = '<div class="post"><div class="p-top"><i class="av">MK</i><div><b>Maria K.</b><small>5h</small></div></div><p>Anyone know a good pressure washing company for a driveway?</p></div>';
   var FEED_HEAD = '<div class="app-h"><b>Feed</b><small>Near you</small></div>';
-  var FEED = '<div class="feed">' + POST + AD_HTML + POST + '</div>';
+  var FEED = '<div class="feed">' + POST1 + AD_HTML + POST2 + '</div>';
   // Before anyone taps, the phone shows a still frame of the feed (no motion).
   scr.innerHTML = FEED_HEAD + FEED;
 

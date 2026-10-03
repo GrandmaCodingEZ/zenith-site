@@ -25,29 +25,30 @@ The form choices for crews and ad budget are in `crewOptions` and
 The page says "a day" after the ad spend amount; the form asks for a monthly
 budget, so its ranges start at $1,500 (about $50 a day).
 
-## 2. Images and the slots still empty
+## 2. Images, and what to add later
 
 The page uses no photos from clients or anyone else. The visuals are drawn in
-HTML: a missed-calls phone screen and a sample calendar week (both labeled as
-illustrative examples), the test lead phone, and simple browser outlines for
-the two client sites. The share image (`assets/og-image.png`) follows the same
-rule.
+HTML: the "One lead, start to finish" card in the hero, a missed-calls phone
+screen and a sample calendar week (labeled as examples), the test lead phone,
+and small versions of the two client sites with their real headlines. The
+share image (`assets/og-image.png`) follows the same rule.
 
 The one video is Jenniffer's testimonial, in the King's Tree Service card under
 Our work, with her "Google ad" line beside it. It only loads when someone
-presses play. The hero holds the founder video slot, not a testimonial; keep
-it that way. Don't join quotes that weren't said together, and don't describe
+presses play. Don't join quotes that weren't said together, and don't describe
 her as an ads-program client: her work with us is the website and her Google
 Ads.
 
-Still to add:
+Nothing on the page is an empty placeholder (they made it look unfinished).
+Each missing item has a finished stand-in and a comment in `index.html`
+marking where the real thing goes:
 
-| Slot | How |
+| When you have | Do this |
 |------|-----|
-| Founder video (hero) | Replace the `.vph` block inside `<div class="video">` with a YouTube/Vimeo `<iframe>` or a `<video>` tag. |
-| Founder photo (closing card) | Save as `assets/photos/founder.jpg`. It fills the box by itself. |
-| A Tree Surgeons testimonial (Our work) | Replace the dashed `.v-ph` box with a `<video>` like the King's card, and update the caption with Fred's own words. Convert any phone video to MP4 (H.264) first; iPhone .mov files are HEVC and HDR, which many browsers can't play. |
-| First ads case study (Our work) | Replace the `.case` box once a client has real numbers. |
+| The founder video | Replace the "One lead, start to finish" card in the hero with the video. The `FOUNDER VIDEO` comment above the card has the markup. Convert phone video to MP4 (H.264) first; iPhone .mov files are HEVC and HDR, which many browsers can't play. |
+| Your photo | Save it as `assets/photos/founder.jpg`. It covers the "ZS" initials in the closing card by itself. |
+| Fred's testimonial | Replace the "What runs behind the site" panel in the A Tree Surgeons card with a `figure.testimonial` like the King's one, in Fred's own words. |
+| Real ads results | Add a case study card where the `FIRST ADS CASE STUDY` comment sits, under the two client cards. Real numbers only. |
 
 ## 3. Booking
 
