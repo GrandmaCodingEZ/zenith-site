@@ -39,6 +39,8 @@ presses play. Don't join quotes that weren't said together, and don't describe
 her as an ads-program client: her work with us is the website and her Google
 Ads.
 
+The founder photo in the closing card is `assets/photos/founder.jpg` (400 by 400). Replace that file to change it; if it's missing, the card shows "ZS" initials.
+
 Nothing on the page is an empty placeholder (they made it look unfinished).
 Each missing item has a finished stand-in and a comment in `index.html`
 marking where the real thing goes:
@@ -46,7 +48,6 @@ marking where the real thing goes:
 | When you have | Do this |
 |------|-----|
 | The founder video | Replace the "One lead, start to finish" card in the hero with the video. The `FOUNDER VIDEO` comment above the card has the markup. Convert phone video to MP4 (H.264) first; iPhone .mov files are HEVC and HDR, which many browsers can't play. |
-| Your photo | Save it as `assets/photos/founder.jpg`. It covers the "ZS" initials in the closing card by itself. |
 | Fred's testimonial | Replace the "What runs behind the site" panel in the A Tree Surgeons card with a `figure.testimonial` like the King's one, in Fred's own words. |
 | Real ads results | Add a case study card where the `FIRST ADS CASE STUDY` comment sits, under the two client cards. Real numbers only. |
 

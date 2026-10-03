@@ -552,9 +552,10 @@
   .hc-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
   .founder{display:flex;align-items:center;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--line);}
   .fph{position:relative;width:72px;height:72px;display:flex;align-items:center;justify-content:center;background:var(--green-tint);border:1px solid var(--green-line);border-radius:var(--r);font-size:22px;font-weight:700;letter-spacing:.02em;color:var(--green);overflow:hidden;}
-  .fph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;color:transparent;}
+  .fph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%;transform:scale(1.25);transform-origin:50% 12%;opacity:0;color:transparent;}
   .fph img.ok{opacity:1;}
   .fph{flex:none;}
+  @media (min-width:960px){ .fph{width:88px;height:88px;} }
   .f-id b{display:block;font-size:18px;font-weight:600;line-height:1.25;color:var(--text);}
   .f-id span{display:block;margin-top:2px;font-size:14px;color:var(--muted);}
   .f-note{margin:16px 0 14px;font-size:16px;line-height:1.45;color:var(--text);}
