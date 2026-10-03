@@ -225,21 +225,44 @@
   .how-intro .head{margin-bottom:24px;}
   .demo-ctrl{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin:0 0 28px;}
   .demo-ctrl .tag{font-size:14px;color:var(--muted);}
-  .steps{border-top:1px solid var(--line);margin-top:40px;}
-  .steps li{position:relative;display:grid;grid-template-columns:40px 1fr;gap:12px;padding:20px 0 20px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:15.5px;line-height:1.5;}
+  /* Steps: the playing one sits on a card and its line fills as it plays */
+  .steps{display:grid;gap:6px;margin-top:36px;}
+  .steps li{position:relative;display:grid;grid-template-columns:40px 1fr;gap:12px;padding:18px 16px 18px 20px;border:1px solid transparent;border-radius:var(--r);color:var(--muted);font-size:15.5px;line-height:1.5;}
+  .steps li::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:2px;background:var(--line);}
+  .steps .fill{position:absolute;left:0;top:16px;width:2px;height:0;background:var(--green);}
+  .steps li.done .fill{height:calc(100% - 32px);}
   .steps .n{font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--muted-dim);padding-top:4px;}
   .steps b{display:block;font-size:18px;font-weight:600;color:var(--text);margin-bottom:4px;}
-  .steps li.on .n{color:var(--green);}
-  .steps li.on::before{content:"";position:absolute;left:-14px;top:-1px;bottom:-1px;width:2px;background:var(--green);}
-  .now{display:flex;align-items:flex-end;justify-content:center;min-height:40px;margin:0 0 10px;text-align:center;font-size:14px;line-height:1.35;font-weight:600;color:var(--green);}
-  .phone{width:300px;max-width:100%;height:560px;margin:0 auto;background:var(--card);border:1px solid var(--line-2);border-radius:22px;padding:10px;}
-  .screen{height:100%;background:var(--bg);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;font-size:14px;line-height:1.4;}
-  .sbar{display:flex;justify-content:space-between;padding:10px 16px 6px;font-size:12px;font-weight:600;color:var(--muted);}
-  .scr{flex:1;padding:6px 12px 14px;display:flex;flex-direction:column;gap:10px;overflow:hidden;transition:opacity .28s ease;}
+  .steps li.on{background:var(--card);border-color:var(--line);color:var(--text);}
+  .steps li.on .n,.steps li.done .n{color:var(--green);}
+  /* Above the phone: whose phone it is, and the step */
+  .now{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:3px;min-height:46px;margin:0 0 10px;text-align:center;}
+  .now-view{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
+  .now-step{min-height:19px;font-size:14px;line-height:1.35;font-weight:600;color:var(--green);}
+  /* The phone */
+  .phone{width:300px;max-width:100%;height:590px;margin:0 auto;background:var(--card);border:1px solid var(--line-2);border-radius:26px;padding:9px;}
+  .screen{position:relative;height:100%;background:var(--bg);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;font-size:14px;line-height:1.4;}
+  .island{position:absolute;top:8px;left:50%;width:74px;height:20px;margin-left:-37px;background:#000;border-radius:11px;z-index:3;}
+  .sbar{display:flex;justify-content:space-between;align-items:center;height:36px;padding:0 20px;font-size:12.5px;font-weight:600;color:var(--text);font-variant-numeric:tabular-nums;}
+  .sicons{display:flex;gap:5px;align-items:center;}
+  .sicons svg{display:block;height:10px;width:auto;fill:currentColor;}
+  .scr{flex:1;position:relative;padding:6px 12px 14px;display:flex;flex-direction:column;gap:10px;overflow:hidden;transition:opacity .28s ease;}
   .scr.out{opacity:0;}
   .scr .idle{margin:auto 14px;text-align:center;color:var(--muted);font-size:15px;}
-  .appbar{padding:4px 0 10px;border-bottom:1px solid var(--line);font-weight:600;text-align:center;}
-  .appbar small{display:block;font-weight:400;font-size:12px;color:var(--muted);}
+  .tap{outline:2px solid var(--green);outline-offset:2px;}
+  .app-h{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:2px 2px 10px;border-bottom:1px solid var(--line);}
+  .app-h b{font-size:16px;font-weight:700;}
+  .app-h small{font-size:12px;color:var(--muted);}
+  .av{display:inline-flex;align-items:center;justify-content:center;flex:none;width:30px;height:30px;border-radius:50%;background:var(--line-2);color:var(--text);font-size:11px;font-weight:700;font-style:normal;}
+  .av.g{background:var(--green);color:var(--on-green);}
+  /* 1. Feed and ad */
+  .feed{display:flex;flex-direction:column;gap:10px;transition:transform .9s ease;}
+  .post{display:flex;flex-direction:column;gap:7px;padding:10px;border:1px solid var(--line);border-radius:6px;background:var(--bg-alt);}
+  .post .p-top{display:flex;align-items:center;gap:8px;}
+  .post .av{width:24px;height:24px;}
+  .ln{display:block;height:7px;border-radius:2px;background:var(--line);}
+  .ln.s{width:42%;} .ln.m{width:72%;}
+  .post .p-img{height:72px;border-radius:3px;background:var(--card-alt);}
   .ad{background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;}
   .ad .who{padding:10px;font-weight:600;}
   .ad .who small{display:block;font-weight:400;font-size:12px;color:var(--muted);}
@@ -248,38 +271,81 @@
   .ad .img svg{width:100%;height:100%;}
   .ad .cta{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px;background:var(--bg-alt);font-size:13px;color:var(--muted);}
   .ad .cta span{background:var(--line-2);color:var(--text);padding:6px 10px;border-radius:3px;font-weight:600;white-space:nowrap;}
-  .tap{outline:2px solid var(--green);outline-offset:2px;}
+  /* 1. Landing page */
+  .lp-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:2px 2px 10px;border-bottom:1px solid var(--line);}
+  .lp-bar b{font-size:14px;}
+  .lp-bar span{font-size:11.5px;font-weight:700;color:var(--green);border:1px solid var(--green-line);border-radius:3px;padding:3px 8px;}
+  .lp-hero b{display:block;font-size:21px;line-height:1.15;font-weight:700;margin:4px 0 6px;}
+  .lp-hero span{font-size:13px;color:var(--muted);}
   .lp .f{background:var(--card);border:1px solid var(--line-2);border-radius:3px;padding:8px 10px;}
   .lp .f small{display:block;font-size:11.5px;color:var(--muted);}
+  .lp .f span{display:block;min-height:20px;}
   .lp .go{background:var(--green);color:var(--on-green);text-align:center;padding:10px;border-radius:3px;font-weight:600;}
+  .lp-ok{display:flex;flex-direction:column;align-items:center;gap:6px;margin:10px 0 auto;padding:22px 14px;text-align:center;border:1px solid var(--green-line);background:var(--green-tint);border-radius:6px;}
+  .lp-ok .ok{display:flex;align-items:center;justify-content:center;width:42px;height:42px;margin-bottom:4px;border-radius:50%;background:var(--green);color:var(--on-green);}
+  .lp-ok .ok svg{width:18px;height:18px;}
+  .lp-ok b{font-size:17px;}
+  .lp-ok span{font-size:13px;color:var(--muted);}
+  /* 2. Messages and the call */
+  .msg-h{display:flex;flex-direction:column;align-items:center;gap:3px;padding:0 0 10px;border-bottom:1px solid var(--line);}
+  .msg-h b{font-size:13.5px;} .msg-h small{font-size:11.5px;color:var(--muted);}
   .timer{align-self:center;background:var(--green-tint);border:1px solid var(--green-line);color:var(--green);border-radius:3px;padding:6px 10px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-variant-numeric:tabular-nums;}
   .msg{max-width:86%;padding:9px 12px;border-radius:12px;font-size:13.5px;line-height:1.45;}
   .msg.out{align-self:flex-start;background:var(--card-alt);color:var(--text);border-bottom-left-radius:3px;}
   .msg.in{align-self:flex-end;background:var(--green);color:var(--on-green);font-weight:500;border-bottom-right-radius:3px;}
+  .typing{display:flex;gap:4px;align-items:center;padding:13px 14px;}
+  .typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:blink 1s infinite ease-in-out;}
+  .typing i:nth-child(2){animation-delay:.15s;} .typing i:nth-child(3){animation-delay:.3s;}
+  @keyframes blink{0%,80%,100%{opacity:.3;}40%{opacity:1;}}
   .sys{align-self:center;font-size:12px;color:var(--muted-dim);text-align:center;letter-spacing:.02em;}
-  .cal{border:1px solid var(--line);border-radius:3px;overflow:hidden;font-size:13px;}
-  .cal .slot{display:grid;grid-template-columns:58px 1fr;min-height:36px;border-bottom:1px solid var(--line);}
-  .cal .slot:last-child{border-bottom:0;}
-  .cal .slot span:first-child{padding:8px;color:var(--muted);}
-  .cal .ev{margin:3px;padding:6px 8px;background:var(--green);color:var(--on-green);border-radius:2px;font-weight:600;}
-  .ledger{border:1px solid var(--line);border-radius:3px;font-size:13.5px;}
-  .ledger div{display:flex;justify-content:space-between;gap:10px;padding:9px 10px;border-bottom:1px solid var(--line);color:var(--muted);}
-  .ledger div:last-child{border-bottom:0;}
-  .ledger b{white-space:nowrap;color:var(--muted);}
-  .ledger .yes{color:var(--text);}
-  .ledger .yes b{color:var(--green);}
+  .call{position:absolute;left:10px;right:10px;top:6px;z-index:2;display:grid;grid-template-columns:auto 1fr auto auto;gap:9px;align-items:center;padding:10px;background:var(--card-alt);border:1px solid var(--line-2);border-radius:14px;}
+  .call b{display:block;font-size:13px;line-height:1.25;} .call small{display:block;font-size:11.5px;color:var(--muted);}
+  .c-btn{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;}
+  .c-btn svg{width:14px;height:14px;}
+  .c-no{background:var(--line-2);color:var(--text);}
+  .c-yes{background:var(--green);color:var(--on-green);}
+  /* 3. Calendar day and lock screen */
+  .day{display:flex;flex-direction:column;flex:1;border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+  .hr{display:grid;grid-template-columns:54px 1fr;min-height:46px;border-bottom:1px solid var(--line);}
+  .hr:last-child{flex:1;border-bottom:0;}
+  .hr>span{padding:6px 8px;font-size:11.5px;color:var(--muted-dim);white-space:nowrap;}
+  .hr .ev,.hr .busy{margin:4px 6px 4px 0;padding:6px 8px;border-radius:3px;font-size:12.5px;line-height:1.3;}
+  .hr .ev{background:var(--green);color:var(--on-green);font-weight:600;}
+  .hr .ev small{display:block;font-size:11.5px;font-weight:500;}
+  .hr .busy{background:var(--card-alt);color:var(--muted);}
+  .lock{display:flex;flex-direction:column;align-items:center;padding:18px 0 20px;}
+  .lock .l-day{font-size:13px;color:var(--muted);}
+  .lock .l-time{font-size:58px;line-height:1.05;font-weight:600;letter-spacing:-.02em;color:var(--text);font-variant-numeric:tabular-nums;}
+  .notif{padding:11px 12px;background:var(--card-alt);border:1px solid var(--line-2);border-radius:14px;font-size:13px;line-height:1.45;}
+  .notif .n-h{display:flex;align-items:center;gap:8px;margin-bottom:5px;}
+  .notif .n-h b{flex:1;font-size:12.5px;}
+  .notif .n-h small{font-size:11px;color:var(--muted-dim);}
+  .notif .av{width:22px;height:22px;font-size:9px;}
+  .notif p{margin:0;color:var(--text);}
+  /* 4. Marking estimates */
+  .lg{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+  .lg-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 10px;border-bottom:1px solid var(--line);}
+  .lg-row:last-child{border-bottom:0;}
+  .lg-row b{display:block;font-size:13px;} .lg-row small{display:block;font-size:12px;color:var(--muted);}
+  .lg-act{display:flex;gap:5px;flex:none;}
+  .lg-act i{font-style:normal;font-size:11px;font-weight:600;padding:5px 6px;border:1px solid var(--line-2);border-radius:3px;color:var(--text);white-space:nowrap;}
+  .pill{flex:none;font-size:11.5px;font-weight:700;padding:5px 8px;border-radius:3px;white-space:nowrap;}
+  .pill.yes{background:var(--green);color:var(--on-green);}
+  .pill.no{border:1px solid var(--line-2);color:var(--muted);}
+  .push{margin-top:auto;}
+  .lg-sum{display:flex;justify-content:space-between;align-items:baseline;margin-top:auto;padding:14px 12px;border:1px solid var(--green-line);background:var(--green-tint);border-radius:6px;}
+  .lg-sum span{font-size:13px;color:var(--muted);} .lg-sum b{font-size:19px;color:var(--text);}
   .pop{animation:pop .45s ease-out both;}
   @keyframes pop{from{opacity:0;}to{opacity:1;}}
-  @media (prefers-reduced-motion:reduce){ .pop{animation:none;} .scr{transition:none;} }
+  @media (prefers-reduced-motion:reduce){ .pop,.typing i{animation:none;} .scr,.feed{transition:none;} }
   @media (min-width:960px){
     .how-grid{display:grid;grid-template-columns:1fr 360px;grid-template-rows:auto 1fr;column-gap:80px;align-items:start;}
     .how-intro{grid-column:1;grid-row:1;}
-    .steps{grid-column:1;grid-row:2;margin-top:12px;}
+    .steps{grid-column:1;grid-row:2;margin-top:8px;}
     .phone-col{grid-column:2;grid-row:1 / span 2;}
-    .steps li{grid-template-columns:52px 1fr;padding:24px 0;}
-    .steps li.on::before{left:-20px;}
-    .phone-col{position:sticky;top:104px;}
-    .phone{width:340px;height:620px;}
+    .steps li{grid-template-columns:52px 1fr;padding:20px 20px 20px 24px;}
+    .phone-col{position:sticky;top:96px;}
+    .phone{width:340px;height:650px;}
   }
 
   /* ---------- Proof ---------- */
@@ -635,20 +701,21 @@
       </div>
       <div class="demo-ctrl">
         <button class="btn" type="button" id="demo-go">Send a test lead</button>
-        <span class="tag" id="demo-state">About 30 seconds.</span>
+        <span class="tag" id="demo-state">About 40 seconds.</span>
       </div>
     </div>
     <ol class="steps" id="steps">
-      <li><span class="n">01</span><div><b>Ads go live</b>A homeowner in your service area taps your ad and fills out your landing page.</div></li>
-      <li><span class="n">02</span><div><b>Text and call right away</b>Your business texts and calls them while they still have the phone in hand.</div></li>
-      <li><span class="n">03</span><div><b>Estimate booked and reminded</b>They pick a time, it lands on your calendar, and they get a reminder before you arrive.</div></li>
-      <li><span class="n">04</span><div><b>You pay when they show</b>You only pay for the estimate if the homeowner is there when you arrive.</div></li>
+      <li><span class="fill" aria-hidden="true"></span><span class="n">01</span><div><b>Ads go live</b>A homeowner in your service area taps your ad and fills out your landing page.</div></li>
+      <li><span class="fill" aria-hidden="true"></span><span class="n">02</span><div><b>Text and call right away</b>Your business texts and calls them while they still have the phone in hand.</div></li>
+      <li><span class="fill" aria-hidden="true"></span><span class="n">03</span><div><b>Estimate booked and reminded</b>They pick a time, it lands on your calendar, and they get a reminder before you arrive.</div></li>
+      <li><span class="fill" aria-hidden="true"></span><span class="n">04</span><div><b>You pay when they show</b>You mark each estimate, and you only pay for the ones where the homeowner was there.</div></li>
     </ol>
     <div class="phone-col">
-      <p class="now" id="demo-now" aria-live="polite"></p>
+      <div class="now"><span class="now-view" id="demo-view">Homeowner's phone</span><span class="now-step" id="demo-now" aria-live="polite"></span></div>
       <div class="phone" role="img" aria-label="Phone playing the test lead demo">
         <div class="screen">
-          <div class="sbar"><span id="clock">9:41</span><span>Test lead</span></div>
+          <span class="island" aria-hidden="true"></span>
+          <div class="sbar"><span id="clock">9:41</span><span class="sicons" aria-hidden="true"><svg viewBox="0 0 17 11"><rect x="0" y="7" width="3" height="4" rx=".6"/><rect x="4.5" y="5" width="3" height="6" rx=".6"/><rect x="9" y="2.5" width="3" height="8.5" rx=".6"/><rect x="13.5" y="0" width="3" height="11" rx=".6"/></svg><svg viewBox="0 0 15 11"><path d="M7.5 2.2c2.2 0 4.2.85 5.7 2.25l1.1-1.15A9.6 9.6 0 0 0 7.5.6 9.6 9.6 0 0 0 .7 3.3l1.1 1.15A8.1 8.1 0 0 1 7.5 2.2zm0 3.2c1.3 0 2.5.5 3.4 1.3l1.1-1.15A6.5 6.5 0 0 0 7.5 3.8 6.5 6.5 0 0 0 3 5.55L4.1 6.7c.9-.8 2.1-1.3 3.4-1.3zm0 3.2c.5 0 .9.15 1.2.45L7.5 10.3 6.3 9.05c.3-.3.7-.45 1.2-.45z"/></svg><svg viewBox="0 0 25 12"><rect x=".5" y=".5" width="21" height="11" rx="3" fill="none" stroke="currentColor" opacity=".5"/><rect x="2" y="2" width="16" height="8" rx="1.6"/><rect x="23" y="4" width="1.6" height="4" rx=".8" opacity=".5"/></svg></span></div>
           <div class="scr" id="scr"><p class="idle">Tap "Send a test lead" to see what the homeowner sees.</p></div>
         </div>
       </div>
@@ -986,10 +1053,15 @@ var SITE = {
   calc();
 
   /* ---- Demo: send a test lead (the only animation on the page) ---- */
-  var scr = $('#scr'), now = $('#demo-now'), go = $('#demo-go'), state = $('#demo-state'), clock = $('#clock');
+  var scr = $('#scr'), now = $('#demo-now'), view = $('#demo-view'), go = $('#demo-go'), state = $('#demo-state'), clock = $('#clock');
   var steps = $$('#steps li');
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var CO = 'Ridge Tree &amp; Land'; // made-up example company, named as such under the phone
+  var HOME = "Homeowner's phone", YOU = 'Your phone';
+  var STEP_MS = [10400, 12800, 8900, 5700]; // rough length of each step, for the line that fills
+  var ICON_OK = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>';
+  var ICON_X = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
+  var ICON_CALL = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1l-2.2 2.2z"/></svg>';
   var AD_HTML = '<div class="ad"><div class="who">' + CO + '<small>Sponsored</small></div>' +
       '<div class="txt">Tree hanging over the house? Book an estimate with a local crew.</div>' +
       '<div class="img"><svg viewBox="0 0 300 120" preserveAspectRatio="xMidYMid slice" aria-hidden="true">' +
@@ -1000,8 +1072,12 @@ var SITE = {
       '<circle cx="104" cy="44" r="24" fill="#208F58"/><circle cx="134" cy="32" r="28" fill="#34C77B"/><circle cx="168" cy="38" r="22" fill="#2AA866"/><circle cx="150" cy="18" r="16" fill="#208F58"/>' +
       '</svg></div>' +
       '<div class="cta">Tree removal and trimming<span>Book now</span></div></div>';
-  // Before anyone taps, the phone shows a still frame of the ad (no motion).
-  scr.innerHTML = '<div class="appbar">Feed</div>' + AD_HTML + '<p class="idle">Tap "Send a test lead" to play it.</p>';
+  var POST = '<div class="post"><div class="p-top"><i class="av"></i><span class="ln s"></span></div><span class="ln"></span><span class="ln m"></span><div class="p-img"></div></div>';
+  var FEED_HEAD = '<div class="app-h"><b>Feed</b><small>Near you</small></div>';
+  var FEED = '<div class="feed">' + POST + AD_HTML + POST + '</div>';
+  // Before anyone taps, the phone shows a still frame of the feed (no motion).
+  scr.innerHTML = FEED_HEAD + FEED;
+
   function wait(ms) { return new Promise(function (res) { setTimeout(res, reduce ? Math.min(ms, 700) : ms); }); }
   function add(html, cls) {
     var d = document.createElement('div');
@@ -1016,80 +1092,131 @@ var SITE = {
     scr.innerHTML = '';
     scr.classList.remove('out');
   }
-  async function stepTo(i, label) {
+  // Highlight step i and fill its line over the step's length; earlier steps show as done.
+  function mark(i) {
+    steps.forEach(function (li, j) {
+      var f = $('.fill', li);
+      li.classList.toggle('on', j === i);
+      li.classList.toggle('done', j < i);
+      f.style.transition = 'none';
+      f.style.height = '';
+    });
+    if (i < 0 || i >= steps.length || reduce) return;
+    var fill = $('.fill', steps[i]);
+    void fill.offsetHeight;
+    fill.style.transition = 'height ' + STEP_MS[i] + 'ms linear';
+    fill.style.height = 'calc(100% - 32px)';
+  }
+  async function stepTo(i, label, who) {
     await clearScreen();
-    steps.forEach(function (li, j) { li.classList.toggle('on', j === i); });
+    mark(i);
     now.textContent = 'Step ' + (i + 1) + ' of 4: ' + label;
+    view.textContent = who;
   }
-  // On phones, bring the whole phone into view before it starts.
-  function showPhone() {
-    if (window.innerWidth >= 960) return;
-    var r = $('.phone-col').getBoundingClientRect(), h = window.innerHeight;
-    var dy = r.bottom > h ? Math.min(r.bottom - h + 16, r.top - 72) : (r.top < 64 ? r.top - 72 : 0);
-    if (dy) window.scrollBy({ top: dy, behavior: reduce ? 'auto' : 'smooth' });
+  async function type(el, text) {
+    if (reduce) { el.textContent = text; return; }
+    for (var k = 1; k <= text.length; k++) { el.textContent = text.slice(0, k); await wait(45); }
   }
+  async function tap(el) { el.classList.add('tap'); await wait(450); }
+
   async function play() {
     go.disabled = true;
     state.textContent = 'Playing. Test only.';
-    showPhone();
 
-    // 1. Ads go live
-    await stepTo(0, 'Ads go live'); clock.textContent = '6:12';
-    add('<div class="appbar">Feed</div>');
-    var ad = add(AD_HTML);
-    await wait(2400);
-    $('.cta span', ad).classList.add('tap');
-    await wait(1100);
+    // 1. Ads go live: the homeowner scrolls past the ad, taps it, and fills out the landing page.
+    await stepTo(0, 'Ads go live', HOME); clock.textContent = '6:12';
+    add(FEED_HEAD);
+    var feed = $('.feed', add(FEED));
+    await wait(1200);
+    feed.style.transform = 'translateY(-' + ($('.post', feed).offsetHeight + 10) + 'px)';
+    await wait(1700);
+    await tap($('.cta span', feed));
+    await wait(400);
     await clearScreen();
-    add('<div class="appbar">' + CO + '<small>Landing page</small></div>');
-    var f1 = add('<div class="lp"><div class="f"><small>What do you need?</small><span>&nbsp;</span></div></div>');
-    var f2 = add('<div class="lp"><div class="f"><small>Tell us about it</small><span>&nbsp;</span></div></div>');
-    var f3 = add('<div class="lp"><div class="f"><small>Cell phone</small><span>&nbsp;</span></div></div>');
-    var sb = add('<div class="lp"><div class="go">Send</div></div>');
-    await wait(900); $('span', f1).textContent = 'Tree removal';
-    await wait(900); $('span', f2).textContent = 'Big oak over the driveway';
-    await wait(900); $('span', f3).textContent = '(321) 555-0142';
-    await wait(800); $('.go', sb).classList.add('tap');
-    await wait(1200);
-
-    // 2. Text and call within 60 seconds
-    await stepTo(1, 'Text and call right away');
-    add('<div class="appbar">' + CO + '<small>Text message</small></div>');
-    var tm = add('Form sent 0:00 ago', 'timer');
-    for (var s = 0; s <= 30; s += reduce ? 30 : 5) { tm.textContent = 'Form sent 0:' + String(s).padStart(2, '0') + ' ago'; await wait(320); }
-    add('Hi, this is ' + CO + '. Got your request about the oak over the driveway. We can come look Thursday at 9 or Friday at 2. Which works?', 'msg out');
-    await wait(3000);
-    add(CO + ' is calling the homeowner', 'sys');
-    await wait(1800);
-    add('Thursday at 9 works', 'msg in');
-    await wait(2000);
-
-    // 3. Estimate booked and reminded
-    await stepTo(2, 'Booked and reminded');
-    add('<div class="appbar">Your calendar<small>Thursday</small></div>');
-    add('<div class="cal">' +
-      '<div class="slot"><span>8 AM</span><span></span></div>' +
-      '<div class="slot"><span>9 AM</span><span class="ev">Estimate: oak removal</span></div>' +
-      '<div class="slot"><span>10 AM</span><span></span></div></div>');
-    await wait(2200);
-    add('Wednesday, 5:00 PM', 'sys');
+    add('<div class="lp-bar"><b>' + CO + '</b><span>Call</span></div>');
+    add('<div class="lp-hero"><b>Get a free tree estimate</b><span>Tell us about the job. We\'ll text you right back.</span></div>');
+    var f1 = add('<div class="f"><small>What do you need?</small><span></span></div>', 'lp');
+    var f2 = add('<div class="f"><small>Tell us about it</small><span></span></div>', 'lp');
+    var f3 = add('<div class="f"><small>Cell phone</small><span></span></div>', 'lp');
+    var sb = add('<div class="go">Send</div>', 'lp');
     await wait(500);
-    add('Reminder: ' + CO + ' will be at your place tomorrow at 9:00 AM for your estimate. Reply here if you need to move it.', 'msg out');
-    await wait(3000);
+    await type($('span', f1), 'Tree removal');
+    await wait(250);
+    await type($('span', f2), 'Big oak over the driveway');
+    await wait(250);
+    await type($('span', f3), '(321) 555-0142');
+    await wait(450);
+    await tap($('.go', sb));
+    [f1, f2, f3, sb].forEach(function (el) { el.remove(); });
+    add('<div class="lp-ok"><span class="ok">' + ICON_OK + '</span><b>Got it.</b><span>' + CO + ' will text you in a moment.</span></div>');
+    await wait(1700);
+
+    // 2. Text and call right away, in the business's name.
+    await stepTo(1, 'Text and call right away', HOME);
+    add('<div class="msg-h"><i class="av g">RT</i><b>' + CO + '</b><small>Text message</small></div>');
+    var tm = add('Form sent 0:00 ago', 'timer');
+    for (var s = 0; s <= 30; s += reduce ? 30 : 5) { tm.textContent = 'Form sent 0:' + String(s).padStart(2, '0') + ' ago'; await wait(300); }
+    var dots = add('<i></i><i></i><i></i>', 'msg out typing');
+    await wait(1100);
+    dots.remove();
+    add('Hi, this is ' + CO + '. Got your request about the oak over the driveway. We can come look Thursday at 9 or Friday at 2. Which works?', 'msg out');
+    await wait(2800);
+    var call = document.createElement('div');
+    call.className = 'call pop';
+    call.innerHTML = '<i class="av g">RT</i><div><b>' + CO + '</b><small>Incoming call</small></div><span class="c-btn c-no">' + ICON_X + '</span><span class="c-btn c-yes">' + ICON_CALL + '</span>';
+    scr.appendChild(call);
+    await wait(1500);
+    await tap($('.c-yes', call));
+    $('small', call).textContent = 'On the call';
+    await wait(1700);
+    call.remove();
+    add('Call with ' + CO + ', 2 min', 'sys');
+    await wait(900);
+    add('Thursday at 9 works', 'msg in');
+    await wait(1800);
+
+    // 3. Booked on the owner's calendar, then a reminder on the homeowner's phone.
+    await stepTo(2, 'Booked and reminded', YOU); clock.textContent = '6:16';
+    add('<div class="app-h"><b>Thursday</b><small>Your calendar</small></div>');
+    var day = add('<div class="day">' +
+      '<div class="hr"><span>7 AM</span><div class="busy">Crew 1: removal job</div></div>' +
+      '<div class="hr"><span>8 AM</span><div></div></div>' +
+      '<div class="hr"><span>9 AM</span><div class="slot9"></div></div>' +
+      '<div class="hr"><span>10 AM</span><div></div></div>' +
+      '<div class="hr"><span>11 AM</span><div class="busy">Crew 2: trimming job</div></div>' +
+      '<div class="hr"><span>12 PM</span><div></div></div></div>');
+    await wait(900);
+    $('.slot9', day).innerHTML = '<div class="ev pop">Estimate: oak removal<small>Booked by text at 6:15 PM</small></div>';
+    await wait(2400);
+    await clearScreen();
+    view.textContent = HOME; clock.textContent = '5:00';
+    add('<div class="lock"><span class="l-day">Wednesday</span><span class="l-time">5:00</span></div>');
+    await wait(700);
+    add('<div class="notif"><div class="n-h"><i class="av g">RT</i><b>' + CO + '</b><small>now</small></div><p>Reminder: we\'ll be at your place tomorrow at 9:00 AM for your estimate. Reply here if you need to move it.</p></div>');
+    await wait(2800);
     add('Thanks, see you then', 'msg in');
-    await wait(2000);
+    await wait(1700);
 
-    // 4. You pay when they show
-    await stepTo(3, 'You pay when they show'); clock.textContent = '9:02';
-    add('<div class="appbar">Your estimates this week</div>');
-    add('<div class="ledger">' +
-      '<div class="yes"><span>Thu 9:00, homeowner was there</span><b>Billed</b></div>' +
-      '<div><span>Fri 2:00, no one home</span><b>Not billed</b></div>' +
-      '<div><span>Lead outside your area</span><b>Not billed</b></div></div>');
-    await wait(2200);
-    add('You pay for 1 estimate.', 'sys');
-    await wait(1200);
+    // 4. The owner marks each estimate; only the shown one bills.
+    await stepTo(3, 'You pay when they show', YOU); clock.textContent = '6:30';
+    add('<div class="app-h"><b>Your estimates</b><small>This week</small></div>');
+    var lg = add('<div class="lg">' +
+      '<div class="lg-row r1"><div><b>Thu 9:00, oak removal</b><small>Did they show?</small></div><span class="lg-act"><i class="y">Shown</i><i>Not shown</i></span></div>' +
+      '<div class="lg-row r2"><div><b>Fri 2:00, palm trimming</b><small>Did they show?</small></div><span class="lg-act"><i>Shown</i><i class="n">Not shown</i></span></div>' +
+      '<div class="lg-row"><div><b>Lead in Orlando</b><small>Outside your area</small></div><span class="pill no">Not billed</span></div></div>');
+    await wait(1300);
+    await tap($('.r1 .y', lg));
+    $('.r1 .lg-act', lg).outerHTML = '<span class="pill yes">Billed</span>';
+    $('.r1 small', lg).textContent = 'Homeowner was there';
+    await wait(900);
+    await tap($('.r2 .n', lg));
+    $('.r2 .lg-act', lg).outerHTML = '<span class="pill no">Not billed</span>';
+    $('.r2 small', lg).textContent = 'No one home';
+    await wait(900);
+    add('<div class="lg-sum"><span>You pay for</span><b>1 estimate</b></div>', 'push');
+    await wait(1500);
 
+    mark(steps.length);
     now.textContent = 'That is the whole loop.';
     go.textContent = 'Run it again';
     go.disabled = false;
