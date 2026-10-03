@@ -63,10 +63,18 @@ lead demo plays.
   custom question** (`a1`). In Calendly, make question 1 a multi-line text box
   such as "About your company". If you don't want that, set
   `calendlyAnswerParam: null`.
-- To also send every submission to your CRM, set `formEndpoint` to a webhook
-  URL, such as a GoHighLevel inbound webhook. It receives JSON with company,
-  service_area, crews, monthly_ad_budget, phone, sms_consent, page, and
-  submitted_at.
+- Every submission also goes to the dialer the moment they press "Next",
+  whether or not they book: `formEndpoint` is
+  `https://dialer.zenithcomarketing.com/api/inbound/website-form`. It becomes a
+  pending lead in the dialer's **Website form** list (switched off until you
+  turn it on), with every answer in a pinned note. A number already in the
+  dialer gets the note instead of a second lead. The dialer only accepts posts
+  from this site (its `INBOUND_FORM_ORIGINS` setting), five per visitor per ten
+  minutes. A hidden "leave this empty" field catches bots.
+- The body is JSON with company, service_area, crews, monthly_ad_budget, phone,
+  sms_consent, page, submitted_at and the hidden url_hp. It's sent as
+  text/plain so the browser doesn't need a preflight. Set `formEndpoint` to
+  null to stop sending.
 - If JavaScript is off, the buttons link straight to Calendly.
 
 ## 4. Copy rules used on the page
