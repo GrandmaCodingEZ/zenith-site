@@ -497,7 +497,15 @@
   /* ---------- Calculator ---------- */
   .calc-grid{display:grid;gap:28px;}
   .deal-calc{max-width:880px;margin:48px auto 0;}
-  .deal-calc h3{font-size:26px;line-height:1.15;margin-bottom:12px;}
+  .deal-calc h3{font-size:26px;line-height:1.18;margin-bottom:14px;}
+  .calc-intro .c-lead{margin:0 0 16px;font-size:17px;color:var(--muted);text-wrap:pretty;}
+  .calc-intro .formula{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0;}
+  .formula .f-g{display:inline-flex;align-items:center;gap:8px;padding:0;border:0;background:none;}
+  .formula span:not(.f-g),.formula b{padding:7px 13px;border:1px solid var(--line-2);border-radius:999px;background:var(--card);font-size:14px;font-weight:500;line-height:1.2;color:var(--text);white-space:nowrap;}
+  .formula b{border-color:var(--green-line);background:var(--green-tint);font-weight:600;color:var(--green);}
+  .formula i{font-style:normal;font-size:16px;color:var(--muted-dim);}
+  .calc-intro .c-note{display:flex;align-items:center;gap:8px;margin:20px 0 0;font-size:13.5px;color:var(--muted-dim);}
+  .c-note svg{width:14px;height:14px;flex:none;}
   .calc-card{padding:22px;}
   .calc-in{display:grid;gap:16px;}
   .fld-n label{display:block;margin-bottom:8px;font-size:14px;font-weight:500;color:var(--muted);}
@@ -514,7 +522,7 @@
   @media (min-width:600px){ .calc-in{grid-template-columns:1fr 1fr;} }
   @media (min-width:960px){
     .calc-grid{grid-template-columns:5fr 6fr;gap:56px;align-items:center;}
-    .deal-calc h3{font-size:30px;}
+    .deal-calc h3{font-size:32px;}
     .calc-grid .head{margin:0;}
     .calc-card{padding:32px;}
     .worth{font-size:72px;}
@@ -922,10 +930,12 @@
       </div>
     </div>
     <div class="calc-grid deal-calc" data-rv-group>
-      <div class="head">
-        <p class="sub-label">Do the math</p>
+      <div class="head calc-intro">
+        <p class="eyebrow">Do the math</p>
         <h3 id="calc-h">What one shown estimate is worth to you</h3>
-        <p>Put in your own numbers. Nothing here is sent anywhere.</p>
+        <p class="c-lead">Put in your own numbers. The math is simple:</p>
+        <p class="formula" aria-label="Average job value times close rate equals what one shown estimate is worth"><span class="f-g"><span>Average job value</span><i aria-hidden="true">&times;</i><span>Close rate</span></span><span class="f-g"><i aria-hidden="true">=</i><b>One shown estimate</b></span></p>
+        <p class="c-note"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Nothing you type here is sent anywhere.</p>
       </div>
     <div class="card calc-card">
       <div class="calc-in">
