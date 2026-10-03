@@ -108,9 +108,15 @@ retainers and lead sites stays three plain rows inside The deal.
 
 ## 5. Legal pages
 
-`privacy.html` and `terms.html` are light reading pages with a navy header,
-set in Barlow. The Terms were rewritten on 2026-10-02 for the per-shown-estimate
-offer and keep the website and automation plans in their own section. They
-are a draft: have a Florida attorney review them before they go live, and
-email current clients 30 days before they take effect. The deal card and FAQ
-on the homepage summarize the Terms; if one changes, change the other.
+`privacy.html` and `terms.html` are light reading pages with a navy header.
+`terms.html` is still the terms that were live before this homepage; only
+its logo changed.
+
+The Terms rewritten on 2026-10-02 for the per-shown-estimate offer are in
+`terms-draft.html` (not linked, marked noindex, with a "Draft, not in effect"
+notice). It keeps the website and automation plans in their own section. To
+publish it: have a Florida attorney review it, set its effective date, email
+current clients 30 days before it applies to them, then copy it over
+`terms.html` and delete the draft notice. Until then the homepage's deal card
+and FAQ describe the offer, but the live Terms don't cover it yet. When the
+Terms change, check the deal card and FAQ still match.
