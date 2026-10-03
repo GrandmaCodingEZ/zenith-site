@@ -1,1174 +1,1477 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zenith Co. — Websites & Marketing Systems for Florida Tree Service Companies</title>
-<meta name="description" content="Zenith Co. builds websites, missed-call text-back, and 5-star review systems for Florida tree service companies. Flat pricing, no long-term contracts, live in about a week.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zenith Co. | Booked Estimates for Florida Tree Companies</title>
+<meta name="description" content="Paid ads for established Florida tree service companies. Every lead gets a text and a call within 60 seconds and a time on your calendar. You pay per estimate where the homeowner shows. One company per service area.">
+<link rel="canonical" href="https://zenithcomarketing.com/">
+<meta name="theme-color" content="#0B1520">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Zenith Co.">
+<meta property="og:url" content="https://zenithcomarketing.com/">
+<meta property="og:title" content="Booked estimates. You only pay when the homeowner shows up.">
+<meta property="og:description" content="Paid ads for established Florida tree companies, billed per shown estimate. One company per service area.">
+<meta property="og:image" content="https://zenithcomarketing.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Booked estimates. You only pay when the homeowner shows up.">
+<meta name="twitter:description" content="Paid ads for established Florida tree companies, billed per shown estimate.">
+<meta name="twitter:image" content="https://zenithcomarketing.com/assets/og-image.png">
 <link rel="icon" href="assets/zenith-mark.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Zenith Co.",
+  "url": "https://zenithcomarketing.com/",
+  "email": "hello@zenithcomarketing.com",
+  "logo": "https://zenithcomarketing.com/apple-touch-icon.png",
+  "description": "Paid ads for established Florida tree service companies, billed per shown estimate.",
+  "areaServed": { "@type": "State", "name": "Florida" }
+}
+</script>
+<script>
+  // Scroll reveal: hide revealable blocks before first paint. If the page script
+  // never starts, show everything after 3 seconds.
+  (function () {
+    var d = document.documentElement;
+    if (!('IntersectionObserver' in window) || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+    d.classList.add('js-reveal');
+    setTimeout(function () { if (!window.__reveal) d.classList.remove('js-reveal'); }, 3000);
+  })();
+</script>
 <style>
+  /* Zenith Co. Same dark navy system as the services site: one green, quiet cards,
+     product mockups instead of photos. Corners barely rounded. Mobile first. */
   :root{
-    --bg:#0E1417;
-    --bg-alt:#101A20;
-    --card:#1A2429;
-    --card-alt:#212E35;
-    --line:#2A3841;
+    --bg:#0B1520;
+    --bg-alt:#0E1A27;
+    --card:#142231;
+    --card-alt:#1B2B3C;
+    --line:#243548;
+    --line-2:#30465C;
+    --text:#F2F6F8;
+    --muted:#98AABB;
+    --muted-dim:#7F92A5;
     --green:#34C77B;
-    --green-dim:#208F58;
-    --amber:#F5B301;
-    --red:#E0574D;
-    --text:#F2F6F7;
-    --muted:#90A4AE;
-    --muted-dim:#5D6E77;
-    --font-display:'Space Grotesk', sans-serif;
-    --font-body:'Inter', sans-serif;
-    --radius:14px;
-    --container:1160px;
+    --green-hi:#4AD48C;
+    --on-green:#06130C;
+    --green-tint:rgba(52,199,123,.1);
+    --green-line:rgba(52,199,123,.34);
+    --font:'Archivo',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+    --r:12px;
+    --r-sm:8px;
+    --shadow:0 24px 48px -20px rgba(0,0,0,.55);
+    --wrap:1160px;
+    --g:20px;
   }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:var(--font-body);
-    line-height:1.5;
-    -webkit-font-smoothing:antialiased;
-  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-padding-top:80px;scroll-behavior:smooth;interpolate-size:allow-keywords;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 var(--font);-webkit-font-smoothing:antialiased;}
   img,svg{display:block;max-width:100%;}
-  a{color:inherit;text-decoration:none;}
-  ul{list-style:none;}
-  .wrap{max-width:var(--container);margin:0 auto;padding:0 28px;}
-  h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;letter-spacing:-0.01em;}
-  section{position:relative;}
-  ::selection{background:var(--green);color:#0E1417;}
+  a{color:inherit;}
+  p{margin:0 0 1em;}
+  ul,ol{margin:0;padding:0;list-style:none;}
+  h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.015em;text-wrap:balance;}
+  ::selection{background:var(--green);color:var(--on-green);}
+  :focus-visible{outline:2px solid var(--green);outline-offset:3px;}
+  [hidden]{display:none !important;}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--g);}
+  .accent{color:var(--green);}
+  @media (min-width:960px){ :root{--g:28px;} }
 
-  a:focus-visible,button:focus-visible{outline:2px solid var(--amber);outline-offset:3px;}
+  /* Details still to fill in. Shown on purpose until set in the SITE block. */
+  .blank{color:var(--text);background:var(--green-tint);border-bottom:1px dashed var(--green);padding:0 4px;font-weight:500;}
 
-  @media (prefers-reduced-motion: reduce){
-    *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important;}
-  }
-
-  /* ---------- reveal (only hides content when JS is running) ---------- */
-  .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease;}
-  .js .reveal.in{opacity:1;transform:translateY(0);}
-
-  /* ---------- nav ---------- */
-  .nav{
-    position:sticky;top:0;z-index:50;
-    background:rgba(14,20,23,0.86);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:76px;}
-  .brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:19px;letter-spacing:0.01em;}
-  .brand-mark{width:36px;height:36px;flex-shrink:0;}
-  .nav-links{display:flex;align-items:center;gap:34px;font-size:14.5px;color:var(--muted);}
-  .nav-links a{transition:color .2s;}
-  .nav-links a:hover{color:var(--text);}
-  .btn{
-    display:inline-flex;align-items:center;justify-content:center;gap:8px;
-    padding:13px 24px;border-radius:9px;font-weight:600;font-size:14.5px;
-    font-family:var(--font-body);border:none;cursor:pointer;
-    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
-    white-space:nowrap;
-  }
-  .btn-primary{background:var(--green);color:#0B1512;box-shadow:0 0 0 0 rgba(52,199,123,0.5);}
-  .btn-primary:hover{background:#3fd88a;transform:translateY(-1px);box-shadow:0 8px 20px -6px rgba(52,199,123,0.45);}
-  .btn-ghost{background:transparent;color:var(--text);border:1px solid var(--line);}
-  .btn-ghost:hover{border-color:var(--muted);}
-  .nav .btn{padding:11px 20px;font-size:14px;}
-
-  /* ---------- hero ---------- */
-  .hero{padding:80px 0 52px;}
-  .hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;}
-  .eyebrow{
-    display:inline-flex;align-items:center;gap:8px;
-    font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;
-    color:var(--green);margin-bottom:18px;
-  }
-  .eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(52,199,123,0.18);}
-  .hero h1{font-size:46px;line-height:1.08;margin-bottom:20px;}
-  .hero h1 .accent{color:var(--green);}
-  .hero p.lead{font-size:17.5px;color:var(--muted);max-width:500px;margin-bottom:28px;}
-  .hero p.lead b{color:var(--text);font-weight:600;}
-  .lead-mobile{display:none;}
-  @media (max-width:600px){
-    .lead-desktop{display:none;}
-    .lead-mobile{display:block;}
-  }
-  .hero-ctas{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-bottom:26px;}
-  .link-inline{font-size:14.5px;color:var(--text);border-bottom:1px solid var(--muted-dim);padding-bottom:2px;transition:border-color .2s,color .2s;}
-  .link-inline:hover{color:var(--green);border-color:var(--green);}
-  .hero-assurance{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--muted);}
-  .hero-assurance span{display:inline-flex;align-items:center;gap:7px;}
-  .hero-assurance svg{width:14px;height:14px;color:var(--green);flex-shrink:0;}
-
-  /* ---------- before/after mock ---------- */
-  .compare{
-    background:var(--card);border:1px solid var(--line);border-radius:18px;
-    padding:22px;
-  }
-  .compare-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
-  .compare-title{font-size:12.5px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;}
-  .toggle{
-    display:flex;background:var(--bg);border-radius:999px;padding:4px;border:1px solid var(--line);
-  }
-  .toggle button{
-    border:none;background:transparent;color:var(--muted);font-family:var(--font-body);
-    font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:999px;cursor:pointer;transition:all .25s;
-  }
-  .toggle button.active{background:var(--green);color:#0B1512;}
-  .search-card{
-    background:var(--bg-alt);border:1px solid var(--line);border-radius:12px;padding:18px 18px 20px;
-  }
-  .search-topbar{display:flex;align-items:center;gap:8px;color:var(--muted-dim);font-size:12px;margin-bottom:14px;}
-  .search-topbar svg{width:14px;height:14px;}
-  .result-row{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px solid var(--line);}
-  .result-row:first-of-type{border-top:none;}
-  .pin{width:34px;height:34px;border-radius:9px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
-  .result-name{font-size:14.5px;font-weight:600;margin-bottom:3px;}
-  .result-meta{font-size:12.5px;color:var(--muted);}
-  .stars{color:var(--amber);font-size:12px;letter-spacing:1px;}
-  .tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:5px;margin-top:6px;letter-spacing:0.03em;}
-  .tag-bad{background:rgba(224,87,77,0.14);color:var(--red);}
-  .tag-good{background:rgba(52,199,123,0.14);color:var(--green);}
-  .compare-caption{font-size:12.5px;color:var(--muted-dim);margin-top:14px;text-align:center;}
-
-  /* ---------- stats bar ---------- */
-  .stats-bar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-alt);}
-  .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);}
-  .stat-cell{padding:28px 24px;text-align:center;border-left:1px solid var(--line);}
-  .stat-cell:first-child{border-left:none;}
-  .stat-cell b{display:block;font-family:var(--font-display);font-size:30px;font-weight:700;color:var(--green);margin-bottom:4px;}
-  .stat-cell span{font-size:13px;color:var(--muted);display:block;max-width:200px;margin:0 auto;}
-
-  /* ---------- canopy divider ---------- */
-  .canopy{width:100%;height:64px;display:block;color:var(--card);}
-
-  /* ---------- section shell ---------- */
-  .section{padding:88px 0;}
-  .section-alt{background:var(--bg-alt);}
-  .section-head{max-width:640px;margin:0 auto 52px;text-align:center;}
-  .section-head .eyebrow{justify-content:center;width:100%;}
-  .section-head h2{font-size:34px;line-height:1.18;margin-bottom:14px;}
-  .section-head p{color:var(--muted);font-size:16px;}
-
-  /* ---------- problem cards ---------- */
-  .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-  .problem-card{
-    background:var(--card);border-radius:var(--radius);padding:28px 26px;
-    border-left:3px solid var(--red);
-  }
-  .problem-card .icon{width:34px;height:34px;color:var(--red);margin-bottom:18px;}
-  .problem-card h3{font-size:18px;margin-bottom:10px;}
-  .problem-card p{font-size:14.5px;color:var(--muted);}
-
-  /* ---------- feature rows ---------- */
-  .feature-row{
-    display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
-    padding:64px 0;border-top:1px solid var(--line);
-  }
-  .feature-row:first-of-type{border-top:none;padding-top:12px;}
-  .feature-num{font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--green);letter-spacing:0.12em;margin-bottom:14px;}
-  .feature-copy h3{font-size:27px;margin-bottom:14px;line-height:1.15;}
-  .feature-copy > p{font-size:15.5px;color:var(--muted);margin-bottom:22px;max-width:460px;}
-  .feature-copy ul{display:flex;flex-direction:column;gap:11px;margin-bottom:26px;}
-  .feature-copy li{font-size:14.5px;display:flex;gap:10px;align-items:flex-start;}
-  .feature-copy li svg{width:16px;height:16px;color:var(--green);flex-shrink:0;margin-top:2px;}
-  .feature-stat{
-    display:inline-flex;align-items:baseline;gap:8px;background:rgba(52,199,123,0.08);
-    border:1px solid rgba(52,199,123,0.25);border-radius:9px;padding:10px 16px;margin-bottom:26px;
-  }
-  .feature-stat b{font-family:var(--font-display);font-size:20px;color:var(--green);}
-  .feature-stat span{font-size:13px;color:var(--muted);}
-  .feature-row.flip .feature-copy{order:2;}
-  .feature-row.flip .feature-visual{order:1;}
-
-  /* phone mock */
-  .phone-mock{
-    width:300px;margin:0 auto;background:var(--bg-alt);border:1px solid var(--line);
-    border-radius:26px;padding:18px 16px 22px;box-shadow:0 24px 48px -20px rgba(0,0,0,0.5);
-  }
-  .phone-notch{width:90px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 16px;}
-  .missed-call{
-    display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);
-    border-radius:11px;padding:11px 13px;margin-bottom:14px;font-size:12.5px;color:var(--muted);
-  }
-  .missed-call svg{width:16px;height:16px;color:var(--red);flex-shrink:0;}
-  .missed-call b{color:var(--text);font-weight:600;display:block;font-size:13px;}
-  .sms{max-width:86%;border-radius:14px;padding:10px 13px;font-size:13px;line-height:1.45;margin-bottom:10px;}
-  .sms-out{background:var(--green);color:#0B1512;margin-left:auto;border-bottom-right-radius:4px;font-weight:500;}
-  .sms-in{background:var(--card-alt);color:var(--text);border-bottom-left-radius:4px;}
-  .sms-time{font-size:10.5px;color:var(--muted-dim);text-align:center;margin:12px 0 10px;letter-spacing:0.04em;}
-
-  /* review mock */
-  .review-mock{width:320px;margin:0 auto;display:flex;flex-direction:column;gap:14px;}
-  .review-step{
-    background:var(--bg-alt);border:1px solid var(--line);border-radius:13px;padding:16px 18px;
-  }
-  .review-step .rs-label{font-size:10.5px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted-dim);margin-bottom:8px;}
-  .review-step p{font-size:13px;color:var(--text);line-height:1.45;}
-  .review-toast{
-    display:flex;align-items:center;gap:12px;background:rgba(52,199,123,0.1);
-    border:1px solid rgba(52,199,123,0.35);border-radius:13px;padding:14px 16px;
-  }
-  .review-toast .stars{font-size:14px;}
-  .review-toast b{display:block;font-size:13px;}
-  .review-toast span{font-size:12px;color:var(--muted);}
-
-  /* browser mock */
-  .browser-mock{width:100%;max-width:440px;margin:0 auto;background:var(--bg-alt);border-radius:12px;border:1px solid var(--line);overflow:hidden;box-shadow:0 24px 48px -20px rgba(0,0,0,0.5);}
-  .browser-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid var(--line);}
-  .browser-dot{width:8px;height:8px;border-radius:50%;background:var(--line);}
-  .browser-url{margin-left:10px;font-size:11.5px;color:var(--muted-dim);font-family:var(--font-body);}
-  .browser-body{padding:22px;}
-  .browser-body .bar{height:10px;border-radius:4px;background:var(--line);margin-bottom:10px;}
-  .browser-body .bar.short{width:55%;}
-  .mock-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;}
-  .mock-nav .bar{margin-bottom:0;}
-  .mock-form{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:14px;margin-top:16px;}
-  .mock-form .bar{background:var(--card-alt);height:14px;}
-  .mock-btn{height:30px;border-radius:7px;background:var(--green);opacity:0.85;margin-top:12px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#0B1512;letter-spacing:0.05em;}
-
-  /* ---------- services grid ---------- */
-  .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
-  .service-tile{
-    background:var(--card);border:1px solid var(--line);border-radius:11px;
-    padding:18px 16px;display:flex;align-items:center;gap:12px;font-size:14px;font-weight:500;
-    transition:border-color .2s;
-  }
-  .service-tile:hover{border-color:var(--green-dim);}
-  .service-tile svg{width:20px;height:20px;color:var(--green);flex-shrink:0;}
-
-  /* ---------- process ---------- */
-  .process{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative;}
-  .process-step{padding:0 26px;position:relative;}
-  .ring-badge{width:64px;height:64px;margin-bottom:22px;position:relative;}
-  .process-step h3{font-size:18.5px;margin-bottom:10px;}
-  .process-step p{font-size:14.5px;color:var(--muted);}
-  .process-step .duration{display:block;font-size:12px;color:var(--amber);font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:8px;}
-  .process-connector{position:absolute;top:32px;left:100%;width:100%;height:1px;background:var(--line);z-index:0;}
-  .process-step:last-child .process-connector{display:none;}
-
-  /* ---------- why cards ---------- */
-  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-  .why-card{
-    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-    padding:26px 24px;transition:border-color .25s;
-  }
-  .why-card:hover{border-color:var(--green-dim);}
-  .why-card .icon-wrap{
-    width:42px;height:42px;border-radius:10px;background:rgba(52,199,123,0.12);
-    display:flex;align-items:center;justify-content:center;margin-bottom:16px;
-  }
-  .why-card .icon-wrap svg{width:21px;height:21px;color:var(--green);}
-  .why-card h3{font-size:16.5px;margin-bottom:8px;}
-  .why-card p{font-size:13.5px;color:var(--muted);}
-
-  /* ---------- proof ---------- */
-  .proof-card{
-    background:var(--card);border:1px solid var(--line);border-radius:20px;
-    display:grid;grid-template-columns:1fr 1fr;overflow:hidden;
-  }
-  .proof-copy{padding:44px 44px;}
-  .proof-copy .eyebrow{color:var(--amber);}
-  .proof-copy .eyebrow::before{background:var(--amber);box-shadow:0 0 0 3px rgba(245,179,1,0.18);}
-  .proof-copy h3{font-size:26px;margin-bottom:14px;}
-  .proof-copy p{color:var(--muted);font-size:15px;margin-bottom:22px;}
-  .proof-visual{
-    background:linear-gradient(160deg,#141F25,#0D1417);
-    display:flex;align-items:center;justify-content:center;padding:36px;
-    border-left:1px solid var(--line);
+  /* ---------- Shared pieces ---------- */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:13px 22px;background:var(--green);color:var(--on-green);border:0;border-radius:var(--r-sm);font:600 16px/1.2 var(--font);text-decoration:none;cursor:pointer;white-space:nowrap;transition:background .2s ease,transform .2s ease;}
+  .btn:hover{background:var(--green-hi);transform:translateY(-1px);}
+  .btn:disabled:hover{transform:none;}
+  .btn:disabled{opacity:.55;cursor:default;}
+  .btn svg{width:16px;height:16px;flex:none;}
+  .btn-sm{min-height:42px;padding:10px 16px;font-size:15px;}
+  .link{transition:color .2s ease,border-color .2s ease;font-size:15.5px;font-weight:500;color:var(--text);text-decoration:none;border-bottom:1px solid var(--muted-dim);padding-bottom:2px;}
+  .link:hover{color:var(--green);border-color:var(--green);}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;margin:0 0 16px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green);}
+  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);flex:none;}
+  .sec{padding:72px 0;}
+  .alt{background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .head{max-width:660px;margin:0 0 40px;}
+  .head h2{font-size:28px;line-height:1.18;margin-bottom:14px;}
+  .head p{color:var(--muted);margin:0;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);}
+  .capfirst::first-letter{text-transform:uppercase;}
+  .ph{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line-2);border-radius:999px;padding:4px 9px;}
+  @media (min-width:960px){
+    body{font-size:16.5px;}
+    .sec{padding:104px 0;}
+    .head{margin-bottom:56px;}
+    .head h2{font-size:34px;}
+    .head.center{margin-left:auto;margin-right:auto;text-align:center;}
   }
 
-  /* ---------- work grid (live builds) ---------- */
-  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-  .work-card{
-    --accent:var(--green);
-    --accent-glow:rgba(52,199,123,0.16);
-    display:flex;flex-direction:column;
-    background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;
-    transition:border-color .25s, transform .25s;
+  /* ---------- Nav ---------- */
+  .nav{position:sticky;top:0;z-index:40;background:var(--bg);border-bottom:1px solid var(--line);}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px;}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;}
+  .brand span{font:700 19px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;}
+  .brand svg{width:34px;height:34px;flex:none;}
+  .nav-links{display:none;}
+  @media (max-width:359px){ .brand span{display:none;} }
+  @media (min-width:960px){
+    .nav-in{height:74px;}
+    .nav-links{display:flex;gap:32px;margin-left:auto;margin-right:12px;font-size:15px;color:var(--muted);}
+    .nav-links a{text-decoration:none;transition:color .2s ease;}
+    .nav-links a:hover{color:var(--text);}
   }
-  .work-card:hover{border-color:var(--accent);transform:translateY(-3px);}
-  .work-card.is-pool{--accent:#3FA9E0;--accent-glow:rgba(63,169,224,0.16);}
-  .work-frame{
-    background:linear-gradient(160deg,#141F25,#0D1417);
-    border-bottom:1px solid var(--line);padding:20px 20px 0;
-  }
-  .work-frame .browser-mock{max-width:none;box-shadow:0 18px 34px -18px rgba(0,0,0,0.6);border-radius:10px 10px 0 0;border-bottom:none;}
-  .work-shot{padding:16px 16px 20px;}
-  .work-shot .bar{height:9px;border-radius:4px;background:var(--line);margin-bottom:9px;}
-  .work-shot .bar.accent{background:var(--accent);opacity:0.55;}
-  .work-shot .bar.short{width:52%;}
-  .work-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:12px 0 4px;}
-  .work-tiles span{height:26px;border-radius:5px;background:var(--card-alt);}
-  .work-tiles span:nth-child(2){background:var(--card);}
-  .work-cta{
-    height:28px;border-radius:6px;background:var(--accent);opacity:0.85;margin-top:12px;
-    display:flex;align-items:center;justify-content:center;
-    font-size:10px;font-weight:700;color:#0B1512;letter-spacing:0.06em;
-  }
-  .work-body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1;}
-  .work-meta{display:flex;align-items:center;gap:10px;margin-bottom:11px;}
-  .work-badge{
-    display:inline-flex;align-items:center;gap:6px;
-    font-size:10.5px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);
-  }
-  .work-badge::before{
-    content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);
-    box-shadow:0 0 0 3px var(--accent-glow);
-  }
-  .work-place{font-size:11.5px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted-dim);font-weight:600;}
-  .work-body h3{font-size:19px;margin-bottom:9px;}
-  .work-body p{font-size:14px;color:var(--muted);margin-bottom:16px;}
-  .work-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px;}
-  .work-tags span{
-    font-size:11.5px;color:var(--muted);padding:5px 11px;
-    border:1px solid var(--line);border-radius:999px;
-  }
-  .work-link{margin-top:auto;font-size:14px;font-weight:600;color:var(--accent);}
-  .work-card:hover .work-link{text-decoration:underline;text-underline-offset:3px;}
 
-  /* ---------- regions ---------- */
-  .region-pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
-  .region-pill{
-    padding:10px 20px;border:1px solid var(--line);border-radius:999px;font-size:14px;color:var(--muted);
-    transition:border-color .2s, color .2s;
+  /* ---------- Hero ---------- */
+  .hero{padding:44px 0 56px;}
+  .hero h1{font-size:clamp(32px,8.8vw,38px);line-height:1.1;margin-bottom:18px;}
+  .hero .lead{font-size:17px;color:var(--muted);max-width:30em;margin-bottom:26px;}
+  .ctas{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-bottom:12px;}
+  .cta-note{margin:0;font-size:14px;color:var(--muted);}
+  /* Three promises under the hero, straight from the Terms */
+  .hero-points{display:grid;gap:18px;margin-top:40px;padding-top:28px;border-top:1px solid var(--line);}
+  .hero-points li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:14px;align-items:start;}
+  .hp-ic{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--green-tint);border:1px solid var(--green-line);color:var(--green);}
+  .hp-ic svg{width:13px;height:13px;}
+  .hero-points b{display:block;font-size:15.5px;font-weight:600;line-height:1.35;}
+  .hero-points div span{display:block;margin-top:3px;font-size:14px;line-height:1.45;color:var(--muted);}
+  @media (min-width:768px){ .hero-points{grid-template-columns:repeat(3,1fr);gap:32px;} }
+  @media (min-width:960px){ .hero-points{margin-top:72px;padding-top:36px;} }
+  .hc-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
+  .video{position:relative;aspect-ratio:16/9;background:var(--bg-alt);border:1px dashed var(--line-2);border-radius:2px;overflow:hidden;}
+  .video>iframe,.video>video{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .vph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:16px;text-align:center;color:var(--muted);font-size:14px;line-height:1.4;}
+  .vph b{color:var(--text);font-size:17px;font-weight:600;}
+  .play{width:52px;height:52px;border:1.5px solid var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:8px;}
+  .play::after{content:"";margin-left:4px;border-left:15px solid var(--green);border-top:9px solid transparent;border-bottom:9px solid transparent;}
+  @media (max-width:359px){ .play{display:none;} .vph b{font-size:15px;} .vph{font-size:13px;} }
+  @media (min-width:960px){
+    .hero{padding:88px 0 80px;}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;}
+    .hero h1{font-size:46px;margin-bottom:20px;}
+    .hero .lead{font-size:18px;}
+    .play{width:64px;height:64px;}
+    .play::after{border-left-width:18px;border-top-width:11px;border-bottom-width:11px;}
   }
-  .region-pill:hover{border-color:var(--green-dim);color:var(--text);}
 
-  /* ---------- pricing ---------- */
-  .pricing-card{
-    max-width:540px;margin:0 auto;background:var(--card);border:1px solid var(--line);
-    border-radius:20px;padding:42px 40px;text-align:center;position:relative;
-  }
-  .pricing-badge{
-    position:absolute;top:-13px;left:50%;transform:translateX(-50%);
-    background:var(--green);color:#0B1512;font-size:11.5px;font-weight:700;
-    letter-spacing:0.08em;text-transform:uppercase;padding:5px 16px;border-radius:999px;white-space:nowrap;
-  }
-  .pricing-row{display:flex;align-items:baseline;justify-content:center;gap:10px;margin:8px 0 4px;}
-  .pricing-row .amt{font-family:var(--font-display);font-size:42px;font-weight:700;}
-  .pricing-row .per{color:var(--muted);font-size:14px;}
-  .pricing-plus{color:var(--muted-dim);font-size:13px;margin:14px 0 22px;}
-  .pricing-list{text-align:left;display:flex;flex-direction:column;gap:12px;margin-bottom:24px;}
-  .pricing-list li{display:flex;gap:10px;font-size:14.5px;align-items:flex-start;}
-  .pricing-list svg{width:16px;height:16px;color:var(--green);flex-shrink:0;margin-top:2px;}
-  .pricing-roi{
-    background:rgba(245,179,1,0.07);border:1px solid rgba(245,179,1,0.25);border-radius:10px;
-    padding:13px 16px;font-size:13.5px;color:var(--text);margin-bottom:26px;text-align:left;
-  }
-  .pricing-roi b{color:var(--amber);}
-  .pricing-terms{font-size:12.5px;color:var(--muted-dim);margin-top:14px;}
+  .hero-card{margin-top:40px;padding:16px;box-shadow:var(--shadow);}
+  .lead-card{padding:18px 18px 6px;}
+  .lc-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:12px;border-bottom:1px solid var(--line);}
+  .lc-head b{font-size:15px;font-weight:600;}
+  .lc-head span{font-size:12px;color:var(--muted-dim);}
+  .lc-list li{display:grid;grid-template-columns:66px minmax(0,1fr) auto;gap:12px;align-items:start;padding:12px 0;}
+  .lc-list li+li{border-top:1px solid var(--line);}
+  .lc-t{padding-top:2px;font-size:12.5px;color:var(--muted-dim);white-space:nowrap;font-variant-numeric:tabular-nums;}
+  .lc-list b{display:block;font-size:15px;font-weight:600;line-height:1.35;color:var(--text);}
+  .lc-list li div span{display:block;font-size:13.5px;line-height:1.4;color:var(--muted);}
+  .lc-list .is-paid b{color:var(--green);}
+  .lc-list .pill{align-self:center;}
+  @media (min-width:960px){ .lead-card{padding:22px 24px 8px;} .lc-list li{grid-template-columns:76px minmax(0,1fr) auto;padding:14px 0;} }
+  @media (min-width:960px){ .hero-card{margin-top:0;padding:20px;} }
+  @media (min-width:700px) and (max-width:959px){ .work-grid{grid-template-columns:1fr 1fr;} }
 
-  /* pricing tiers */
-  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;}
-  .pricing-grid .pricing-card{max-width:none;margin:0;padding:38px 26px 30px;display:flex;flex-direction:column;}
-  .pricing-card.featured{border-color:var(--green-dim);margin-top:-14px;box-shadow:0 28px 56px -26px rgba(0,0,0,0.65);}
-  .pricing-popular{
-    font-family:var(--font-display);font-size:12px;font-weight:700;color:var(--green);
-    letter-spacing:0.12em;text-transform:uppercase;margin-bottom:10px;
+  /* ---------- Fit: one card, yes beside no, button in the footer ---------- */
+  .fit-card{max-width:980px;margin:0 auto;overflow:hidden;box-shadow:var(--shadow);}
+  .fit-cols{display:grid;}
+  .fit-col{padding:22px 20px 10px;}
+  .fit-no{border-top:1px solid var(--line);background:var(--bg-alt);}
+  .fit-col h3{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 6px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green);}
+  .fit-no h3{color:var(--muted-dim);}
+  .fit-list li{display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:center;padding:14px 0;border-top:1px solid var(--line);font-size:16.5px;font-weight:500;line-height:1.4;}
+  .fit-list li:first-child{border-top:0;}
+  .fit-list .ic{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--green-tint);border:1px solid var(--green-line);color:var(--green);}
+  .fit-list .ic svg{width:13px;height:13px;}
+  .fit-no .fit-list li{font-weight:400;color:var(--muted);}
+  .fit-no .ic{background:none;border-color:var(--line-2);color:var(--muted-dim);}
+  .fit-no .ic svg{width:11px;height:11px;}
+  .fit-foot{display:grid;gap:16px;padding:20px;border-top:1px solid var(--line);background:var(--card-alt);}
+  .fit-foot p{margin:0;font-size:15px;color:var(--muted);}
+  .fit-foot b{display:block;font-size:17px;font-weight:600;color:var(--text);}
+  @media (min-width:768px){
+    .fit-cols{grid-template-columns:1fr 1fr;}
+    .fit-no{border-top:0;border-left:1px solid var(--line);}
+    .fit-col{padding:28px 32px 14px;}
+    .fit-foot{grid-template-columns:1fr auto;align-items:center;gap:32px;padding:22px 32px;}
   }
-  .plan-name{font-family:var(--font-display);font-size:19px;font-weight:700;margin-bottom:8px;}
-  .pricing-grid .pricing-row .amt{font-size:34px;}
-  .pricing-grid .pricing-list{flex:1;margin-bottom:22px;}
-  .pricing-grid .pricing-roi{margin-bottom:22px;}
-  .pricing-cta{margin-top:auto;}
-  .pricing-grid + .pricing-terms{text-align:center;margin-top:30px;}
-
-  /* plan tags */
-  .plan-tag{
-    display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
-    padding:5px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);margin-bottom:14px;
+  @media (min-width:960px){
+    .fit-col{padding:32px 40px 16px;}
+    .fit-list li{grid-template-columns:30px 1fr;gap:16px;padding:16px 0;font-size:17px;}
+    .fit-list .ic{width:30px;height:30px;}
+    .fit-foot{padding:24px 40px;}
   }
-  .plan-tag.is-pro{background:rgba(52,199,123,0.08);border-color:rgba(52,199,123,0.25);color:var(--green);}
 
-  /* receptionist mock (reuses phone + step + toast) */
-  .missed-call.answered svg{color:var(--green);}
-  .phone-mock .review-step{margin-bottom:12px;}
-
-  /* ---------- faq ---------- */
-  .faq{max-width:760px;margin:0 auto;}
-  .faq-item{border-bottom:1px solid var(--line);}
-  .faq-q{
-    width:100%;text-align:left;background:transparent;border:none;color:var(--text);
-    font-family:var(--font-display);font-size:16.5px;font-weight:600;padding:22px 0;
-    display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:20px;
+  /* ---------- Feature rows ---------- */
+  .feature{display:grid;gap:40px;align-items:center;}
+  .feature>div{min-width:0;}
+  .feature h2{font-size:28px;line-height:1.18;margin-bottom:16px;}
+  .feature .big{font-size:20px;line-height:1.4;font-weight:500;color:var(--text);margin-bottom:16px;}
+  .feature p{color:var(--muted);}
+  @media (min-width:960px){
+    .feature{grid-template-columns:1fr 1fr;gap:72px;}
+    .feature h2{font-size:34px;}
+    .feature .big{font-size:22px;}
+    .feature.flip>div:last-child{order:-1;}
   }
-  .faq-q svg{width:18px;height:18px;color:var(--muted);flex-shrink:0;transition:transform .3s;}
-  .faq-item.open .faq-q svg{transform:rotate(45deg);color:var(--green);}
-  .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
-  .faq-a p{padding-bottom:22px;color:var(--muted);font-size:14.5px;max-width:640px;}
 
-  /* ---------- final cta ---------- */
-  .final-cta{
-    background:linear-gradient(135deg, #14231D 0%, #0E1417 60%);
-    border:1px solid var(--line);border-radius:24px;
-    padding:64px 48px;text-align:center;position:relative;overflow:hidden;
+  /* Week mock (illustrative) */
+  .week{padding:18px;box-shadow:var(--shadow);}
+  .wk-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--line);}
+  .wk-head b{font-size:16px;font-weight:600;}
+  .wk-head span{font-size:12.5px;color:var(--muted-dim);}
+  .wk-row{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);}
+  .wk-row:last-of-type{border-bottom:0;padding-bottom:4px;}
+  .wk-day{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:9px;}
+  .wk-ev{background:var(--bg-alt);border:1px solid var(--line);border-left:3px solid var(--green);border-radius:6px;padding:9px 12px;font-size:14.5px;line-height:1.35;}
+  .wk-ev small{display:flex;justify-content:space-between;gap:10px;margin-top:3px;font-size:12.5px;color:var(--muted);}
+  .wk-ev small i{font-style:normal;color:var(--green);}
+  .mock-cap{font-size:12.5px;color:var(--muted-dim);margin:14px 0 0;text-align:center;}
+  @media (max-width:767px){ .wk-more{display:none;} }
+  .slip-list{margin:8px 0 0;border-top:1px solid var(--line);}
+  .slip-list li{padding:16px 0;border-bottom:1px solid var(--line);font-size:19px;line-height:1.4;color:var(--text);}
+  /* Phone on a work day: the demo's phone, sized to its content. Muted on purpose,
+     no green and no red; the calendar in the next section is the answer. */
+  .phone-day .screen{padding-bottom:22px;}
+  .phone-day .lock{padding:10px 0 16px;}
+  .pd-list{display:flex;flex-direction:column;gap:8px;padding:0 10px;}
+  .app-ic{display:flex;align-items:center;justify-content:center;flex:none;width:22px;height:22px;border-radius:6px;background:var(--line-2);color:var(--text);}
+  .app-ic svg{width:12px;height:12px;}
+  .notif .n-from{display:block;font-weight:600;}
+  .lock-btns{position:absolute;left:24px;right:24px;bottom:26px;display:flex;justify-content:space-between;}
+  .lock-btns span{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:var(--card-alt);color:var(--text);}
+  .lock-btns svg{width:17px;height:17px;}
+  @media (min-width:960px){ .slip-list li{font-size:21px;padding:18px 0;} }
+  @media (min-width:960px){ .week{padding:24px;} .wk-row{grid-template-columns:56px 1fr;} }
+
+  /* ---------- How it works (the only animation) ---------- */
+  .how-grid{display:flex;flex-direction:column;}
+  .how-intro{order:1;} .how-grid .phone-col{order:2;} .how-grid .steps{order:3;}
+  .how-intro .head{margin-bottom:24px;}
+  .demo-ctrl{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin:0 0 28px;}
+  .demo-ctrl .tag{font-size:14px;color:var(--muted);}
+  /* Steps: the playing one sits on a card and its line fills as it plays */
+  .steps{display:grid;gap:6px;margin-top:36px;}
+  .steps li{position:relative;display:grid;grid-template-columns:40px 1fr;gap:12px;padding:18px 16px 18px 20px;border:1px solid transparent;border-radius:var(--r);color:var(--muted);font-size:15.5px;line-height:1.5;}
+  .steps li::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:2px;background:var(--line);}
+  .steps .fill{position:absolute;left:0;top:16px;width:2px;height:0;background:var(--green);}
+  .steps li.done .fill{height:calc(100% - 32px);}
+  .steps .n{font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--muted-dim);padding-top:4px;}
+  .steps b{display:block;font-size:17px;font-weight:600;color:var(--text);margin-bottom:4px;}
+  .steps li.on{background:var(--card);border-color:var(--line);color:var(--text);}
+  .steps li.on .n,.steps li.done .n{color:var(--green);}
+  /* Above the phone: whose phone it is, and the step */
+  .now{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:3px;min-height:46px;margin:0 0 10px;text-align:center;}
+  .now-view{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
+  .now-step{min-height:19px;font-size:14px;line-height:1.35;font-weight:600;color:var(--green);}
+  /* The phone */
+  .phone{width:300px;max-width:100%;height:590px;margin:0 auto;background:var(--card);border:1px solid var(--line-2);border-radius:26px;padding:9px;box-shadow:var(--shadow);}
+  @media (min-width:960px){ .phone{width:340px;height:650px;} }
+  .screen::after{content:"";position:absolute;left:50%;bottom:6px;z-index:4;width:96px;height:4px;margin-left:-48px;border-radius:2px;background:var(--muted-dim);opacity:.55;}
+  .screen{position:relative;height:100%;background:var(--bg);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;font-size:14px;line-height:1.4;}
+  .island{position:absolute;top:8px;left:50%;width:74px;height:20px;margin-left:-37px;background:#000;border-radius:11px;z-index:3;}
+  .sbar{display:flex;justify-content:space-between;align-items:center;height:36px;padding:0 20px;font-size:12.5px;font-weight:600;color:var(--text);font-variant-numeric:tabular-nums;}
+  .sicons{display:flex;gap:5px;align-items:center;}
+  .sicons svg{display:block;height:10px;width:auto;fill:currentColor;}
+  .scr{flex:1;position:relative;padding:6px 12px 14px;display:flex;flex-direction:column;gap:10px;overflow:hidden;transition:opacity .28s ease;}
+  .scr.out{opacity:0;}
+  .scr .idle{margin:auto 14px;text-align:center;color:var(--muted);font-size:15px;}
+  .tap{outline:2px solid var(--green);outline-offset:2px;}
+  .app-h{position:relative;z-index:2;display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:0 -12px;padding:2px 14px 10px;background:var(--bg);border-bottom:1px solid var(--line);}
+  .app-h b{font-size:16px;font-weight:700;}
+  .app-h small{font-size:12px;color:var(--muted);}
+  .av{display:inline-flex;align-items:center;justify-content:center;flex:none;width:30px;height:30px;border-radius:50%;background:var(--line-2);color:var(--text);font-size:11px;font-weight:700;font-style:normal;}
+  .av.g{background:var(--green);color:var(--on-green);}
+  /* 1. Feed and ad: a local feed app, scrolled until the ad sits at the top */
+  .feed{display:flex;flex-direction:column;gap:8px;padding-bottom:56px;transition:transform .9s cubic-bezier(.3,.7,.3,1);}
+  .post,.ad{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:10px;background:var(--bg-alt);overflow:hidden;}
+  .p-top{display:flex;align-items:center;gap:8px;padding:10px 11px 0;}
+  .p-top .av{width:28px;height:28px;font-size:9.5px;}
+  .p-top div{flex:1;min-width:0;}
+  .p-top b{display:block;font-size:12.5px;line-height:1.25;}
+  .p-top small{display:block;font-size:11px;color:var(--muted-dim);}
+  .p-top .more{flex:none;color:var(--muted-dim);font-size:15px;line-height:1;letter-spacing:1px;font-style:normal;}
+  .post p,.ad .txt{margin:0;padding:8px 11px 10px;font-size:13px;line-height:1.4;color:var(--text);}
+  .acts{display:flex;justify-content:space-around;padding:7px 6px;border-top:1px solid var(--line);font-size:11px;font-weight:600;color:var(--muted-dim);}
+  .acts span{display:inline-flex;align-items:center;gap:5px;}
+  .acts svg{width:12px;height:12px;}
+  .ad{background:var(--card);}
+  .ad .img{height:118px;background:var(--card-alt);}
+  .ad .img svg{width:100%;height:100%;}
+  .ad .cta{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 11px;background:var(--bg-alt);border-top:1px solid var(--line);}
+  .ad .cta-t{font-size:12.5px;font-weight:600;line-height:1.3;color:var(--text);}
+  .ad .cta-t small{display:block;font-size:11px;font-weight:400;color:var(--muted);}
+  .ad .cta-b{flex:none;background:var(--line-2);color:var(--text);padding:7px 11px;border-radius:6px;font-size:12px;font-weight:700;white-space:nowrap;}
+  .tabbar{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;justify-content:space-around;align-items:center;height:50px;padding-bottom:8px;background:var(--bg);border-top:1px solid var(--line);color:var(--muted-dim);}
+  .tabbar svg{width:18px;height:18px;}
+  .tabbar .on{color:var(--text);}
+  .on-top{position:relative;z-index:2;}
+  /* 1. Landing page */
+  .lp-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:2px 2px 10px;border-bottom:1px solid var(--line);}
+  .lp-bar b{font-size:14px;}
+  .lp-bar span{font-size:11.5px;font-weight:700;color:var(--green);border:1px solid var(--green-line);border-radius:3px;padding:3px 8px;}
+  .lp-hero b{display:block;font-size:21px;line-height:1.15;font-weight:700;margin:4px 0 6px;}
+  .lp-hero span{font-size:13px;color:var(--muted);}
+  .lp .f{background:var(--card);border:1px solid var(--line-2);border-radius:3px;padding:8px 10px;}
+  .lp .f small{display:block;font-size:11.5px;color:var(--muted);}
+  .lp .f span{display:block;min-height:20px;}
+  .lp .go{background:var(--green);color:var(--on-green);text-align:center;padding:10px;border-radius:3px;font-weight:600;}
+  .lp-ok{display:flex;flex-direction:column;align-items:center;gap:6px;margin:10px 0 auto;padding:22px 14px;text-align:center;border:1px solid var(--green-line);background:var(--green-tint);border-radius:6px;}
+  .lp-ok .ok{display:flex;align-items:center;justify-content:center;width:42px;height:42px;margin-bottom:4px;border-radius:50%;background:var(--green);color:var(--on-green);}
+  .lp-ok .ok svg{width:18px;height:18px;}
+  .lp-ok b{font-size:17px;}
+  .lp-ok span{font-size:13px;color:var(--muted);}
+  /* 2. Messages and the call */
+  .msg-h{display:flex;flex-direction:column;align-items:center;gap:3px;padding:0 0 10px;border-bottom:1px solid var(--line);}
+  .msg-h b{font-size:13.5px;} .msg-h small{font-size:11.5px;color:var(--muted);}
+  .timer{align-self:center;background:var(--green-tint);border:1px solid var(--green-line);color:var(--green);border-radius:3px;padding:6px 10px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-variant-numeric:tabular-nums;}
+  .msg{max-width:86%;padding:9px 12px;border-radius:12px;font-size:13.5px;line-height:1.45;}
+  .msg.out{align-self:flex-start;background:var(--card-alt);color:var(--text);border-bottom-left-radius:3px;}
+  .msg.in{align-self:flex-end;background:var(--green);color:var(--on-green);font-weight:500;border-bottom-right-radius:3px;}
+  .typing{display:flex;gap:4px;align-items:center;padding:13px 14px;}
+  .typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:blink 1s infinite ease-in-out;}
+  .typing i:nth-child(2){animation-delay:.15s;} .typing i:nth-child(3){animation-delay:.3s;}
+  @keyframes blink{0%,80%,100%{opacity:.3;}40%{opacity:1;}}
+  .sys{align-self:center;font-size:12px;color:var(--muted-dim);text-align:center;letter-spacing:.02em;}
+  .call{position:absolute;left:10px;right:10px;top:6px;z-index:2;display:grid;grid-template-columns:auto 1fr auto auto;gap:9px;align-items:center;padding:10px;background:var(--card-alt);border:1px solid var(--line-2);border-radius:14px;}
+  .call b{display:block;font-size:13px;line-height:1.25;} .call small{display:block;font-size:11.5px;color:var(--muted);}
+  .c-btn{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;}
+  .c-btn svg{width:14px;height:14px;}
+  .c-no{background:var(--line-2);color:var(--text);}
+  .c-yes{background:var(--green);color:var(--on-green);}
+  /* 3. Calendar day and lock screen */
+  .day{display:flex;flex-direction:column;flex:1;border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+  .hr{display:grid;grid-template-columns:54px 1fr;min-height:46px;border-bottom:1px solid var(--line);}
+  .hr:last-child{flex:1;border-bottom:0;}
+  .hr>span{padding:6px 8px;font-size:11.5px;color:var(--muted-dim);white-space:nowrap;}
+  .hr .ev,.hr .busy{margin:4px 6px 4px 0;padding:6px 8px;border-radius:3px;font-size:12.5px;line-height:1.3;}
+  .hr .ev{background:var(--green);color:var(--on-green);font-weight:600;}
+  .hr .ev small{display:block;font-size:11.5px;font-weight:500;}
+  .hr .busy{background:var(--card-alt);color:var(--muted);}
+  .lock{display:flex;flex-direction:column;align-items:center;padding:18px 0 20px;}
+  .lock .l-day{font-size:13px;color:var(--muted);}
+  .lock .l-time{font-size:58px;line-height:1.05;font-weight:600;letter-spacing:-.02em;color:var(--text);font-variant-numeric:tabular-nums;}
+  .notif{padding:11px 12px;background:var(--card-alt);border:1px solid var(--line-2);border-radius:14px;font-size:13px;line-height:1.45;}
+  .notif .n-h{display:flex;align-items:center;gap:8px;margin-bottom:5px;}
+  .notif .n-h b{flex:1;font-size:12.5px;}
+  .notif .n-h small{font-size:11px;color:var(--muted-dim);}
+  .notif .av{width:22px;height:22px;font-size:9px;}
+  .notif p{margin:0;color:var(--text);}
+  /* 4. Marking estimates */
+  .lg{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+  .lg-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 10px;border-bottom:1px solid var(--line);}
+  .lg-row:last-child{border-bottom:0;}
+  .lg-row b{display:block;font-size:13px;} .lg-row small{display:block;font-size:12px;color:var(--muted);}
+  .lg-act{display:flex;gap:5px;flex:none;}
+  .lg-act i{font-style:normal;font-size:11px;font-weight:600;padding:5px 6px;border:1px solid var(--line-2);border-radius:3px;color:var(--text);white-space:nowrap;}
+  .pill{flex:none;font-size:11.5px;font-weight:700;padding:5px 8px;border-radius:3px;white-space:nowrap;}
+  .pill.yes{background:var(--green);color:var(--on-green);}
+  .pill.no{border:1px solid var(--line-2);color:var(--muted);}
+  .push{margin-top:auto;}
+  .lg-sum{display:flex;justify-content:space-between;align-items:baseline;margin-top:auto;padding:14px 12px;border:1px solid var(--green-line);background:var(--green-tint);border-radius:6px;}
+  .lg-sum span{font-size:13px;color:var(--muted);} .lg-sum b{font-size:19px;color:var(--text);}
+  .pop{animation:pop .45s ease-out both;}
+  @keyframes pop{from{opacity:0;}to{opacity:1;}}
+  @media (prefers-reduced-motion:reduce){ .pop,.typing i{animation:none;} .scr,.feed{transition:none;} }
+  @media (min-width:960px){
+    .how-grid{display:grid;grid-template-columns:1fr 360px;grid-template-rows:auto 1fr;column-gap:80px;align-items:start;}
+    .how-intro{grid-column:1;grid-row:1;}
+    .steps{grid-column:1;grid-row:2;margin-top:8px;}
+    .phone-col{grid-column:2;grid-row:1 / span 2;}
+    .steps li{grid-template-columns:52px 1fr;padding:20px 20px 20px 24px;}
+    .phone-col{position:sticky;top:96px;}
   }
-  .final-cta h2{font-size:32px;margin-bottom:14px;}
-  .final-cta p{color:var(--muted);font-size:16px;max-width:500px;margin:0 auto 30px;}
 
-  /* ---------- footer ---------- */
-  footer{border-top:1px solid var(--line);padding:48px 0 40px;}
-  .foot-inner{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;}
-  .foot-brand{font-family:var(--font-display);font-weight:700;font-size:17px;}
-  .foot-note{color:var(--muted-dim);font-size:13px;margin-top:8px;max-width:320px;}
-  .foot-links{display:flex;gap:36px;}
-  .foot-col h4{font-size:12.5px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted-dim);margin-bottom:12px;}
-  .foot-col a{display:block;font-size:14px;color:var(--muted);padding:5px 0;transition:color .2s;}
-  .foot-col a:hover{color:var(--text);}
-
-  /* ---------- responsive ---------- */
-  @media (max-width:900px){
-    .hero-grid{grid-template-columns:1fr;gap:44px;}
-    .hero h1{font-size:35px;}
-    .nav-links{display:none;}
-    .stats-inner{grid-template-columns:repeat(2,1fr);}
-    .stat-cell{border-left:none;border-top:1px solid var(--line);}
-    .stat-cell:nth-child(-n+2){border-top:none;}
-    .problem-grid,.why-grid{grid-template-columns:1fr;}
-    .feature-row{grid-template-columns:1fr;gap:40px;padding:48px 0;}
-    .feature-row.flip .feature-copy{order:1;}
-    .feature-row.flip .feature-visual{order:2;}
-    .services-grid{grid-template-columns:repeat(2,1fr);}
-    .process{grid-template-columns:1fr;gap:36px;}
-    .pricing-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto;gap:34px;}
-    .pricing-card.featured{margin-top:0;}
-    .process-connector{display:none;}
-    .proof-card{grid-template-columns:1fr;}
-    .proof-visual{border-left:none;border-top:1px solid var(--line);}
-    .work-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto;}
-    .section{padding:64px 0;}
-    .section-head h2{font-size:28px;}
-    .foot-inner{flex-direction:column;}
+  /* ---------- Proof ---------- */
+  .work-grid{display:grid;gap:20px;}
+  .work{display:flex;flex-direction:column;overflow:hidden;transition:border-color .25s ease;}
+  .work:hover{border-color:var(--green-line);}
+  .frame{padding:18px 18px 0;background:var(--bg-alt);border-bottom:1px solid var(--line);}
+  .browser{background:var(--bg);border:1px solid var(--line);border-bottom:0;border-radius:8px 8px 0 0;overflow:hidden;box-shadow:var(--shadow);}
+  .b-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;border-bottom:1px solid var(--line);font-size:11.5px;color:var(--muted-dim);}
+  .b-bar i{width:7px;height:7px;border-radius:50%;background:var(--line-2);}
+  .b-bar span{margin-left:8px;}
+  .site{padding:14px 16px 18px;background:var(--bg);}
+  .s-nav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--line);}
+  .s-nav b{overflow:hidden;font-size:12px;font-weight:700;color:var(--text);white-space:nowrap;text-overflow:ellipsis;}
+  .s-eye{display:block;margin-bottom:6px;font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);}
+  .s-h{display:block;margin-bottom:4px;font-size:21px;font-weight:700;line-height:1.12;letter-spacing:-.01em;color:var(--text);}
+  .w-body{display:flex;flex-direction:column;flex:1;padding:22px 22px 24px;}
+  .w-meta{display:flex;align-items:center;gap:12px;margin-bottom:10px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;}
+  .live{display:inline-flex;align-items:center;gap:6px;color:var(--green);}
+  .live::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);}
+  .place{color:var(--muted-dim);}
+  .w-body h3{font-size:21px;margin-bottom:12px;}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;}
+  .tags span{font-size:12.5px;color:var(--muted);border:1px solid var(--line-2);border-radius:999px;padding:4px 11px;}
+  .built{margin:0 0 20px;padding:14px 16px 4px;background:var(--bg-alt);border:1px solid var(--line);border-radius:var(--r-sm);}
+  .built .t-label{display:block;margin-bottom:4px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);}
+  .b-row{padding:11px 0;border-top:1px solid var(--line);}
+  .b-row:first-of-type{border-top:0;}
+  .b-row b{display:block;font-size:15px;font-weight:600;color:var(--text);}
+  .b-row span{display:block;font-size:14px;line-height:1.45;color:var(--muted);}
+  .testimonial{display:grid;grid-template-columns:130px minmax(0,1fr);gap:16px;align-items:center;margin:0 0 20px;padding:12px;background:var(--bg-alt);border:1px solid var(--line);border-radius:var(--r-sm);}
+  .testimonial video,.v-ph{display:block;width:130px;height:auto;aspect-ratio:9/16;border-radius:2px;}
+  .testimonial video{object-fit:cover;background:#000;}
+  .v-ph{display:flex;align-items:center;justify-content:center;padding:10px;text-align:center;border:1px dashed var(--line-2);font-size:12.5px;color:var(--muted-dim);}
+  .testimonial .ph{margin-bottom:8px;}
+  .testimonial figcaption{font-size:14.5px;color:var(--muted);line-height:1.5;}
+  .testimonial .t-label{display:block;margin-bottom:8px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);}
+  .testimonial b{display:block;margin-bottom:4px;font-size:17px;font-weight:600;line-height:1.3;color:var(--text);}
+  .testimonial blockquote{margin:0 0 10px;font-size:15px;font-weight:600;line-height:1.35;color:var(--text);}
+  .testimonial cite{display:block;margin-bottom:8px;font-style:normal;font-size:13px;line-height:1.4;color:var(--muted);}
+  .testimonial .t-len{display:block;font-size:12.5px;line-height:1.4;color:var(--muted-dim);}
+  @media (max-width:379px){
+    .testimonial{grid-template-columns:minmax(0,1fr);}
+    .testimonial video,.v-ph{width:100%;max-width:200px;}
   }
+  @media (min-width:960px){
+    .testimonial{grid-template-columns:180px 1fr;gap:24px;padding:14px;}
+    .testimonial video,.v-ph{width:180px;}
+    .testimonial blockquote{font-size:18px;}
+    .testimonial cite{font-size:14px;}
+  }
+  /* In a stretched card, the panel sits centered between the tags and the link */
+  .w-body>:is(.built,.testimonial){margin-top:auto;margin-bottom:auto;}
+  .visit{margin-top:20px;display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--green);text-decoration:none;}
+  .visit:hover{text-decoration:underline;text-underline-offset:3px;}
+  .visit svg{width:14px;height:14px;transition:transform .2s ease;}
+  .visit:hover svg{transform:translate(2px,-2px);}
+  .case{margin-top:20px;padding:26px 22px;border-style:dashed;border-color:var(--line-2);display:grid;gap:22px;}
+  .case h3{font-size:22px;margin:12px 0 8px;}
+  .case p{color:var(--muted);margin:0;font-size:15.5px;}
+  .case dl{margin:0;display:grid;}
+  .case dl div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 0;border-top:1px solid var(--line);}
+  .case dt{font-size:14.5px;color:var(--muted);}
+  .case dd{margin:0;font-size:20px;font-weight:600;color:var(--muted-dim);letter-spacing:.06em;}
+  @media (min-width:960px){
+    .work-grid{grid-template-columns:1fr 1fr;gap:24px;}
+    .frame{padding:24px 24px 0;}
+    .w-body{padding:26px 28px 28px;}
+    .case{margin-top:24px;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:36px 40px;}
+  }
+
+  /* ---------- The deal ---------- */
+  .sub-label{margin:0 0 12px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-dim);}
+  .compare{max-width:880px;margin:0 auto 28px;}
+  .compare dl{margin:0;border-top:1px solid var(--line);}
+  .compare dl div{padding:14px 0 14px 14px;border-bottom:1px solid var(--line);border-left:2px solid transparent;}
+  .compare dt{margin-bottom:2px;font-size:13px;font-weight:600;color:var(--muted-dim);}
+  .compare dd{margin:0;font-size:16.5px;line-height:1.45;color:var(--muted);}
+  .compare .us{border-left-color:var(--green);}
+  .compare .us dt{color:var(--green);}
+  .compare .us dd{color:var(--text);font-weight:500;}
+  .cmp-note{margin:10px 0 0;font-size:13px;color:var(--muted-dim);}
+  @media (min-width:960px){
+    .compare dl div{display:grid;grid-template-columns:180px 1fr;gap:20px;align-items:baseline;padding:16px 0 16px 18px;}
+    .compare dt{margin:0;font-size:14px;}
+    .compare dd{font-size:17px;}
+  }
+  .deal-card{max-width:880px;margin:0 auto;overflow:hidden;}
+  .d-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line);background:var(--card-alt);font-size:13px;color:var(--muted);}
+  .d-head b{display:flex;align-items:center;gap:10px;color:var(--text);font-size:15px;font-weight:600;}
+  .d-head svg{width:24px;height:24px;}
+  .terms{counter-reset:t;}
+  .terms li{counter-increment:t;display:grid;grid-template-columns:36px 1fr;gap:4px 8px;padding:18px 20px;border-bottom:1px solid var(--line);}
+  .terms li::before{content:counter(t,decimal-leading-zero);grid-row:1 / span 2;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--green);padding-top:3px;}
+  .terms h3{font-size:17px;}
+  .terms p{margin:0;font-size:15.5px;color:var(--muted);}
+  .d-foot{display:grid;gap:16px;align-items:center;padding:20px;}
+  .d-foot p{margin:0;font-size:15px;color:var(--muted);}
+  @media (min-width:960px){
+    .d-head{padding:18px 32px;}
+    .terms li{grid-template-columns:48px 220px 1fr;gap:0 20px;padding:22px 32px;align-items:baseline;}
+    .terms li::before{grid-row:auto;}
+    .d-foot{grid-template-columns:1fr auto;gap:32px;padding:24px 32px;}
+  }
+
+  /* ---------- Calculator ---------- */
+  .calc-grid{display:grid;gap:28px;}
+  .deal-calc{max-width:880px;margin:48px auto 0;}
+  .deal-calc h3{font-size:26px;line-height:1.18;margin-bottom:14px;}
+  .calc-intro .c-lead{margin:0 0 16px;font-size:17px;color:var(--muted);text-wrap:pretty;}
+  .calc-intro .formula{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0;}
+  .formula .f-g{display:inline-flex;align-items:center;gap:8px;padding:0;border:0;background:none;}
+  .formula span:not(.f-g),.formula b{padding:7px 13px;border:1px solid var(--line-2);border-radius:999px;background:var(--card);font-size:14px;font-weight:500;line-height:1.2;color:var(--text);white-space:nowrap;}
+  .formula b{border-color:var(--green-line);background:var(--green-tint);font-weight:600;color:var(--green);}
+  .formula i{font-style:normal;font-size:16px;color:var(--muted-dim);}
+  .calc-intro .c-note{display:flex;align-items:center;gap:8px;margin:20px 0 0;font-size:13.5px;color:var(--muted-dim);}
+  .c-note svg{width:14px;height:14px;flex:none;}
+  .calc-card{padding:22px;}
+  .calc-in{display:grid;gap:16px;}
+  .fld-n label{display:block;margin-bottom:8px;font-size:14px;font-weight:500;color:var(--muted);}
+  .box{display:flex;align-items:center;gap:4px;background:var(--bg);border:1px solid var(--line-2);border-radius:var(--r-sm);padding:0 14px;}
+  .box:focus-within{border-color:var(--green);}
+  .aff{font-size:24px;font-weight:500;color:var(--muted);}
+  .box input{flex:1;min-width:0;width:100%;background:none;border:0;color:var(--text);font:600 30px/1 var(--font);padding:14px 0;-moz-appearance:textfield;appearance:textfield;}
+  .box input::-webkit-outer-spin-button,.box input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0;}
+  .box input:focus{outline:none;}
+  .result{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);}
+  .result .lbl{margin:0 0 4px;font-size:14px;font-weight:500;color:var(--muted);}
+  .worth{display:block;font-size:56px;line-height:1;font-weight:700;color:var(--green);letter-spacing:-.02em;overflow-wrap:anywhere;}
+  .why{margin:14px 0 0;font-size:15px;color:var(--muted);}
+  @media (min-width:600px){ .calc-in{grid-template-columns:1fr 1fr;} }
+  @media (min-width:960px){
+    .calc-grid{grid-template-columns:5fr 6fr;gap:56px;align-items:center;}
+    .deal-calc h3{font-size:32px;}
+    .calc-grid .head{margin:0;}
+    .calc-card{padding:32px;}
+    .worth{font-size:72px;}
+  }
+
+  /* ---------- FAQ ---------- */
+  .qa{max-width:780px;margin:0 auto;border-top:1px solid var(--line);}
+  .qa details{border-bottom:1px solid var(--line);}
+  .qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;font-size:17px;font-weight:600;}
+  .qa summary::-webkit-details-marker{display:none;}
+  .qa summary::after{content:"+";flex:none;font-size:22px;font-weight:400;line-height:1;color:var(--muted);transition:transform .25s ease,color .25s ease;}
+  .qa details[open] summary::after{transform:rotate(45deg);color:var(--green);}
+  .qa summary{transition:color .2s ease;}
+  .qa details::details-content{block-size:0;overflow-y:clip;transition:block-size .3s ease,content-visibility .3s allow-discrete;}
+  .qa details[open]::details-content{block-size:auto;}
+  @media (prefers-reduced-motion:reduce){ .qa details::details-content{transition:none;} }
+  .qa summary:hover{color:var(--green);}
+  .qa .a{padding:0 0 22px;max-width:40em;color:var(--muted);font-size:16px;}
+  .qa .a p:last-child{margin:0;}
+  @media (min-width:960px){ .qa summary{font-size:18px;padding:22px 0;} }
+
+  /* ---------- Final ---------- */
+  .final{padding:28px 22px 30px;}
+  .final h2{font-size:30px;line-height:1.15;margin-bottom:14px;}
+  .final .who{color:var(--muted);max-width:30em;margin-bottom:24px;}
+  .fin-side{margin-top:28px;padding:20px;background:var(--bg-alt);border:1px solid var(--line);border-radius:var(--r);}
+  .hc-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
+  .founder{display:flex;align-items:center;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--line);}
+  .fph{position:relative;width:72px;height:72px;display:flex;align-items:center;justify-content:center;background:var(--green-tint);border:1px solid var(--green-line);border-radius:var(--r);font-size:22px;font-weight:700;letter-spacing:.02em;color:var(--green);overflow:hidden;}
+  .fph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%;transform:scale(1.25);transform-origin:50% 12%;opacity:0;color:transparent;}
+  .fph img.ok{opacity:1;}
+  .fph{flex:none;}
+  @media (min-width:960px){ .fph{width:88px;height:88px;} }
+  .f-id b{display:block;font-size:18px;font-weight:600;line-height:1.25;color:var(--text);}
+  .f-id span{display:block;margin-top:2px;font-size:14px;color:var(--muted);}
+  .f-note{margin:16px 0 14px;font-size:16px;line-height:1.45;color:var(--text);}
+  .f-mail{display:flex;flex-direction:column;gap:4px;margin:0;font-size:13.5px;color:var(--muted);}
+  .f-mail a{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--green);text-decoration:none;}
+  .f-mail a:hover{text-decoration:underline;text-underline-offset:3px;}
+  .f-mail svg{width:16px;height:16px;flex:none;}
+  @media (min-width:960px){
+    .final{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;padding:48px 52px;}
+    .final h2{font-size:36px;}
+    .fin-side{margin:0;padding:24px 28px;}
+  }
+
+  /* ---------- Footer ---------- */
+  footer{border-top:1px solid var(--line);padding:44px 0 36px;font-size:14.5px;}
+  .foot{display:grid;gap:28px;}
+  .foot-note{color:var(--muted-dim);font-size:14px;margin:10px 0 0;max-width:22em;}
+  .foot-cols{display:flex;flex-wrap:wrap;gap:28px 48px;}
+  .foot-cols .foot-h{margin:0 0 10px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-dim);}
+  .foot-cols a{display:block;padding:4px 0;color:var(--muted);text-decoration:none;}
+  .foot-cols a:hover{color:var(--text);}
+  .copy{margin:32px 0 0;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted-dim);}
+  @media (min-width:960px){ .foot{grid-template-columns:1fr auto;} }
+
+  /* ---------- Phone CTA bar (no motion: shown and hidden with [hidden]) ---------- */
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:45;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--card);border-top:1px solid var(--line);}
+  .mbar p{margin:0;max-width:14em;font-size:13px;line-height:1.35;color:var(--muted);}
+  .mbar .btn{min-height:44px;padding:10px 16px;font-size:15px;}
+  @media (max-width:767px){ .nav{position:static;} }
+  @media (min-width:768px){ .mbar{display:none !important;} }
+  @media (max-width:359px){ .mbar p{display:none;} .mbar .btn{flex:1;} }
+
+  /* ---------- Booking dialog ---------- */
+  html.locked{overflow:hidden;}
+  dialog.book{width:100%;max-width:100%;height:100%;max-height:100%;margin:0;padding:0;border:0;background:var(--card);color:var(--text);}
+  dialog.book::backdrop{background:rgba(5,10,16,.8);}
+  .book-head{position:sticky;top:0;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px var(--g);background:var(--card-alt);border-bottom:1px solid var(--line);}
+  .book-head h2{font-size:22px;}
+  .x{background:none;border:0;padding:10px 0;font:500 15px/1 var(--font);color:var(--muted);text-decoration:underline;text-underline-offset:4px;cursor:pointer;}
+  .x:hover{color:var(--text);}
+  .book-body{padding:24px var(--g) 32px;}
+  .book form{display:grid;gap:16px;}
+  .book form .btn{width:100%;}
+  .fld label{display:block;margin-bottom:6px;font-size:15px;font-weight:500;}
+  .fld input,.fld select{display:block;width:100%;height:48px;margin:0;padding:0 14px;font:400 16px/1.2 var(--font);background:var(--bg);color:var(--text);border:1px solid var(--line-2);border-radius:var(--r-sm);}
+  .fld select{-webkit-appearance:none;appearance:none;padding-right:40px;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%2398AABB' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 15px center;cursor:pointer;}
+  .fld select option{background:var(--card);color:var(--text);}
+  .fld input::placeholder{color:var(--muted-dim);}
+  .fld .hint{margin:6px 0 0;font-size:13px;color:var(--muted);}
+  .fld input:focus,.fld select:focus{border-color:var(--green);outline:1px solid var(--green);outline-offset:0;}
+  .consent{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:start;padding:14px;background:var(--bg-alt);border:1px solid var(--line);border-radius:var(--r);font-size:13.5px;line-height:1.5;color:var(--muted);cursor:pointer;}
+  .consent input{-webkit-appearance:none;appearance:none;width:20px;height:20px;margin:1px 0 0;background:var(--bg);border:1px solid var(--line-2);border-radius:2px;cursor:pointer;}
+  .consent input:checked{background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M2.5 7.5l3 3 6-7' fill='none' stroke='%2306130C' stroke-width='2'/%3E%3C/svg%3E") no-repeat center;border-color:var(--green);}
+  .consent input:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+  .consent b{color:var(--text);font-weight:600;}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+  .err{margin:0;font-size:15px;font-weight:500;color:#F3A59C;}
+  .err:empty{display:none;}
+  .cal-frame{display:block;width:100%;height:calc(100vh - 150px);min-height:640px;border:1px solid var(--line);border-radius:var(--r);background:#fff;}
+  @media (min-width:760px){
+    dialog.book{width:620px;height:fit-content;max-height:calc(100vh - 48px);margin:auto;border:1px solid var(--line-2);border-radius:var(--r);}
+    dialog.book.wide{width:min(1040px,calc(100vw - 48px));}
+    .book-head{padding:16px 28px;}
+    .book-body{padding:26px 28px 32px;}
+    .cal-frame{height:720px;min-height:0;}
+  }
+
+  /* Section labels keep one look, whatever paragraph style the section sets */
+  :is(.hero,.sec) .eyebrow{margin:0 0 14px;font-size:12.5px;line-height:1.5;color:var(--green);max-width:none;}
+  .hero .eyebrow{margin-bottom:18px;}
+
+  /* ---------- Scroll reveal (same feel as the services site; off for reduced motion) ----------
+     Blocks fade up together, a section at a time. The script at the end groups them. */
+  .js-reveal :is(.hero-grid>div,.hero-points,.wrap>.head,.fit-card,.feature>div,.how-intro,.steps,.phone-col,.work,.compare,.deal-card,.deal-calc>*,.qa,.final){opacity:0;transform:translateY(18px);}
+  .js-reveal :is(.hero-grid>div,.hero-points,.wrap>.head,.fit-card,.feature>div,.how-intro,.steps,.phone-col,.work,.compare,.deal-card,.deal-calc>*,.qa,.final):not(.rv-done){transition:opacity .7s ease,transform .7s ease;}
+  .js-reveal :is(.hero-grid>div,.hero-points,.wrap>.head,.fit-card,.feature>div,.how-intro,.steps,.phone-col,.work,.compare,.deal-card,.deal-calc>*,.qa,.final).in{opacity:1;transform:none;}
 </style>
 </head>
 <body>
 
-<nav class="nav">
-  <div class="wrap nav-inner">
-    <a href="#top" class="brand">
-      <svg class="brand-mark" viewBox="0 0 300 300" fill="none" aria-hidden="true">
-        <path d="M46 206 L96 140 L138 194" stroke="#7FC8A9" stroke-width="7" stroke-linejoin="round" opacity="0.55"/>
-        <path d="M254 206 L204 140 L162 194" stroke="#7FC8A9" stroke-width="7" stroke-linejoin="round" opacity="0.55"/>
-        <path d="M96 140 L112 161 L104 170 L96 158 L88 170 L80 161 Z" fill="#F5F7F6" opacity="0.6"/>
-        <path d="M204 140 L220 161 L212 170 L204 158 L196 170 L188 161 Z" fill="#F5F7F6" opacity="0.6"/>
-        <path d="M78 208 L150 100 L222 208 Z" fill="#0E1417" stroke="#7FC8A9" stroke-width="9" stroke-linejoin="round"/>
-        <path d="M150 100 L180 145 L169 158 L160 140 L150 156 L140 139 L130 159 L120 145 Z" fill="#F5F7F6"/>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#main" class="brand" aria-label="Zenith Co.">
+      <svg viewBox="0 0 300 300" fill="none" aria-hidden="true">
+        <path d="M46 206 L96 140 L138 194" stroke="#7FC8A9" stroke-width="9" stroke-linejoin="round" opacity=".55"/>
+        <path d="M254 206 L204 140 L162 194" stroke="#7FC8A9" stroke-width="9" stroke-linejoin="round" opacity=".55"/>
+        <path d="M78 208 L150 100 L222 208 Z" fill="#0B1520" stroke="#7FC8A9" stroke-width="9" stroke-linejoin="round"/>
+        <path d="M96 140 L112 161 L104 170 L96 158 L88 170 L80 161 Z" fill="#FFFFFF"/>
+        <path d="M204 140 L220 161 L212 170 L204 158 L196 170 L188 161 Z" fill="#FFFFFF"/>
+        <path d="M150 100 L180 145 L169 158 L160 140 L150 156 L140 139 L130 159 L120 145 Z" fill="#FFFFFF"/>
         <circle cx="150" cy="150" r="139" stroke="#7FC8A9" stroke-width="9"/>
       </svg>
-      ZENITH CO.
+      <span>Zenith Co.</span>
     </a>
-    <div class="nav-links">
-      <a href="#what-you-get">What You Get</a>
-      <a href="#how-it-works">How It Works</a>
-      <a href="#why-us">Why Zenith</a>
-      <a href="#proof">Our Work</a>
-      <a href="#pricing">Pricing</a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#proof">Our work</a>
+      <a href="#deal">The deal</a>
       <a href="#faq">FAQ</a>
-    </div>
-    <a href="https://calendly.com/zacharyspencer/zenith-co-consultation" target="_blank" rel="noopener" class="btn btn-primary">Book A Call</a>
+    </nav>
+    <a class="btn btn-sm" href="https://calendly.com/zacharyspencer/zenith-co-consultation" data-book>See if you qualify</a>
   </div>
-</nav>
+</header>
 
-<main id="top">
+<main id="main">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="reveal">
-        <div class="eyebrow">For Florida Tree Service Companies</div>
-        <h1>Five-star work shouldn't be <span class="accent">invisible on Google.</span></h1>
-        <p class="lead lead-desktop">We build the three systems a tree company actually needs — a real website, an instant text back when you miss a call, and reviews that stack up automatically. No miracle lead machine (nobody has one, including us). Just the leads you <b>already earn</b>, actually reaching your phone.</p>
-        <p class="lead lead-mobile">A real website, instant text-back when you miss a call, and reviews on autopilot — so the leads you <b>already earn</b> actually reach your phone.</p>
-        <div class="hero-ctas">
-          <a href="https://calendly.com/zacharyspencer/zenith-co-consultation" target="_blank" rel="noopener" class="btn btn-primary">Book A Free 15-Minute Audit</a>
-          <a href="#proof" class="link-inline">See live client sites →</a>
-        </div>
-        <div class="hero-assurance">
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>No long-term contracts</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Live in about a week</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>No new phone to carry</span>
-        </div>
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Ads for Florida tree companies</p>
+      <h1 id="hero-h">Booked tree estimates. You only pay when the homeowner <span class="accent">shows&nbsp;up.</span></h1>
+      <p class="lead">We run your ads. We text and call every lead in your company's name, aiming for under a minute. The estimate goes on your calendar.</p>
+      <div class="ctas">
+        <a class="btn" href="https://calendly.com/zacharyspencer/zenith-co-consultation" data-book>See if you qualify<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+        <a class="link" href="#how">Watch a test lead</a>
       </div>
-
-      <div class="reveal">
-        <div class="compare">
-          <div class="compare-head">
-            <span class="compare-title">Same company. Same reviews.</span>
-            <div class="toggle" role="tablist" aria-label="Before and after comparison">
-              <button type="button" class="tgl-before active" role="tab" aria-selected="true">Before</button>
-              <button type="button" class="tgl-after" role="tab" aria-selected="false">After</button>
-            </div>
-          </div>
-
-          <div class="search-card">
-            <div class="search-topbar">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              tree service near me
-            </div>
-
-            <!-- BEFORE state -->
-            <div class="compare-state state-before">
-              <div class="result-row">
-                <div class="pin" style="background:rgba(224,87,77,0.14);">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E0574D" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-                </div>
-                <div>
-                  <div class="result-name">Ridge Tree &amp; Land Co.</div>
-                  <div class="result-meta"><span class="stars">★★★★★</span> 4.9 (61) · No website listed</div>
-                  <span class="tag tag-bad">EASY TO SCROLL PAST</span>
-                </div>
-              </div>
-              <div class="result-row">
-                <div class="pin" style="background:var(--card-alt);">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#90A4AE" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-                </div>
-                <div>
-                  <div class="result-name" style="color:var(--muted);">Competitor Tree Service</div>
-                  <div class="result-meta">Website · Booking form · Reviews</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- AFTER state -->
-            <div class="compare-state state-after" style="display:none;">
-              <div class="result-row">
-                <div class="pin" style="background:rgba(52,199,123,0.16);">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34C77B" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-                </div>
-                <div>
-                  <div class="result-name">Ridge Tree &amp; Land Co.</div>
-                  <div class="result-meta"><span class="stars">★★★★★</span> 4.9 (61) · ridgetreeco.com</div>
-                  <span class="tag tag-good">WEBSITE · QUOTE FORM · TEXT-BACK</span>
-                </div>
-              </div>
-              <div class="result-row">
-                <div class="pin" style="background:var(--card-alt);">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#90A4AE" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-                </div>
-                <div>
-                  <div class="result-name" style="color:var(--muted);">Competitor Tree Service</div>
-                  <div class="result-meta">Website · Booking form · Reviews</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p class="compare-caption">Illustrative example — same business, same reviews, different first impression.</p>
-        </div>
-      </div>
+      <p class="cta-note">Five questions, then pick a time to talk with Zachary.</p>
     </div>
-  </section>
-
-  <!-- STATS BAR -->
-  <div class="stats-bar">
-    <div class="wrap stats-inner">
-      <div class="stat-cell reveal"><b>7×</b><span>more likely to win the lead when you respond within the hour</span></div>
-      <div class="stat-cell reveal"><b>&lt; 60 sec</b><span>for the text-back to reach a caller you just missed</span></div>
-      <div class="stat-cell reveal"><b>~1 week</b><span>from kickoff call to your site being live</span></div>
-      <div class="stat-cell reveal"><b>1 trade</b><span>we only work with tree service companies — nothing else</span></div>
+    <!-- FOUNDER VIDEO: when it's recorded, replace this card with
+         <div class="card hero-card"><div class="video"><video controls playsinline preload="none"
+           poster="assets/video/founder.jpg"><source src="assets/video/founder.mp4" type="video/mp4"></video></div></div>
+         (zenith-site.md has the steps). -->
+    <div class="card hero-card lead-card" aria-label="Example of one lead, from the ad to a shown estimate">
+      <div class="lc-head"><b>One lead, start to finish</b><span>Example</span></div>
+      <ol class="lc-list">
+        <li><span class="lc-t">6:12 PM</span><div><b>Homeowner taps your ad</b><span>Oak hanging over the driveway</span></div></li>
+        <li><span class="lc-t">6:12 PM</span><div><b>Your business texts and calls</b><span>28 seconds after the form</span></div></li>
+        <li><span class="lc-t">6:15 PM</span><div><b>Estimate booked</b><span>Thursday at 9:00 AM, on your calendar</span></div></li>
+        <li><span class="lc-t">Wed 5 PM</span><div><b>Reminder sent</b><span>They reply &ldquo;See you then&rdquo;</span></div></li>
+        <li class="is-paid"><span class="lc-t">Thu 9:02</span><div><b>Homeowner was there</b><span>The only step you pay for</span></div><span class="pill yes">Billed</span></li>
+      </ol>
     </div>
   </div>
+  <div class="wrap">
+    <ul class="hero-points">
+      <li><span class="hp-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><div><b>One company per service area</b><span>We won't run ads for another tree company in your area.</span></div></li>
+      <li><span class="hp-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><div><b>No long-term contract</b><span>Email us and the ads go off within 2 business days.</span></div></li>
+      <li><span class="hp-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><div><b>Ad spend stays on your card</b><span>The ad accounts are in your business's name.</span></div></li>
+    </ul>
+  </div>
+</section>
 
-  <!-- PROBLEM -->
-  <section class="section-alt section">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow" style="color:var(--red);">What's Costing You The Job</div>
-        <h2>The lead never even reaches your phone</h2>
-        <p>Most Florida tree companies aren't losing jobs on price or quality. They're losing them before the homeowner ever picks up the phone.</p>
+<!-- WHO THIS IS FOR / NOT FOR -->
+<section class="sec alt" aria-labelledby="fit-h">
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow">Who it's for</p>
+      <h2 id="fit-h">Built for companies that already have crews</h2>
+      <p>We take one tree company per service area, so it has to be the right one.</p>
+    </div>
+    <div class="card fit-card">
+      <div class="fit-cols">
+        <div class="fit-col fit-yes">
+          <h3>You're a fit</h3>
+          <ul class="fit-list">
+            <li><span class="ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></span><span>Established tree companies in Florida</span></li>
+            <li><span class="ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></span><span class="capfirst"><span data-fill="fitThreshold">Two or more crews ready for more work</span></span></li>
+            <li><span class="ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></span><span>Room to put <span data-fill="minAdSpend">$50</span>+ a day into ads</span></li>
+          </ul>
+        </div>
+        <div class="fit-col fit-no">
+          <h3>Not a fit</h3>
+          <ul class="fit-list">
+            <li><span class="ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><span>New or owner-only businesses</span></li>
+            <li><span class="ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><span>Anyone who only wants a website</span></li>
+            <li><span class="ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><span>Anyone who can't show up at the booked time</span></li>
+          </ul>
+        </div>
       </div>
-      <div class="problem-grid">
-        <div class="problem-card reveal">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/><line x1="17" y1="8" x2="22" y2="3" stroke="var(--red)"/></svg>
-          <h3>Missed calls go nowhere</h3>
-          <p>You're 60 feet up an oak or driving the chipper truck. The call rings out, no text goes back, and the homeowner calls the next company on the list — usually within minutes.</p>
-        </div>
-        <div class="problem-card reveal">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg>
-          <h3>No website, no first impression</h3>
-          <p>A Facebook page and a directory listing don't show a homeowner what you do, where you work, or why you're the safer choice for a 60-foot oak hanging over their roof.</p>
-        </div>
-        <div class="problem-card reveal">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <h3>Reviews trickle in, or don't</h3>
-          <p>You did the job right, but nobody thinks to leave a review a week later. Meanwhile the company with 40 more reviews keeps outranking you on the map.</p>
-        </div>
+      <div class="fit-foot">
+        <p><b>Sound like your company?</b>Answer five questions and pick a time to talk.</p>
+        <a class="btn" href="https://calendly.com/zacharyspencer/zenith-co-consultation" data-book>See if you qualify<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FEATURES -->
-  <section class="section" id="what-you-get">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">What You Get</div>
-        <h2>Four systems. Pick your retainer. No guesswork.</h2>
-        <p>The same foundation we built for A Tree Surgeons in Tampa — built once, live in about a week, running every day after that.</p>
-      </div>
-
-      <!-- Feature 1: Website -->
-      <div class="feature-row reveal">
-        <div class="feature-copy">
-          <div class="feature-num">01 — THE WEBSITE</div>
-          <h3>A real website, built to turn searches into booked jobs</h3>
-          <p>Multi-page, mobile-first, and built around your actual services and service area — not a one-page template that looks like every other tree company in Florida.</p>
-          <div class="feature-stat"><b>Mobile-first</b><span>because homeowners search from their phone, usually standing in the yard</span></div>
-          <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>A page for every service you offer — removal, trimming, stump grinding, storm work</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Quote form that routes straight to your phone, not an inbox you never check</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>On-site SEO done properly, so Google can actually find and rank you</li>
-          </ul>
-          <a href="https://calendly.com/zacharyspencer/zenith-co-consultation" target="_blank" rel="noopener" class="link-inline">Get your site built →</a>
-        </div>
-        <div class="feature-visual">
-          <div class="browser-mock">
-            <div class="browser-bar">
-              <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
-              <span class="browser-url">yourtreecompany.com</span>
-            </div>
-            <div class="browser-body">
-              <div class="mock-nav">
-                <div class="bar" style="width:26%;height:12px;"></div>
-                <div class="bar" style="width:38%;height:8px;"></div>
-              </div>
-              <div class="bar" style="width:75%;height:18px;"></div>
-              <div class="bar short"></div>
-              <div class="bar" style="width:82%;"></div>
-              <div class="mock-form">
-                <div class="bar" style="width:100%;"></div>
-                <div class="bar" style="width:100%;"></div>
-                <div class="mock-btn">GET A FREE QUOTE</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature 2: Missed-call text back -->
-      <div class="feature-row flip reveal">
-        <div class="feature-copy">
-          <span class="plan-tag">Included in: Growth</span>
-          <div class="feature-num">02 — MISSED-CALL TEXT-BACK</div>
-          <h3>Miss the call, keep the customer</h3>
-          <p>You can't answer the phone with a chainsaw running. The moment a call rings out, the caller instantly gets a text back — so the conversation starts with you, not your competitor.</p>
-          <div class="feature-stat"><b>7×</b><span>more likely to qualify the lead when you respond within the hour</span></div>
-          <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Fires automatically, seconds after a missed call</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Every call, text, and form fill lands in one inbox you check from your truck</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Works nights, weekends, and mid-job — no app babysitting required</li>
-          </ul>
-          <a href="https://calendly.com/zacharyspencer/zenith-co-consultation" target="_blank" rel="noopener" class="link-inline">Stop losing missed calls →</a>
-        </div>
-        <div class="feature-visual">
-          <div class="phone-mock">
-            <div class="phone-notch"></div>
-            <div class="missed-call">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 2v6h6"/><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <div><b>Missed call · (813) 555-0142</b>Homeowner, 2:47 PM</div>
-            </div>
-            <div class="sms-time">2:47 PM — SENT AUTOMATICALLY</div>
-            <div class="sms sms-out">Sorry we missed you — we're up a tree right now 🌳 This is Ridge Tree &amp; Land. What can we help with? Reply here and we'll get you a quote today.</div>
-            <div class="sms sms-in">Oh great, thanks! Big oak leaning over my back fence, need someone to take a look this week.</div>
-            <div class="sms sms-out">We can do that. What's the address? I'll swing by tomorrow morning.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature 3: Review engine -->
-      <div class="feature-row reveal">
-        <div class="feature-copy">
-          <div class="feature-num">03 — THE REVIEW ENGINE</div>
-          <h3>Reviews on autopilot, while the customer's still happy</h3>
-          <p>Every finished job triggers an automatic review request — timed for right after the crew leaves, when the yard looks great and your name is still top of mind. Then a gentle nudge if they forget.</p>
-          <div class="feature-stat"><b>1 tap</b><span>from your customer's text thread straight to your Google review page</span></div>
-          <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Automatic text &amp; email request after every closed job</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Polite follow-up if they don't respond the first time</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>No login, no friction for the customer — one tap and they're writing</li>
-          </ul>
-          <a href="https://calendly.com/zacharyspencer/zenith-co-consultation" target="_blank" rel="noopener" class="link-inline">Start stacking reviews →</a>
-        </div>
-        <div class="feature-visual">
-          <div class="review-mock">
-            <div class="review-step">
-              <div class="rs-label">Job marked complete</div>
-              <p>Crew finishes the Hendersons' oak removal, 3:10 PM</p>
-            </div>
-            <div class="review-step">
-              <div class="rs-label">Auto-sent · 3:25 PM</div>
-              <p>"Thanks for trusting us with your oak today! If we did right by you, a quick Google review helps more than you'd think → g.page/r/ridge-tree"</p>
-            </div>
-            <div class="review-toast">
-              <div>
-                <span class="stars">★★★★★</span>
-                <b>New Google review</b>
-                <span>"Crew was on time, yard was spotless after…"</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature 4: AI receptionist -->
-      <div class="feature-row flip reveal">
-        <div class="feature-copy">
-          <span class="plan-tag is-pro">Pro Plan</span>
-          <div class="feature-num">04 — THE RECEPTIONIST</div>
-          <h3>Every missed call, answered live — not texted</h3>
-          <p>When a call comes in and no one picks up, your AI receptionist answers instead of letting it ring out. It knows your hours, your pricing, and your services, books the appointment on the spot, and confirms it by text right after.</p>
-          <div class="feature-stat"><b>Live, not scripted</b><span>sounds like a real front-desk person, not a phone tree</span></div>
-          <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Answers in your business's voice, trained on your services and pricing</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Books appointments directly onto your calendar during the call</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Sends a confirmation text automatically once it's booked</li>
-          </ul>
-          <a href="#pricing" class="link-inline">See the Pro plan →</a>
-        </div>
-        <div class="feature-visual">
-          <div class="phone-mock">
-            <div class="phone-notch"></div>
-            <div class="missed-call answered">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <div><b>Missed → Answered by Ava</b>(813) 555-0142 · 2:47 PM</div>
-            </div>
-            <div class="sms-time">LIVE TRANSCRIPT</div>
-            <div class="review-step">
-              <div class="rs-label">Ava · Zenith Receptionist</div>
-              <p>"Hi, thanks for calling — how can I help today?"</p>
-            </div>
-            <div class="review-toast">
-              <div>
-                <b>Appointment booked ✓</b>
-                <span>Tue 9:00 AM — oak removal estimate</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+<!-- WHERE JOBS SLIP: the "before" to the calendar's "after" -->
+<section class="sec" aria-labelledby="slip-h">
+  <div class="wrap feature">
+    <div>
+      <p class="eyebrow">Where jobs slip</p>
+      <h2 id="slip-h">You lose jobs before you ever see the yard</h2>
+      <ul class="slip-list">
+        <li>The phone rings while you're up a tree or running the chipper.</li>
+        <li>By the time you call back, they've booked whoever answered first.</li>
+      </ul>
     </div>
-  </section>
-
-  <!-- SERVICES GRID -->
-  <section class="section section-alt">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">Built For Your Trade</div>
-        <h2>We speak tree service, not agency</h2>
-        <p>One trade, done properly. Your site gets a page for every kind of work you actually do — written by people who know the difference between a trim and a topping.</p>
+    <div>
+      <div class="phone phone-day" role="img" aria-label="Example of a phone after a work day: two missed calls, a voicemail about an oak, and a text from a caller who already booked someone else">
+        <div class="screen">
+          <span class="island" aria-hidden="true"></span>
+          <div class="sbar"><span></span><span class="sicons" aria-hidden="true"><svg viewBox="0 0 17 11"><rect x="0" y="7" width="3" height="4" rx=".6"/><rect x="4.5" y="5" width="3" height="6" rx=".6"/><rect x="9" y="2.5" width="3" height="8.5" rx=".6"/><rect x="13.5" y="0" width="3" height="11" rx=".6"/></svg><svg viewBox="0 0 15 11"><path d="M7.5 2.2c2.2 0 4.2.85 5.7 2.25l1.1-1.15A9.6 9.6 0 0 0 7.5.6 9.6 9.6 0 0 0 .7 3.3l1.1 1.15A8.1 8.1 0 0 1 7.5 2.2zm0 3.2c1.3 0 2.5.5 3.4 1.3l1.1-1.15A6.5 6.5 0 0 0 7.5 3.8 6.5 6.5 0 0 0 3 5.55L4.1 6.7c.9-.8 2.1-1.3 3.4-1.3zm0 3.2c.5 0 .9.15 1.2.45L7.5 10.3 6.3 9.05c.3-.3.7-.45 1.2-.45z"/></svg><svg viewBox="0 0 25 12"><rect x=".5" y=".5" width="21" height="11" rx="3" fill="none" stroke="currentColor" opacity=".5"/><rect x="2" y="2" width="16" height="8" rx="1.6"/><rect x="23" y="4" width="1.6" height="4" rx=".8" opacity=".5"/></svg></span></div>
+          <div class="lock"><span class="l-day">Tuesday</span><span class="l-time">7:48</span></div>
+          <div class="pd-list">
+            <div class="notif"><div class="n-h"><span class="app-ic"><svg viewBox="0 0 16 16"><path d="M3.6 1.5h2.1l1 3.1-1.6 1.1a8.2 8.2 0 0 0 4.2 4.2l1.1-1.6 3.1 1v2.1a1.6 1.6 0 0 1-1.6 1.6A11.6 11.6 0 0 1 2 3.1a1.6 1.6 0 0 1 1.6-1.6z" fill="currentColor"/></svg></span><b>Phone</b><small>9:14 AM</small></div><p>Missed call from (813) 555-0142</p></div>
+            <div class="notif"><div class="n-h"><span class="app-ic"><svg viewBox="0 0 16 16"><path d="M3.6 1.5h2.1l1 3.1-1.6 1.1a8.2 8.2 0 0 0 4.2 4.2l1.1-1.6 3.1 1v2.1a1.6 1.6 0 0 1-1.6 1.6A11.6 11.6 0 0 1 2 3.1a1.6 1.6 0 0 1 1.6-1.6z" fill="currentColor"/></svg></span><b>Phone</b><small>11:02 AM</small></div><p>Missed call from (813) 555-0187</p></div>
+            <div class="notif"><div class="n-h"><span class="app-ic"><svg viewBox="0 0 16 16"><circle cx="4.5" cy="8" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="11.5" cy="8" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 10.6h7" stroke="currentColor" stroke-width="1.6"/></svg></span><b>Voicemail</b><small>1:36 PM</small></div><p>&ldquo;Got an oak leaning toward the house...&rdquo;</p></div>
+            <div class="notif"><div class="n-h"><span class="app-ic"><svg viewBox="0 0 16 16"><path d="M2 3.6A1.6 1.6 0 0 1 3.6 2h8.8A1.6 1.6 0 0 1 14 3.6v6a1.6 1.6 0 0 1-1.6 1.6H6.2L2.8 14v-2.9A1.6 1.6 0 0 1 2 9.6z" fill="currentColor"/></svg></span><b>Messages</b><small>7:48 PM</small></div><p><span class="n-from">(813) 555-0187</span>Thanks for getting back to us. We already booked someone.</p></div>
+          </div>
+          <div class="lock-btns" aria-hidden="true"><span><svg viewBox="0 0 20 20"><path d="M7 2h6v4l-1.5 3v9h-3V9L7 6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7 6h6" stroke="currentColor" stroke-width="1.6"/></svg></span><span><svg viewBox="0 0 20 20"><path d="M2.5 6.5A1.5 1.5 0 0 1 4 5h2.2l1.3-2h5l1.3 2H16a1.5 1.5 0 0 1 1.5 1.5v8A1.5 1.5 0 0 1 16 16H4a1.5 1.5 0 0 1-1.5-1.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="10" cy="10.5" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
+        </div>
       </div>
-      <div class="services-grid reveal">
-        <div class="service-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22v-7"/><path d="M7 14l5-10 5 10z"/><path d="M9 9l3-5 3 5"/></svg>Tree Removal</div>
-        <div class="service-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9l6 6 6-6"/><path d="M6 15l6 6 6-6" opacity="0.4"/></svg>Tree Trimming</div>
-        <div class="service-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="14" r="6"/><path d="M12 8V3"/><path d="M9 4h6"/></svg>Stump Grinding</div>
-        <div class="service-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 20h18"/><path d="M5 20V9l6-5 8 7v9"/></svg>Land Clearing</div>
-        <div class="service-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg>Storm Cleanup</div>
-        <div class="service-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22V8"/><path d="M12 8c-4 0-6-3-6-6 3 0 6 1 6 6zM12 8c4 0 6-3 6-6-3 0-6 1-6 6z"/></svg>Palm Care</div>
-        <div class="service-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V8l8 4 8-4v13"/><path d="M12 12v9"/></svg>Crane Work</div>
-        <div class="service-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>24/7 Emergency</div>
+      <p class="mock-cap">Illustrative example, not a real customer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE OUTCOME -->
+<section class="sec alt" aria-labelledby="out-h">
+  <div class="wrap feature flip">
+    <div>
+      <p class="eyebrow">What a week looks like</p>
+      <h2 id="out-h">Estimates on your calendar before the week&nbsp;starts</h2>
+      <p>You show up, walk the job, and write the quote. You stop calling people back at 9 at night.</p>
+    </div>
+    <div>
+      <div class="card week" aria-label="Example calendar week">
+        <div class="wk-head"><b>Your week</b><span>Estimates booked by your ads</span></div>
+        <div class="wk-row"><span class="wk-day">Mon</span><div class="wk-ev">Estimate: oak over the roof<small><span>8:30 AM</span><i>Reminder sent</i></small></div></div>
+        <div class="wk-row"><span class="wk-day">Tue</span><div class="wk-ev">Estimate: palm trimming, 6 trees<small><span>2:00 PM</span><i>Reminder sent</i></small></div></div>
+        <div class="wk-row"><span class="wk-day">Wed</span><div class="wk-ev">Estimate: stump grinding<small><span>10:00 AM</span><i>Reminder sent</i></small></div></div>
+        <div class="wk-row wk-more"><span class="wk-day">Thu</span><div class="wk-ev">Estimate: oak removal<small><span>9:00 AM</span><i>Reminder sent</i></small></div></div>
+        <div class="wk-row wk-more"><span class="wk-day">Fri</span><div class="wk-ev">Estimate: limbs over the driveway<small><span>3:30 PM</span><i>Reminder sent</i></small></div></div>
+      </div>
+      <p class="mock-cap">Illustrative example, not a client's calendar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec" id="how" aria-labelledby="how-h">
+  <div class="wrap how-grid">
+    <div class="how-intro">
+      <div class="head">
+        <p class="eyebrow">How it works</p>
+        <h2 id="how-h">Watch a lead turn into an estimate</h2>
+        <p>Tap the button to play a test lead. Nobody real is on the other end.</p>
+      </div>
+      <div class="demo-ctrl">
+        <button class="btn" type="button" id="demo-go">Send a test lead</button>
+        <span class="tag" id="demo-state">About 40 seconds.</span>
       </div>
     </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="section" id="how-it-works">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">How It Works</div>
-        <h2>From audit call to live site</h2>
-        <p>No 40-page proposals, no six-week discovery phase. Three steps, and you're not the company without a website anymore.</p>
+    <ol class="steps" id="steps">
+      <li><span class="fill" aria-hidden="true"></span><span class="n">01</span><div><b>Ads go live</b>A homeowner in your service area taps your ad and fills out your landing page.</div></li>
+      <li><span class="fill" aria-hidden="true"></span><span class="n">02</span><div><b>Text and call right away</b>Your business texts and calls them while they still have the phone in hand.</div></li>
+      <li><span class="fill" aria-hidden="true"></span><span class="n">03</span><div><b>Estimate booked and reminded</b>They pick a time, it lands on your calendar, and they get a reminder before you arrive.</div></li>
+      <li><span class="fill" aria-hidden="true"></span><span class="n">04</span><div><b>You pay when they show</b>You mark each estimate, and you only pay for the ones where the homeowner was there.</div></li>
+    </ol>
+    <div class="phone-col">
+      <div class="now"><span class="now-view" id="demo-view">Homeowner's phone</span><span class="now-step" id="demo-now" aria-live="polite"></span></div>
+      <div class="phone" role="img" aria-label="Phone playing the test lead demo">
+        <div class="screen">
+          <span class="island" aria-hidden="true"></span>
+          <div class="sbar"><span id="clock">9:41</span><span class="sicons" aria-hidden="true"><svg viewBox="0 0 17 11"><rect x="0" y="7" width="3" height="4" rx=".6"/><rect x="4.5" y="5" width="3" height="6" rx=".6"/><rect x="9" y="2.5" width="3" height="8.5" rx=".6"/><rect x="13.5" y="0" width="3" height="11" rx=".6"/></svg><svg viewBox="0 0 15 11"><path d="M7.5 2.2c2.2 0 4.2.85 5.7 2.25l1.1-1.15A9.6 9.6 0 0 0 7.5.6 9.6 9.6 0 0 0 .7 3.3l1.1 1.15A8.1 8.1 0 0 1 7.5 2.2zm0 3.2c1.3 0 2.5.5 3.4 1.3l1.1-1.15A6.5 6.5 0 0 0 7.5 3.8 6.5 6.5 0 0 0 3 5.55L4.1 6.7c.9-.8 2.1-1.3 3.4-1.3zm0 3.2c.5 0 .9.15 1.2.45L7.5 10.3 6.3 9.05c.3-.3.7-.45 1.2-.45z"/></svg><svg viewBox="0 0 25 12"><rect x=".5" y=".5" width="21" height="11" rx="3" fill="none" stroke="currentColor" opacity=".5"/><rect x="2" y="2" width="16" height="8" rx="1.6"/><rect x="23" y="4" width="1.6" height="4" rx=".8" opacity=".5"/></svg></span></div>
+          <div class="scr" id="scr"><p class="idle">Tap "Send a test lead" to see what the homeowner sees.</p></div>
+        </div>
       </div>
-      <div class="process">
-        <div class="process-step reveal">
-          <svg class="ring-badge" viewBox="0 0 64 64" fill="none">
-            <circle cx="32" cy="32" r="30" stroke="#2A3841" stroke-width="1.5"/>
-            <circle cx="32" cy="32" r="21" stroke="#2A3841" stroke-width="1.5"/>
-            <circle cx="32" cy="32" r="12" stroke="#34C77B" stroke-width="2"/>
-            <text x="32" y="37" text-anchor="middle" font-family="Space Grotesk" font-size="14" fill="#F2F6F7" font-weight="600">1</text>
+      <p class="mock-cap">Ridge Tree &amp; Land is an example company, not a client.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="sec alt" id="proof" aria-labelledby="proof-h">
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow">Our work</p>
+      <h2 id="proof-h">Tree companies we've built for</h2>
+      <p>We built both websites. Visit either one and see for yourself.</p>
+    </div>
+
+    <div class="work-grid">
+      <article class="card work">
+        <div class="frame" aria-hidden="true">
+          <div class="browser">
+            <div class="b-bar"><i></i><i></i><i></i><span>atreesurgeons.net</span></div>
+            <div class="site">
+              <div class="s-nav"><b>A Tree Surgeon's Enterprise</b></div>
+              <span class="s-eye">Tampa's Tree Surgeons Since Day One</span>
+              <span class="s-h">Honest Tree Work. Every&nbsp;Time.</span>
+            </div>
+          </div>
+        </div>
+        <div class="w-body">
+          <p class="w-meta"><span class="live">Live</span><span class="place">Tampa, FL</span></p>
+          <h3>A Tree Surgeons Enterprise</h3>
+          <div class="tags"><span>Website</span><span>Missed-call text back</span><span>Review requests</span></div>
+          <!-- OWNER TESTIMONIAL: when Fred's video or quote comes in, replace this panel with a figure.testimonial like the King's card. -->
+          <div class="built">
+            <span class="t-label">What runs behind the site</span>
+            <div class="b-row"><b>Estimate form</b><span>Right on the first screen, so homeowners can ask without calling.</span></div>
+            <div class="b-row"><b>Missed call</b><span>The caller gets a text back right away.</span></div>
+            <div class="b-row"><b>Job finished</b><span>The customer gets a review request.</span></div>
+          </div>
+          <a class="visit" href="https://atreesurgeons.net" target="_blank" rel="noopener">Visit atreesurgeons.net<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+        </div>
+      </article>
+
+      <article class="card work">
+        <div class="frame" aria-hidden="true">
+          <div class="browser">
+            <div class="b-bar"><i></i><i></i><i></i><span>kingstreecare.com</span></div>
+            <div class="site">
+              <div class="s-nav"><b>King's Tree Service</b></div>
+              <span class="s-eye">25+ years &middot; Palm Bay, FL</span>
+              <span class="s-h">The tree comes down. Your yard stays&nbsp;intact.</span>
+            </div>
+          </div>
+        </div>
+        <div class="w-body">
+          <p class="w-meta"><span class="live">Live</span><span class="place">Palm Bay, FL</span></p>
+          <h3>King's Tree Service</h3>
+          <div class="tags"><span>Google Ads</span><span>Website</span><span>Photo estimate form</span><span>Job gallery</span></div>
+          <figure class="testimonial">
+            <video controls playsinline preload="none" poster="assets/video/kings-testimonial.jpg" width="540" height="960" aria-label="Testimonial video from Jenniffer, co-owner of King's Tree Service">
+              <source src="assets/video/kings-testimonial.mp4" type="video/mp4">
+            </video>
+            <figcaption><span class="t-label">Owner testimonial</span><blockquote>&ldquo;My Google ad is now up and running and we're starting to get calls from it.&rdquo;</blockquote><cite>Jenniffer, co&#8209;owner of King's Tree Service</cite><span class="t-len">49 seconds. Tap play for sound.</span></figcaption>
+          </figure>
+          <a class="visit" href="https://kingstreecare.com" target="_blank" rel="noopener">Visit kingstreecare.com<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+        </div>
+      </article>
+    </div>
+
+    <!-- FIRST ADS CASE STUDY: add a card here once a client has real numbers (zenith-site.md has the markup). -->
+  </div>
+</section>
+
+<!-- THE DEAL -->
+<section class="sec" id="deal" aria-labelledby="deal-h">
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow">The deal</p>
+      <h2 id="deal-h">You pay for estimates that happen</h2>
+    </div>
+    <div class="compare">
+      <p class="sub-label" id="cmp-h">How it compares</p>
+      <dl aria-labelledby="cmp-h">
+        <div><dt>Retainer agency</dt><dd>You pay the agency every month, on top of ad spend, whether your phone rings or not.</dd></div>
+        <div><dt>Shared lead site</dt><dd>You pay per lead, and other companies can buy the same lead.</dd></div>
+        <div class="us"><dt>Zenith Co.</dt><dd>You pay ad spend on your own card and a one-time setup fee. Our only other fee is for estimates the homeowner was there for.</dd></div>
+      </dl>
+      <p class="cmp-note">Typical setups. Some agencies and lead sites work differently.</p>
+    </div>
+    <div class="card deal-card" data-rv-group>
+      <div class="d-head">
+        <b>
+          <svg viewBox="0 0 300 300" fill="none" aria-hidden="true">
+            <path d="M78 208 L150 100 L222 208 Z" fill="#1B2B3C" stroke="#7FC8A9" stroke-width="12" stroke-linejoin="round"/>
+            <path d="M150 100 L180 145 L169 158 L160 140 L150 156 L140 139 L130 159 L120 145 Z" fill="#FFFFFF"/>
+            <circle cx="150" cy="150" r="139" stroke="#7FC8A9" stroke-width="11"/>
           </svg>
-          <span class="duration">15 Minutes</span>
-          <h3>Free Audit Call</h3>
-          <p>We pull up your Google Business Profile live and show you exactly what a homeowner sees right now — and what's missing. If we can't help, we'll tell you that too.</p>
-          <div class="process-connector"></div>
-        </div>
-        <div class="process-step reveal">
-          <svg class="ring-badge" viewBox="0 0 64 64" fill="none">
-            <circle cx="32" cy="32" r="30" stroke="#2A3841" stroke-width="1.5"/>
-            <circle cx="32" cy="32" r="21" stroke="#34C77B" stroke-width="1.5" opacity="0.5"/>
-            <circle cx="32" cy="32" r="12" stroke="#34C77B" stroke-width="2"/>
-            <text x="32" y="37" text-anchor="middle" font-family="Space Grotesk" font-size="14" fill="#F2F6F7" font-weight="600">2</text>
-          </svg>
-          <span class="duration">About A Week</span>
-          <h3>We Build It</h3>
-          <p>Send over your logo, photos, and service areas. We build the site and both automations on a smart business line that forwards straight to the phone you already answer.</p>
-          <div class="process-connector"></div>
-        </div>
-        <div class="process-step reveal">
-          <svg class="ring-badge" viewBox="0 0 64 64" fill="none">
-            <circle cx="32" cy="32" r="30" stroke="#34C77B" stroke-width="1.5" opacity="0.35"/>
-            <circle cx="32" cy="32" r="21" stroke="#34C77B" stroke-width="1.5" opacity="0.7"/>
-            <circle cx="32" cy="32" r="12" fill="#34C77B"/>
-            <text x="32" y="37" text-anchor="middle" font-family="Space Grotesk" font-size="14" fill="#0B1512" font-weight="700">3</text>
-          </svg>
-          <span class="duration">Launch Call</span>
-          <h3>Go Live</h3>
-          <p>We walk you through the site and the two things you actually need to know how to use. Then it runs — while you're out running jobs.</p>
-        </div>
+          Per-estimate ads
+        </b>
+        <span>9 terms</span>
+      </div>
+      <ol class="terms">
+        <li><h3>Ad spend</h3><p>You pay the ad platforms directly, on your own card. Plan on at least <span data-fill="minAdSpend">$50</span> a day, about $1,500 a month. The ad accounts are in your business's name, and you keep them if you stop.</p></li>
+        <li><h3>Setup</h3><p>You pay us a one-time setup fee. That covers your landing page and the text, call, booking, and reminders for every lead.</p></li>
+        <li><h3>Per estimate</h3><p>After setup, you pay a flat fee for each shown estimate. We bill once a week.</p></li>
+        <li><h3>What counts as shown</h3><p>A homeowner booked through your ads, you showed up at the booked time, and they were there to walk the job.</p></li>
+        <li><h3>What does not bill</h3><p>Leads outside your service area. Leads asking for work you don't do. Homeowners who don't show. Duplicate bookings. Estimates you cancel.</p></li>
+        <li><h3>You mark each one</h3><p>Within 3 business days, mark each estimate shown or not shown, the way we set up with you. If you don't mark it, it counts as shown. If a charge looks wrong, email us within 14 days of the bill and we'll check the records and credit any that didn't count.</p></li>
+        <li><h3>Your area is yours</h3><p>Your area is written down when you sign up. While you're in, we won't run ads for another tree company there.</p></li>
+        <li><h3>What we need from you</h3><p>Give us access to your ad accounts and calendar. Keep the open times on your calendar current. Tell us when your service area or the work you take changes.</p></li>
+        <li><h3>Term</h3><p>There is no long-term contract. Email us and the ads go off within 2 business days. The landing page we host comes down with them.</p></li>
+      </ol>
+      <div class="d-foot">
+        <p>The setup fee and the per-estimate fee are set on the call, based on your area and your mix of jobs.</p>
+        <a class="btn" href="https://calendly.com/zacharyspencer/zenith-co-consultation" data-book>See if you qualify</a>
       </div>
     </div>
-  </section>
-
-  <!-- WHY ZENITH -->
-  <section class="section section-alt" id="why-us">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">Why Zenith</div>
-        <h2>The un-agency agency</h2>
-        <p>Most agencies charge $1,500+/month, lock you into a year, and treat a tree company like a dentist's office with chainsaws. We don't.</p>
+    <div class="calc-grid deal-calc" data-rv-group>
+      <div class="head calc-intro">
+        <p class="eyebrow">Do the math</p>
+        <h3 id="calc-h">What one shown estimate is worth to you</h3>
+        <p class="c-lead">Put in your own numbers. The math is simple:</p>
+        <p class="formula" aria-label="Average job value times close rate equals what one shown estimate is worth"><span class="f-g"><span>Average job value</span><i aria-hidden="true">&times;</i><span>Close rate</span></span><span class="f-g"><i aria-hidden="true">=</i><b>One shown estimate</b></span></p>
+        <p class="c-note"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Nothing you type here is sent anywhere.</p>
       </div>
-      <div class="why-grid">
-        <div class="why-card reveal">
-          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg></div>
-          <h3>No long-term contracts</h3>
-          <p>Month to month. If the work isn't worth keeping, why would we need a contract to make you stay?</p>
+    <div class="card calc-card">
+      <div class="calc-in">
+        <div class="fld-n">
+          <label for="m-job">Average job value</label>
+          <div class="box"><span class="aff">$</span><input id="m-job" type="number" inputmode="numeric" min="0" step="50" value="1000"></div>
         </div>
-        <div class="why-card reveal">
-          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-          <h3>Flat, honest pricing</h3>
-          <p>The price on this page is the price. No "custom quotes," no surprise line items three months in.</p>
+        <div class="fld-n">
+          <label for="m-close">Close rate on estimates</label>
+          <div class="box"><input id="m-close" type="number" inputmode="numeric" min="0" max="100" step="1" value="33"><span class="aff">%</span></div>
         </div>
-        <div class="why-card reveal">
-          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22v-7"/><path d="M7 14l5-10 5 10z"/><path d="M9 9l3-5 3 5"/></svg></div>
-          <h3>Tree services only</h3>
-          <p>We're not juggling roofers, dentists, and gyms. One trade means your site isn't a find-and-replace template.</p>
+      </div>
+      <div class="result" aria-live="polite">
+        <p class="lbl">Each shown estimate brings in</p>
+        <span class="worth" id="o-worth">$330</span>
+      </div>
+      <p class="why" id="o-why">You close 33 of every 100 estimates, at $1,000 a job. Hold that number up against the per-estimate fee we quote you.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec alt" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow">FAQ</p>
+      <h2 id="faq-h">Straight answers before the call</h2>
+    </div>
+    <div class="qa">
+      <details open>
+        <summary>Facebook leads are tire kickers.</summary>
+        <div class="a"><p>A lot of them are. That's why you don't pay us per lead. The ones who fill out a form and vanish still cost ad spend, so we text and call each one right away, before they forget they asked.</p></div>
+      </details>
+      <details>
+        <summary>What if we get too busy?</summary>
+        <div class="a"><p>Leads can only book times that are open on your calendar, so block off the days you're full. If you're booked out for weeks, email us and we'll pause the ads.</p></div>
+      </details>
+      <details>
+        <summary>How fast does it start?</summary>
+        <div class="a"><p>Ads go live <span data-fill="startTime">1 to 2 weeks</span> after setup is paid and we have access.</p></div>
+      </details>
+      <details>
+        <summary>Do I need a website?</summary>
+        <div class="a"><p>No. The ads send homeowners to a landing page we build for you. Your website stays as it is.</p></div>
+      </details>
+      <details>
+        <summary>Is my area still open?</summary>
+        <div class="a"><p>Put your counties in the form when you book. We'll tell you on the call if another tree company already has them.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="sec" aria-labelledby="final-h">
+  <div class="wrap">
+    <div class="card final">
+      <div class="fin-main">
+        <h2 id="final-h">Keep your crews <span class="accent">booked.</span></h2>
+        <p class="who">If your crews can take on more estimates, answer five questions and pick a time to talk.</p>
+        <a class="btn" href="https://calendly.com/zacharyspencer/zenith-co-consultation" data-book>See if you qualify<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      </div>
+      <div class="fin-side">
+        <div class="founder">
+          <!-- Founder photo: save as assets/photos/founder.jpg and it fills this box. -->
+          <div class="fph"><span aria-hidden="true">ZS</span><img src="assets/photos/founder.jpg" alt="Zachary Spencer, founder of Zenith Co." loading="lazy" decoding="async" onload="this.classList.add('ok')" onerror="this.remove()"></div>
+          <div class="f-id"><b data-fill="founderName">Zachary Spencer</b><span>Founder, Zenith Co.</span></div>
         </div>
-        <div class="why-card reveal">
-          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-          <h3>No new phone, no new habits</h3>
-          <p>A smart line forwards straight to the phone you already answer. The number on your trucks keeps working — the system just catches what you miss.</p>
-        </div>
-        <div class="why-card reveal">
-          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-          <h3>One inbox for everything</h3>
-          <p>Calls, texts, quote forms, review replies — one place, on your phone. No tab-juggling between five apps.</p>
-        </div>
-        <div class="why-card reveal">
-          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></div>
-          <h3>Fast, then done</h3>
-          <p>Live in about a week. After launch it runs itself — we maintain it, you get back to running crews.</p>
-        </div>
+        <p class="f-note">You'll be talking to me on the call.</p>
+        <p class="f-mail"><span>Questions before then?</span><a href="mailto:zachary@zenithcomarketing.com"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2 4l6 5 6-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>zachary@<wbr>zenithcomarketing.com</span></a></p>
       </div>
     </div>
-  </section>
-
-  <!-- PROOF -->
-  <section class="section" id="proof">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">Our Work</div>
-        <h2>Real sites. Real owners. Live right now.</h2>
-        <p>No mockups, no "concepts," no portfolio of work we did for someone else's agency. Click any of them — they're online today, taking calls and quote requests for the people who own them.</p>
-      </div>
-      <div class="work-grid">
-
-        <a class="work-card reveal" href="https://atreesurgeons.net" target="_blank" rel="noopener">
-          <div class="work-frame">
-            <div class="browser-mock">
-              <div class="browser-bar">
-                <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
-                <span class="browser-url">atreesurgeons.net</span>
-              </div>
-              <div class="work-shot">
-                <div class="bar accent" style="width:68%;height:14px;"></div>
-                <div class="bar short"></div>
-                <div class="bar" style="width:80%;"></div>
-                <div class="work-cta">GET A FREE QUOTE</div>
-              </div>
-            </div>
-          </div>
-          <div class="work-body">
-            <div class="work-meta">
-              <span class="work-badge">Live</span>
-              <span class="work-place">Tampa, FL</span>
-            </div>
-            <h3>A Tree Surgeons Enterprise</h3>
-            <p>Our first Zenith Co. build. Multi-page site with missed-call text-back and automated review requests forwarding straight to the phone Fred already answers — no disruption to how leads reach him.</p>
-            <div class="work-tags"><span>Website</span><span>Missed-call text-back</span><span>Review engine</span></div>
-            <span class="work-link">Visit atreesurgeons.net →</span>
-          </div>
-        </a>
-
-        <a class="work-card reveal" href="https://kingstreecare.com" target="_blank" rel="noopener">
-          <div class="work-frame">
-            <div class="browser-mock">
-              <div class="browser-bar">
-                <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
-                <span class="browser-url">kingstreecare.com</span>
-              </div>
-              <div class="work-shot">
-                <div class="bar accent" style="width:74%;height:14px;"></div>
-                <div class="bar short"></div>
-                <div class="work-tiles"><span></span><span></span><span></span></div>
-                <div class="work-cta">GET A FREE ESTIMATE</div>
-              </div>
-            </div>
-          </div>
-          <div class="work-body">
-            <div class="work-meta">
-              <span class="work-badge">Live</span>
-              <span class="work-place">Palm Bay, FL</span>
-            </div>
-            <h3>King's Tree Service</h3>
-            <p>Built for Bill and Jenniffer, two owner-operators covering Brevard County. Photo-upload estimate form so they can price a job before they drive it, a real gallery of climbing and rigging work, and storm-damage calls flagged as priority.</p>
-            <div class="work-tags"><span>Website</span><span>Photo estimate form</span><span>Job gallery</span><span>Storm priority</span></div>
-            <span class="work-link">Visit kingstreecare.com →</span>
-          </div>
-        </a>
-
-        <a class="work-card is-pool reveal" href="https://glassymountainpools.com" target="_blank" rel="noopener">
-          <div class="work-frame">
-            <div class="browser-mock">
-              <div class="browser-bar">
-                <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
-                <span class="browser-url">glassymountainpools.com</span>
-              </div>
-              <div class="work-shot">
-                <div class="bar accent" style="width:62%;height:14px;"></div>
-                <div class="bar short"></div>
-                <div class="work-tiles"><span></span><span></span><span></span></div>
-                <div class="work-cta">REQUEST A FREE 3D DESIGN</div>
-              </div>
-            </div>
-          </div>
-          <div class="work-body">
-            <div class="work-meta">
-              <span class="work-badge">Live</span>
-              <span class="work-place">Greenville, SC</span>
-            </div>
-            <h3>Glassy Mountain Pools</h3>
-            <p>Outside the trade, on purpose — proof the system isn't a tree template with the words swapped. Custom pool builds across Upstate SC, with a project gallery, service pages, and a quote form that routes straight to Jeremy's phone.</p>
-            <div class="work-tags"><span>Website</span><span>Project gallery</span><span>Quote routing</span></div>
-            <span class="work-link">Visit glassymountainpools.com →</span>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- REGIONS -->
-  <section class="section section-alt">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">Where We Work</div>
-        <h2>Built for Florida tree service companies</h2>
-        <p>We only work with tree service companies, so every site and automation is built around how your business actually runs — hurricane season included.</p>
-      </div>
-      <div class="region-pills reveal">
-        <span class="region-pill">Tampa Bay</span>
-        <span class="region-pill">Jacksonville</span>
-        <span class="region-pill">Treasure Coast</span>
-        <span class="region-pill">Naples</span>
-        <span class="region-pill">Bradenton</span>
-        <span class="region-pill">Daytona</span>
-        <span class="region-pill">Riverview</span>
-        <span class="region-pill">+ statewide</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICING -->
-  <section class="section" id="pricing">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">Pricing</div>
-        <h2>One website. Three ways to run it. Pick your level of automation.</h2>
-        <p>Every plan gets a real, multi-page website. The difference is how much of the follow-up runs itself.</p>
-      </div>
-      <div class="pricing-grid">
-        <div class="pricing-card reveal">
-          <span class="pricing-badge">Website Only</span>
-          <div class="plan-name">Starter</div>
-          <div class="pricing-row"><span class="amt">$250</span><span class="per">one-time setup</span></div>
-          <div class="pricing-plus">then $97/month — month to month, cancel anytime</div>
-          <ul class="pricing-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Multi-page website build, hosting &amp; on-site SEO</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Quote form routed straight to your phone</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Ongoing hosting, maintenance &amp; support</li>
-          </ul>
-          <div class="pricing-cta">
-            <a href="https://calendly.com/zacharyspencer/zenith-co-consultation" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;">Book A Free Audit</a>
-          </div>
-        </div>
-        <div class="pricing-card featured reveal">
-          <span class="pricing-badge">Everything Included</span>
-          <div class="pricing-popular">Most Popular</div>
-          <div class="plan-name">Growth</div>
-          <div class="pricing-row"><span class="amt">$500</span><span class="per">one-time setup</span></div>
-          <div class="pricing-plus">then $297/month — month to month, cancel anytime</div>
-          <ul class="pricing-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Multi-page website build, hosting &amp; on-site SEO</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Missed-call text-back, wired to the phone you already answer</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Automated 5-star review requests with follow-up</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>One inbox for calls, texts &amp; quote forms</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Ongoing hosting, maintenance &amp; support</li>
-          </ul>
-          <div class="pricing-roi"><b>Do the math:</b> one average removal job runs $1,000+. If this system saves you one missed call a quarter, it's already paid for itself.</div>
-          <div class="pricing-cta">
-            <a href="https://calendly.com/zacharyspencer/zenith-co-consultation" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;">Book A Free Audit</a>
-          </div>
-        </div>
-        <div class="pricing-card reveal">
-          <span class="pricing-badge">Full Automation</span>
-          <div class="plan-name">Pro</div>
-          <div class="pricing-row"><span class="amt">$750</span><span class="per">one-time setup</span></div>
-          <div class="pricing-plus">then $499/month — month to month, cancel anytime</div>
-          <ul class="pricing-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Multi-page website build, hosting &amp; on-site SEO</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>AI voice receptionist answers every missed call live and books the appointment</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Confirmation text sent automatically after every booked call</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Automated 5-star review requests with follow-up</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>One inbox for calls, texts &amp; quote forms</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Ongoing hosting, maintenance &amp; support</li>
-          </ul>
-          <div class="pricing-roi"><b>Most missed calls never call back.</b> A live AI receptionist answers on the first ring, every time — no voicemail, no waiting on a text reply.</div>
-          <div class="pricing-cta">
-            <a href="https://calendly.com/zacharyspencer/zenith-co-consultation" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;">Book A Free Audit</a>
-          </div>
-        </div>
-      </div>
-      <p class="pricing-terms">No long-term contract. If it's working, you'll stay — that's the deal.</p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section section-alt" id="faq">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">FAQ</div>
-        <h2>Straight answers</h2>
-      </div>
-      <div class="faq reveal">
-        <div class="faq-item">
-          <button class="faq-q">Will this get me leads by itself?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-          <div class="faq-a"><p>Honest answer: no system prints leads out of thin air, and anyone who promises that is selling you something. This is the foundation — it makes sure that when someone does look you up (from a truck they saw, a referral, or a search), what they find turns them into a booked job instead of a bounce. If you run ads or do outreach on top, this is what makes those dollars work harder.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Am I locked into a contract?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-          <div class="faq-a"><p>No. It's month to month. If the system is making you money, you'll keep it — we'd rather earn that every month than trap you in a 12-month agreement.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">I already have a website. Can you work with it?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-          <div class="faq-a"><p>If you've got a domain, we keep it — your web address doesn't change. We rebuild what lives at that address so it's fast, mobile-first, and wired into the text-back and review systems. Most "I already have a site" sites are exactly why we exist.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Do I need to already have reviews?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-          <div class="faq-a"><p>No. The review system starts working from day one — every job you close from here on triggers a request. If you've got existing reviews we'll showcase the best ones on the site too.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Do I have to change my phone number?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-          <div class="faq-a"><p>No — the phone in your pocket and how you answer it stay exactly the same. We set up a business line that forwards straight to it; that line goes on your website and Google listing so every call is tracked and a missed one triggers the text-back. The number painted on your trucks keeps working exactly like it always has.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">How long until it's actually live?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-          <div class="faq-a"><p>Once we have your logo, photos, and service details, most sites are ready within about a week. We walk you through everything on a short launch call before it goes live.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="section" id="contact">
-    <div class="wrap">
-      <div class="final-cta reveal">
-        <h2>Stop losing jobs to a blank Google listing.</h2>
-        <p>15 minutes, no pitch deck. We'll pull up your listing live and show you exactly what a homeowner sees when they look you up right now.</p>
-        <a href="https://calendly.com/zacharyspencer/zenith-co-consultation" target="_blank" rel="noopener" class="btn btn-primary">Book A Free Audit</a>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
 <footer>
-  <div class="wrap foot-inner">
-    <div>
-      <div class="foot-brand">ZENITH CO.</div>
-      <p class="foot-note">Websites, missed-call text-back, and review systems for Florida tree service companies. No contracts, no agency games.</p>
-    </div>
-    <div class="foot-links">
-      <div class="foot-col">
-        <h4>Site</h4>
-        <a href="#what-you-get">What You Get</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#why-us">Why Zenith</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#main" class="brand" aria-label="Zenith Co.">
+          <svg viewBox="0 0 300 300" fill="none" aria-hidden="true">
+            <path d="M46 206 L96 140 L138 194" stroke="#7FC8A9" stroke-width="9" stroke-linejoin="round" opacity=".55"/>
+            <path d="M254 206 L204 140 L162 194" stroke="#7FC8A9" stroke-width="9" stroke-linejoin="round" opacity=".55"/>
+            <path d="M78 208 L150 100 L222 208 Z" fill="#0B1520" stroke="#7FC8A9" stroke-width="9" stroke-linejoin="round"/>
+            <path d="M96 140 L112 161 L104 170 L96 158 L88 170 L80 161 Z" fill="#FFFFFF"/>
+            <path d="M204 140 L220 161 L212 170 L204 158 L196 170 L188 161 Z" fill="#FFFFFF"/>
+            <path d="M150 100 L180 145 L169 158 L160 140 L150 156 L140 139 L130 159 L120 145 Z" fill="#FFFFFF"/>
+            <circle cx="150" cy="150" r="139" stroke="#7FC8A9" stroke-width="9"/>
+          </svg>
+          <span>Zenith Co.</span>
+        </a>
+        <p class="foot-note">Paid ads for established Florida tree companies, billed per shown estimate.</p>
       </div>
-      <div class="foot-col">
-        <h4>Contact</h4>
-        <a href="mailto:hello@zenithcomarketing.com">hello@zenithcomarketing.com</a>
-        <a href="https://calendly.com/zacharyspencer/zenith-co-consultation" target="_blank" rel="noopener">Book a call</a>
-      </div>
-      <div class="foot-col">
-        <h4>Legal</h4>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
+      <div class="foot-cols">
+        <div><p class="foot-h">Site</p><a href="#how">How it works</a><a href="#proof">Our work</a><a href="#deal">The deal</a><a href="#faq">FAQ</a></div>
+        <div><p class="foot-h">Contact</p><a href="mailto:hello@zenithcomarketing.com">hello@zenithcomarketing.com</a><a href="https://calendly.com/zacharyspencer/zenith-co-consultation" data-book>See if you qualify</a></div>
+        <div><p class="foot-h">Legal</p><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
       </div>
     </div>
+    <p class="copy">&copy; <span id="yr">2026</span> Zenith Co.</p>
   </div>
 </footer>
 
+<!-- PHONE CTA BAR: shown on phones between the hero and the closing card (see the script at the end) -->
+<div class="mbar" id="mbar" hidden>
+  <p>Five questions, then pick a time.</p>
+  <a class="btn" href="https://calendly.com/zacharyspencer/zenith-co-consultation" data-book>See if you qualify</a>
+</div>
+
+<!-- BOOKING: five questions, then the Calendly calendar -->
+<dialog class="book" id="book" aria-labelledby="book-h">
+  <div class="book-head">
+    <h2 id="book-h">See if you qualify</h2>
+    <button class="x" type="button" data-close>Close</button>
+  </div>
+  <div class="book-body">
+    <form id="qual" novalidate>
+      <div class="fld">
+        <label for="f-company">Company name</label>
+        <input id="f-company" name="company" type="text" autocomplete="organization" required>
+      </div>
+      <div class="fld">
+        <label for="f-area">Service area</label>
+        <input id="f-area" name="area" type="text" placeholder="Counties or cities you work" aria-describedby="f-area-hint" required>
+        <p class="hint" id="f-area-hint">List every county you want covered.</p>
+      </div>
+      <div class="fld">
+        <label for="f-crews">Number of crews</label>
+        <select id="f-crews" name="crews" required><option value="">Pick one</option></select>
+      </div>
+      <div class="fld">
+        <label for="f-budget">Monthly ad budget</label>
+        <select id="f-budget" name="budget" required><option value="">Pick a range</option></select>
+      </div>
+      <div class="fld">
+        <label for="f-phone">Cell phone</label>
+        <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+      </div>
+      <label class="consent">
+        <input type="checkbox" name="sms_consent" value="yes">
+        <span><b>Text me about my booking.</b> By checking this box, you agree to receive text messages from Zenith Co. at the number above about your inquiry and your appointment, including reminders. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase. See our <a href="privacy.html" target="_blank">Privacy Policy</a> and <a href="terms.html" target="_blank">Terms of Service</a>.</span>
+      </label>
+      <div class="hp" aria-hidden="true"><label for="f-url">Leave this empty</label><input id="f-url" name="url_hp" type="text" tabindex="-1" autocomplete="off"></div>
+      <p class="err" id="f-err" role="alert"></p>
+      <button class="btn" type="submit">Next: pick a time</button>
+    </form>
+
+    <div id="step-cal" hidden>
+      <p>Thanks. Pick a time to talk with Zachary.</p>
+      <iframe class="cal-frame" id="cal" title="Book a call with Zenith Co."></iframe>
+    </div>
+  </div>
+</dialog>
+
 <script>
-  document.documentElement.classList.add('js');
+/* =====================================================================
+   EDIT HERE. Each value fills in everywhere it appears on the page.
+   While a value is null, the page shows a visible [blank] in its place.
+   ===================================================================== */
+var SITE = {
+  fitThreshold: 'two or more crews ready for more work',  // reads after "a tree company with"; the bullet capitalizes it
+  minAdSpend: '$50',  // per day; the page says "a day" after it
+  startTime: '1 to 2 weeks',
+  founderName: 'Zachary Spencer',
 
-  // reveal on scroll
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  },{threshold:0.12});
-  revealEls.forEach(el=>io.observe(el));
+  // Form choices. Edit freely.
+  crewOptions: ['None yet, just me', '1 crew', '2 crews', '3 to 4 crews', '5 or more crews'],
+  budgetOptions: ['Under $1,500', '$1,500 to $3,000', '$3,000 to $5,000', 'More than $5,000', 'Not sure yet'],
 
-  // before/after toggle
-  const beforeBtn = document.querySelector('.tgl-before');
-  const afterBtn = document.querySelector('.tgl-after');
-  const beforeState = document.querySelector('.state-before');
-  const afterState = document.querySelector('.state-after');
-  function showBefore(){
-    beforeBtn.classList.add('active'); afterBtn.classList.remove('active');
-    beforeBtn.setAttribute('aria-selected','true'); afterBtn.setAttribute('aria-selected','false');
-    beforeState.style.display=''; afterState.style.display='none';
-  }
-  function showAfter(){
-    afterBtn.classList.add('active'); beforeBtn.classList.remove('active');
-    afterBtn.setAttribute('aria-selected','true'); beforeBtn.setAttribute('aria-selected','false');
-    afterState.style.display=''; beforeState.style.display='none';
-  }
-  beforeBtn.addEventListener('click', showBefore);
-  afterBtn.addEventListener('click', showAfter);
-  // auto-cycle once on load to draw the eye, then stop
-  let cycled = false;
-  setTimeout(()=>{ if(!cycled){ showAfter(); cycled = true; } }, 3200);
+  calendly: 'https://calendly.com/zacharyspencer/zenith-co-consultation',
+  // Form answers are passed to Calendly as the prefilled answer to the FIRST
+  // custom question on the event type ("a1"). Set to null to pass nothing.
+  calendlyAnswerParam: 'a1',
+  // Every form submission is also sent here as JSON, whether or not they book:
+  // the dialer's website-form route, which adds them as a lead in its
+  // "Website form" list. Set to null to send nothing.
+  formEndpoint: 'https://dialer.zenithcomarketing.com/api/inbound/website-form'
+};
+/* ===================================================================== */
 
-  // faq accordion
-  document.querySelectorAll('.faq-item').forEach(item=>{
-    const q = item.querySelector('.faq-q');
-    const a = item.querySelector('.faq-a');
-    q.addEventListener('click', ()=>{
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(o=>{ o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight=null; });
-      if(!isOpen){ item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
-    });
+(function () {
+  'use strict';
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var has = function (v) { return v !== null && v !== undefined && String(v).trim() !== ''; };
+  var money = function (n) { return '$' + Math.round(n).toLocaleString('en-US'); };
+
+  $('#yr').textContent = new Date().getFullYear();
+
+  /* ---- Fill in the blanks ---- */
+  $$('[data-fill]').forEach(function (el) {
+    var v = SITE[el.getAttribute('data-fill')];
+    if (!has(v)) return;
+    el.textContent = String(v);
+    el.classList.remove('blank');
   });
-</script>
 
+  /* ---- Calculator: what one shown estimate is worth ---- */
+  var mJob = $('#m-job'), mClose = $('#m-close'), oWorth = $('#o-worth'), oWhy = $('#o-why');
+  function calc() {
+    var job = parseFloat(mJob.value), close = parseFloat(mClose.value);
+    if (!(job > 0) || !(close > 0)) {
+      oWorth.textContent = '$0';
+      oWhy.textContent = 'Enter a job value and a close rate above 0.';
+      return;
+    }
+    close = Math.min(close, 100);
+    oWorth.textContent = money(job * close / 100);
+    oWhy.textContent = 'You close ' + (Math.round(close * 10) / 10) + ' of every 100 estimates, at ' + money(job) +
+      ' a job. Hold that number up against the per-estimate fee we quote you.';
+  }
+  mJob.addEventListener('input', calc);
+  mClose.addEventListener('input', calc);
+  calc();
+
+  /* ---- Demo: send a test lead (the only animation on the page) ---- */
+  var scr = $('#scr'), now = $('#demo-now'), view = $('#demo-view'), go = $('#demo-go'), state = $('#demo-state'), clock = $('#clock');
+  var steps = $$('#steps li');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var CO = 'Ridge Tree &amp; Land'; // made-up example company, named as such under the phone
+  var HOME = "Homeowner's phone", YOU = 'Your phone';
+  var STEP_MS = [11300, 12800, 8900, 5700]; // rough length of each step, for the line that fills
+  var ICON_OK = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>';
+  var ICON_X = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
+  var ICON_CALL = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1l-2.2 2.2z"/></svg>';
+  var ACTS = '<div class="acts"><span><svg viewBox="0 0 16 16"><path d="M5 7l2.6-5c1.2 0 2 .8 2 2v2.4H13a1.5 1.5 0 0 1 1.5 1.8l-.9 4.6A1.5 1.5 0 0 1 12.1 14H5zM2 7h2v7H2z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg> Like</span><span><svg viewBox="0 0 16 16"><path d="M2.5 3.5A1.5 1.5 0 0 1 4 2h8a1.5 1.5 0 0 1 1.5 1.5v6A1.5 1.5 0 0 1 12 11H6.5L3 14v-3A1.5 1.5 0 0 1 2.5 9.5z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg> Comment</span><span><svg viewBox="0 0 16 16"><path d="M9 2.5l5 4.5-5 4.5V9C5.5 9 3.5 10.5 2 13c.5-4 2.5-7 7-7.5z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg> Share</span></div>';
+  var MORE = '<i class="more" aria-hidden="true">&middot;&middot;&middot;</i>';
+  function post(av, who, meta, text) {
+    return '<div class="post"><div class="p-top"><i class="av">' + av + '</i><div><b>' + who + '</b><small>' + meta + '</small></div>' + MORE + '</div><p>' + text + '</p>' + ACTS + '</div>';
+  }
+  var AD_HTML = '<div class="ad"><div class="p-top"><i class="av g">RT</i><div><b>' + CO + '</b><small>Sponsored</small></div>' + MORE + '</div>' +
+      '<div class="txt">Tree hanging over the house? Book an estimate with a local crew.</div>' +
+      '<div class="img"><svg viewBox="0 0 300 120" preserveAspectRatio="xMidYMid slice" aria-hidden="true">' +
+      '<rect width="300" height="120" fill="#1B2B3C"/><rect y="100" width="300" height="20" fill="#142231"/>' +
+      '<path d="M146 66 L198 38 L250 66 Z" fill="#30465C"/><rect x="154" y="64" width="88" height="36" fill="#0E1A27"/>' +
+      '<rect x="166" y="74" width="16" height="12" fill="#30465C"/><rect x="214" y="74" width="16" height="12" fill="#30465C"/><rect x="191" y="78" width="14" height="22" fill="#30465C"/>' +
+      '<path d="M84 100 C90 80 96 62 116 46 L122 52 C106 66 100 82 98 100 Z" fill="#0B1520"/><path d="M112 52 C134 42 154 40 172 44" stroke="#0B1520" stroke-width="5" fill="none"/>' +
+      '<circle cx="104" cy="44" r="24" fill="#208F58"/><circle cx="134" cy="32" r="28" fill="#34C77B"/><circle cx="168" cy="38" r="22" fill="#2AA866"/><circle cx="150" cy="18" r="16" fill="#208F58"/>' +
+      '</svg></div>' +
+      '<div class="cta"><span class="cta-t">Tree removal and trimming<small>Free estimates</small></span><span class="cta-b">Book now</span></div>' + ACTS + '</div>';
+  var FEED_HEAD = '<div class="app-h"><b>Feed</b><small>Near you</small></div>';
+  var TABS = '<div class="tabbar" aria-hidden="true">' +
+      '<svg class="on" viewBox="0 0 20 20"><path d="M3 9l7-6 7 6v8h-5v-5H8v5H3z" fill="currentColor"/></svg>' +
+      '<svg viewBox="0 0 20 20"><circle cx="9" cy="9" r="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13 13l4 4" stroke="currentColor" stroke-width="1.8"/></svg>' +
+      '<svg viewBox="0 0 20 20"><path d="M10 3a5 5 0 0 0-5 5v3l-1.5 3h13L15 11V8a5 5 0 0 0-5-5zM8 16a2 2 0 0 0 4 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>' +
+      '<svg viewBox="0 0 20 20"><circle cx="10" cy="7" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 17c1-3.5 3.5-5 6.5-5s5.5 1.5 6.5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></div>';
+  var FEED = '<div class="feed">' +
+      post('BN', 'Brevard Neighbors', '2h &middot; Group', 'Power is back on along Malabar Rd. Thanks to the crews out there today.') +
+      post('DR', 'Dana R.', '3h', 'Farmers market is back at the park Saturday morning. Get there early for the strawberries.') +
+      AD_HTML +
+      post('MK', 'Maria K.', '5h', 'Anyone know a good pressure washing company for a driveway?') +
+      post('PC', 'Palm Bay Community', '6h &middot; Group', 'Road work on Babcock St. starts Monday. Plan for delays near the light.') +
+      post('TW', 'Tom W.', '8h', 'Found a set of keys by the boat ramp. Message me to describe them.') +
+      '</div>' + TABS;
+  // Before anyone taps, the phone shows a still frame of the feed (no motion).
+  scr.innerHTML = FEED_HEAD + FEED;
+
+  function wait(ms) { return new Promise(function (res) { setTimeout(res, reduce ? Math.min(ms, 700) : ms); }); }
+  function add(html, cls) {
+    var d = document.createElement('div');
+    d.className = (cls ? cls + ' ' : '') + 'pop';
+    d.innerHTML = html;
+    scr.appendChild(d);
+    return d;
+  }
+  async function clearScreen() {
+    scr.classList.add('out');
+    await wait(280);
+    scr.innerHTML = '';
+    scr.classList.remove('out');
+  }
+  // Highlight step i and fill its line over the step's length; earlier steps show as done.
+  function mark(i) {
+    steps.forEach(function (li, j) {
+      var f = $('.fill', li);
+      li.classList.toggle('on', j === i);
+      li.classList.toggle('done', j < i);
+      f.style.transition = 'none';
+      f.style.height = '';
+    });
+    if (i < 0 || i >= steps.length || reduce) return;
+    var fill = $('.fill', steps[i]);
+    void fill.offsetHeight;
+    fill.style.transition = 'height ' + STEP_MS[i] + 'ms linear';
+    fill.style.height = 'calc(100% - 32px)';
+  }
+  async function stepTo(i, label, who) {
+    await clearScreen();
+    mark(i);
+    now.textContent = 'Step ' + (i + 1) + ' of 4: ' + label;
+    view.textContent = who;
+  }
+  async function type(el, text) {
+    if (reduce) { el.textContent = text; return; }
+    for (var k = 1; k <= text.length; k++) { el.textContent = text.slice(0, k); await wait(45); }
+  }
+  async function tap(el) { el.classList.add('tap'); await wait(450); }
+
+  async function play() {
+    go.disabled = true;
+    state.textContent = 'Playing. Test only.';
+
+    // 1. Ads go live: the homeowner scrolls past the ad, taps it, and fills out the landing page.
+    await stepTo(0, 'Ads go live', HOME); clock.textContent = '6:12';
+    add(FEED_HEAD, 'on-top');
+    var feed = $('.feed', add(FEED));
+    var ad = $('.ad', feed);
+    await wait(1100);
+    feed.style.transform = 'translateY(-' + Math.round(ad.offsetTop * 0.45) + 'px)';
+    await wait(1100);
+    feed.style.transform = 'translateY(-' + (ad.offsetTop - feed.offsetTop - 2) + 'px)';
+    await wait(1500);
+    await tap($('.cta-b', feed));
+    await wait(400);
+    await clearScreen();
+    add('<div class="lp-bar"><b>' + CO + '</b><span>Call</span></div>');
+    add('<div class="lp-hero"><b>Get a free tree estimate</b><span>Tell us about the job. We\'ll text you right back.</span></div>');
+    var f1 = add('<div class="f"><small>What do you need?</small><span></span></div>', 'lp');
+    var f2 = add('<div class="f"><small>Tell us about it</small><span></span></div>', 'lp');
+    var f3 = add('<div class="f"><small>Cell phone</small><span></span></div>', 'lp');
+    var sb = add('<div class="go">Send</div>', 'lp');
+    await wait(500);
+    await type($('span', f1), 'Tree removal');
+    await wait(250);
+    await type($('span', f2), 'Big oak over the driveway');
+    await wait(250);
+    await type($('span', f3), '(321) 555-0142');
+    await wait(450);
+    await tap($('.go', sb));
+    [f1, f2, f3, sb].forEach(function (el) { el.remove(); });
+    add('<div class="lp-ok"><span class="ok">' + ICON_OK + '</span><b>Got it.</b><span>' + CO + ' will text you in a moment.</span></div>');
+    await wait(1700);
+
+    // 2. Text and call right away, in the business's name.
+    await stepTo(1, 'Text and call right away', HOME);
+    add('<div class="msg-h"><i class="av g">RT</i><b>' + CO + '</b><small>Text message</small></div>');
+    var tm = add('Form sent 0:00 ago', 'timer');
+    for (var s = 0; s <= 30; s += reduce ? 30 : 5) { tm.textContent = 'Form sent 0:' + String(s).padStart(2, '0') + ' ago'; await wait(300); }
+    var dots = add('<i></i><i></i><i></i>', 'msg out typing');
+    await wait(1100);
+    dots.remove();
+    add('Hi, this is ' + CO + '. Got your request about the oak over the driveway. We can come look Thursday at 9 or Friday at 2. Which works?', 'msg out');
+    await wait(2800);
+    var call = document.createElement('div');
+    call.className = 'call pop';
+    call.innerHTML = '<i class="av g">RT</i><div><b>' + CO + '</b><small>Incoming call</small></div><span class="c-btn c-no">' + ICON_X + '</span><span class="c-btn c-yes">' + ICON_CALL + '</span>';
+    scr.appendChild(call);
+    await wait(1500);
+    await tap($('.c-yes', call));
+    $('small', call).textContent = 'On the call';
+    await wait(1700);
+    call.remove();
+    add('Call with ' + CO + ', 2 min', 'sys');
+    await wait(900);
+    add('Thursday at 9 works', 'msg in');
+    await wait(1800);
+
+    // 3. Booked on the owner's calendar, then a reminder on the homeowner's phone.
+    await stepTo(2, 'Booked and reminded', YOU); clock.textContent = '6:16';
+    add('<div class="app-h"><b>Thursday</b><small>Your calendar</small></div>');
+    var day = add('<div class="day">' +
+      '<div class="hr"><span>7 AM</span><div class="busy">Crew 1: removal job</div></div>' +
+      '<div class="hr"><span>8 AM</span><div></div></div>' +
+      '<div class="hr"><span>9 AM</span><div class="slot9"></div></div>' +
+      '<div class="hr"><span>10 AM</span><div></div></div>' +
+      '<div class="hr"><span>11 AM</span><div class="busy">Crew 2: trimming job</div></div>' +
+      '<div class="hr"><span>12 PM</span><div></div></div></div>');
+    await wait(900);
+    $('.slot9', day).innerHTML = '<div class="ev pop">Estimate: oak removal<small>Booked by text at 6:15 PM</small></div>';
+    await wait(2400);
+    await clearScreen();
+    view.textContent = HOME; clock.textContent = '5:00';
+    add('<div class="lock"><span class="l-day">Wednesday</span><span class="l-time">5:00</span></div>');
+    await wait(700);
+    add('<div class="notif"><div class="n-h"><i class="av g">RT</i><b>' + CO + '</b><small>now</small></div><p>Reminder: we\'ll be at your place tomorrow at 9:00 AM for your estimate. Reply here if you need to move it.</p></div>');
+    await wait(2800);
+    add('Thanks, see you then', 'msg in');
+    await wait(1700);
+
+    // 4. The owner marks each estimate; only the shown one bills.
+    await stepTo(3, 'You pay when they show', YOU); clock.textContent = '6:30';
+    add('<div class="app-h"><b>Your estimates</b><small>This week</small></div>');
+    var lg = add('<div class="lg">' +
+      '<div class="lg-row"><div><b>Mon 8:30, stump grinding</b><small>Homeowner was there</small></div><span class="pill yes">Billed</span></div>' +
+      '<div class="lg-row"><div><b>Tue 10:00, limb removal</b><small>You canceled</small></div><span class="pill no">Not billed</span></div>' +
+      '<div class="lg-row r1"><div><b>Thu 9:00, oak removal</b><small>Did they show?</small></div><span class="lg-act"><i class="y">Shown</i><i>Not shown</i></span></div>' +
+      '<div class="lg-row r2"><div><b>Fri 2:00, palm trimming</b><small>Did they show?</small></div><span class="lg-act"><i>Shown</i><i class="n">Not shown</i></span></div>' +
+      '<div class="lg-row"><div><b>Lead in Orlando</b><small>Outside your area</small></div><span class="pill no">Not billed</span></div>' +
+      '<div class="lg-row"><div><b>Duplicate booking</b><small>Same homeowner, same job</small></div><span class="pill no">Not billed</span></div></div>');
+    await wait(1300);
+    await tap($('.r1 .y', lg));
+    $('.r1 .lg-act', lg).outerHTML = '<span class="pill yes">Billed</span>';
+    $('.r1 small', lg).textContent = 'Homeowner was there';
+    await wait(900);
+    await tap($('.r2 .n', lg));
+    $('.r2 .lg-act', lg).outerHTML = '<span class="pill no">Not billed</span>';
+    $('.r2 small', lg).textContent = 'No one home';
+    await wait(900);
+    add('<div class="lg-sum"><span>You pay for</span><b>2 of 6</b></div>', 'push');
+    await wait(1500);
+
+    mark(steps.length);
+    now.textContent = 'That is the whole loop.';
+    go.textContent = 'Run it again';
+    go.disabled = false;
+    state.textContent = 'Test only. Nothing was sent.';
+  }
+  go.addEventListener('click', play);
+
+  /* ---- Booking: five questions, then Calendly ---- */
+  var dlg = $('#book'), form = $('#qual'), err = $('#f-err');
+  var crewSel = $('#f-crews'), budSel = $('#f-budget');
+  function fillSelect(sel, items) {
+    items.forEach(function (t) { var o = document.createElement('option'); o.textContent = t; sel.appendChild(o); });
+  }
+  fillSelect(crewSel, SITE.crewOptions);
+  fillSelect(budSel, SITE.budgetOptions);
+
+  function openBook(e) {
+    if (typeof dlg.showModal !== 'function') return; // old browser: the link goes straight to Calendly
+    e.preventDefault();
+    document.documentElement.classList.add('locked');
+    dlg.showModal();
+  }
+  $$('[data-book]').forEach(function (a) { a.addEventListener('click', openBook); });
+  dlg.addEventListener('close', function () { document.documentElement.classList.remove('locked'); });
+  $$('[data-close]', dlg).forEach(function (b) { b.addEventListener('click', function () { dlg.close(); }); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var fd = new FormData(form);
+    var lead = {
+      company: String(fd.get('company') || '').trim(),
+      service_area: String(fd.get('area') || '').trim(),
+      crews: crewSel.value,
+      monthly_ad_budget: budSel.value,
+      phone: String(fd.get('phone') || '').trim(),
+      sms_consent: fd.get('sms_consent') === 'yes',
+      url_hp: String(fd.get('url_hp') || '') // hidden from people; bots fill it in
+    };
+    var missing = [];
+    if (!lead.company) missing.push('company name');
+    if (!lead.service_area) missing.push('service area');
+    if (!lead.crews) missing.push('number of crews');
+    if (!lead.monthly_ad_budget) missing.push('ad budget');
+    if (lead.phone.replace(/\D/g, '').length < 10) missing.push('phone number (10 digits)');
+    if (missing.length) { err.textContent = 'Please fill in: ' + missing.join(', ') + '.'; return; }
+    err.textContent = '';
+
+    if (has(SITE.formEndpoint)) {
+      lead.page = location.href;
+      lead.submitted_at = new Date().toISOString();
+      fetch(SITE.formEndpoint, {
+        // text/plain: no preflight, so it still goes out as the calendar loads.
+        method: 'POST', headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+        body: JSON.stringify(lead), keepalive: true
+      }).catch(function () {});
+    }
+
+    var q = new URLSearchParams({ embed_domain: location.hostname || 'zenithcomarketing.com', embed_type: 'Inline', hide_gdpr_banner: '1' });
+    if (has(SITE.calendlyAnswerParam)) {
+      q.set(SITE.calendlyAnswerParam, 'Company: ' + lead.company + ' | Area: ' + lead.service_area +
+        ' | Crews: ' + lead.crews + ' | Ad budget: ' + lead.monthly_ad_budget +
+        ' | Phone: ' + lead.phone + ' | SMS consent: ' + (lead.sms_consent ? 'yes' : 'no'));
+    }
+    $('#cal').src = SITE.calendly + '?' + q.toString();
+    form.hidden = true;
+    $('#step-cal').hidden = false;
+    $('#book-h').textContent = 'Pick a time';
+    dlg.classList.add('wide');
+    dlg.scrollTop = 0;
+  });
+})();
+</script>
+<script>
+/* Phone CTA bar: visible only after the hero button scrolls away and before the
+   closing card comes into view, and never while the form is open, a field has
+   focus, or the test lead demo is playing. */
+(function () {
+  'use strict';
+  var bar = document.getElementById('mbar');
+  if (!bar || !('IntersectionObserver' in window)) return;
+  var heroBtn = document.querySelector('.hero [data-book]'), fin = document.querySelector('.final');
+  var dlg = document.getElementById('book'), go = document.getElementById('demo-go');
+  var heroGone = false, finalReached = false;
+  function typing() { var a = document.activeElement; return !!a && a.matches('input, select, textarea'); }
+  function update() { bar.hidden = !(heroGone && !finalReached && !dlg.open && !typing() && !go.disabled); }
+  new IntersectionObserver(function (es) {
+    es.forEach(function (e) { heroGone = !e.isIntersecting && e.boundingClientRect.top < 0; }); update();
+  }).observe(heroBtn);
+  new IntersectionObserver(function (es) {
+    es.forEach(function (e) { finalReached = e.isIntersecting || e.boundingClientRect.top < 0; }); update();
+  }).observe(fin);
+  document.addEventListener('focusin', update);
+  document.addEventListener('focusout', function () { setTimeout(update, 0); });
+  new MutationObserver(update).observe(go, { attributes: true, attributeFilter: ['disabled'] });
+  new MutationObserver(update).observe(dlg, { attributes: true, attributeFilter: ['open'] });
+})();
+</script>
+<script>
+/* Scroll reveal: blocks fade up together, one group at a time, the first time
+   the group scrolls into view. A group is the section, unless a block sits inside
+   data-rv-group (the deal card and the calculator, far down a long section).
+   Inside a group, blocks start within 160ms of each other. */
+(function () {
+  'use strict';
+  var d = document.documentElement;
+  if (!d.classList.contains('js-reveal')) return;
+  window.__reveal = true;
+  var els = Array.prototype.slice.call(document.querySelectorAll('.hero-grid>div,.hero-points,.wrap>.head,.fit-card,.feature>div,.how-intro,.steps,.phone-col,.work,.compare,.deal-card,.deal-calc>*,.qa,.final'));
+  var groups = [];
+  els.forEach(function (el) {
+    var g = el.closest('[data-rv-group]') || el.closest('section') || el;
+    if (groups.indexOf(g) < 0) { groups.push(g); g.__rv = []; }
+    el.style.transitionDelay = Math.min(g.__rv.length, 2) * 80 + 'ms';
+    g.__rv.push(el);
+  });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      e.target.__rv.forEach(function (el) {
+        el.classList.add('in');
+        // After the fade, hand transitions back to the element (hover effects, the demo).
+        setTimeout(function () { el.classList.add('rv-done'); el.style.transitionDelay = ''; }, 1100);
+      });
+    });
+  }, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
+  groups.forEach(function (g) { io.observe(g); });
+})();
+</script>
 </body>
 </html>

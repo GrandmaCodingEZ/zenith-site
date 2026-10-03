@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0F2236">
 <title>Privacy Policy — Zenith Co.</title>
 <meta name="description" content="Privacy policy for zenithcomarketing.com, the website of Zenith Co.">
 <meta name="robots" content="noindex">
@@ -10,39 +11,42 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0E1417;--card:#1A2429;--line:#2A3841;--green:#34C77B;
-    --text:#F2F6F7;--muted:#90A4AE;--muted-dim:#5D6E77;
-    --font-display:'Space Grotesk', sans-serif;--font-body:'Inter', sans-serif;
+    --bg:#F1F5F9;--paper:#FFFFFF;--ink:#0F2236;--ink-2:#455A70;--line:#D3DEE9;--navy:#081523;--navy-line:#16304B;
+    --head:'Barlow Condensed','Arial Narrow',Arial,sans-serif;--body:'Barlow',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
-  body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.65;-webkit-font-smoothing:antialiased;}
-  a{color:var(--green);text-decoration:none;}
-  a:hover{text-decoration:underline;}
-  .nav{position:sticky;top:0;background:rgba(14,20,23,0.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
-  .nav-inner{max-width:760px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:70px;}
-  .brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:18px;color:var(--text);}
-  .brand:hover{text-decoration:none;}
-  .brand svg{width:36px;height:36px;}
-  .back{font-size:14px;color:var(--muted);}
-  main{max-width:760px;margin:0 auto;padding:56px 28px 80px;}
-  h1{font-family:var(--font-display);font-size:34px;margin-bottom:8px;}
-  .updated{color:var(--muted-dim);font-size:13.5px;margin-bottom:40px;}
-  h2{font-family:var(--font-display);font-size:20px;margin:36px 0 12px;}
-  h3{font-family:var(--font-display);font-size:16px;margin:22px 0 10px;}
-  p,li{color:var(--muted);font-size:15px;margin-bottom:14px;}
+  body{background:var(--bg);color:var(--ink);font:400 18px/1.65 var(--body);-webkit-font-smoothing:antialiased;}
+  a{color:var(--ink);text-underline-offset:3px;}
+  :focus-visible{outline:3px solid #34C77B;outline-offset:3px;}
+  .nav{position:sticky;top:0;background:#0F2236;border-bottom:1px solid #2A4A6B;}
+  .nav a{color:#fff;}
+  .nav-inner{max-width:800px;margin:0 auto;padding:0 16px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;}
+  .brand span{font:700 19px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;}
+  .brand svg{width:34px;height:34px;}
+  .back{font-size:16px;}
+  main{max-width:800px;margin:0 auto;padding:48px 16px 80px;}
+  h1{font:800 clamp(40px,10vw,60px)/1 var(--head);margin-bottom:10px;}
+  .updated{color:var(--ink-2);font-size:15px;margin-bottom:36px;}
+  .notice{background:var(--paper);border:1px solid var(--ink);padding:16px 20px;margin-bottom:32px;}
+  .notice p{margin-bottom:0;}
+  h2{font:800 30px/1.1 var(--head);margin:40px 0 12px;}
+  h3{font:800 23px/1.1 var(--head);margin:24px 0 10px;}
+  p,li{color:var(--ink-2);margin-bottom:14px;}
   ul{padding-left:22px;margin-bottom:14px;}
   li{margin-bottom:8px;}
-  strong{color:var(--text);font-weight:600;}
-  table{width:100%;border-collapse:collapse;margin-bottom:18px;font-size:14px;}
-  th,td{text-align:left;padding:10px 12px;border:1px solid var(--line);color:var(--muted);vertical-align:top;}
-  th{color:var(--text);font-weight:600;background:var(--card);}
-  .toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:8px;}
-  .toc p{margin-bottom:6px;font-size:14px;}
-  footer{border-top:1px solid var(--line);padding:28px;text-align:center;color:var(--muted-dim);font-size:13.5px;}
-  footer a{color:var(--muted);margin:0 10px;}
+  strong{color:var(--ink);font-weight:600;}
+  table{width:100%;border-collapse:collapse;margin-bottom:18px;font-size:16px;}
+  th,td{text-align:left;padding:10px 12px;border:1px solid var(--line);color:var(--ink-2);vertical-align:top;}
+  th{color:var(--ink);font-weight:600;background:var(--paper);}
+  .toc{background:var(--paper);border:1px solid var(--line);padding:18px 22px;margin-bottom:8px;}
+  .toc p{margin-bottom:6px;font-size:16px;}
+  footer{background:var(--navy);color:#CBD3DA;padding:32px 16px;text-align:center;font-size:16px;}
+  footer a{color:#fff;margin:0 10px;}
+  @media (min-width:900px){ .nav-inner,main{padding-left:32px;padding-right:32px;} }
 </style>
 </head>
 <body>
@@ -51,17 +55,17 @@
   <div class="nav-inner">
     <a href="index.html" class="brand">
       <svg viewBox="0 0 300 300" fill="none" aria-hidden="true">
-        <path d="M46 206 L96 140 L138 194" stroke="#7FC8A9" stroke-width="7" stroke-linejoin="round" opacity="0.55"/>
-        <path d="M254 206 L204 140 L162 194" stroke="#7FC8A9" stroke-width="7" stroke-linejoin="round" opacity="0.55"/>
-        <path d="M96 140 L112 161 L104 170 L96 158 L88 170 L80 161 Z" fill="#F5F7F6" opacity="0.6"/>
-        <path d="M204 140 L220 161 L212 170 L204 158 L196 170 L188 161 Z" fill="#F5F7F6" opacity="0.6"/>
-        <path d="M78 208 L150 100 L222 208 Z" fill="#0E1417" stroke="#7FC8A9" stroke-width="9" stroke-linejoin="round"/>
-        <path d="M150 100 L180 145 L169 158 L160 140 L150 156 L140 139 L130 159 L120 145 Z" fill="#F5F7F6"/>
+        <path d="M46 206 L96 140 L138 194" stroke="#7FC8A9" stroke-width="9" stroke-linejoin="round" opacity=".55"/>
+        <path d="M254 206 L204 140 L162 194" stroke="#7FC8A9" stroke-width="9" stroke-linejoin="round" opacity=".55"/>
+        <path d="M78 208 L150 100 L222 208 Z" fill="#0F2236" stroke="#7FC8A9" stroke-width="9" stroke-linejoin="round"/>
+        <path d="M96 140 L112 161 L104 170 L96 158 L88 170 L80 161 Z" fill="#FFFFFF"/>
+        <path d="M204 140 L220 161 L212 170 L204 158 L196 170 L188 161 Z" fill="#FFFFFF"/>
+        <path d="M150 100 L180 145 L169 158 L160 140 L150 156 L140 139 L130 159 L120 145 Z" fill="#FFFFFF"/>
         <circle cx="150" cy="150" r="139" stroke="#7FC8A9" stroke-width="9"/>
       </svg>
-      ZENITH CO.
+      <span>Zenith Co.</span>
     </a>
-    <a href="index.html" class="back">← Back to site</a>
+    <a href="index.html" class="back">Back to home</a>
   </div>
 </nav>
 
