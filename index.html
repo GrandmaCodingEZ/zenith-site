@@ -485,18 +485,23 @@
   .final{padding:28px 22px 30px;}
   .final h2{font-size:32px;line-height:1.1;margin-bottom:14px;}
   .final .who{color:var(--muted);max-width:30em;margin-bottom:24px;}
-  .fin-side{margin-top:28px;padding-top:24px;border-top:1px solid var(--line);}
+  .fin-side{margin-top:28px;padding:20px;background:var(--bg-alt);border:1px solid var(--line);border-radius:var(--r);}
   .hc-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
-  .founder{display:grid;grid-template-columns:72px 1fr;gap:16px;align-items:center;}
+  .founder{display:flex;align-items:center;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--line);}
   .fph{position:relative;width:72px;height:72px;display:flex;align-items:center;justify-content:center;text-align:center;padding:4px;background:var(--bg-alt);border:1px dashed var(--line-2);border-radius:2px;font-size:11px;line-height:1.2;color:var(--muted);overflow:hidden;}
   .fph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-  .founder p{margin:0;font-size:14.5px;line-height:1.5;color:var(--muted);}
-  .founder b{display:block;font-size:17px;font-weight:600;color:var(--text);margin-bottom:2px;}
-  .founder a{color:var(--green);overflow-wrap:anywhere;}
+  .fph{flex:none;}
+  .f-id b{display:block;font-size:18px;font-weight:600;line-height:1.25;color:var(--text);}
+  .f-id span{display:block;margin-top:2px;font-size:14px;color:var(--muted);}
+  .f-note{margin:16px 0 14px;font-size:16px;line-height:1.45;color:var(--text);}
+  .f-mail{display:flex;flex-direction:column;gap:4px;margin:0;font-size:13.5px;color:var(--muted);}
+  .f-mail a{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--green);text-decoration:none;}
+  .f-mail a:hover{text-decoration:underline;text-underline-offset:3px;}
+  .f-mail svg{width:16px;height:16px;flex:none;}
   @media (min-width:960px){
     .final{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;padding:48px 52px;}
     .final h2{font-size:42px;}
-    .fin-side{margin:0;padding:0 0 0 48px;border-top:0;border-left:1px solid var(--line);}
+    .fin-side{margin:0;padding:24px 28px;}
   }
 
   /* ---------- Footer ---------- */
@@ -907,8 +912,10 @@
         <div class="founder">
           <!-- Founder photo: save as assets/photos/founder.jpg and it fills this box. -->
           <div class="fph">Founder photo goes here<img src="assets/photos/founder.jpg" alt="Zachary Spencer, founder of Zenith Co." loading="lazy" decoding="async" onerror="this.remove()"></div>
-          <p><b><span data-fill="founderName">Zachary Spencer</span></b>Founder, Zenith Co. You'll be talking to me on the call. Questions before then? Email me at <a href="mailto:zachary@zenithcomarketing.com">zachary@zenithcomarketing.com</a></p>
+          <div class="f-id"><b data-fill="founderName">Zachary Spencer</b><span>Founder, Zenith Co.</span></div>
         </div>
+        <p class="f-note">You'll be talking to me on the call.</p>
+        <p class="f-mail"><span>Questions before then?</span><a href="mailto:zachary@zenithcomarketing.com"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2 4l6 5 6-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>zachary@<wbr>zenithcomarketing.com</span></a></p>
       </div>
     </div>
   </div>
