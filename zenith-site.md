@@ -109,14 +109,21 @@ retainers and lead sites stays three plain rows inside The deal.
 ## 5. Legal pages
 
 `privacy.html` and `terms.html` are light reading pages with a navy header.
-`terms.html` is still the terms that were live before this homepage; only
-its logo changed.
 
-The Terms rewritten on 2026-10-02 for the per-shown-estimate offer are in
-`terms-draft.html` (not linked, marked noindex, with a "Draft, not in effect"
-notice). It keeps the website and automation plans in their own section. To
-publish it: have a Florida attorney review it, set its effective date, email
-current clients 30 days before it applies to them, then copy it over
-`terms.html` and delete the draft notice. Until then the homepage's deal card
-and FAQ describe the offer, but the live Terms don't cover it yet. When the
-Terms change, check the deal card and FAQ still match.
+`terms.html` covers the per-shown-estimate ads offer and, in Section 7, the
+website and automation plans, which are still for sale. It took effect on
+2026-10-05 for new clients. Clients who signed up earlier (A Tree Surgeons and
+King's Tree Service) get 30 days' notice by email, so it applies to them from
+2026-11-04; until then they're under `terms-2026-08-01.html`, the earlier
+version, which is kept online and marked as replaced. After 2026-11-04, keep
+that page (it's the record of what they agreed to) but nothing needs to link
+to it except the notice in `terms.html`, which can come out then.
+
+The Terms went live before an attorney looked at them. When a Florida
+attorney reviews them, publish any changes as a normal update: new "Last
+updated" date, and 30 days' email notice to clients for anything material
+(Section 22).
+
+The homepage's deal card and FAQ say the same things as the Terms. When either
+changes, check the other still matches. Fees, the service area and the
+minimum daily ad budget live in each client's order form, not on the site.
