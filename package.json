@@ -1,0 +1,14 @@
+{
+  "name": "zenith-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Zenith Co. — static marketing site for zenithcomarketing.com",
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "node build.mjs --check",
+    "serve": "node dev-server.mjs",
+    "crawlers": "node scripts/crawler-sweep.mjs",
+    "live": "node scripts/live-check.mjs"
+  }
+}
