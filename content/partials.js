@@ -131,7 +131,7 @@ export function renderFooter() {
         ${cols}
       </div>
     </div>
-    <p class="copy">&copy; <span id="yr">${new Date().getFullYear()}</span> Zenith Co.</p>
+    <p class="copy">&copy; <span id="yr">${new Date().getFullYear()}</span> Zenith Co Marketing, LLC</p>
   </div>
 </footer>`;
 }
