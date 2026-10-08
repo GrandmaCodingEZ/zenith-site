@@ -17,7 +17,7 @@
 //             differently from the <title>
 //   priority / changefreq  sitemap hints
 //
-// privacy.html, terms.html and terms-draft.html are noindex and stay out of
+// privacy.html, terms.html and terms-2026-08-01.html are noindex and stay out of
 // this list, so they stay out of the sitemap and llms.txt too.
 
 export const pages = [

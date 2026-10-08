@@ -7,15 +7,15 @@ Each line below describes the question that page answers.
 ## Core pages
 
 - [Zenith Co. | Booked Estimates for Florida Tree Companies](https://zenithcomarketing.com/): What Zenith Co. does for a Florida tree service company: runs its ads, texts and calls every lead, books estimates on its calendar, and bills only for estimates where the homeowner showed up. Who qualifies, and how to book a call.
-- [How It Works: From Ad to Booked Tree Estimate | Zenith Co.](https://zenithcomarketing.com/how-it-works/): Step by step, what happens between a homeowner tapping a tree company's ad and the owner standing in their yard: the landing page, the text and call, the booking, the reminder, and how each estimate gets marked shown or not shown.
+- [How It Works: From Ad Tap to Booked Tree Estimate](https://zenithcomarketing.com/how-it-works/): Step by step, what happens between a homeowner tapping a tree company's ad and the owner standing in their yard: the landing page, the text and call, the booking, the reminder, and how each estimate gets marked shown or not shown.
 - [Pricing: Pay Per Shown Tree Estimate | Zenith Co.](https://zenithcomarketing.com/pricing/): How Zenith Co. charges: ad spend on the client's own card, a one-time setup fee, and a flat fee per shown estimate. What counts as shown, what never bills, how disputes work, and why the fees are set on a call instead of published.
 - [About Zenith Co. and Founder Zachary Spencer](https://zenithcomarketing.com/about/): Who runs Zenith Co., why it works with Florida tree companies only, why it takes one company per service area, and who it turns away.
 
 ## Client work
 
 - [Our Work: Tree Companies We've Built For | Zenith Co.](https://zenithcomarketing.com/work/): Which tree service companies Zenith Co. has built for, what it built for each, and why no lead or revenue numbers are published yet.
-- [King's Tree Service, Palm Bay: Website and Google Ads | Zenith Co.](https://zenithcomarketing.com/work/kings-tree-service/): What Zenith Co. built and runs for King's Tree Service in Palm Bay, Florida: the website, the photo estimate form, the job gallery and its Google Ads, with the co-owner's own words on the ads.
-- [A Tree Surgeons Enterprise, Tampa: Website and Follow-Up | Zenith Co.](https://zenithcomarketing.com/work/a-tree-surgeons/): What Zenith Co. built for A Tree Surgeons Enterprise in Tampa, its first client: the website with an estimate form on the first screen, the missed-call text back, and review requests after each job.
+- [King's Tree Service, Palm Bay | Zenith Co.](https://zenithcomarketing.com/work/kings-tree-service/): What Zenith Co. built and runs for King's Tree Service in Palm Bay, Florida: the website, the photo estimate form, the job gallery and its Google Ads, with the co-owner's own words on the ads.
+- [A Tree Surgeons Enterprise, Tampa | Zenith Co.](https://zenithcomarketing.com/work/a-tree-surgeons/): What Zenith Co. built for A Tree Surgeons Enterprise in Tampa, its first client: the website with an estimate form on the first screen, the missed-call text back, and review requests after each job.
 
 ## Articles
 
