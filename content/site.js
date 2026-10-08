@@ -57,7 +57,7 @@ export const site = {
       'Founder of Zenith Co. Runs paid ads and lead follow-up for established Florida tree service companies, billed per shown estimate, and works with that one trade.',
     email: 'zachary@zenithcomarketing.com',
     image: '/assets/photos/founder.jpg',
-    sameAs: [], // personal LinkedIn. See the note above.
+    sameAs: ['https://www.linkedin.com/in/zachary-spencer-usf/'],
   },
 
   service: {
