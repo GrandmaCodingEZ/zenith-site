@@ -1,0 +1,28 @@
+# GitHub Pages serves this repository as-is, which means every file in it is
+# public unless excluded here. That includes the working files: the strategy
+# doc, the build source, and the notes flagging claims that still need
+# confirming. None of that should be fetchable at zenithcomarketing.com, and
+# none of it should be quotable by an assistant reading the site.
+#
+# Everything listed below is kept out of the published output. Anything not
+# listed IS published, so check this file when adding working files to the repo.
+
+exclude:
+  - AEO-PLAN.md
+  - MEASUREMENT.md
+  - zenith-site.md
+  - offsite/
+  - measurement/
+  - content/
+  - scripts/
+  - build.mjs
+  - dev-server.mjs
+  - package.json
+  - package-lock.json
+  - node_modules/
+  - .claude/
+  - README.md
+
+# The site is hand-written HTML; nothing here needs Liquid or Markdown
+# processing. Jekyll stays on only because it is what applies the exclude list.
+plugins: []

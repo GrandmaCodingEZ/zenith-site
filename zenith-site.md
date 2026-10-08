@@ -1,9 +1,12 @@
 # Zenith Co. site: how to finish and edit it
 
 The homepage (`index.html`) is a one-page sales letter with one job: get a
-qualified tree company owner to book a call. It's plain HTML, CSS, and a
-little JavaScript, with no build step. Push to `main` and GitHub Pages
-serves it at zenithcomarketing.com.
+qualified tree company owner to book a call. Around it sit the inner pages
+(how it works, pricing, about, our work, articles), built for AI assistants to
+cite (the AEO plan behind them is kept outside this public repo). Everything is plain HTML, CSS and a little
+JavaScript. A small build step (`npm run build`, section 6) fills in the
+shared parts. Push to `main` and GitHub Pages serves it at
+zenithcomarketing.com.
 
 ## 1. Fill in the blanks
 
@@ -20,8 +23,9 @@ Until a key is set, the page shows a dashed `[blank]` box wherever it's used.
 For search engines, you can also type the values straight into the HTML (search
 for `data-fill="..."`).
 
-The form choices for crews and ad budget are in `crewOptions` and
-`budgetOptions`, in the same block. Match the budget ranges to your minimum.
+The form choices for crews and ad budget are in `booking.crewOptions` and
+`booking.budgetOptions` in `content/site.js` (section 6). Match the budget
+ranges to your minimum.
 The page says "a day" after the ad spend amount; the form asks for a monthly
 budget, so its ranges start at $1,500 (about $50 a day).
 
@@ -53,7 +57,7 @@ marking where the real thing goes:
 
 ## 3. Booking
 
-Every "See if you qualify" button opens a 5-question form. Then it shows the
+Every "See if you qualify" button, on every page, opens a 5-question form. Then it shows the
 Calendly calendar for `zenith-co-consultation`. On phones, a bar with the same
 button sits at the bottom of the screen between the hero and the closing card.
 It hides while the form is open, while someone is typing, and while the test
@@ -62,7 +66,8 @@ lead demo plays.
 - The answers go to Calendly as the prefilled answer to the event's **first
   custom question** (`a1`). In Calendly, make question 1 a multi-line text box
   such as "About your company". If you don't want that, set
-  `calendlyAnswerParam: null`.
+  `calendlyAnswerParam: null`. Add any other questions (like "How did you
+  hear about us?") after it.
 - Every submission also goes to the dialer the moment they press "Next",
   whether or not they book: `formEndpoint` is
   `https://dialer.zenithcomarketing.com/api/inbound/website-form`. It becomes a
@@ -75,6 +80,14 @@ lead demo plays.
   sms_consent, page, submitted_at and the hidden url_hp. It's sent as
   text/plain so the browser doesn't need a preflight. Set `formEndpoint` to
   null to stop sending.
+- `page` is the page they booked from, plus where the visit started when
+  that differs: "| landed on" the first page they saw, "| from" the site that
+  sent them. It shows in the dialer note's Page line, and it's how a lead from
+  an AI assistant (`utm_source=chatgpt.com`) becomes visible.
+- The settings (`calendly`, `calendlyAnswerParam`, `formEndpoint` and the
+  two option lists) live under `booking` in `content/site.js`. The build
+  copies them into `assets/book.js`, which runs the form on every page. The
+  form's HTML is in `content/partials.js`.
 - If JavaScript is off, the buttons link straight to Calendly.
 
 ## 4. Copy rules used on the page
@@ -127,3 +140,33 @@ updated" date, and 30 days' email notice to clients for anything material
 The homepage's deal card and FAQ say the same things as the Terms. When either
 changes, check the other still matches. Fees, the service area and the
 minimum daily ad budget live in each client's order form, not on the site.
+
+## 6. Inner pages and the build
+
+The inner pages, `robots.txt`, `sitemap.xml` and `llms.txt` come from
+`content/`:
+
+| File | What's in it |
+|------|-----|
+| `content/site.js` | Business facts used in schema and `llms.txt`, and the booking settings. Change it in the same commit as any homepage copy it repeats |
+| `content/pages.js` | One entry per page, with the question that page answers |
+| `content/posts.js` | The articles and their topic groups |
+| `content/partials.js` | Nav, footer, booking form, closing card, breadcrumbs, bylines |
+
+Run `npm run build` after any change and commit what it writes. It fills the
+`<!-- build:NAME -->` blocks in every page, including the homepage's head tags,
+footer and booking form. Edit outside those blocks; anything inside them is
+overwritten. `npm run check` fails if something is out of date.
+
+Inner pages use `assets/site.css`. Its colors and shared components are copied
+from the homepage's inline styles, so change both together. FAQs on every page
+are `<details><summary>Question</summary><div class="a">...</div></details>`;
+the build turns them into FAQ schema, so the visible answer is the one
+assistants quote.
+
+To add an article: copy an existing one in `blog/`, add an entry to
+`content/posts.js`, run `npm run build`. The nav, related links, sitemap and
+`llms.txt` pick it up.
+
+`_config.yml` keeps the working files (this one included) off the live site.
+Add any new working file to its list.
