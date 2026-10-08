@@ -168,6 +168,7 @@ function entityGraph() {
     '@type': 'Organization',
     '@id': ID.org,
     name: site.name,
+    ...(site.legalName && { legalName: site.legalName }),
     url: site.url + '/',
     description: site.description,
     email: site.email,
