@@ -23,6 +23,10 @@ export const site = {
   summary:
     'Zenith Co. runs paid ads for established Florida tree service companies and books the resulting leads as estimates on the owner\'s calendar. Every lead gets a text and a call in the tree company\'s name, aiming for under a minute, then a reminder before the visit. The tree company pays its ad spend on its own card, in ad accounts in its own name, plus a one-time setup fee and a flat fee for each estimate where the homeowner was there. Leads that do not show, fall outside the service area, or ask for work the company does not do are not billed. Zenith Co. takes one tree company per service area and has no long-term contract. It is run by its founder, Zachary Spencer.',
 
+  // The registered Florida LLC (Sunbiz L26000456623, filed 2026-08-31). The brand
+  // stays "Zenith Co."; this goes into schema as legalName.
+  legalName: 'Zenith Co Marketing, LLC',
+
   logo: '/apple-touch-icon.png',
   ogImage: '/assets/og-image.png',
   ogImageSize: [1200, 630],
