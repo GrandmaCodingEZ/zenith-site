@@ -324,7 +324,6 @@
   .lc-list .pill{align-self:center;}
   @media (min-width:960px){ .lead-card{padding:22px 24px 8px;} .lc-list li{grid-template-columns:76px minmax(0,1fr) auto;padding:14px 0;} }
   @media (min-width:960px){ .hero-card{margin-top:0;padding:20px;} }
-  @media (min-width:700px) and (max-width:959px){ .work-grid{grid-template-columns:1fr 1fr;} }
 
   /* ---------- Fit: one card, yes beside no, button in the footer ---------- */
   .fit-card{max-width:980px;margin:0 auto;overflow:hidden;box-shadow:var(--shadow);}
@@ -579,12 +578,6 @@
     .testimonial{grid-template-columns:minmax(0,1fr);}
     .testimonial video,.v-ph{width:100%;max-width:200px;}
   }
-  @media (min-width:960px){
-    .testimonial{grid-template-columns:180px 1fr;gap:24px;padding:14px;}
-    .testimonial video,.v-ph{width:180px;}
-    .testimonial blockquote{font-size:18px;}
-    .testimonial cite{font-size:14px;}
-  }
   /* In a stretched card, the panel sits centered between the tags and the link */
   .w-body>:is(.built,.testimonial){margin-top:auto;margin-bottom:auto;}
   .visit{margin-top:20px;display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--green);text-decoration:none;}
@@ -599,7 +592,7 @@
   .case dt{font-size:14.5px;color:var(--muted);}
   .case dd{margin:0;font-size:20px;font-weight:600;color:var(--muted-dim);letter-spacing:.06em;}
   @media (min-width:960px){
-    .work-grid{grid-template-columns:1fr 1fr;gap:24px;}
+    .work-grid{grid-template-columns:1fr 1fr 1fr;gap:24px;}
     .frame{padding:24px 24px 0;}
     .w-body{padding:26px 28px 28px;}
     .case{margin-top:24px;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:36px 40px;}
@@ -978,7 +971,7 @@
     <div class="head center">
       <p class="eyebrow">Our work</p>
       <h2 id="proof-h">Tree companies we've built for</h2>
-      <p>We built both websites. Visit either one and see for yourself.</p>
+      <p>We built all three websites. Visit any of them and see for yourself.</p>
     </div>
 
     <div class="work-grid">
@@ -1030,6 +1023,31 @@
             <figcaption><span class="t-label">Owner testimonial</span><blockquote>&ldquo;My Google ad is now up and running and we're starting to get calls from it.&rdquo;</blockquote><cite>Jenniffer, co&#8209;owner of King's Tree Service</cite><span class="t-len">49 seconds. Tap play for sound.</span></figcaption>
           </figure>
           <a class="visit" href="https://kingstreecare.com" target="_blank" rel="noopener">Visit kingstreecare.com<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+        </div>
+      </article>
+      <article class="card work">
+        <div class="frame" aria-hidden="true">
+          <div class="browser">
+            <div class="b-bar"><i></i><i></i><i></i><span>andyspgm.com</span></div>
+            <div class="site">
+              <div class="s-nav"><b>Andy's PGM</b></div>
+              <span class="s-eye">Sarasota, FL &middot; Since 1988</span>
+              <span class="s-h">No job too tall or too small. One call does it&nbsp;all.</span>
+            </div>
+          </div>
+        </div>
+        <div class="w-body">
+          <p class="w-meta"><span class="live">Live</span><span class="place">Sarasota, FL</span></p>
+          <h3>Andy's PGM</h3>
+          <div class="tags"><span>Website</span><span>Photo estimate form</span><span>Service pages</span><span>Job gallery</span></div>
+          <!-- OWNER TESTIMONIAL: when Andy's video or quote comes in, replace this panel with a figure.testimonial like the King's card. -->
+          <div class="built">
+            <span class="t-label">What runs behind the site</span>
+            <div class="b-row"><b>Photo estimate form</b><span>Name, phone, the job address and a photo of the tree, in one short form.</span></div>
+            <div class="b-row"><b>A page for every service</b><span>Removals, crane work, trimming, stumps, storm cleanup, landscaping and sod, each with the crew's own photos.</span></div>
+            <div class="b-row"><b>Call first on phones</b><span>The number is one tap away on every page.</span></div>
+          </div>
+          <a class="visit" href="https://andyspgm.com" target="_blank" rel="noopener">Visit andyspgm.com<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
         </div>
       </article>
     </div>
