@@ -111,6 +111,18 @@ export const pages = [
     changefreq: 'yearly',
   },
   {
+    file: 'work/andys-pgm/index.html',
+    url: '/work/andys-pgm/',
+    crumb: "Andy's PGM",
+    kind: 'case-study',
+    group: 'Client work',
+    question:
+      "What Zenith Co. built for Andy's PGM, a Sarasota tree, landscape and grounds maintenance company in business since 1988: its first website, with a page for every service and town, a photo estimate form, and a gallery of the company's own photos.",
+    faq: true,
+    priority: '0.6',
+    changefreq: 'yearly',
+  },
+  {
     file: 'blog/index.html',
     url: '/blog/',
     crumb: 'Articles',

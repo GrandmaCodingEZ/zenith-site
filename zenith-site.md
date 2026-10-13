@@ -34,7 +34,7 @@ budget, so its ranges start at $1,500 (about $50 a day).
 The page uses no photos from clients or anyone else. The visuals are drawn in
 HTML: the "One lead, start to finish" card in the hero, a missed-calls phone
 screen and a sample calendar week (labeled as examples), the test lead phone,
-and small versions of the two client sites with their real headlines. The
+and small versions of the three client sites with their real headlines. The
 share image (`assets/og-image.png`) follows the same rule.
 
 The one video is Jenniffer's testimonial, in the King's Tree Service card under
@@ -53,7 +53,7 @@ marking where the real thing goes:
 |------|-----|
 | The founder video | Replace the "One lead, start to finish" card in the hero with the video. The `FOUNDER VIDEO` comment above the card has the markup. Convert phone video to MP4 (H.264) first; iPhone .mov files are HEVC and HDR, which many browsers can't play. |
 | Fred's testimonial | Replace the "What runs behind the site" panel in the A Tree Surgeons card with a `figure.testimonial` like the King's one, in Fred's own words. |
-| Real ads results | Add a case study card where the `FIRST ADS CASE STUDY` comment sits, under the two client cards. Real numbers only. |
+| Real ads results | Add a case study card where the `FIRST ADS CASE STUDY` comment sits, under the three client cards. Real numbers only. |
 
 ## 3. Booking
 
