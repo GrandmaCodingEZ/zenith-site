@@ -93,7 +93,8 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;font-size:14.5px;}
 .foot-cols .foot-h{margin:0 0 10px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-dim);}
 .foot-cols a{display:block;padding:4px 0;color:var(--muted);text-decoration:none;}
 .foot-cols a:hover{color:var(--text);}
-.copy{margin:32px 0 0;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted-dim);}
+.copy{margin:32px 0 0;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted-dim);line-height:1.7;}
+.copy a{color:inherit;}
 @media (min-width:960px){ .foot{grid-template-columns:1fr auto;} }
 
 /* FAQ */
