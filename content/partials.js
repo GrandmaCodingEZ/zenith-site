@@ -133,7 +133,9 @@ export function renderFooter() {
     </div>
     <p class="copy">&copy; <span id="yr">${new Date().getFullYear()}</span> Zenith Co Marketing, LLC</p>
   </div>
-</footer>`;
+</footer>
+<!-- LeadConnector chat widget (every page) -->
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6adf9d556118072e0e9b12c1" data-source="WEB_USER"></script>`;
 }
 
 // The five-question form, then Calendly. assets/book.js drives it.
