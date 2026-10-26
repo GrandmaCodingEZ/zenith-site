@@ -57,7 +57,7 @@ marking where the real thing goes:
 
 ## 3. Booking
 
-Every "See if you qualify" button, on every page, opens a 5-question form. Then it shows the
+Every "See if you qualify" button, on every page, opens a 4-question form (no phone field: the chat widget is the only SMS opt-in on the site). Then it shows the
 Calendly calendar for `zenith-co-consultation`. On phones, a bar with the same
 button sits at the bottom of the screen between the hero and the closing card.
 It hides while the form is open, while someone is typing, and while the test

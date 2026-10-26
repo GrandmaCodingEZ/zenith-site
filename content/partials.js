@@ -4,7 +4,7 @@
 //   nav       header on every page except the homepage (which keeps its own
 //             in-page section links)
 //   footer    every page, homepage included
-//   booking   the five-question form and the Calendly step, every page
+//   booking   the four-question form and the Calendly step, every page
 //   cta       the closing card, every page except the homepage
 //   crumbs    breadcrumb trail above a page's headline
 //   byline    author and date on articles
@@ -40,7 +40,7 @@ export const navLinks = [
 ];
 
 // The button every page uses. Without JavaScript it is a plain link to
-// Calendly; with it, assets/book.js opens the five-question form first.
+// Calendly; with it, assets/book.js opens the four-question form first.
 export const bookButton = (label = 'See if you qualify', cls = 'btn') =>
   `<a class="${cls}" href="${site.booking.calendly}" data-book>${label}${cls === 'btn' ? ARROW : ''}</a>`;
 
@@ -136,7 +136,10 @@ export function renderFooter() {
 </footer>`;
 }
 
-// The five-question form, then Calendly. assets/book.js drives it.
+// The four-question form, then Calendly. assets/book.js drives it.
+// No phone field and no SMS consent here: the LeadConnector chat widget is
+// the only thing on the site that collects a number for texting (A2P 10DLC).
+// Calendly asks for contact details at booking time.
 export function renderBooking() {
   return `<dialog class="book" id="book" aria-labelledby="book-h">
   <div class="book-head">
@@ -162,14 +165,6 @@ export function renderBooking() {
         <label for="f-budget">Monthly ad budget</label>
         <select id="f-budget" name="budget" required><option value="">Pick a range</option></select>
       </div>
-      <div class="fld">
-        <label for="f-phone">Cell phone</label>
-        <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
-      </div>
-      <label class="consent">
-        <input type="checkbox" name="sms_consent" value="yes">
-        <span><b>Text me about my booking.</b> By checking this box, you agree to receive text messages from Zenith Co. at the number above about your inquiry and your appointment, including reminders. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase. See our <a href="/privacy.html" target="_blank">Privacy Policy</a> and <a href="/terms.html" target="_blank">Terms of Service</a>.</span>
-      </label>
       <div class="hp" aria-hidden="true"><label for="f-url">Leave this empty</label><input id="f-url" name="url_hp" type="text" tabindex="-1" autocomplete="off"></div>
       <p class="err" id="f-err" role="alert"></p>
       <button class="btn" type="submit">Next: pick a time</button>
@@ -193,7 +188,7 @@ export function renderCta() {
     <div class="card final">
       <div class="fin-main">
         <h2 id="final-h">Keep your crews <span class="accent">booked.</span></h2>
-        <p class="who">If your crews can take on more estimates, answer five questions and pick a time to talk.</p>
+        <p class="who">If your crews can take on more estimates, answer four questions and pick a time to talk.</p>
         ${bookButton()}
       </div>
       <div class="fin-side">

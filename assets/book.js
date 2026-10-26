@@ -1,5 +1,5 @@
 /* Booking: every "See if you qualify" button ([data-book]) opens the
-   five-question form, then the Calendly calendar. Every page loads this file;
+   four-question form, then the Calendly calendar. Every page loads this file;
    the form markup comes from content/partials.js.
 
    Without JavaScript (or in a browser with no <dialog>), the buttons stay
@@ -89,8 +89,6 @@ var CONFIG = {
       service_area: String(fd.get('area') || '').trim(),
       crews: crewSel.value,
       monthly_ad_budget: budSel.value,
-      phone: String(fd.get('phone') || '').trim(),
-      sms_consent: fd.get('sms_consent') === 'yes',
       url_hp: String(fd.get('url_hp') || '') // hidden from people; bots fill it in
     };
     var missing = [];
@@ -98,7 +96,6 @@ var CONFIG = {
     if (!lead.service_area) missing.push('service area');
     if (!lead.crews) missing.push('number of crews');
     if (!lead.monthly_ad_budget) missing.push('ad budget');
-    if (lead.phone.replace(/\D/g, '').length < 10) missing.push('phone number (10 digits)');
     if (missing.length) { err.textContent = 'Please fill in: ' + missing.join(', ') + '.'; return; }
     err.textContent = '';
 
@@ -115,8 +112,7 @@ var CONFIG = {
     var q = new URLSearchParams({ embed_domain: location.hostname || 'zenithcomarketing.com', embed_type: 'Inline', hide_gdpr_banner: '1' });
     if (has(CONFIG.calendlyAnswerParam)) {
       q.set(CONFIG.calendlyAnswerParam, 'Company: ' + lead.company + ' | Area: ' + lead.service_area +
-        ' | Crews: ' + lead.crews + ' | Ad budget: ' + lead.monthly_ad_budget +
-        ' | Phone: ' + lead.phone + ' | SMS consent: ' + (lead.sms_consent ? 'yes' : 'no'));
+        ' | Crews: ' + lead.crews + ' | Ad budget: ' + lead.monthly_ad_budget);
     }
     cal.src = CONFIG.calendly + '?' + q.toString();
     form.hidden = true;
