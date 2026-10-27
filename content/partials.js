@@ -131,7 +131,7 @@ export function renderFooter() {
         ${cols}
       </div>
     </div>
-    <p class="copy">&copy; <span id="yr">${new Date().getFullYear()}</span> Zenith Co Marketing, LLC<br>Zenith Co. is owned and operated by Zachary Spencer.<br>Zenith Co. &middot; 829 SE Cavern Avenue, Port St. Lucie, FL 34983 &middot; Email: <a href="mailto:zachary@zenithcomarketing.com">zachary@zenithcomarketing.com</a></p>
+    <p class="copy">&copy; <span id="yr">${new Date().getFullYear()}</span> Zenith Co Marketing, LLC</p>
   </div>
 </footer>
 <!-- LeadConnector chat widget (every page) -->
