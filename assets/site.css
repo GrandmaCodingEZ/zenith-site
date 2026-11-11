@@ -95,6 +95,12 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;font-size:14.5px;}
 .foot-cols a:hover{color:var(--text);}
 .copy{margin:32px 0 0;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted-dim);}
 @media (min-width:960px){ .foot{grid-template-columns:1fr auto;} }
+/* The landing page's footer: the legal line only */
+.foot-bare{padding:26px 0 28px;}
+.foot-bare .copy{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;margin:0;padding:0;border:0;}
+.foot-legal{display:flex;gap:20px;}
+.foot-legal a{color:var(--muted);text-decoration:none;}
+.foot-legal a:hover{color:var(--text);}
 
 /* FAQ */
 .qa{border-top:1px solid var(--line);}

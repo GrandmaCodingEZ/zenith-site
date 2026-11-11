@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Booked Tree Estimates, Paid Per Shown Estimate | Zenith Co.</title>
+<meta name="description" content="How Zenith Co. books estimates for established Florida tree companies: your ads, a text and call to every lead, and a fee only when the homeowner shows up.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0B1520">
+<meta name="format-detection" content="telephone=no">
+<!-- build:head-meta -->
+<link rel="canonical" href="https://zenithcomarketing.com/watch/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Zenith Co.">
+<meta property="og:url" content="https://zenithcomarketing.com/watch/">
+<meta property="og:title" content="Booked tree estimates. You only pay when the homeowner shows up.">
+<meta property="og:description" content="How Zenith Co. books estimates for established Florida tree companies, and what you pay. One company per service area.">
+<meta property="og:image" content="https://zenithcomarketing.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Booked tree estimates. You only pay when the homeowner shows up.">
+<meta name="twitter:description" content="How Zenith Co. books estimates for established Florida tree companies, and what you pay. One company per service area.">
+<meta name="twitter:image" content="https://zenithcomarketing.com/assets/og-image.png">
+<!-- /build:head-meta -->
+<link rel="icon" href="/assets/zenith-mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script>
+  // Scroll reveal, as on the homepage: hide the blocks before first paint. If
+  // the page script never starts, show everything after 3 seconds.
+  (function () {
+    var d = document.documentElement;
+    if (!('IntersectionObserver' in window) || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+    d.classList.add('js-reveal');
+    setTimeout(function () { if (!window.__reveal) d.classList.remove('js-reveal'); }, 3000);
+  })();
+</script>
+<style>
+  /* The page outbound texts and calls point to. One job: watch, then book.
+     Shared components come from /assets/site.css; these are the pieces only
+     this page has. The header carries no site links on purpose. */
+  .nav .brand{cursor:default;}
+  @media (max-width:359px){ .nav .btn{display:none;} }
+
+  .w-hero{padding:40px 0 52px;text-align:center;}
+  .w-hero .eyebrow{margin-bottom:18px;}
+  .w-hero h1{max-width:17em;margin:0 auto 18px;font-size:clamp(30px,8.4vw,38px);line-height:1.1;}
+  .w-hero .lead{max-width:34em;margin:0 auto 30px;font-size:17px;color:var(--muted);}
+  .vsl{max-width:540px;margin:0 auto 30px;text-align:left;}
+  .vsl-video{max-width:880px;}
+  .vsl-card{padding:10px;box-shadow:var(--shadow);}
+  .video{position:relative;aspect-ratio:16/9;background:#000;border-radius:6px;overflow:hidden;}
+  .video>video{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .w-cta .btn{min-width:240px;}
+  .cta-note{margin:12px 0 0;font-size:14px;color:var(--muted);}
+
+  .w-points{display:grid;gap:18px;margin-top:44px;padding-top:28px;border-top:1px solid var(--line);text-align:left;}
+  .w-points li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:14px;align-items:start;}
+  .hp-ic{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--green-tint);border:1px solid var(--green-line);color:var(--green);}
+  .hp-ic svg{width:13px;height:13px;}
+  .w-points b{display:block;font-size:15.5px;font-weight:600;line-height:1.35;}
+  .w-points div span{display:block;margin-top:3px;font-size:14px;line-height:1.45;color:var(--muted);}
+
+  .head{max-width:660px;margin:0 auto 36px;text-align:center;}
+  .head h2{font-size:28px;line-height:1.18;margin-bottom:14px;}
+  .head p{color:var(--muted);margin:0;}
+  .w-narrow{max-width:820px;margin-left:auto;margin-right:auto;}
+  .deal-foot{margin:22px 0 0;color:var(--muted);}
+
+  /* Client cards: the browser frames from /work/, without the case-study link */
+  .w-body h3{font-size:20px;margin-bottom:10px;}
+  .w-body .tags{margin-bottom:0;}
+  .visit{margin-top:18px;display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--green);text-decoration:none;}
+  .visit:hover{text-decoration:underline;text-underline-offset:3px;}
+  .visit svg{width:14px;height:14px;transition:transform .2s ease;}
+  .visit:hover svg{transform:translate(2px,-2px);}
+  .w-quote{max-width:620px;margin:28px auto 0;}
+  .w-quote blockquote{margin:0 0 10px;font-size:16px;font-weight:600;line-height:1.4;color:var(--text);}
+
+  /* Phones: the booking button stays one thumb away between the hero and the closing card */
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:45;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--card);border-top:1px solid var(--line);}
+  .mbar p{margin:0;max-width:14em;font-size:13px;line-height:1.35;color:var(--muted);}
+  .mbar .btn{min-height:44px;padding:10px 16px;font-size:15px;}
+  @media (min-width:768px){ .mbar{display:none !important;} }
+  @media (max-width:359px){ .mbar p{display:none;} .mbar .btn{flex:1;} }
+
+  @media (min-width:768px){ .w-points{grid-template-columns:repeat(3,1fr);gap:32px;} }
+  @media (min-width:960px){
+    .w-hero{padding:72px 0 76px;}
+    .w-hero h1{font-size:46px;margin-bottom:20px;}
+    .w-hero .lead{font-size:18px;margin-bottom:36px;}
+    .vsl{margin-bottom:34px;}
+    .vsl-card{padding:14px;}
+    .w-points{margin-top:64px;padding-top:36px;}
+    .head{margin-bottom:48px;}
+    .head h2{font-size:34px;}
+    .w-quote blockquote{font-size:18px;}
+  }
+
+  /* Scroll reveal (same feel as the homepage; off for reduced motion). A
+     section's blocks fade up together. */
+  .js-reveal :is(.w-top,.vsl,.w-cta,.w-points,.head,.compare,.deal-foot,.work,.w-quote,.qa,.final){opacity:0;transform:translateY(18px);}
+  .js-reveal :is(.w-top,.vsl,.w-cta,.w-points,.head,.compare,.deal-foot,.work,.w-quote,.qa,.final):not(.rv-done){transition:opacity .7s ease,transform .7s ease;}
+  .js-reveal :is(.w-top,.vsl,.w-cta,.w-points,.head,.compare,.deal-foot,.work,.w-quote,.qa,.final).in{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-in">
+    <span class="brand">
+      <svg viewBox="0 0 300 300" fill="none" aria-hidden="true">
+        <path d="M46 206 L96 140 L138 194" stroke="#34C77B" stroke-width="9" stroke-linejoin="round" opacity=".55"/>
+        <path d="M254 206 L204 140 L162 194" stroke="#34C77B" stroke-width="9" stroke-linejoin="round" opacity=".55"/>
+        <path d="M78 208 L150 100 L222 208 Z" fill="#0B1520" stroke="#34C77B" stroke-width="9" stroke-linejoin="round"/>
+        <path d="M96 140 L112 161 L104 170 L96 158 L88 170 L80 161 Z" fill="#FFFFFF"/>
+        <path d="M204 140 L220 161 L212 170 L204 158 L196 170 L188 161 Z" fill="#FFFFFF"/>
+        <path d="M150 100 L180 145 L169 158 L160 140 L150 156 L140 139 L130 159 L120 145 Z" fill="#FFFFFF"/>
+        <circle cx="150" cy="150" r="139" stroke="#34C77B" stroke-width="9"/>
+      </svg>
+      <span>Zenith Co.</span>
+    </span>
+    <a class="btn btn-sm" href="https://calendly.com/zacharyspencer/zenith-co-consultation" data-book>See if you qualify</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO: the headline, the video slot, the one button -->
+<section class="w-hero" aria-labelledby="hero-h">
+  <div class="wrap">
+    <div class="w-top">
+      <p class="eyebrow">For Florida tree company owners</p>
+      <h1 id="hero-h">Booked tree estimates. You only pay when the homeowner <span class="accent">shows&nbsp;up.</span></h1>
+      <p class="lead">We run your ads. We text and call every lead in your company's name, aiming for under a minute. The estimate goes on your calendar.</p>
+    </div>
+    <!-- The founder video shows here once assets/video/founder.mp4 and
+         founder.jpg exist and the build has run (zenith-site.md, section 7).
+         Until then the build fills in the "One lead, start to finish" card. -->
+<!-- build:vsl -->
+<div class="vsl">
+      <div class="card lead-card" aria-label="Example of one lead, from the ad to a shown estimate">
+        <div class="lc-head"><b>One lead, start to finish</b><span>Example</span></div>
+        <ol class="lc-list">
+          <li><span class="lc-t">6:12 PM</span><div><b>Homeowner taps your ad</b><span>Oak hanging over the driveway</span></div></li>
+          <li><span class="lc-t">6:12 PM</span><div><b>Your business texts and calls</b><span>28 seconds after the form</span></div></li>
+          <li><span class="lc-t">6:15 PM</span><div><b>Estimate booked</b><span>Thursday at 9:00 AM, on your calendar</span></div></li>
+          <li><span class="lc-t">Wed 5 PM</span><div><b>Reminder sent</b><span>They reply &ldquo;See you then&rdquo;</span></div></li>
+          <li class="is-paid"><span class="lc-t">Thu 9:02</span><div><b>Homeowner was there</b><span>The only step you pay for</span></div><span class="pill yes">Billed</span></li>
+        </ol>
+      </div>
+    </div>
+<!-- /build:vsl -->
+    <div class="w-cta">
+      <a class="btn" href="https://calendly.com/zacharyspencer/zenith-co-consultation" data-book>See if you qualify<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      <p class="cta-note">Four questions, then pick a time to talk with Zachary.</p>
+    </div>
+    <ul class="w-points">
+      <li><span class="hp-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><div><b>One company per service area</b><span>We won't run ads for another tree company in your area.</span></div></li>
+      <li><span class="hp-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><div><b>No long-term contract</b><span>Email us and the ads go off within 2 business days.</span></div></li>
+      <li><span class="hp-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><div><b>Ad spend stays on your card</b><span>The ad accounts are in your business's name.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- THE DEAL -->
+<section class="sec alt" aria-labelledby="deal-h">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">The deal</p>
+      <h2 id="deal-h">You pay for estimates that happen</h2>
+      <p>A shown estimate means a homeowner booked through your ads, you showed up at the booked time, and they were there to walk the job.</p>
+    </div>
+    <div class="w-narrow">
+      <div class="compare">
+        <dl>
+          <div><dt>Retainer agency</dt><dd>You pay the agency every month, on top of ad spend, whether your phone rings or not.</dd></div>
+          <div><dt>Shared lead site</dt><dd>You pay for each inquiry, and the same homeowner's request can go to several companies.</dd></div>
+          <div class="us"><dt>Zenith Co.</dt><dd>You pay ad spend on your own card and a one-time setup fee. Our only other fee is for estimates the homeowner was there for.</dd></div>
+        </dl>
+        <p class="cmp-note">Typical setups. Some agencies and lead sites work differently.</p>
+      </div>
+      <p class="deal-foot">Plan on at least $50 a day in ad spend, paid to the ad platforms. The setup fee and the per-estimate fee are set on the call, and you get them in writing before you pay anything.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="sec" aria-labelledby="proof-h">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Our work</p>
+      <h2 id="proof-h">Tree companies we've built for</h2>
+      <p>We built all three websites. Visit any of them and see for yourself.</p>
+    </div>
+
+    <div class="work-grid">
+      <article class="card work">
+        <div class="frame" aria-hidden="true">
+          <div class="browser">
+            <div class="b-bar"><i></i><i></i><i></i><span>atreesurgeons.net</span></div>
+            <div class="site">
+              <div class="s-nav"><b>A Tree Surgeon's Enterprise</b></div>
+              <span class="s-eye">Tampa's Tree Surgeons Since Day One</span>
+              <span class="s-h">Honest Tree Work. Every&nbsp;Time.</span>
+            </div>
+          </div>
+        </div>
+        <div class="w-body">
+          <p class="w-meta"><span class="live">Live</span><span class="place">Tampa, FL</span></p>
+          <h3>A Tree Surgeons Enterprise</h3>
+          <div class="tags"><span>Website</span><span>Missed-call text back</span><span>Review requests</span></div>
+          <a class="visit" href="https://atreesurgeons.net" target="_blank" rel="noopener">Visit atreesurgeons.net<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+        </div>
+      </article>
+
+      <article class="card work">
+        <div class="frame" aria-hidden="true">
+          <div class="browser">
+            <div class="b-bar"><i></i><i></i><i></i><span>kingstreecare.com</span></div>
+            <div class="site">
+              <div class="s-nav"><b>King's Tree Service</b></div>
+              <span class="s-eye">25+ years &middot; Palm Bay, FL</span>
+              <span class="s-h">The tree comes down. Your yard stays&nbsp;intact.</span>
+            </div>
+          </div>
+        </div>
+        <div class="w-body">
+          <p class="w-meta"><span class="live">Live</span><span class="place">Palm Bay, FL</span></p>
+          <h3>King's Tree Service</h3>
+          <div class="tags"><span>Google Ads</span><span>Website</span><span>Photo estimate form</span><span>Job gallery</span></div>
+          <a class="visit" href="https://kingstreecare.com" target="_blank" rel="noopener">Visit kingstreecare.com<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+        </div>
+      </article>
+
+      <article class="card work">
+        <div class="frame" aria-hidden="true">
+          <div class="browser">
+            <div class="b-bar"><i></i><i></i><i></i><span>andyspgm.com</span></div>
+            <div class="site">
+              <div class="s-nav"><b>Andy's PGM</b></div>
+              <span class="s-eye">Sarasota, FL &middot; Since 1988</span>
+              <span class="s-h">No job too tall or too small. One call does it&nbsp;all.</span>
+            </div>
+          </div>
+        </div>
+        <div class="w-body">
+          <p class="w-meta"><span class="live">Live</span><span class="place">Sarasota, FL</span></p>
+          <h3>Andy's PGM</h3>
+          <div class="tags"><span>Website</span><span>Photo estimate form</span><span>Service pages</span><span>Job gallery</span></div>
+          <a class="visit" href="https://andyspgm.com" target="_blank" rel="noopener">Visit andyspgm.com<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+        </div>
+      </article>
+    </div>
+
+    <figure class="testimonial w-quote">
+      <video controls playsinline preload="none" poster="/assets/video/kings-testimonial.jpg" width="540" height="960" aria-label="Testimonial video from Jenniffer, co-owner of King's Tree Service">
+        <source src="/assets/video/kings-testimonial.mp4" type="video/mp4">
+      </video>
+      <figcaption><span class="t-label">Owner testimonial</span><blockquote>&ldquo;My Google ad is now up and running and we're starting to get calls from it.&rdquo;</blockquote><cite>Jenniffer, co&#8209;owner of King's Tree Service</cite><span class="t-len">49 seconds. Tap play for sound.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec alt" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">FAQ</p>
+      <h2 id="faq-h">Straight answers before the call</h2>
+    </div>
+    <div class="qa w-narrow">
+      <details open>
+        <summary>Who is this for?</summary>
+        <div class="a"><p>Established tree companies in Florida with two or more crews ready for more work and room for at least $50 a day in ad spend. It isn't for new or owner-only businesses, or for anyone who can't show up at the booked time.</p></div>
+      </details>
+      <details>
+        <summary>Facebook leads are tire kickers.</summary>
+        <div class="a"><p>A lot of them are. That's why you don't pay us per lead. The ones who fill out a form and vanish still cost ad spend, so we text and call each one right away, before they forget they asked.</p></div>
+      </details>
+      <details>
+        <summary>What if a homeowner books and isn't there?</summary>
+        <div class="a"><p>You mark it not shown within 3 business days and it doesn't bill. The same goes for leads outside your area, work you don't do, duplicate bookings, and estimates you cancel.</p></div>
+      </details>
+      <details>
+        <summary>How fast does it start?</summary>
+        <div class="a"><p>Ads go live 1 to 2 weeks after setup is paid and we have access.</p></div>
+      </details>
+      <details>
+        <summary>Is my area still open?</summary>
+        <div class="a"><p>Put your counties in the form when you book. We'll tell you on the call if another tree company already has them.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- build:cta -->
+<section class="sec" aria-labelledby="final-h">
+  <div class="wrap">
+    <div class="card final">
+      <div class="fin-main">
+        <h2 id="final-h">Keep your crews <span class="accent">booked.</span></h2>
+        <p class="who">If your crews can take on more estimates, answer four questions and pick a time to talk.</p>
+        <a class="btn" href="https://calendly.com/zacharyspencer/zenith-co-consultation" data-book>See if you qualify<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      </div>
+      <div class="fin-side">
+        <div class="founder">
+          <div class="fph"><span aria-hidden="true">ZS</span><img src="/assets/photos/founder.jpg" alt="Zachary Spencer, founder of Zenith Co." loading="lazy" decoding="async" onload="this.classList.add('ok')" onerror="this.remove()"></div>
+          <div class="f-id"><b>Zachary Spencer</b><span>Founder, Zenith Co.</span></div>
+        </div>
+        <p class="f-note">You'll be talking to me on the call.</p>
+        <p class="f-mail"><span>Questions before then?</span><a href="mailto:zachary@zenithcomarketing.com"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2 4l6 5 6-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>zachary@<wbr>zenithcomarketing.com</span></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /build:cta -->
+</main>
+
+<!-- build:footer -->
+<footer class="foot-bare">
+  <div class="wrap">
+    <p class="copy"><span>&copy; <span id="yr">2026</span> Zenith Co Marketing, LLC</span><span class="foot-legal"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a></span></p>
+  </div>
+</footer>
+<!-- /build:footer -->
+
+<div class="mbar" id="mbar" hidden>
+  <p>Four questions, then pick a time.</p>
+  <a class="btn" href="https://calendly.com/zacharyspencer/zenith-co-consultation" data-book>See if you qualify</a>
+</div>
+
+<!-- build:booking -->
+<dialog class="book" id="book" aria-labelledby="book-h">
+  <div class="book-head">
+    <h2 id="book-h">See if you qualify</h2>
+    <button class="x" type="button" data-close>Close</button>
+  </div>
+  <div class="book-body">
+    <form id="qual" novalidate>
+      <div class="fld">
+        <label for="f-company">Company name</label>
+        <input id="f-company" name="company" type="text" autocomplete="organization" required>
+      </div>
+      <div class="fld">
+        <label for="f-area">Service area</label>
+        <input id="f-area" name="area" type="text" placeholder="Counties or cities you work" aria-describedby="f-area-hint" required>
+        <p class="hint" id="f-area-hint">List every county you want covered.</p>
+      </div>
+      <div class="fld">
+        <label for="f-crews">Number of crews</label>
+        <select id="f-crews" name="crews" required><option value="">Pick one</option></select>
+      </div>
+      <div class="fld">
+        <label for="f-budget">Monthly ad budget</label>
+        <select id="f-budget" name="budget" required><option value="">Pick a range</option></select>
+      </div>
+      <div class="hp" aria-hidden="true"><label for="f-url">Leave this empty</label><input id="f-url" name="url_hp" type="text" tabindex="-1" autocomplete="off"></div>
+      <p class="err" id="f-err" role="alert"></p>
+      <button class="btn" type="submit">Next: pick a time</button>
+    </form>
+
+    <div id="step-cal" hidden>
+      <p>Thanks. Pick a time to talk with Zachary.</p>
+      <div class="cal-wrap">
+        <p class="cal-wait" aria-hidden="true">Loading the calendar&hellip;</p>
+        <iframe class="cal-frame" id="cal" title="Book a call with Zenith Co."></iframe>
+      </div>
+    </div>
+  </div>
+</dialog>
+<!-- /build:booking -->
+<script src="/assets/book.js"></script>
+<script>
+/* The phone bar: shown once the hero button has scrolled away, hidden again
+   when the closing card comes into view, and never while the form is open or
+   a field has focus. */
+(function () {
+  'use strict';
+  var bar = document.getElementById('mbar');
+  if (!bar || !('IntersectionObserver' in window)) return;
+  var heroBtn = document.querySelector('.w-cta [data-book]'), fin = document.querySelector('.final');
+  var dlg = document.getElementById('book');
+  if (!heroBtn || !fin || !dlg) return;
+  var heroGone = false, finalReached = false;
+  function typing() { var a = document.activeElement; return !!a && a.matches('input, select, textarea'); }
+  function update() { bar.hidden = !(heroGone && !finalReached && !dlg.open && !typing()); }
+  new IntersectionObserver(function (es) {
+    es.forEach(function (e) { heroGone = !e.isIntersecting && e.boundingClientRect.top < 0; }); update();
+  }).observe(heroBtn);
+  new IntersectionObserver(function (es) {
+    es.forEach(function (e) { finalReached = e.isIntersecting || e.boundingClientRect.top < 0; }); update();
+  }).observe(fin);
+  document.addEventListener('focusin', update);
+  document.addEventListener('focusout', function () { setTimeout(update, 0); });
+  new MutationObserver(update).observe(dlg, { attributes: true, attributeFilter: ['open'] });
+})();
+</script>
+<script>
+/* Scroll reveal: a section's blocks fade up together the first time it scrolls
+   into view, within 160ms of each other (same as the homepage). */
+(function () {
+  'use strict';
+  var d = document.documentElement;
+  if (!d.classList.contains('js-reveal')) return;
+  window.__reveal = true;
+  var els = Array.prototype.slice.call(document.querySelectorAll('.w-top,.vsl,.w-cta,.w-points,.head,.compare,.deal-foot,.work,.w-quote,.qa,.final'));
+  var groups = [];
+  els.forEach(function (el) {
+    var g = el.closest('section') || el;
+    if (groups.indexOf(g) < 0) { groups.push(g); g.__rv = []; }
+    el.style.transitionDelay = Math.min(g.__rv.length, 2) * 80 + 'ms';
+    g.__rv.push(el);
+  });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      e.target.__rv.forEach(function (el) {
+        el.classList.add('in');
+        // After the fade, hand transitions back to the element (hover effects).
+        setTimeout(function () { el.classList.add('rv-done'); el.style.transitionDelay = ''; }, 1100);
+      });
+    });
+  }, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
+  groups.forEach(function (g) { io.observe(g); });
+})();
+</script>
+</body>
+</html>

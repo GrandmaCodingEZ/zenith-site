@@ -16,6 +16,9 @@
 //   og        optional { title, description } when the share card should read
 //             differently from the <title>
 //   priority / changefreq  sitemap hints
+//   unlisted  true for a page people are sent to rather than find (/watch/).
+//             It must carry a noindex tag, and it is left out of the sitemap,
+//             llms.txt and schema. kind 'landing' also gives it the bare footer.
 //
 // privacy.html, terms.html and terms-2026-08-01.html are noindex and stay out of
 // this list, so they stay out of the sitemap and llms.txt too.
@@ -133,5 +136,22 @@ export const pages = [
     faq: false,
     priority: '0.7',
     changefreq: 'weekly',
+  },
+  // The page outbound texts and calls send an owner to: the founder video (or
+  // its stand-in), the deal in three rows, the client sites, and the booking
+  // form. unlisted keeps it noindex and out of the sitemap and llms.txt, so
+  // the only people on it are the ones we sent.
+  {
+    file: 'watch/index.html',
+    url: '/watch/',
+    crumb: 'Watch',
+    kind: 'landing',
+    unlisted: true,
+    faq: false,
+    og: {
+      title: 'Booked tree estimates. You only pay when the homeowner shows up.',
+      description:
+        'How Zenith Co. books estimates for established Florida tree companies, and what you pay. One company per service area.',
+    },
   },
 ];

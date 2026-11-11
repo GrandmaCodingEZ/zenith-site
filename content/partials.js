@@ -10,6 +10,7 @@
 //   byline    author and date on articles
 //   related   sibling articles and the hub, at the foot of each article
 //   post-list the blog index
+//   vsl       the video slot on /watch/ (the founder video, or its stand-in)
 //
 // One copy of each means a new page can't become an orphan and the booking
 // form can't drift between pages.
@@ -107,7 +108,23 @@ export const footerColumns = [
   },
 ];
 
-export function renderFooter() {
+const CHAT_WIDGET = `<!-- LeadConnector chat widget (every page) -->
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6adf9d556118072e0e9b12c1" data-source="WEB_USER"></script>`;
+
+// A landing page (kind: 'landing', the /watch/ page) gets the legal line only:
+// no site links, so the booking button is the one way on. The chat widget is
+// left off too. On a phone its greeting bubble opens on top of the page's one
+// button, and it asks for something other than a booking.
+function renderBareFooter() {
+  return `<footer class="foot-bare">
+  <div class="wrap">
+    <p class="copy"><span>&copy; <span id="yr">${new Date().getFullYear()}</span> Zenith Co Marketing, LLC</span><span class="foot-legal"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a></span></p>
+  </div>
+</footer>`;
+}
+
+export function renderFooter(page) {
+  if (page && page.kind === 'landing') return renderBareFooter();
   const cols = footerColumns
     .map(
       (col) =>
@@ -134,8 +151,36 @@ export function renderFooter() {
     <p class="copy">&copy; <span id="yr">${new Date().getFullYear()}</span> Zenith Co Marketing, LLC</p>
   </div>
 </footer>
-<!-- LeadConnector chat widget (every page) -->
-<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6adf9d556118072e0e9b12c1" data-source="WEB_USER"></script>`;
+${CHAT_WIDGET}`;
+}
+
+// The slot at the top of /watch/. With the founder video on disk
+// (assets/video/founder.mp4 and founder.jpg) it is the video; until then it is
+// the homepage's "One lead, start to finish" card, so the page never shows an
+// empty player. build.mjs checks for the files and passes hasVideo.
+export const FOUNDER_VIDEO = { file: 'assets/video/founder.mp4', poster: 'assets/video/founder.jpg' };
+
+export function renderVsl(hasVideo) {
+  if (hasVideo) {
+    return `<div class="vsl vsl-video">
+      <div class="card vsl-card">
+        <div class="video"><video controls playsinline preload="none" poster="/${FOUNDER_VIDEO.poster}" aria-label="Zachary Spencer explains how Zenith Co. works"><source src="/${FOUNDER_VIDEO.file}" type="video/mp4"></video></div>
+      </div>
+      <p class="mock-cap">Tap play for sound.</p>
+    </div>`;
+  }
+  return `<div class="vsl">
+      <div class="card lead-card" aria-label="Example of one lead, from the ad to a shown estimate">
+        <div class="lc-head"><b>One lead, start to finish</b><span>Example</span></div>
+        <ol class="lc-list">
+          <li><span class="lc-t">6:12 PM</span><div><b>Homeowner taps your ad</b><span>Oak hanging over the driveway</span></div></li>
+          <li><span class="lc-t">6:12 PM</span><div><b>Your business texts and calls</b><span>28 seconds after the form</span></div></li>
+          <li><span class="lc-t">6:15 PM</span><div><b>Estimate booked</b><span>Thursday at 9:00 AM, on your calendar</span></div></li>
+          <li><span class="lc-t">Wed 5 PM</span><div><b>Reminder sent</b><span>They reply &ldquo;See you then&rdquo;</span></div></li>
+          <li class="is-paid"><span class="lc-t">Thu 9:02</span><div><b>Homeowner was there</b><span>The only step you pay for</span></div><span class="pill yes">Billed</span></li>
+        </ol>
+      </div>
+    </div>`;
 }
 
 // The four-question form, then Calendly. assets/book.js drives it.

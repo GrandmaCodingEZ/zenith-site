@@ -170,3 +170,33 @@ To add an article: copy an existing one in `blog/`, add an entry to
 
 `_config.yml` keeps the working files (this one included) off the live site.
 Add any new working file to its list.
+
+## 7. The watch page (/watch/)
+
+`watch/index.html` is where outbound texts and calls send an owner: the
+headline, the founder video, one button, the deal in three rows, the three
+client sites, five questions and the closing card. It has no site links, so
+the booking button is the only way on. Use `zenithcomarketing.com/watch/` as
+the link in texts and as the booking link in the command center.
+
+It is marked `unlisted` in `content/pages.js`. That keeps it out of the
+sitemap and `llms.txt`, and the build refuses to run if its noindex tag goes
+missing. It has no chat widget: on a phone the widget's greeting opens on top
+of the button.
+
+A lead who books from it shows `/watch/` in the dialer note's Page line. Add
+`?utm_source=sms` (or `call`) to the link to tell the two apart.
+
+**The founder video.** Until it exists, the slot shows the "One lead, start to
+finish" card. To put the video in:
+
+1. Convert it to MP4 (H.264), 1280 by 720, under about 40 MB. iPhone .mov
+   files are HEVC and HDR, which many browsers can't play, and GitHub refuses
+   files over 100 MB.
+2. Save it as `assets/video/founder.mp4`.
+3. Save one frame as `assets/video/founder.jpg`, 1280 by 720.
+4. Run `npm run build` and commit. The build sees both files and swaps the
+   card for the video.
+
+Copy on this page repeats the homepage and the pricing page. When the deal,
+the FAQ answers or the client cards change there, change them here too.
