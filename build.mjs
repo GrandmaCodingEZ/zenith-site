@@ -6,8 +6,12 @@
 //
 //   head-meta  canonical + Open Graph + Twitter tags
 //   schema     the JSON-LD entity graph, plus page, breadcrumb, article and FAQ nodes
-//   nav, footer, booking, cta, crumbs, byline, related, post-list
+//   nav, footer, booking, cta, crumbs, byline, related, post-list, vsl
 //              shared HTML from content/partials.js
+//
+// A page marked unlisted in content/pages.js (the /watch/ landing page) gets
+// the same blocks but stays out of the sitemap and llms.txt, needs no schema,
+// and must carry a noindex tag.
 //
 // A block is the text between <!-- build:NAME --> and <!-- /build:NAME -->.
 // Everything outside the markers is hand-written and left alone.
@@ -18,7 +22,7 @@
 //   node build.mjs          write the files
 //   node build.mjs --check  fail if anything is out of date (nothing written)
 
-import { readFileSync as readRaw, writeFileSync, statSync } from 'node:fs';
+import { readFileSync as readRaw, writeFileSync, statSync, existsSync } from 'node:fs';
 import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
@@ -35,6 +39,8 @@ import {
   renderByline,
   renderRelated,
   renderPostList,
+  renderVsl,
+  FOUNDER_VIDEO,
 } from './content/partials.js';
 
 // Read as LF whatever the checkout uses (git on Windows writes CRLF), so a
@@ -244,6 +250,12 @@ const postAsPage = (post) => ({
 });
 
 const allPages = [...pages, ...posts.map(postAsPage)];
+// What the sitemap and llms.txt publish: everything except unlisted pages.
+const listedPages = allPages.filter((p) => !p.unlisted);
+
+// The founder video goes live the moment both files are on disk.
+const hasFounderVideo =
+  existsSync(join(root, FOUNDER_VIDEO.file)) && existsSync(join(root, FOUNDER_VIDEO.poster));
 
 // Breadcrumb trail from the URL path, naming each level from the registry.
 function trail(page) {
@@ -374,9 +386,11 @@ function buildPages() {
     const description = tagValue(html, /<meta name="description" content="([^"]*)"/);
     if (!title || !description) throw new Error(`${page.file}: missing <title> or meta description`);
     titles.set(page.url, page.post ? page.post.title : title);
+    if (page.unlisted && !/<meta name="robots" content="noindex">/.test(html))
+      throw new Error(`${page.file}: unlisted pages need <meta name="robots" content="noindex">`);
 
     let next = replaceBlock(html, 'head-meta', headMeta(page, title, description));
-    next = replaceBlock(next, 'schema', pageSchema(page, html, title, description));
+    if (!page.unlisted) next = replaceBlock(next, 'schema', pageSchema(page, html, title, description));
     next = replaceBlock(next, 'footer', renderFooter(page));
     next = replaceBlock(next, 'booking', renderBooking());
     next = replaceBlock(next, 'nav', renderNav(page), { optional: true });
@@ -387,6 +401,7 @@ function buildPages() {
       next = replaceBlock(next, 'related', renderRelated(page.post));
     }
     next = replaceBlock(next, 'post-list', renderPostList(), { optional: true });
+    next = replaceBlock(next, 'vsl', renderVsl(hasFounderVideo), { optional: true });
     put(page.file, next);
   }
 }
@@ -422,7 +437,7 @@ Sitemap: ${site.url}/sitemap.xml
 }
 
 function buildSitemap() {
-  const entries = allPages.map((p) => ({
+  const entries = listedPages.map((p) => ({
     url: abs(p.url),
     // An article states its own dates; everything else is dated by the last
     // commit that touched it.
@@ -454,7 +469,7 @@ ${entries
 
 function buildLlmsTxt() {
   const groups = new Map();
-  for (const page of allPages) {
+  for (const page of listedPages) {
     const group = page.group || 'Pages';
     if (!groups.has(group)) groups.set(group, []);
     groups.get(group).push(page);

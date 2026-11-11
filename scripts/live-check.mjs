@@ -132,7 +132,7 @@ else if (!leaked) pass(`none of the ${MUST_BE_PRIVATE.length} working files are 
 
 /* -------------------------------------------------------- legal pages */
 console.log('\nNoindex pages');
-for (const path of ['/privacy.html', '/terms.html', '/terms-2026-08-01.html']) {
+for (const path of ['/privacy.html', '/terms.html', '/terms-2026-08-01.html', '/watch/']) {
   const res = await get(path);
   if (res.status !== 200) fail(`${path} returned ${res.status}`);
   else if (!/name="robots" content="noindex"/.test(res.body))
