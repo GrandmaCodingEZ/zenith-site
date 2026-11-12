@@ -148,7 +148,7 @@ export function renderFooter(page) {
         ${cols}
       </div>
     </div>
-    <p class="copy">&copy; <span id="yr">${new Date().getFullYear()}</span> Zenith Co Marketing, LLC</p>
+    <p class="copy">&copy; <span id="yr">${new Date().getFullYear()}</span> Zenith Co Marketing, LLC &middot; 7901 4th St N Ste 300, St. Petersburg, FL 33702 &middot; <a href="mailto:zachary@zenithcomarketing.com">zachary@zenithcomarketing.com</a></p>
   </div>
 </footer>
 ${CHAT_WIDGET}`;
