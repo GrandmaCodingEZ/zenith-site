@@ -109,7 +109,7 @@ export const footerColumns = [
 ];
 
 const CHAT_WIDGET = `<!-- LeadConnector chat widget (every page) -->
-<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6adf9d556118072e0e9b12c1" data-source="WEB_USER"></script>`;
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6af618cc75f0c3a520db312e"></script>`;
 
 // A landing page (kind: 'landing', the /watch/ page) gets the legal line only:
 // no site links, so the booking button is the one way on. The chat widget is
