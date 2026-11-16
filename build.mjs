@@ -8,6 +8,9 @@
 //   schema     the JSON-LD entity graph, plus page, breadcrumb, article and FAQ nodes
 //   nav, footer, booking, cta, crumbs, byline, related, post-list, vsl
 //              shared HTML from content/partials.js
+//   precall-step1, precall-faq, precall-results
+//              the pre-call page's video, questions and results cards, from
+//              content/precall.js
 //
 // A page marked unlisted in content/pages.js (the /watch/ landing page) gets
 // the same blocks but stays out of the sitemap and llms.txt, needs no schema,
@@ -40,8 +43,12 @@ import {
   renderRelated,
   renderPostList,
   renderVsl,
+  renderPrecallStep1,
+  renderPrecallFaq,
+  renderPrecallResults,
   FOUNDER_VIDEO,
 } from './content/partials.js';
+import { precall } from './content/precall.js';
 
 // Read as LF whatever the checkout uses (git on Windows writes CRLF), so a
 // --check on Windows compares like with like.
@@ -392,7 +399,9 @@ function buildPages() {
     let next = replaceBlock(html, 'head-meta', headMeta(page, title, description));
     if (!page.unlisted) next = replaceBlock(next, 'schema', pageSchema(page, html, title, description));
     next = replaceBlock(next, 'footer', renderFooter(page));
-    next = replaceBlock(next, 'booking', renderBooking());
+    // Every page carries the booking form except one for people who have
+    // already booked (the pre-call page).
+    if (!page.booked) next = replaceBlock(next, 'booking', renderBooking());
     next = replaceBlock(next, 'nav', renderNav(page), { optional: true });
     next = replaceBlock(next, 'cta', renderCta(page), { optional: true });
     next = replaceBlock(next, 'crumbs', renderCrumbs(trail(page)), { optional: true });
@@ -402,6 +411,9 @@ function buildPages() {
     }
     next = replaceBlock(next, 'post-list', renderPostList(), { optional: true });
     next = replaceBlock(next, 'vsl', renderVsl(hasFounderVideo), { optional: true });
+    next = replaceBlock(next, 'precall-step1', renderPrecallStep1(precall.video), { optional: true });
+    next = replaceBlock(next, 'precall-faq', renderPrecallFaq(precall.faqs), { optional: true });
+    next = replaceBlock(next, 'precall-results', renderPrecallResults(precall.results), { optional: true });
     put(page.file, next);
   }
 }

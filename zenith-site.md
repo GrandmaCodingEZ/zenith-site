@@ -200,3 +200,36 @@ finish" card. To put the video in:
 
 Copy on this page repeats the homepage and the pricing page. When the deal,
 the FAQ answers or the client cards change there, change them here too.
+
+## 8. The pre-call page (/pre-call/)
+
+`pre-call/index.html` is where an owner lands right after booking: the
+confirmation, Step 1 (the video), Step 2 (accept the invite, what to have
+ready), seven questions, the three client sites and a sign-off. It has no
+booking button, no site menu and no chat widget. Like `/watch/` it is
+`unlisted`: noindex, and out of the sitemap and `llms.txt`.
+
+**How people get there.** When someone books in the form's calendar step,
+Calendly tells the page and `assets/book.js` sends them to `/pre-call/`
+(`booking.afterBooking` in `content/site.js`; set it to null to turn that
+off). For bookings made any other way, use the link yourself: in Calendly's
+"redirect after booking" setting if your plan has it, in the confirmation
+email, and in the command center's booking confirmation text.
+
+**What you edit** is `content/precall.js`, then `npm run build`:
+
+| To change | Edit |
+|------|-----|
+| The video | `video.url`: a YouTube link, a Loom link, or a path to an MP4 in `assets/video/`. While it's null, Step 1 shows the "One lead, start to finish" card. |
+| The questions | `faqs`: plain text, in order. The first one starts open, and opening one closes the others. |
+| Results cards | `results`: empty until there are real ads numbers. Add a card and a "Recent results" row appears above the client sites, with a "Results vary" line under it. |
+
+The answers repeat the homepage, `/pricing/` and `/how-it-works/`. When the
+deal changes there, change it here too. The page says the call is on Google
+Meet, which is how the Calendly event is set up; if that changes, change the
+two lines that say so.
+
+Reschedule buttons open an email to you, and the page points people to the
+Reschedule link in their confirmation email. They don't link to the booking
+page, because booking again there makes a second call without cancelling the
+first.

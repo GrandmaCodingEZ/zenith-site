@@ -12,6 +12,7 @@ var CONFIG = {
   "calendly": "https://calendly.com/zacharyspencer/zenith-co-consultation",
   "calendlyAnswerParam": "a1",
   "formEndpoint": "https://dialer.zenithcomarketing.com/api/inbound/website-form",
+  "afterBooking": "/pre-call/",
   "crewOptions": [
     "None yet, just me",
     "1 crew",
@@ -80,6 +81,15 @@ var CONFIG = {
 
   var cal = $('#cal');
   cal.addEventListener('load', function () { if (cal.src) cal.classList.add('ready'); });
+
+  // Calendly tells the page that embeds it when a time has been booked. That
+  // is the moment to send them to the pre-call page.
+  if (has(CONFIG.afterBooking)) {
+    window.addEventListener('message', function (e) {
+      if (e.origin !== 'https://calendly.com' || !e.data || e.data.event !== 'calendly.event_scheduled') return;
+      location.href = CONFIG.afterBooking;
+    });
+  }
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();

@@ -86,6 +86,9 @@ export const site = {
     // Every submission is also posted here, whether or not they book: the
     // dialer's website-form route. null sends nothing.
     formEndpoint: 'https://dialer.zenithcomarketing.com/api/inbound/website-form',
+    // Where the page goes once Calendly reports a booking made in the form's
+    // calendar step. null leaves them on Calendly's own confirmation screen.
+    afterBooking: '/pre-call/',
     crewOptions: ['None yet, just me', '1 crew', '2 crews', '3 to 4 crews', '5 or more crews'],
     budgetOptions: ['Under $1,500', '$1,500 to $3,000', '$3,000 to $5,000', 'More than $5,000', 'Not sure yet'],
   },

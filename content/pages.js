@@ -19,6 +19,8 @@
 //   unlisted  true for a page people are sent to rather than find (/watch/).
 //             It must carry a noindex tag, and it is left out of the sitemap,
 //             llms.txt and schema. kind 'landing' also gives it the bare footer.
+//   booked    true for a page whose visitors have already booked (/pre-call/):
+//             it gets no booking form.
 //
 // privacy.html, terms.html and terms-2026-08-01.html are noindex and stay out of
 // this list, so they stay out of the sitemap and llms.txt too.
@@ -152,6 +154,23 @@ export const pages = [
       title: 'Booked tree estimates. You only pay when the homeowner shows up.',
       description:
         'How Zenith Co. books estimates for established Florida tree companies, and what you pay. One company per service area.',
+    },
+  },
+  // Where an owner lands right after booking a call: the video (or its
+  // stand-in), what to do before the call, the questions owners ask first, and
+  // the client sites. Its copy lives in content/precall.js. booked: true leaves
+  // the booking form off, since everyone on this page already has a time.
+  {
+    file: 'pre-call/index.html',
+    url: '/pre-call/',
+    crumb: 'Pre-call',
+    kind: 'landing',
+    unlisted: true,
+    booked: true,
+    faq: false,
+    og: {
+      title: "You're booked with Zenith Co.",
+      description: 'Two things to do before the call, and answers to the questions tree company owners ask first.',
     },
   },
 ];
