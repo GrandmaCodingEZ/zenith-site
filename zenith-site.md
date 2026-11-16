@@ -205,7 +205,7 @@ the FAQ answers or the client cards change there, change them here too.
 
 `pre-call/index.html` is where an owner lands right after booking: the
 confirmation, Step 1 (the video), Step 2 (accept the invite, what to have
-ready), seven questions, the three client sites and a sign-off. It has no
+ready), eight questions, the three client sites and a sign-off. It has no
 booking button, no site menu and no chat widget. Like `/watch/` it is
 `unlisted`: noindex, and out of the sitemap and `llms.txt`.
 
