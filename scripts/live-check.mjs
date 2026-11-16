@@ -28,6 +28,7 @@ const MUST_BE_PRIVATE = [
   '/content/pages.js',
   '/content/posts.js',
   '/content/partials.js',
+  '/content/precall.js',
   '/build.mjs',
   '/dev-server.mjs',
   '/package.json',
@@ -132,7 +133,7 @@ else if (!leaked) pass(`none of the ${MUST_BE_PRIVATE.length} working files are 
 
 /* -------------------------------------------------------- legal pages */
 console.log('\nNoindex pages');
-for (const path of ['/privacy.html', '/terms.html', '/terms-2026-08-01.html', '/watch/']) {
+for (const path of ['/privacy.html', '/terms.html', '/terms-2026-08-01.html', '/watch/', '/pre-call/']) {
   const res = await get(path);
   if (res.status !== 200) fail(`${path} returned ${res.status}`);
   else if (!/name="robots" content="noindex"/.test(res.body))

@@ -11,6 +11,9 @@
 //   related   sibling articles and the hub, at the foot of each article
 //   post-list the blog index
 //   vsl       the video slot on /watch/ (the founder video, or its stand-in)
+//   precall-step1, precall-faq, precall-results
+//             the pre-call page's video, questions and results cards, from
+//             content/precall.js
 //
 // One copy of each means a new page can't become an orphan and the booking
 // form can't drift between pages.
@@ -180,6 +183,104 @@ export function renderVsl(hasVideo) {
           <li class="is-paid"><span class="lc-t">Thu 9:02</span><div><b>Homeowner was there</b><span>The only step you pay for</span></div><span class="pill yes">Billed</span></li>
         </ol>
       </div>
+    </div>`;
+}
+
+/* ------------------------------------------------- the pre-call page ----
+ * /pre-call/ is where an owner lands right after booking. Its video, questions
+ * and results cards live in content/precall.js; these turn them into HTML.
+ */
+
+const LEAD_CARD = `<div class="card lead-card" aria-label="Example of one lead, from the ad to a shown estimate">
+        <div class="lc-head"><b>One lead, start to finish</b><span>Example</span></div>
+        <ol class="lc-list">
+          <li><span class="lc-t">6:12 PM</span><div><b>Homeowner taps your ad</b><span>Oak hanging over the driveway</span></div></li>
+          <li><span class="lc-t">6:12 PM</span><div><b>Your business texts and calls</b><span>28 seconds after the form</span></div></li>
+          <li><span class="lc-t">6:15 PM</span><div><b>Estimate booked</b><span>Thursday at 9:00 AM, on your calendar</span></div></li>
+          <li><span class="lc-t">Wed 5 PM</span><div><b>Reminder sent</b><span>They reply &ldquo;See you then&rdquo;</span></div></li>
+          <li class="is-paid"><span class="lc-t">Thu 9:02</span><div><b>Homeowner was there</b><span>The only step you pay for</span></div><span class="pill yes">Billed</span></li>
+        </ol>
+      </div>`;
+
+// A YouTube or Loom link becomes its embed address; a path to an .mp4 in this
+// repo plays in a plain <video>. Anything else stops the build, so a typo in
+// content/precall.js can't put a broken player on the page.
+function precallPlayer(video) {
+  const url = String(video.url).trim();
+  const title = esc(video.title || 'Video from Zenith Co.');
+  const frame = (src) =>
+    `<iframe src="${src}" title="${title}" loading="lazy" allow="accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+
+  const yt = url.match(/(?:youtu\.be\/|youtube(?:-nocookie)?\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/|live\/))([\w-]{11})/);
+  if (yt) return frame(`https://www.youtube-nocookie.com/embed/${yt[1]}?rel=0`);
+  const loom = url.match(/loom\.com\/(?:share|embed)\/([a-f0-9]{16,})/);
+  if (loom) return frame(`https://www.loom.com/embed/${loom[1]}`);
+  if (/^\/[\w./-]+\.mp4$/.test(url)) {
+    const poster = video.poster ? ` poster="${esc(video.poster)}"` : '';
+    return `<video controls playsinline preload="none"${poster} aria-label="${title}"><source src="${url}" type="video/mp4"></video>`;
+  }
+  throw new Error(`content/precall.js: video.url "${url}" is not a YouTube link, a Loom link, or a /path/to/file.mp4`);
+}
+
+// Step 1. With a video it asks them to watch it with the sound on. Without
+// one it shows the "One lead, start to finish" card, worded to match.
+export function renderPrecallStep1(video) {
+  if (video && video.url) {
+    return `<p class="eyebrow">Step 1</p>
+      <h2 id="s1-h">Watch this short video with the sound on</h2>
+      <p class="pc-sub">It shows how we book estimates for tree companies, so we can skip the basics on the call.</p>
+      <div class="vsl vsl-video">
+        <div class="card vsl-card">
+          <div class="video">${precallPlayer(video)}</div>
+        </div>
+        <p class="mock-cap">Tap play for sound.</p>
+      </div>`;
+  }
+  return `<p class="eyebrow">Step 1</p>
+      <h2 id="s1-h">See how one lead runs</h2>
+      <p class="pc-sub">This is the whole loop, from a tap on your ad to you standing in the yard. Read it once and we can skip the basics on the call.</p>
+      <div class="vsl">
+      ${LEAD_CARD}
+        <p class="mock-cap">Illustrative example, not a real customer.</p>
+      </div>`;
+}
+
+// The questions. Each <details> shares a name, so opening one closes the
+// others (the page script does the same for browsers without that).
+export function renderPrecallFaq(faqs) {
+  return `<div class="qa w-narrow">
+${faqs
+  .map(
+    (f, i) => `      <details name="pc-faq"${i === 0 ? ' open' : ''}>
+        <summary>${esc(f.q)}</summary>
+        <div class="a"><p>${esc(f.a)}</p></div>
+      </details>`
+  )
+  .join('\n')}
+    </div>`;
+}
+
+// The results row. Nothing at all until content/precall.js has a real card.
+export function renderPrecallResults(results) {
+  if (!results || !results.length) return '';
+  return `<div class="pc-results">
+      <div class="head">
+        <p class="eyebrow">Recent results</p>
+        <h2 id="res-h">What the ads have booked</h2>
+      </div>
+      <div class="res-grid">
+${results
+  .map(
+    (r) => `        <article class="card result">
+          <p class="w-meta"><span class="place">${esc(r.place || '')}</span></p>
+          <h3>${esc(r.client)}</h3>
+          <p class="res-stat">${esc(r.stat)}</p>
+          <p class="res-detail">${esc(r.detail)}</p>
+        </article>`
+  )
+  .join('\n')}
+      </div>
+      <p class="res-note">Results vary by market, ad spend and how many estimates your crews can take.</p>
     </div>`;
 }
 
