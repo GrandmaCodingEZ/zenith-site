@@ -222,6 +222,7 @@ email, and in the command center's booking confirmation text.
 |------|-----|
 | The video | `video.url`: a YouTube link, a Loom link, or a path to an MP4 in `assets/video/`. While it's null, Step 1 shows the "One lead, start to finish" card. |
 | The questions | `faqs`: plain text, in order. The first one starts open, and opening one closes the others. |
+| A video for one question | The `video` line on that question: a YouTube link, a Loom link, or a path to an MP4. It plays above the written answer and stops when another question opens. While it's null, the question shows its written answer alone. |
 | Results cards | `results`: empty until there are real ads numbers. Add a card and a "Recent results" row appears above the client sites, with a "Results vary" line under it. |
 
 The answers repeat the homepage, `/pricing/` and `/how-it-works/`. When the
