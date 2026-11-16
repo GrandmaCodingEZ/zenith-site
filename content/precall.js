@@ -54,6 +54,12 @@ export const precall = {
       a: "The ads only show in the area written down when you sign up, and the landing page asks for the job details. We text and call every lead right away, aiming for under a minute, while they're still holding the phone. A lead outside your area or asking for work you don't do doesn't bill.",
     },
     {
+      // No client dashboard exists, so this answers with what the owner can
+      // already see: their own ad accounts, their calendar, the weekly bill.
+      q: "How do I see what's happening?",
+      a: "The ad accounts are in your business's name, so you see every dollar the platforms charge. Every booked estimate lands on your calendar with the homeowner's name, address and the job they described. We bill once a week, only for shown estimates.",
+    },
+    {
       q: "What happens if it doesn't work?",
       a: "A homeowner who isn't there doesn't bill. If the ads don't book anything, you've paid your ad spend and the setup fee, and no per-estimate fees. There is no long-term contract. Email us and the ads go off within 2 business days, and the ad accounts stay yours.",
     },
