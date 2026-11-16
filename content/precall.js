@@ -22,28 +22,39 @@ export const precall = {
 
   // QUESTIONS
   // Plain text, in the order they show. The first one starts open.
+  //
+  // TODO (Zac): each question can have its own short video. Paste a link on
+  // its `video` line (YouTube, Loom, or a path to an MP4 in assets/video/,
+  // same as the Step 1 video) and it plays above the written answer. While
+  // the line is null, that question shows the written answer alone. The
+  // scripts are in the site notes folder (PRE-CALL-QUESTION-SCRIPTS.md).
   faqs: [
     {
       q: "What's involved on your end?",
+      video: null,
       a: "Give us access to your ad accounts and your calendar, and keep your open times current. Then show up at the booked time, walk the job and write the quote. We build and run the ads and the landing page, and we text and call every lead in your company's name. After each visit, you mark it shown or not shown.",
     },
     {
       // TODO (Zac): there's no time-to-first-lead number here on purpose. The
       // site has no client data to back one yet. Add a line once you have it.
       q: 'How fast do leads come in?',
+      video: null,
       a: "Ads go live 1 to 2 weeks after the setup fee is paid and we have access to your ad accounts and calendar. Leads can start as soon as the ads are running. On the call I'll tell you what to expect for your area.",
     },
     {
       q: 'Are the leads exclusive to me?',
+      video: null,
       a: "Yes. The ads run in ad accounts in your business's name and send homeowners to a landing page with your company on it, so those leads go to you and nobody else. We also take one tree company per service area. While you're in, we won't run ads for another tree company there.",
     },
     {
       q: 'Who pays for the ad spend?',
+      video: null,
       a: 'You do, straight to the ad platforms on your own card, so you see every dollar they charge. Plan on at least $50 a day. You pay us a one-time setup fee, and after that a flat fee only for estimates where the homeowner showed up.',
     },
     {
       // This is the definition from the Terms and /pricing/. Keep them the same.
       q: 'What counts as a shown estimate?',
+      video: null,
       a: "A homeowner booked through your ads, you showed up at the booked time, and they were there to walk the job. You mark each one within 3 business days. Leads outside your area, work you don't do, duplicate bookings and estimates you cancel never bill.",
     },
     {
@@ -51,16 +62,19 @@ export const precall = {
       // homeowner status. The site doesn't say that anywhere, so it's left out.
       // Add it back if the form really asks both.
       q: 'How do you make sure leads are qualified?',
+      video: null,
       a: "The ads only show in the area written down when you sign up, and the landing page asks for the job details. We text and call every lead right away, aiming for under a minute, while they're still holding the phone. A lead outside your area or asking for work you don't do doesn't bill.",
     },
     {
       // No client dashboard exists, so this answers with what the owner can
       // already see: their own ad accounts, their calendar, the weekly bill.
       q: "How do I see what's happening?",
+      video: null,
       a: "The ad accounts are in your business's name, so you see every dollar the platforms charge. Every booked estimate lands on your calendar with the homeowner's name, address and the job they described. We bill once a week, only for shown estimates.",
     },
     {
       q: "What happens if it doesn't work?",
+      video: null,
       a: "A homeowner who isn't there doesn't bill. If the ads don't book anything, you've paid your ad spend and the setup fee, and no per-estimate fees. There is no long-term contract. Email us and the ads go off within 2 business days, and the ad accounts stay yours.",
     },
   ],

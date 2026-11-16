@@ -246,14 +246,18 @@ export function renderPrecallStep1(video) {
 }
 
 // The questions. Each <details> shares a name, so opening one closes the
-// others (the page script does the same for browsers without that).
+// others (the page script does the same for browsers without that). A
+// question with a video link gets the player above its written answer; the
+// written answer always stays.
 export function renderPrecallFaq(faqs) {
+  const player = (f) =>
+    f.video ? `<div class="video qa-video">${precallPlayer({ url: f.video, title: f.q, poster: f.poster })}</div>` : '';
   return `<div class="qa w-narrow">
 ${faqs
   .map(
     (f, i) => `      <details name="pc-faq"${i === 0 ? ' open' : ''}>
         <summary>${esc(f.q)}</summary>
-        <div class="a"><p>${esc(f.a)}</p></div>
+        <div class="a">${player(f)}<p>${esc(f.a)}</p></div>
       </details>`
   )
   .join('\n')}
