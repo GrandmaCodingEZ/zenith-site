@@ -7,17 +7,25 @@
 
 export const precall = {
   // STEP 1 VIDEO
-  // TODO (Zac): paste the video link once it's recorded. It can be:
+  // The link can be:
   //   a YouTube link   'https://youtu.be/XXXXXXXXXXX' or 'https://www.youtube.com/watch?v=XXXXXXXXXXX'
   //   a Loom link      'https://www.loom.com/share/xxxxxxxxxxxxxxxx'
   //   a file in here   '/assets/video/pre-call.mp4' (MP4, H.264, under about 40 MB)
-  // While it's null, Step 1 shows the "One lead, start to finish" card in its
-  // place, so the page never has an empty player on it.
+  // Set it to null and Step 1 shows the "One lead, start to finish" card in
+  // its place, so the page never has an empty player on it.
+  //
+  // To swap in a new cut, replace assets/video/pre-call.mp4 and pre-call.jpg.
+  // Export it with no black bars around the picture, and set `shape` to match.
   video: {
-    url: null,
+    url: '/assets/video/pre-call.mp4',
     title: 'Zachary Spencer explains how Zenith Co. books estimates for tree companies',
-    // Only used with an MP4 file: a 1280 by 720 frame shown before play.
-    poster: null,
+    // Only used with an MP4 file: one frame of the video, shown before play.
+    poster: '/assets/video/pre-call.jpg',
+    // The shape of the picture, so the player fits it with no black bars:
+    //   'wide'    16:9, a screen recording or a phone held sideways (the default)
+    //   'square'  1:1
+    //   'tall'    9:16, a phone held upright
+    shape: 'square',
   },
 
   // QUESTIONS
