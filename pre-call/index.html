@@ -61,6 +61,12 @@
   .vsl-video{max-width:880px;}
   .vsl-card{padding:10px;box-shadow:var(--shadow);}
   .video{position:relative;aspect-ratio:16/9;background:#000;border-radius:6px;overflow:hidden;}
+  /* A square or upright video (video.shape in content/precall.js): the player
+     takes the picture's shape, and stays narrow enough to fit a screen. */
+  .vsl-square{max-width:560px;}
+  .vsl-square .video{aspect-ratio:1/1;}
+  .vsl-tall{max-width:380px;}
+  .vsl-tall .video{aspect-ratio:9/16;}
   .video>video,.video>iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
 
   /* A question's own video (content/precall.js), above its written answer */
@@ -174,20 +180,13 @@
     <div class="pc-step">
 <!-- build:precall-step1 -->
 <p class="eyebrow">Step 1</p>
-      <h2 id="s1-h">See how one lead runs</h2>
-      <p class="pc-sub">This is the whole loop, from a tap on your ad to you standing in the yard. Read it once and we can skip the basics on the call.</p>
-      <div class="vsl">
-      <div class="card lead-card" aria-label="Example of one lead, from the ad to a shown estimate">
-        <div class="lc-head"><b>One lead, start to finish</b><span>Example</span></div>
-        <ol class="lc-list">
-          <li><span class="lc-t">6:12 PM</span><div><b>Homeowner taps your ad</b><span>Oak hanging over the driveway</span></div></li>
-          <li><span class="lc-t">6:12 PM</span><div><b>Your business texts and calls</b><span>28 seconds after the form</span></div></li>
-          <li><span class="lc-t">6:15 PM</span><div><b>Estimate booked</b><span>Thursday at 9:00 AM, on your calendar</span></div></li>
-          <li><span class="lc-t">Wed 5 PM</span><div><b>Reminder sent</b><span>They reply &ldquo;See you then&rdquo;</span></div></li>
-          <li class="is-paid"><span class="lc-t">Thu 9:02</span><div><b>Homeowner was there</b><span>The only step you pay for</span></div><span class="pill yes">Billed</span></li>
-        </ol>
-      </div>
-        <p class="mock-cap">Illustrative example, not a real customer.</p>
+      <h2 id="s1-h">Watch this short video with the sound on</h2>
+      <p class="pc-sub">It shows how we book estimates for tree companies, so we can skip the basics on the call.</p>
+      <div class="vsl vsl-video vsl-square">
+        <div class="card vsl-card">
+          <div class="video"><video controls playsinline preload="none" poster="/assets/video/pre-call.jpg" aria-label="Zachary Spencer explains how Zenith Co. books estimates for tree companies"><source src="/assets/video/pre-call.mp4" type="video/mp4"></video></div>
+        </div>
+        <p class="mock-cap">Tap play for sound.</p>
       </div>
 <!-- /build:precall-step1 -->
     </div>
