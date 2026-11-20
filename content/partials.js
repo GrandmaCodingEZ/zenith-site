@@ -223,13 +223,14 @@ function precallPlayer(video) {
 }
 
 // The player is 16:9 unless the video says it is square or tall; the pre-call
-// page has the sizes for each. A typo stops the build.
-const VIDEO_SHAPES = { wide: '', square: ' vsl-square', tall: ' vsl-tall' };
-function shapeClass(video) {
+// page has the sizes for each (.vsl-square, .qa-tall and so on). A typo stops
+// the build.
+const VIDEO_SHAPES = ['wide', 'square', 'tall'];
+function shapeClass(video, prefix) {
   const shape = video.shape || 'wide';
-  if (!(shape in VIDEO_SHAPES))
-    throw new Error(`content/precall.js: video.shape "${shape}" is not 'wide', 'square' or 'tall'`);
-  return VIDEO_SHAPES[shape];
+  if (!VIDEO_SHAPES.includes(shape))
+    throw new Error(`content/precall.js: shape "${shape}" is not 'wide', 'square' or 'tall'`);
+  return shape === 'wide' ? '' : ` ${prefix}-${shape}`;
 }
 
 // Step 1. With a video it asks them to watch it with the sound on. Without
@@ -239,7 +240,7 @@ export function renderPrecallStep1(video) {
     return `<p class="eyebrow">Step 1</p>
       <h2 id="s1-h">Watch this short video with the sound on</h2>
       <p class="pc-sub">It shows how we book estimates for tree companies, so we can skip the basics on the call.</p>
-      <div class="vsl vsl-video${shapeClass(video)}">
+      <div class="vsl vsl-video${shapeClass(video, 'vsl')}">
         <div class="card vsl-card">
           <div class="video">${precallPlayer(video)}</div>
         </div>
@@ -261,7 +262,9 @@ export function renderPrecallStep1(video) {
 // written answer always stays.
 export function renderPrecallFaq(faqs) {
   const player = (f) =>
-    f.video ? `<div class="video qa-video">${precallPlayer({ url: f.video, title: f.q, poster: f.poster })}</div>` : '';
+    f.video
+      ? `<div class="video qa-video${shapeClass(f, 'qa')}">${precallPlayer({ url: f.video, title: f.q, poster: f.poster })}</div>`
+      : '';
   return `<div class="qa w-narrow">
 ${faqs
   .map(

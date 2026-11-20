@@ -71,6 +71,8 @@
 
   /* A question's own video (content/precall.js), above its written answer */
   .qa-video{max-width:560px;margin:0 0 18px;border:1px solid var(--line);}
+  .qa-square{max-width:400px;aspect-ratio:1/1;}
+  .qa-tall{max-width:300px;aspect-ratio:9/16;}
 
   .head{max-width:660px;margin:0 auto 32px;text-align:center;}
   .head p:last-child{color:var(--muted);margin:0;}
@@ -216,9 +218,9 @@
         <h3>Have these ready</h3>
         <p>Rough numbers are fine. They're what I'll ask about first.</p>
         <ul class="bring">
-          <li><span class="hp-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><div><b>The counties you want covered</b><span>I'll tell you if another tree company already has them.</span></div></li>
+          <li><span class="hp-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><div><b>The zip codes you want covered</b><span>I'll tell you if another tree company already has them.</span></div></li>
           <li><span class="hp-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><div><b>How many crews you run</b><span>And how far out you're booked right now.</span></div></li>
-          <li><span class="hp-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><div><b>Your average job and your close rate</b><span>Together they say what one shown estimate is worth to you.</span></div></li>
+          <li><span class="hp-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><div><b>Your average job and your close rate</b><span>Together they say what one shown appointment is worth to you.</span></div></li>
         </ul>
       </div>
     </div>
@@ -236,36 +238,48 @@
 <!-- build:precall-faq -->
 <div class="qa w-narrow">
       <details name="pc-faq" open>
-        <summary>What's involved on your end?</summary>
-        <div class="a"><p>Give us access to your ad accounts and your calendar, and keep your open times current. Then show up at the booked time, walk the job and write the quote. We build and run the ads and the landing page, and we text and call every lead in your company's name. After each visit, you mark it shown or not shown.</p></div>
+        <summary>What counts as a shown appointment?</summary>
+        <div class="a"><div class="video qa-video qa-tall"><video controls playsinline preload="none" poster="/assets/video/pre-call-faq-shown-appointment.jpg" aria-label="What counts as a shown appointment?"><source src="/assets/video/pre-call-faq-shown-appointment.mp4" type="video/mp4"></video></div><p>A homeowner in your service area meets you at the property for the estimate. That's the only time you pay us. If they don't show, cancel, or turn out to be outside your service area, you don't pay. You mark each visit shown or not shown within 3 business days. Whether the job closes is up to you.</p></div>
       </details>
       <details name="pc-faq">
         <summary>How fast do leads come in?</summary>
-        <div class="a"><p>Ads go live 1 to 2 weeks after the setup fee is paid and we have access to your ad accounts and calendar. Leads can start as soon as the ads are running. On the call I'll tell you what to expect for your area.</p></div>
-      </details>
-      <details name="pc-faq">
-        <summary>Are the leads exclusive to me?</summary>
-        <div class="a"><p>Yes. The ads run in ad accounts in your business's name and send homeowners to a landing page with your company on it, so those leads go to you and nobody else. We also take one tree company per service area. While you're in, we won't run ads for another tree company there.</p></div>
+        <div class="a"><p>Once your ads are live, leads usually start coming in within 1 to 2 weeks. Every lead gets a text from us right away, and the faster you call them back, the more of them show up. On the call I'll tell you what to expect for your zip codes.</p></div>
       </details>
       <details name="pc-faq">
         <summary>Who pays for the ad spend?</summary>
-        <div class="a"><p>You do, straight to the ad platforms on your own card, so you see every dollar they charge. Plan on at least $50 a day. You pay us a one-time setup fee, and after that a flat fee only for estimates where the homeowner showed up.</p></div>
+        <div class="a"><p>You do. It goes straight from your account to Facebook, not through us, so you see every dollar. We usually recommend around $50 a day. Our fee is separate: a $500 deposit to start, then $197 for each shown appointment.</p></div>
       </details>
       <details name="pc-faq">
-        <summary>What counts as a shown estimate?</summary>
-        <div class="a"><p>A homeowner booked through your ads, you showed up at the booked time, and they were there to walk the job. You mark each one within 3 business days. Leads outside your area, work you don't do, duplicate bookings and estimates you cancel never bill.</p></div>
+        <summary>Is there a long-term contract?</summary>
+        <div class="a"><div class="video qa-video qa-tall"><video controls playsinline preload="none" poster="/assets/video/pre-call-faq-contract.jpg" aria-label="Is there a long-term contract?"><source src="/assets/video/pre-call-faq-contract.mp4" type="video/mp4"></video></div><p>No. It's month to month. We start with a trial, so you see leads coming in before you commit to anything, and I'll go over how the trial works on the call. If it isn't working for you, you aren't locked in.</p></div>
+      </details>
+      <details name="pc-faq">
+        <summary>What if the ads don't work?</summary>
+        <div class="a"><div class="video qa-video qa-tall"><video controls playsinline preload="none" poster="/assets/video/pre-call-faq-if-it-doesnt-work.jpg" aria-label="What if the ads don't work?"><source src="/assets/video/pre-call-faq-if-it-doesnt-work.mp4" type="video/mp4"></video></div><p>You only pay us the $197 when a homeowner shows up for the estimate. If nobody shows, you pay us nothing per appointment. What you put in is the $500 deposit and your ad spend, which goes straight to Facebook. If the trial doesn't bring at least one shown appointment in your first month, we refund the full deposit. We check the numbers with you during the trial, so you never have to guess whether it's working.</p></div>
+      </details>
+      <details name="pc-faq">
+        <summary>How is this different from Angi or Thumbtack?</summary>
+        <div class="a"><div class="video qa-video qa-tall"><video controls playsinline preload="none" poster="/assets/video/pre-call-faq-angi-thumbtack.jpg" aria-label="How is this different from Angi or Thumbtack?"><source src="/assets/video/pre-call-faq-angi-thumbtack.mp4" type="video/mp4"></video></div><p>On those sites you pay for a lead that usually goes to other companies too, so you're racing them to call back, and you pay whether the homeowner answers or not. With us the ads run for your business only, and we don't take another tree company in your zip codes. The homeowner is asking for you, not a list. And you pay per shown appointment, not per lead.</p></div>
+      </details>
+      <details name="pc-faq">
+        <summary>Do I need a website to run ads?</summary>
+        <div class="a"><div class="video qa-video qa-tall"><video controls playsinline preload="none" poster="/assets/video/pre-call-faq-website.jpg" aria-label="Do I need a website to run ads?"><source src="/assets/video/pre-call-faq-website.mp4" type="video/mp4"></video></div><p>No. The ads can run on a form built into Facebook, so homeowners never have to leave the app. A lot of them will look you up on Google before the estimate, though, and a good website and good reviews make them more likely to show up. If you don't have those yet, we can help with both, but you don't need them to start.</p></div>
+      </details>
+      <details name="pc-faq">
+        <summary>What do I have to do on my end?</summary>
+        <div class="a"><div class="video qa-video qa-tall"><video controls playsinline preload="none" poster="/assets/video/pre-call-faq-your-end.jpg" aria-label="What do I have to do on my end?"><source src="/assets/video/pre-call-faq-your-end.mp4" type="video/mp4"></video></div><p>Three things. Send us real photos and videos of your work, because real jobs beat stock photos every time. Give us access to your Facebook page so we can run the ads under your name. And when a lead comes in, call them as soon as you can. We handle the leads, the form and the follow-up text. You handle the closing.</p></div>
+      </details>
+      <details name="pc-faq">
+        <summary>Do you work with other tree companies in my area?</summary>
+        <div class="a"><div class="video qa-video qa-tall"><video controls playsinline preload="none" poster="/assets/video/pre-call-faq-other-companies.jpg" aria-label="Do you work with other tree companies in my area?"><source src="/assets/video/pre-call-faq-other-companies.mp4" type="video/mp4"></video></div><p>Not in your zip codes. Each client gets their own zip codes, and once they're taken, we don't add another tree company there. If I ran your ads and a competitor's down the road, you'd be bidding against each other, which is the opposite of what I want. I check that your zip codes are open before I run any ads.</p></div>
       </details>
       <details name="pc-faq">
         <summary>How do you make sure leads are qualified?</summary>
-        <div class="a"><p>The ads only show in the area written down when you sign up, and the landing page asks for the job details. We text and call every lead right away, aiming for under a minute, while they're still holding the phone. A lead outside your area or asking for work you don't do doesn't bill.</p></div>
+        <div class="a"><p>The ads only show to homeowners in your zip codes, and each lead fills out a short form. They get a text back right away, and the sooner you call, the more of them show up. A lead outside your service area never bills, and neither does a homeowner who isn't there.</p></div>
       </details>
       <details name="pc-faq">
         <summary>How do I see what's happening?</summary>
-        <div class="a"><p>The ad accounts are in your business's name, so you see every dollar the platforms charge. Every booked estimate lands on your calendar with the homeowner's name, address and the job they described. We bill once a week, only for shown estimates.</p></div>
-      </details>
-      <details name="pc-faq">
-        <summary>What happens if it doesn't work?</summary>
-        <div class="a"><p>A homeowner who isn't there doesn't bill. If the ads don't book anything, you've paid your ad spend and the setup fee, and no per-estimate fees. There is no long-term contract. Email us and the ads go off within 2 business days, and the ad accounts stay yours.</p></div>
+        <div class="a"><p>Your ad spend goes straight from your account to Facebook, so you see every dollar. Every lead comes to you with what the homeowner put on the form, so you know who you're calling. And during the trial we go over the numbers with you, so you never have to guess whether it's working.</p></div>
       </details>
     </div>
 <!-- /build:precall-faq -->

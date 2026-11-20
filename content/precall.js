@@ -2,8 +2,9 @@
 // video, the questions and answers, and the results cards. Change it here, run
 // `npm run build`, and the page picks it up.
 //
-// The answers repeat the homepage, /pricing/ and /how-it-works/. When the deal
-// changes there, change it here too.
+// The written answers under a video say what that video says. The rest of the
+// site (the homepage, /pricing/, /how-it-works/, the Terms) should say the same
+// deal. When the deal changes in one place, change it in the others.
 
 export const precall = {
   // STEP 1 VIDEO
@@ -31,59 +32,99 @@ export const precall = {
   // QUESTIONS
   // Plain text, in the order they show. The first one starts open.
   //
-  // TODO (Zac): each question can have its own short video. Paste a link on
-  // its `video` line (YouTube, Loom, or a path to an MP4 in assets/video/,
-  // same as the Step 1 video) and it plays above the written answer. While
-  // the line is null, that question shows the written answer alone. The
-  // scripts are in the site notes folder (PRE-CALL-QUESTION-SCRIPTS.md).
+  // A question can have its own short video. It plays above the written
+  // answer and stops when another question opens. The lines for it:
+  //   video   a YouTube link, a Loom link, or a path to an MP4 in assets/video/
+  //   poster  only with an MP4: one frame of it, shown before play
+  //   shape   'wide', 'square' or 'tall', same as the Step 1 video
+  // Leave `video` as null and the question shows its written answer alone.
+  //
+  // The videos open with the question read out loud, so each `q` is worded the
+  // way it's said, and each `a` says what the video says. If you re-record
+  // one, change its answer to match.
   faqs: [
     {
-      q: "What's involved on your end?",
-      video: null,
-      a: "Give us access to your ad accounts and your calendar, and keep your open times current. Then show up at the booked time, walk the job and write the quote. We build and run the ads and the landing page, and we text and call every lead in your company's name. After each visit, you mark it shown or not shown.",
+      // The "3 business days" line is from the Terms; the video doesn't say it.
+      q: 'What counts as a shown appointment?',
+      video: '/assets/video/pre-call-faq-shown-appointment.mp4',
+      poster: '/assets/video/pre-call-faq-shown-appointment.jpg',
+      shape: 'tall',
+      a: "A homeowner in your service area meets you at the property for the estimate. That's the only time you pay us. If they don't show, cancel, or turn out to be outside your service area, you don't pay. You mark each visit shown or not shown within 3 business days. Whether the job closes is up to you.",
     },
     {
-      // TODO (Zac): there's no time-to-first-lead number here on purpose. The
-      // site has no client data to back one yet. Add a line once you have it.
+      // No video yet. The answer is what the Step 1 video says.
       q: 'How fast do leads come in?',
       video: null,
-      a: "Ads go live 1 to 2 weeks after the setup fee is paid and we have access to your ad accounts and calendar. Leads can start as soon as the ads are running. On the call I'll tell you what to expect for your area.",
+      a: "Once your ads are live, leads usually start coming in within 1 to 2 weeks. Every lead gets a text from us right away, and the faster you call them back, the more of them show up. On the call I'll tell you what to expect for your zip codes.",
     },
     {
-      q: 'Are the leads exclusive to me?',
-      video: null,
-      a: "Yes. The ads run in ad accounts in your business's name and send homeowners to a landing page with your company on it, so those leads go to you and nobody else. We also take one tree company per service area. While you're in, we won't run ads for another tree company there.",
-    },
-    {
+      // No video yet. The answer is what the Step 1 video says.
       q: 'Who pays for the ad spend?',
       video: null,
-      a: 'You do, straight to the ad platforms on your own card, so you see every dollar they charge. Plan on at least $50 a day. You pay us a one-time setup fee, and after that a flat fee only for estimates where the homeowner showed up.',
+      a: 'You do. It goes straight from your account to Facebook, not through us, so you see every dollar. We usually recommend around $50 a day. Our fee is separate: a $500 deposit to start, then $197 for each shown appointment.',
     },
     {
-      // This is the definition from the Terms and /pricing/. Keep them the same.
-      q: 'What counts as a shown estimate?',
-      video: null,
-      a: "A homeowner booked through your ads, you showed up at the booked time, and they were there to walk the job. You mark each one within 3 business days. Leads outside your area, work you don't do, duplicate bookings and estimates you cancel never bill.",
+      q: 'Is there a long-term contract?',
+      video: '/assets/video/pre-call-faq-contract.mp4',
+      poster: '/assets/video/pre-call-faq-contract.jpg',
+      shape: 'tall',
+      a: "No. It's month to month. We start with a trial, so you see leads coming in before you commit to anything, and I'll go over how the trial works on the call. If it isn't working for you, you aren't locked in.",
     },
     {
-      // TODO (Zac): your draft said the ad form filters by job type and
-      // homeowner status. The site doesn't say that anywhere, so it's left out.
-      // Add it back if the form really asks both.
+      // Zac confirmed 2026-11-20: the deposit comes back if the trial doesn't
+      // work out, and "working" is at least one shown appointment in the
+      // first month. Section 9 of the Terms says the same. Keep them matched.
+      q: "What if the ads don't work?",
+      video: '/assets/video/pre-call-faq-if-it-doesnt-work.mp4',
+      poster: '/assets/video/pre-call-faq-if-it-doesnt-work.jpg',
+      shape: 'tall',
+      a: "You only pay us the $197 when a homeowner shows up for the estimate. If nobody shows, you pay us nothing per appointment. What you put in is the $500 deposit and your ad spend, which goes straight to Facebook. If the trial doesn't bring at least one shown appointment in your first month, we refund the full deposit. We check the numbers with you during the trial, so you never have to guess whether it's working.",
+    },
+    {
+      q: 'How is this different from Angi or Thumbtack?',
+      video: '/assets/video/pre-call-faq-angi-thumbtack.mp4',
+      poster: '/assets/video/pre-call-faq-angi-thumbtack.jpg',
+      shape: 'tall',
+      a: "On those sites you pay for a lead that usually goes to other companies too, so you're racing them to call back, and you pay whether the homeowner answers or not. With us the ads run for your business only, and we don't take another tree company in your zip codes. The homeowner is asking for you, not a list. And you pay per shown appointment, not per lead.",
+    },
+    {
+      q: 'Do I need a website to run ads?',
+      video: '/assets/video/pre-call-faq-website.mp4',
+      poster: '/assets/video/pre-call-faq-website.jpg',
+      shape: 'tall',
+      // The video says a form inside Facebook. Zac may use a landing page for
+      // some clients instead (his call), and either way no website is needed.
+      a: "No. The ads can run on a form built into Facebook, so homeowners never have to leave the app. A lot of them will look you up on Google before the estimate, though, and a good website and good reviews make them more likely to show up. If you don't have those yet, we can help with both, but you don't need them to start.",
+    },
+    {
+      q: 'What do I have to do on my end?',
+      video: '/assets/video/pre-call-faq-your-end.mp4',
+      poster: '/assets/video/pre-call-faq-your-end.jpg',
+      shape: 'tall',
+      a: 'Three things. Send us real photos and videos of your work, because real jobs beat stock photos every time. Give us access to your Facebook page so we can run the ads under your name. And when a lead comes in, call them as soon as you can. We handle the leads, the form and the follow-up text. You handle the closing.',
+    },
+    {
+      q: 'Do you work with other tree companies in my area?',
+      video: '/assets/video/pre-call-faq-other-companies.mp4',
+      poster: '/assets/video/pre-call-faq-other-companies.jpg',
+      shape: 'tall',
+      a: "Not in your zip codes. Each client gets their own zip codes, and once they're taken, we don't add another tree company there. If I ran your ads and a competitor's down the road, you'd be bidding against each other, which is the opposite of what I want. I check that your zip codes are open before I run any ads.",
+    },
+    {
+      // No video. Reworded 2026-11-20 to match the videos: the form is in
+      // Facebook, we text the lead and the owner calls.
+      // TODO (Zac): if the form asks for the job type or whether they own the
+      // home, say so here.
       q: 'How do you make sure leads are qualified?',
       video: null,
-      a: "The ads only show in the area written down when you sign up, and the landing page asks for the job details. We text and call every lead right away, aiming for under a minute, while they're still holding the phone. A lead outside your area or asking for work you don't do doesn't bill.",
+      a: "The ads only show to homeowners in your zip codes, and each lead fills out a short form. They get a text back right away, and the sooner you call, the more of them show up. A lead outside your service area never bills, and neither does a homeowner who isn't there.",
     },
     {
-      // No client dashboard exists, so this answers with what the owner can
-      // already see: their own ad accounts, their calendar, the weekly bill.
+      // No video. No client dashboard exists, so this answers with what the
+      // owner already sees: their own ad spend, their leads, the trial numbers.
       q: "How do I see what's happening?",
       video: null,
-      a: "The ad accounts are in your business's name, so you see every dollar the platforms charge. Every booked estimate lands on your calendar with the homeowner's name, address and the job they described. We bill once a week, only for shown estimates.",
-    },
-    {
-      q: "What happens if it doesn't work?",
-      video: null,
-      a: "A homeowner who isn't there doesn't bill. If the ads don't book anything, you've paid your ad spend and the setup fee, and no per-estimate fees. There is no long-term contract. Email us and the ads go off within 2 business days, and the ad accounts stay yours.",
+      a: "Your ad spend goes straight from your account to Facebook, so you see every dollar. Every lead comes to you with what the homeowner put on the form, so you know who you're calling. And during the trial we go over the numbers with you, so you never have to guess whether it's working.",
     },
   ],
 
