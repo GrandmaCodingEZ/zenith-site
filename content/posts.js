@@ -43,6 +43,7 @@ export const posts = [
     blurb: 'Minutes, not hours. What the research says and how to do it from up a tree.',
     cluster: 'speed-to-lead',
     published: '2026-10-05',
+    updated: '2026-11-20',
   },
   {
     slug: 'are-facebook-leads-worth-it-for-tree-service',
@@ -52,6 +53,7 @@ export const posts = [
     blurb: 'Why they feel like tire kickers, and the two things that change that.',
     cluster: 'speed-to-lead',
     published: '2026-10-05',
+    updated: '2026-11-20',
   },
   {
     slug: 'how-to-cut-no-shows-on-tree-estimates',
@@ -61,6 +63,7 @@ export const posts = [
     blurb: 'Most no-shows are set up in the first conversation. Here is how to fix that.',
     cluster: 'speed-to-lead',
     published: '2026-10-05',
+    updated: '2026-11-20',
   },
   {
     slug: 'pay-per-lead-vs-pay-per-appointment-vs-retainer',
@@ -70,6 +73,7 @@ export const posts = [
     blurb: 'Each model pays for something different. Pick the one that pays for what you want.',
     cluster: 'paying-for-leads',
     published: '2026-10-05',
+    updated: '2026-11-20',
   },
   {
     slug: 'shared-lead-sites-vs-your-own-ads',
@@ -79,6 +83,7 @@ export const posts = [
     blurb: 'Renting leads versus building your own. What you keep when you stop paying.',
     cluster: 'paying-for-leads',
     published: '2026-10-05',
+    updated: '2026-11-20',
   },
   {
     slug: 'how-much-should-a-tree-company-spend-on-ads',
@@ -88,6 +93,7 @@ export const posts = [
     blurb: 'Work back from your own numbers. A budget method, not a guess.',
     cluster: 'paying-for-leads',
     published: '2026-10-05',
+    updated: '2026-11-20',
   },
   {
     slug: 'who-should-own-your-ad-accounts',
@@ -97,6 +103,7 @@ export const posts = [
     blurb: 'You should. Here is why, and how to check in five minutes.',
     cluster: 'choosing-a-vendor',
     published: '2026-10-05',
+    updated: '2026-11-20',
   },
   {
     slug: 'questions-to-ask-before-hiring-an-ads-agency',
@@ -106,5 +113,6 @@ export const posts = [
     blurb: 'Eight questions, and the answers that should make you walk.',
     cluster: 'choosing-a-vendor',
     published: '2026-10-05',
+    updated: '2026-11-20',
   },
 ];

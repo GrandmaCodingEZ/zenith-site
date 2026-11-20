@@ -1,15 +1,15 @@
 # Zenith Co.
 
-> Zenith Co. runs paid ads for established Florida tree service companies and books the resulting leads as estimates on the owner's calendar. Every lead gets a text and a call in the tree company's name, aiming for under a minute, then a reminder before the visit. The tree company pays its ad spend on its own card, in ad accounts in its own name, plus a one-time setup fee and a flat fee for each estimate where the homeowner was there. Leads that do not show, fall outside the service area, or ask for work the company does not do are not billed. Zenith Co. takes one tree company per service area and has no long-term contract. It is run by its founder, Zachary Spencer.
+> Zenith Co. runs paid ads for established Florida tree service companies and bills per shown estimate, also called pay per shown appointment. A homeowner fills out a short form, either one built into Facebook or a landing page, and gets an automatic text right away. The lead goes to the tree company, which calls the homeowner and sets the estimate. Zenith Co. does not call leads. The tree company pays its ad spend straight to the ad platform from its own account, plus a deposit to start and a flat fee for each estimate where the homeowner was there. The deposit is refunded in full if the first 30 days of ads do not produce at least one shown estimate. Leads that do not show, fall outside the company's zip codes, or ask for work the company does not do are not billed. Zenith Co. takes one tree company per set of zip codes and works month to month, with no long-term contract. It is run by its founder, Zachary Spencer.
 
 Each line below describes the question that page answers.
 
 ## Core pages
 
-- [Zenith Co. | Booked Estimates for Florida Tree Companies](https://zenithcomarketing.com/): What Zenith Co. does for a Florida tree service company: runs its ads, texts and calls every lead, books estimates on its calendar, and bills only for estimates where the homeowner showed up. Who qualifies, and how to book a call.
-- [How It Works: From Ad Tap to Booked Tree Estimate](https://zenithcomarketing.com/how-it-works/): Step by step, what happens between a homeowner tapping a tree company's ad and the owner standing in their yard: the landing page, the text and call, the booking, the reminder, and how each estimate gets marked shown or not shown.
-- [Pricing: Pay Per Shown Tree Estimate | Zenith Co.](https://zenithcomarketing.com/pricing/): How Zenith Co. charges: ad spend on the client's own card, a one-time setup fee, and a flat fee per shown estimate. What counts as shown, what never bills, how disputes work, and why the fees are set on a call instead of published.
-- [About Zenith Co. and Founder Zachary Spencer](https://zenithcomarketing.com/about/): Who runs Zenith Co., why it works with Florida tree companies only, why it takes one company per service area, and who it turns away.
+- [Zenith Co. | Booked Estimates for Florida Tree Companies](https://zenithcomarketing.com/): What Zenith Co. does for a Florida tree service company: runs its ads, texts every lead right away so the owner can call and set the estimate, and bills only for estimates where the homeowner showed up. Who qualifies, and how to book a call.
+- [How It Works: From Ad Tap to Booked Tree Estimate](https://zenithcomarketing.com/how-it-works/): Step by step, what happens between a homeowner tapping a tree company's ad and the owner standing in their yard: the form, the automatic text, the owner's call to set the time, and how each estimate gets marked shown or not shown.
+- [Pricing: Pay Per Shown Tree Estimate | Zenith Co.](https://zenithcomarketing.com/pricing/): How Zenith Co. charges: ad spend on the client's own card, a deposit to start, and a flat fee per shown estimate. When the deposit is refunded, what counts as shown, what never bills, and how disputes work.
+- [About Zenith Co. and Founder Zachary Spencer](https://zenithcomarketing.com/about/): Who runs Zenith Co., why it works with Florida tree companies only, why it takes one company per set of zip codes, and who it turns away.
 
 ## Client work
 
@@ -34,13 +34,17 @@ Each line below describes the question that page answers.
 
 - Who it is for: established tree service companies in Florida with two or more crews ready for more work and room for at least $50 a day in ad spend.
 - Who it is not for: new or owner-only businesses, anyone who only wants a website, anyone who cannot show up at the booked time.
-- Billing: ad spend paid directly to the ad platforms on the client's own card; a one-time setup fee; a flat fee per shown estimate, billed weekly. Both fees are set on the call, based on the area and the mix of jobs.
-- What counts as shown: a homeowner booked through the ads, the company showed up at the booked time, and the homeowner was there to walk the job.
-- Not billed: leads outside the service area, leads asking for work the company does not do, homeowners who do not show, duplicate bookings, estimates the company cancels.
+- Billing: ad spend paid directly to the ad platforms on the client's own card; a deposit to start; a flat fee per shown estimate, billed weekly. Both numbers are given in writing before the client pays anything.
+- Deposit refund: the deposit is refunded in full if the first 30 days after the ads go live do not produce at least one shown estimate.
+- Lead follow-up: each lead gets an automatic text when the form comes in. The tree company calls the lead and sets the estimate. Zenith Co. does not call leads.
+- The form: a form built into Facebook or a landing page, whichever Zenith Co. judges fits. The client does not need a website.
+- What counts as shown: a homeowner came in through the ads, the company showed up at the time it set with them, and the homeowner was there to walk the job.
+- Not billed: leads outside the company's zip codes, leads asking for work the company does not do, homeowners who do not show, the same homeowner and job counted twice, estimates the company cancels.
 - Marking: the company marks each estimate shown or not shown within 3 business days. Unmarked estimates count as shown. Billing questions within 14 days of a bill are checked against the records and credited if they did not count.
-- Exclusivity: one tree company per service area. The area is written down at sign-up.
-- Term: no long-term contract. Email and the ads go off within 2 business days.
-- Start: ads go live 1 to 2 weeks after setup is paid and access is granted.
+- Exclusivity: one tree company per set of zip codes. The zip codes are written down at sign-up.
+- Term: month to month, starting with a trial. No long-term contract. Email and the ads go off within 2 business days.
+- Start: ads go live 1 to 2 weeks after the deposit is paid and the company has sent photos and videos of its work and given access to its Facebook page.
+- What the company provides: real photos and videos of its work, and access to its Facebook page.
 - Ad accounts: in the client's business name. The client keeps them if they stop.
 - Founder: Zachary Spencer, who takes every qualifying call.
 - Contact: zachary@zenithcomarketing.com. Calls are booked through the "See if you qualify" form at https://zenithcomarketing.com/

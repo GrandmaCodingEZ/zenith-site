@@ -33,14 +33,14 @@ export const pages = [
     kind: 'home',
     group: 'Core pages',
     question:
-      'What Zenith Co. does for a Florida tree service company: runs its ads, texts and calls every lead, books estimates on its calendar, and bills only for estimates where the homeowner showed up. Who qualifies, and how to book a call.',
+      'What Zenith Co. does for a Florida tree service company: runs its ads, texts every lead right away so the owner can call and set the estimate, and bills only for estimates where the homeowner showed up. Who qualifies, and how to book a call.',
     faq: true,
     priority: '1.0',
     changefreq: 'weekly',
     og: {
       title: 'Booked estimates. You only pay when the homeowner shows up.',
       description:
-        'Paid ads for established Florida tree companies, billed per shown estimate. One company per service area.',
+        'Paid ads for established Florida tree companies, billed per shown estimate. One company per set of zip codes.',
     },
   },
   {
@@ -50,7 +50,7 @@ export const pages = [
     kind: 'process',
     group: 'Core pages',
     question:
-      'Step by step, what happens between a homeowner tapping a tree company\'s ad and the owner standing in their yard: the landing page, the text and call, the booking, the reminder, and how each estimate gets marked shown or not shown.',
+      'Step by step, what happens between a homeowner tapping a tree company\'s ad and the owner standing in their yard: the form, the automatic text, the owner\'s call to set the time, and how each estimate gets marked shown or not shown.',
     faq: true,
     priority: '0.9',
     changefreq: 'monthly',
@@ -62,7 +62,7 @@ export const pages = [
     kind: 'pricing',
     group: 'Core pages',
     question:
-      'How Zenith Co. charges: ad spend on the client\'s own card, a one-time setup fee, and a flat fee per shown estimate. What counts as shown, what never bills, how disputes work, and why the fees are set on a call instead of published.',
+      'How Zenith Co. charges: ad spend on the client\'s own card, a deposit to start, and a flat fee per shown estimate. When the deposit is refunded, what counts as shown, what never bills, and how disputes work.',
     faq: true,
     priority: '0.9',
     changefreq: 'monthly',
@@ -74,7 +74,7 @@ export const pages = [
     kind: 'about',
     group: 'Core pages',
     question:
-      'Who runs Zenith Co., why it works with Florida tree companies only, why it takes one company per service area, and who it turns away.',
+      'Who runs Zenith Co., why it works with Florida tree companies only, why it takes one company per set of zip codes, and who it turns away.',
     faq: true,
     priority: '0.8',
     changefreq: 'monthly',
@@ -153,7 +153,7 @@ export const pages = [
     og: {
       title: 'Booked tree estimates. You only pay when the homeowner shows up.',
       description:
-        'How Zenith Co. books estimates for established Florida tree companies, and what you pay. One company per service area.',
+        'How Zenith Co. gets estimates for established Florida tree companies, and what you pay. One company per set of zip codes.',
     },
   },
   // Where an owner lands right after booking a call: the video (or its
