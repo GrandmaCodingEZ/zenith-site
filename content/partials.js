@@ -177,10 +177,10 @@ export function renderVsl(hasVideo) {
         <div class="lc-head"><b>One lead, start to finish</b><span>Example</span></div>
         <ol class="lc-list">
           <li><span class="lc-t">6:12 PM</span><div><b>Homeowner taps your ad</b><span>Oak hanging over the driveway</span></div></li>
-          <li><span class="lc-t">6:12 PM</span><div><b>Your business texts and calls</b><span>28 seconds after the form</span></div></li>
-          <li><span class="lc-t">6:15 PM</span><div><b>Estimate booked</b><span>Thursday at 9:00 AM, on your calendar</span></div></li>
-          <li><span class="lc-t">Wed 5 PM</span><div><b>Reminder sent</b><span>They reply &ldquo;See you then&rdquo;</span></div></li>
-          <li class="is-paid"><span class="lc-t">Thu 9:02</span><div><b>Homeowner was there</b><span>The only step you pay for</span></div><span class="pill yes">Billed</span></li>
+          <li><span class="lc-t">6:12 PM</span><div><b>They get a text right away</b><span>Automatic, as soon as the form comes in</span></div></li>
+          <li><span class="lc-t">6:12 PM</span><div><b>The lead comes to you</b><span>With what they put on the form</span></div></li>
+          <li><span class="lc-t">6:40 PM</span><div><b>You call and set the estimate</b><span>Thursday at 9:00 AM</span></div></li>
+          <li class="is-paid"><span class="lc-t">Thu 9:02</span><div><b>Homeowner was there</b><span>The only step that bills</span></div><span class="pill yes">Billed</span></li>
         </ol>
       </div>
     </div>`;
@@ -195,10 +195,10 @@ const LEAD_CARD = `<div class="card lead-card" aria-label="Example of one lead, 
         <div class="lc-head"><b>One lead, start to finish</b><span>Example</span></div>
         <ol class="lc-list">
           <li><span class="lc-t">6:12 PM</span><div><b>Homeowner taps your ad</b><span>Oak hanging over the driveway</span></div></li>
-          <li><span class="lc-t">6:12 PM</span><div><b>Your business texts and calls</b><span>28 seconds after the form</span></div></li>
-          <li><span class="lc-t">6:15 PM</span><div><b>Estimate booked</b><span>Thursday at 9:00 AM, on your calendar</span></div></li>
-          <li><span class="lc-t">Wed 5 PM</span><div><b>Reminder sent</b><span>They reply &ldquo;See you then&rdquo;</span></div></li>
-          <li class="is-paid"><span class="lc-t">Thu 9:02</span><div><b>Homeowner was there</b><span>The only step you pay for</span></div><span class="pill yes">Billed</span></li>
+          <li><span class="lc-t">6:12 PM</span><div><b>They get a text right away</b><span>Automatic, as soon as the form comes in</span></div></li>
+          <li><span class="lc-t">6:12 PM</span><div><b>The lead comes to you</b><span>With what they put on the form</span></div></li>
+          <li><span class="lc-t">6:40 PM</span><div><b>You call and set the estimate</b><span>Thursday at 9:00 AM</span></div></li>
+          <li class="is-paid"><span class="lc-t">Thu 9:02</span><div><b>Homeowner was there</b><span>The only step that bills</span></div><span class="pill yes">Billed</span></li>
         </ol>
       </div>`;
 
@@ -319,8 +319,8 @@ export function renderBooking() {
       </div>
       <div class="fld">
         <label for="f-area">Service area</label>
-        <input id="f-area" name="area" type="text" placeholder="Counties or cities you work" aria-describedby="f-area-hint" required>
-        <p class="hint" id="f-area-hint">List every county you want covered.</p>
+        <input id="f-area" name="area" type="text" placeholder="Zip codes or cities you work" aria-describedby="f-area-hint" required>
+        <p class="hint" id="f-area-hint">List the zip codes you want covered, or the cities if that's easier.</p>
       </div>
       <div class="fld">
         <label for="f-crews">Number of crews</label>

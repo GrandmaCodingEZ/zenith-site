@@ -138,8 +138,17 @@ updated" date, and 30 days' email notice to clients for anything material
 (Section 22).
 
 The homepage's deal card and FAQ say the same things as the Terms. When either
-changes, check the other still matches. Fees, the service area and the
-minimum daily ad budget live in each client's order form, not on the site.
+changes, check the other still matches. The deposit, the per-estimate fee, the
+zip codes and the minimum daily ad budget live in each client's order form.
+The two fee amounts are on the unlisted pre-call page and nowhere else on the
+site (a choice made on 2026-11-20; say the word and they go on /pricing/).
+
+The deal the site describes, as confirmed on 2026-11-20: a deposit to start,
+refunded if the first 30 days of ads bring no shown estimate, then a flat fee
+per shown estimate; we send each lead an automatic text and the owner calls;
+the form is in Facebook or on a landing page, our choice; one tree company per
+set of zip codes; the owner sends real photos and videos and gives access to
+their Facebook page.
 
 ## 6. Inner pages and the build
 
